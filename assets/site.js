@@ -32,6 +32,22 @@
 
 
 
+
+  /* La scelta manuale della lingua vince sempre sul rilevamento
+     automatico: appena l'utente tocca IT/EN, la memorizziamo e il
+     redirect della home non si attiva piu. */
+  (function () {
+    var sw = document.querySelectorAll('.langsw a');
+    if (!sw.length) return;
+    Array.prototype.forEach.call(sw, function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('clegar_lang', a.getAttribute('hreflang') || lang); } catch (e) {}
+      });
+    });
+    /* chi arriva direttamente su una pagina inglese ha gia espresso una preferenza */
+    if (lang === 'en') { try { localStorage.setItem('clegar_lang', 'en'); } catch (e) {} }
+  })();
+
   /* ============================================================
      GOOGLE ANALYTICS 4 — attivato solo dopo il consenso
      (il Garante Privacy richiede l'opt-in prima di qualunque
