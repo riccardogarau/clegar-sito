@@ -30,6 +30,141 @@
     fArea:   {it:'Ambito', en:'Area'}
   };
 
+
+
+  /* ============================================================
+     GOOGLE ANALYTICS 4 — attivato solo dopo il consenso
+     (il Garante Privacy richiede l'opt-in prima di qualunque
+     cookie di tracciamento).
+
+     >>> INCOLLA QUI IL TUO ID: sostituisci G-XXXXXXXXXX con il
+         Measurement ID che trovi su analytics.google.com.
+         È l'unica riga da modificare in tutto il sito.
+     ============================================================ */
+  var GA_ID = 'G-XL4B4Y4DY1';
+
+  (function () {
+    if (GA_ID.indexOf('XXXX') !== -1) return;   // non ancora configurato
+    var KEY = 'clegar_consent';
+
+    function loadGA() {
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', GA_ID, { anonymize_ip: true });
+    }
+
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) { return; }
+    if (stored === 'granted') { loadGA(); return; }
+    if (stored === 'denied') return;
+
+    var TXT = {
+      it: { msg: 'Usiamo Google Analytics solo se lo permetti, per capire come viene usato il sito. Nessun dato viene venduto o condiviso a fini pubblicitari.',
+            accept: 'Accetta', reject: 'Rifiuta' },
+      en: { msg: 'We use Google Analytics only with your permission, to understand how the site is used. No data is sold or shared for advertising.',
+            accept: 'Accept', reject: 'Reject' }
+    }[lang];
+
+    var bar = document.createElement('div');
+    bar.setAttribute('role', 'region');
+    bar.setAttribute('aria-label', lang === 'it' ? 'Consenso cookie' : 'Cookie consent');
+    bar.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:1100;background:#0B2545;'
+      + 'color:#DCE7F1;padding:1rem clamp(1.1rem,4vw,2.75rem);display:flex;gap:1rem;'
+      + 'flex-wrap:wrap;align-items:center;justify-content:space-between;'
+      + 'font-family:Georgia,serif;font-size:.92rem;line-height:1.5;'
+      + 'box-shadow:0 -2px 18px rgba(0,0,0,.18)';
+    bar.innerHTML =
+      '<p style="margin:0;max-width:46rem;flex:1 1 18rem">' + TXT.msg + '</p>'
+      + '<div style="display:flex;gap:.6rem;flex:none">'
+      + '<button id="cc-reject" style="font-family:monospace;font-size:.7rem;letter-spacing:.1em;'
+      + 'text-transform:uppercase;background:none;color:#DCE7F1;border:1px solid rgba(220,231,241,.4);'
+      + 'padding:.7rem 1.1rem;min-height:44px;cursor:pointer">' + TXT.reject + '</button>'
+      + '<button id="cc-accept" style="font-family:monospace;font-size:.7rem;letter-spacing:.1em;'
+      + 'text-transform:uppercase;background:#009AA6;color:#fff;border:0;'
+      + 'padding:.7rem 1.1rem;min-height:44px;cursor:pointer">' + TXT.accept + '</button></div>';
+    document.body.appendChild(bar);
+
+    document.getElementById('cc-accept').onclick = function () {
+      try { localStorage.setItem(KEY, 'granted'); } catch (e) {}
+      bar.remove(); loadGA();
+    };
+    document.getElementById('cc-reject').onclick = function () {
+      try { localStorage.setItem(KEY, 'denied'); } catch (e) {}
+      bar.remove();
+    };
+  })();
+
+  /* ============================================================
+     FIGURE VIEWER
+     Charts fit the page width; at that size their labels would be
+     2-4px. A tap opens the figure full-screen, rendered large
+     enough to read and pannable.
+     ============================================================ */
+  (function () {
+    var figs = document.querySelectorAll('figure[data-zoomable]');
+    if (!figs.length) return;
+    if (!window.matchMedia || !window.matchMedia('(max-width: 900px)').matches) return;
+
+    var TXT = {
+      it: { close: 'Chiudi', hint: 'Scorri per esplorare il grafico' },
+      en: { close: 'Close',  hint: 'Scroll to explore the chart' }
+    }[lang];
+
+    var modal = document.createElement('div');
+    modal.className = 'figmodal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.innerHTML =
+      '<div class="figmodal-bar"><span>' + TXT.hint + '</span>'
+      + '<button class="figmodal-close" type="button">' + TXT.close + '</button></div>'
+      + '<div class="figmodal-body"></div>';
+    document.body.appendChild(modal);
+
+    var body = modal.querySelector('.figmodal-body');
+    var closeBtn = modal.querySelector('.figmodal-close');
+    var lastFocus = null;
+
+    function open(fig) {
+      var chart = fig.querySelector('svg, .datafig');
+      if (!chart) return;
+      body.innerHTML = '';
+      body.appendChild(chart.cloneNode(true));
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      lastFocus = document.activeElement;
+      closeBtn.focus();
+    }
+
+    function close() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      body.innerHTML = '';
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    Array.prototype.forEach.call(figs, function (fig) {
+      var target = fig.querySelector('svg, .datafig');
+      if (!target) return;
+      target.style.cursor = 'zoom-in';
+      target.addEventListener('click', function () { open(fig); });
+      fig.setAttribute('tabindex', '0');
+      fig.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(fig); }
+      });
+    });
+
+    closeBtn.addEventListener('click', close);
+    modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('open')) close();
+    });
+  })();
+
   var send = document.getElementById('f-send');
   if (!send) return;
   var statusEl = document.getElementById('f-status');

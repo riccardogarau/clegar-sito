@@ -37,72 +37,6 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.clegar.it/"},{"@type":"ListItem","position":2,"name":"Marine Geoscience","item":"https://www.clegar.it/geoscienze-marine/"}]}</script>
 </head>
 <body>
-<!-- ============================================================
-     GOOGLE ANALYTICS 4 -- gated by consent (Italian Garante Privacy
-     requires opt-in before any tracking cookie is set).
-     Replace G-XXXXXXXXXX with the Measurement ID from
-     analytics.google.com and it works with no other change.
-     ============================================================ -->
-<script>
-(function () {
-  var GA_ID = 'G-XXXXXXXXXX';
-  if (GA_ID.indexOf('XXXX') !== -1) return;
-  var KEY = 'clegar_consent';
-  var lang = document.documentElement.lang === 'en' ? 'en' : 'it';
-
-  function loadGA() {
-    var s = document.createElement('script');
-    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-    document.head.appendChild(s);
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { dataLayer.push(arguments); };
-    gtag('js', new Date());
-    gtag('config', GA_ID, { anonymize_ip: true });
-  }
-
-  var stored = localStorage.getItem(KEY);
-  if (stored === 'granted') { loadGA(); return; }
-  if (stored === 'denied') return;
-
-  var TXT = {
-    it: { msg: 'Usiamo Google Analytics solo se lo permetti, per capire come viene usato il sito. Nessun dato viene venduto o condiviso a fini pubblicitari.',
-          accept: 'Accetta', reject: 'Rifiuta' },
-    en: { msg: 'We use Google Analytics only with your permission, to understand how the site is used. No data is sold or shared for advertising.',
-          accept: 'Accept', reject: 'Reject' }
-  }[lang];
-
-  function ready(fn) {
-    if (document.body) fn(); else document.addEventListener('DOMContentLoaded', fn);
-  }
-
-  ready(function () {
-    var bar = document.createElement('div');
-    bar.setAttribute('role', 'region');
-    bar.setAttribute('aria-label', lang === 'it' ? 'Consenso cookie' : 'Cookie consent');
-    bar.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:999;background:#0B2545;'
-      + 'color:#DCE7F1;padding:1rem clamp(1.1rem,4vw,2.75rem);display:flex;gap:1rem;'
-      + 'flex-wrap:wrap;align-items:center;justify-content:space-between;'
-      + 'font-family:Georgia,serif;font-size:.92rem;line-height:1.5;'
-      + 'box-shadow:0 -2px 18px rgba(0,0,0,.18)';
-    bar.innerHTML =
-      '<p style="margin:0;max-width:46rem;flex:1 1 20rem">' + TXT.msg + '</p>'
-      + '<div style="display:flex;gap:.6rem;flex:none">'
-      + '<button id="cc-reject" style="font-family:monospace;font-size:.7rem;'
-      + 'letter-spacing:.1em;text-transform:uppercase;background:none;color:#DCE7F1;'
-      + 'border:1px solid rgba(220,231,241,.4);padding:.65rem 1.1rem;cursor:pointer">' + TXT.reject + '</button>'
-      + '<button id="cc-accept" style="font-family:monospace;font-size:.7rem;'
-      + 'letter-spacing:.1em;text-transform:uppercase;background:#009AA6;color:#fff;border:0;'
-      + 'padding:.65rem 1.1rem;cursor:pointer">' + TXT.accept + '</button></div>';
-    document.body.appendChild(bar);
-    document.getElementById('cc-accept').onclick = function () {
-      localStorage.setItem(KEY, 'granted'); bar.remove(); loadGA();
-    };
-    document.getElementById('cc-reject').onclick = function () {
-      localStorage.setItem(KEY, 'denied'); bar.remove();
-    };
-  });
-})();
-</script>
 <header class="masthead">
   <div class="masthead-row">
     <a class="brand" aria-label="CLEGAR" href="../">
@@ -140,8 +74,8 @@
       <p class="lede it">Progettiamo l'indagine attorno alla decisione che dovrà sostenere, scriviamo le specifiche che il contractor dovrà rispettare, e verifichiamo che il dato consegnato le rispetti davvero.</p>
       
 
-      <figure class="svc-fig">
-        <div class="figscroll"><div class="datafig">
+      <figure class="svc-fig" data-zoomable="1">
+        <div class="datafig">
           <img src="../assets/bathy.webp" alt="Multibeam bathymetry, shaded relief" width="1400" height="880">
           <svg class="ov" viewbox="0 0 1400 880" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <defs><lineargradient id="dbar" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#EEF4EC"></stop><stop offset="10%" stop-color="#BAE2D6"></stop><stop offset="24%" stop-color="#6CC4CA"></stop><stop offset="42%" stop-color="#3E96BE"></stop><stop offset="62%" stop-color="#2668A4"></stop><stop offset="82%" stop-color="#123464"></stop><stop offset="100%" stop-color="#0A1A34"></stop></lineargradient></defs>
@@ -178,7 +112,7 @@
             </g>
           </svg>
         </div>
-        </div><p class="fig-hint">Scorrere lateralmente per leggere il grafico</p><figcaption class="fig-cap it">Fig. 02 — Modello batimetrico multibeam, rilievo ombreggiato, isobate 2 m. Paleocanale, campo di sand wave e massi affioranti: tre vincoli diversi sul tracciato dei cavi. Dataset dimostrativo.</figcaption>
+        <p class="fig-hint">Tocca il grafico per ingrandirlo</p><figcaption class="fig-cap it">Fig. 02 — Modello batimetrico multibeam, rilievo ombreggiato, isobate 2 m. Paleocanale, campo di sand wave e massi affioranti: tre vincoli diversi sul tracciato dei cavi. Dataset dimostrativo.</figcaption>
         
       </figure>
     </div>

@@ -330,28 +330,49 @@ p{margin:0 0 1.1rem}
 
 /* ============================================================
    MOBILE
-   Data figures keep their own scale and pan horizontally:
-   squeezing a 1400-unit chart into 360px renders its labels at
-   ~2px, which is worse than asking the reader to scroll.
+   Figures fit the screen. Dense charts would render their labels
+   at 2-4px at that size, so tapping one opens it full-screen
+   where it can be read and panned.
    ============================================================ */
-@media(max-width:900px){
-  .figscroll{
-    overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;
-    scrollbar-width:thin;
-  }
-  .figscroll > svg,
-  .figscroll .datafig{min-width:1180px}
-  .figscroll .datafig img,
-  .figscroll .datafig .ov{min-width:1180px}
-  .svc-fig{padding:.9rem}
-  .fig-hint{display:flex}
-}
+figure{margin-inline:0}          /* browsers default to 40px each side */
 .fig-hint{
   display:none;align-items:center;gap:.45rem;margin-top:.7rem;
   font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;
   text-transform:uppercase;color:var(--steel);
 }
 .fig-hint::before{content:"";width:14px;height:1px;background:var(--steel)}
+@media(max-width:900px){
+  .svc-fig{padding:.9rem;cursor:zoom-in}
+  .profile .datafig{cursor:zoom-in}
+  .fig-hint{display:flex}
+}
+
+/* full-screen figure viewer */
+.figmodal{
+  position:fixed;inset:0;z-index:1000;background:rgba(11,37,69,.97);
+  display:none;flex-direction:column;
+}
+.figmodal.open{display:flex}
+.figmodal-bar{
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  padding:.85rem 1.1rem;border-bottom:1px solid rgba(255,255,255,.16);flex:none;
+}
+.figmodal-bar span{
+  font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;
+  text-transform:uppercase;color:rgba(220,231,241,.72);
+}
+.figmodal-close{
+  background:none;border:1px solid rgba(220,231,241,.4);color:#DCE7F1;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  padding:.6rem 1rem;cursor:pointer;min-height:44px;
+}
+.figmodal-body{
+  flex:1;overflow:auto;-webkit-overflow-scrolling:touch;
+  padding:1rem;background:var(--paper-2);
+}
+.figmodal-body > *{min-width:1180px;display:block}
+.figmodal-body .datafig{min-width:1180px}
+.figmodal-body .datafig img,.figmodal-body .datafig .ov{min-width:1180px}
 
 @media(max-width:640px){
   :root{--pad:1.1rem}
