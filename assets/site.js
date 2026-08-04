@@ -80,10 +80,10 @@
     if (stored === 'denied') return;
 
     var TXT = {
-      it: { msg: 'Usiamo Google Analytics solo se lo permetti, per capire come viene usato il sito. Nessun dato viene venduto o condiviso a fini pubblicitari.',
+      it: { msg: 'Questo sito utilizza cookie analitici per misurare l\'utilizzo delle pagine e migliorarne i contenuti. Vengono installati esclusivamente previo consenso e non sono impiegati per finalit\u00e0 pubblicitarie o di profilazione.',
             accept: 'Accetta', reject: 'Rifiuta' },
-      en: { msg: 'We use Google Analytics only with your permission, to understand how the site is used. No data is sold or shared for advertising.',
-            accept: 'Accept', reject: 'Reject' }
+      en: { msg: 'This site uses analytics cookies to measure how its pages are used and to improve its content. They are set only with your consent and are never used for advertising or profiling.',
+            accept: 'Accept', reject: 'Decline' }
     }[lang];
 
     var bar = document.createElement('div');
