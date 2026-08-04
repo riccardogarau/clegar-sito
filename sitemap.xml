@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.clegar.it/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/geoscienze-marine/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/geoscienze-marine/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/marine-geoscience/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/geoscienze-marine/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/marine-geoscience/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/geoscienze-marine/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/marine-geoscience/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/geoscienze-marine/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/project-management/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/project-management/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/project-management/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/project-management/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/project-management/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/project-management/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/project-management/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/project-management/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/technical-advisory/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/technical-advisory/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/technical-advisory/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/technical-advisory/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/technical-advisory/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/technical-advisory/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/technical-advisory/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/technical-advisory/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/owners-engineering/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/owners-engineering/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/owners-engineering/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/owners-engineering/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/owners-engineering/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/owners-engineering/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/owners-engineering/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/owners-engineering/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/operational-excellence/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/operational-excellence/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/operational-excellence/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/operational-excellence/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/operational-excellence/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/operational-excellence/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/operational-excellence/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/operational-excellence/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/contatti/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/contatti/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/contatti/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/contatti/"/>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
