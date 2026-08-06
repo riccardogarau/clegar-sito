@@ -40,7 +40,7 @@ ARTICLES = [
 
 <h2>Why CLEGAR exists</h2>
 
-<p>Most problems on an offshore project don't start offshore. They start weeks earlier, in a specification – with a tolerance nobody defined precisely, or an acceptance criterion the client and the contractor each read differently.</p>
+<p>Most problems on an offshore project don't start offshore. They start weeks earlier, when the requirements are written – with a tolerance nobody defined precisely, or an acceptance criterion the client and the contractor each read differently.</p>
 
 <p>By the time the data comes back and someone has to decide whether it's good enough, the argument has no fixed reference point. It gets settled by whoever is more persuasive in the room, not by what the deliverable actually shows against what was agreed.</p>
 
@@ -68,14 +68,14 @@ ARTICLES = [
 
 <h2>Who we work with</h2>
 
-<p>Offshore wind developers, marine contractors, and asset owners who need a technical partner that reduces risk and improves decision-making at each stage of a project – from the first specification to the final acceptance.</p>
+<p>Offshore wind developers, marine contractors, and asset owners who need a technical partner that reduces risk and improves decision-making at each stage of a project – from the first requirements to the final acceptance.</p>
 
 <h2>What comes next</h2>
 
 <p>This is the first of a series of technical articles CLEGAR will publish covering real cases from marine geoscience, project management, and offshore operations – the kind of worked examples that show how a tolerance, a schedule, or a mobilisation record actually gets checked in practice, not just described in general terms.</p>
 
 <div class="callout">
-  <p>If you're planning a survey, reviewing a dataset you're not sure you should accept, or setting up a specification for an upcoming campaign, that conversation is free.</p>
+  <p>If you're planning a survey, reviewing a dataset you're not sure you should accept, or setting the requirements for an upcoming campaign, that conversation is free.</p>
 </div>
 
 <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
@@ -85,7 +85,7 @@ ARTICLES = [
 
 <h2>Perché nasce CLEGAR</h2>
 
-<p>La maggior parte dei problemi di un progetto offshore non nasce offshore. Nasce settimane prima, in una specifica: una tolleranza che nessuno ha definito con precisione, o un criterio di accettazione che il committente e il contractor leggono in due modi diversi.</p>
+<p>La maggior parte dei problemi di un progetto offshore non nasce offshore. Nasce settimane prima, quando si scrivono i requisiti: una tolleranza che nessuno ha definito con precisione, o un criterio di accettazione che il committente e il contractor leggono in due modi diversi.</p>
 
 <p>Quando i dati tornano a terra e qualcuno deve decidere se sono sufficienti, la discussione non ha più un riferimento fisso. Si risolve in favore di chi è più persuasivo nella stanza, non in base a quello che il deliverable mostra davvero rispetto a quanto era stato pattuito.</p>
 
@@ -113,14 +113,14 @@ ARTICLES = [
 
 <h2>Con chi lavoriamo</h2>
 
-<p>Sviluppatori eolici offshore, contractor marini e proprietari di asset che hanno bisogno di un partner tecnico capace di ridurre il rischio e migliorare le decisioni in ogni fase del progetto, dalla prima specifica all'accettazione finale.</p>
+<p>Sviluppatori eolici offshore, contractor marini e proprietari di asset che hanno bisogno di un partner tecnico capace di ridurre il rischio e migliorare le decisioni in ogni fase del progetto, dai primi requisiti all'accettazione finale.</p>
 
 <h2>Che cosa arriva dopo</h2>
 
 <p>Questo è il primo di una serie di articoli tecnici che CLEGAR pubblicherà su casi reali di geoscienze marine, project management e operazioni offshore: esempi lavorati che mostrano come una tolleranza, un programma o un verbale di mobilitazione vengano verificati nella pratica, e non soltanto descritti in termini generali.</p>
 
 <div class="callout">
-  <p>Se state pianificando un'indagine, valutando un dataset che non siete sicuri di dover accettare, o impostando la specifica di una campagna in arrivo, quella conversazione non ha costo.</p>
+  <p>Se state pianificando un'indagine, valutando un dataset che non siete sicuri di dover accettare, o impostando i requisiti di una campagna in arrivo, quella conversazione non ha costo.</p>
 </div>
 
 <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>

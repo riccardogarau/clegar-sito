@@ -17,7 +17,7 @@ def bil(x, y, size, fill, it, en, anchor='start', font=MONO, extra=''):
 # ═══════════════════════════════════ FIG A — origin vs surfacing of problems
 W, H = 1300, 540
 PHASES = [
-    ('Specifica',      'Specification'),
+    ('Requisiti',      'Requirements'),
     ('Gara',           'Tender'),
     ('Mobilitazione',  'Mobilisation'),
     ('Acquisizione',   'Acquisition'),

@@ -13,8 +13,8 @@
 <line x1="956.7" y1="122" x2="956.7" y2="474" stroke="#0B2545" stroke-opacity=".09"/>
 <line x1="1118.3" y1="122" x2="1118.3" y2="474" stroke="#0B2545" stroke-opacity=".09"/>
 <line x1="1280.0" y1="122" x2="1280.0" y2="474" stroke="#0B2545" stroke-opacity=".09"/>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="390.8" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">SPECIFICA</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="390.8" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">SPECIFICATION</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="390.8" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">REQUISITI</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="390.8" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">REQUIREMENTS</text>
 <text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="552.5" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">GARA</text>
 <text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="552.5" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">TENDER</text>
 <text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="714.2" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">MOBILITAZIONE</text>
