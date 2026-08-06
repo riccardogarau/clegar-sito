@@ -15,7 +15,7 @@ def bil(x, y, size, fill, it, en, anchor='start', font=MONO, extra=''):
 
 
 # ═══════════════════════════════════ FIG A — origin vs surfacing of problems
-W, H = 1300, 520
+W, H = 1300, 540
 PHASES = [
     ('Specifica',      'Specification'),
     ('Gara',           'Tender'),
@@ -33,9 +33,16 @@ PHASES = [
 LX = 270                         # le etichette finiscono qui
 GX0, GX1 = 310, 1280             # la linea temporale occupa il resto
 BW = (GX1 - GX0) / len(PHASES)
-TOP, RH = 190, 62                # prima riga e passo verticale
-BAND_TOP, BAND_BOT = 104, 456
+TOP, RH = 208, 62                # prima riga e passo verticale
+BAND_TOP, BAND_BOT = 122, 474
 OPEN_PHASES = 2                  # specifica e gara: qui i criteri sono ancora modificabili
+
+# Costo della correzione per fase in cui il problema emerge, in pixel di
+# spessore del cuneo. Non sono euro e non fingono di esserlo: e' una scala
+# qualitativa, dichiarata nel sottotitolo. Serve perche' la didascalia
+# affermava che il costo cresce mentre il disegno mostrava solo il ritardo -
+# un'affermazione che il lettore non poteva verificare guardando la figura.
+COST = [2, 5, 9, 14, 20, 27]
 
 # origine e scoperta di ciascun caso, come indici di PHASES.
 # Sono esempi tratti dal testo dell'articolo, non una casistica misurata:
@@ -53,17 +60,18 @@ centre = lambda i: GX0 + i * BW + BW / 2
 o = ['<svg viewBox="0 0 %d %d" xmlns="http://www.w3.org/2000/svg" role="img" '
      'aria-label="Examples of offshore project problems, each shown from the phase where it '
      'originates to the phase where it is found">' % (W, H)]
-o.append('<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" '
-         'orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="%s"/></marker></defs>' % AMBER)
-
 o += bil(0, 52, 18, NAVY,
-         'Dove nascono i problemi, dove si scoprono',
-         'Where problems start, where they are found', font=DISP)
-# il sottotitolo spiega come si legge la figura e dichiara che sono esempi:
-# viaggia con l'immagine anche quando si apre a schermo intero
+         'Quanto tardi si scopre, quanto costa rimediare',
+         'How late it is found, how much it costs to put right', font=DISP)
+# le due righe di sottotitolo spiegano le due dimensioni del disegno e
+# dichiarano che sono esempi: viaggiano con l'immagine anche quando si apre
+# a schermo intero, dove la didascalia non la segue
 o += bil(0, 76, 14, STEEL,
-         'OGNI FRECCIA VA DA DOVE IL PROBLEMA NASCE A DOVE SI SCOPRE – ESEMPI, NON CASISTICA MISURATA',
-         'EACH ARROW RUNS FROM WHERE A PROBLEM STARTS TO WHERE IT IS FOUND – EXAMPLES, NOT MEASURED CASES')
+         'OGNI CUNEO VA DA DOVE IL PROBLEMA NASCE A DOVE SI SCOPRE',
+         'EACH WEDGE RUNS FROM WHERE A PROBLEM STARTS TO WHERE IT IS FOUND')
+o += bil(0, 98, 14, STEEL,
+         'LO SPESSORE CRESCE CON IL COSTO DI RIMEDIARE – SCALA QUALITATIVA, ESEMPI NON MISURATI',
+         'THE WEDGE THICKENS WITH THE COST OF PUTTING IT RIGHT – QUALITATIVE SCALE, NOT MEASURED')
 
 # La fascia sulle prime due fasi e' l'unica area colorata della figura: le
 # strisce alternate di prima le farebbero concorrenza con un secondo grigio
@@ -76,23 +84,27 @@ for i in range(len(PHASES) + 1):
              % (GX0 + i * BW, BAND_TOP, GX0 + i * BW, BAND_BOT, NAVY))
 
 for i, (it, en) in enumerate(PHASES):
-    o += bil(centre(i), 132, 14, NAVY, it.upper(), en.upper(), anchor='middle', extra=' fill-opacity=".72"')
+    o += bil(centre(i), 150, 14, NAVY, it.upper(), en.upper(), anchor='middle', extra=' fill-opacity=".72"')
 
-# una riga per caso: pallino dove nasce, freccia fino a dove si scopre
+# una riga per caso: pallino dove nasce, cuneo fino a dove si scopre.
+# Due dimensioni in un solo segno: la lunghezza e' il ritardo, lo spessore
+# finale e' il costo. Due problemi trovati nella stessa fase costano uguale
+# anche se sono nati in momenti diversi - ed e' giusto che sia cosi'.
 for j, (it, en, a, b) in enumerate(CASES):
     y = TOP + j * RH
     o += bil(LX, y + 5, 15, NAVY, it, en, anchor='end', font=DISP, extra=' fill-opacity=".9"')
     x0, x1 = centre(a), centre(b)
+    xs, t = x0 + 11, COST[b]
     o.append('<circle cx="%.1f" cy="%d" r="6.5" fill="%s"/>' % (x0, y, NAVY))
-    o.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="2" '
-             'stroke-opacity=".55" marker-end="url(#ar)"/>' % (x0 + 11, y, x1 - 6, y, AMBER))
+    o.append('<polygon points="%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f" fill="%s" fill-opacity=".78"/>'
+             % (xs, y - 1.5, x1, y - t / 2, x1, y + t / 2, xs, y + 1.5, AMBER))
 
 # la parentesi sotto la fascia: dice dove i criteri si possono ancora fissare,
 # cioe' dove entra CLEGAR. L'etichetta sta sotto e non dentro, altrimenti la
 # versione italiana sarebbe piu' larga della fascia stessa.
-o.append('<line x1="%.1f" y1="468" x2="%.1f" y2="468" stroke="%s" stroke-width="2" stroke-opacity=".55"/>'
+o.append('<line x1="%.1f" y1="486" x2="%.1f" y2="486" stroke="%s" stroke-width="2" stroke-opacity=".55"/>'
          % (GX0, GX0 + OPEN_PHASES * BW, TEAL))
-o += bil(GX0, 490, 14, TEAL,
+o += bil(GX0, 508, 14, TEAL,
          'QUI I CRITERI SI POSSONO ANCORA FISSARE',
          'THE CRITERIA CAN STILL BE SET HERE')
 o.append('</svg>')
@@ -101,52 +113,47 @@ print('fig_art_origin.svg', len('\n'.join(o)), 'chars')
 
 
 # ═══════════════════════════════════ FIG B — service lines across lifecycle
-# +2 px oltre l'ultima linea della griglia (GX1=1330): sul bordo esatto
-# meta' del tratto cadrebbe fuori dal viewBox e quella linea si vedrebbe
-# piu' chiara delle altre
-W, H = 1332, 560
+# Stessa griglia della prima figura: nello stesso articolo le sei fasi devono
+# cadere negli stessi punti, altrimenti il lettore non riconosce di star
+# guardando due volte la stessa linea temporale. Prima erano due griglie
+# diverse (LX 330 contro 270, GX0 360 contro 310).
+W, H = 1300, 480
 LINES = [
-    ('Marine Geoscience',            'Marine Geoscience',            0, 6, NAVY),
-    ('Project Management',           'Project Management',           0, 6, BLUE),
-    ('Technical Advisory & Assurance','Technical Advisory & Assurance',0, 6, TEAL),
-    ("Owner's Engineering",          "Owner's Engineering",          2, 5, AMBER),
-    ('Operational Excellence',       'Operational Excellence',       4, 6, STEEL),
+    ('Marine Geoscience',            'Marine Geoscience',            0, 6),
+    ('Project Management',           'Project Management',           0, 6),
+    ('Technical Advisory & Assurance','Technical Advisory & Assurance',0, 6),
+    ("Owner's Engineering",          "Owner's Engineering",          2, 5),
+    ('Operational Excellence',       'Operational Excellence',       4, 6),
 ]
-LX = 330
-GX0, GX1 = LX + 30, 1330
-TOP, RH = 168, 62
-BW2 = (GX1 - GX0) / 6
+TOP, RH = 190, 62
+GRID_TOP, GRID_BOT = 104, 456
 
 o = ['<svg viewBox="0 0 %d %d" xmlns="http://www.w3.org/2000/svg" role="img" '
      'aria-label="Coverage of the five CLEGAR service lines across the project lifecycle">' % (W, H)]
 o += bil(0, 52, 18, NAVY,
          'Le cinque linee di servizio lungo il ciclo di progetto',
          'The five service lines across the project lifecycle', font=DISP)
+# il sottotitolo dice il raggruppamento. Prima stava in una frase in fondo
+# alla figura, che ripeteva a parole quello che le barre gia' mostravano.
 o += bil(0, 76, 14, STEEL,
-         'DOVE INTERVIENE CIASCUNA LINEA', 'WHERE EACH LINE APPLIES')
+         'TRE LINEE COPRONO L\u2019INTERO CICLO, DUE INTERVENGONO IN FASI PRECISE',
+         'THREE LINES SPAN THE WHOLE CYCLE, TWO APPLY AT SPECIFIC STAGES')
 
+for i in range(len(PHASES) + 1):
+    o.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-opacity=".09"/>'
+             % (GX0 + i * BW, GRID_TOP, GX0 + i * BW, GRID_BOT, NAVY))
 for i, (it, en) in enumerate(PHASES):
-    x = GX0 + i * BW2
-    o.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-opacity=".1"/>'
-             % (x, 120, x, TOP + len(LINES) * RH - 10, NAVY))
-    o += bil(x + BW2 / 2, 142, 14, NAVY, it.upper(), en.upper(), anchor='middle', extra=' fill-opacity=".7"')
-o.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-opacity=".1"/>'
-         % (GX1, 120, GX1, TOP + len(LINES) * RH - 10, NAVY))
+    o += bil(centre(i), 132, 14, NAVY, it.upper(), en.upper(), anchor='middle', extra=' fill-opacity=".72"')
 
-for j, (it, en, a, b, col) in enumerate(LINES):
+# Due tinte, non cinque: il colore distingue chi copre l'intero ciclo da chi
+# entra in fasi precise. Cinque tinte su cinque righe gia' etichettate erano
+# decorazione, e lasciavano credere che il colore significasse qualcosa.
+for j, (it, en, a, b) in enumerate(LINES):
     y = TOP + j * RH
+    full = (a == 0 and b == len(PHASES))
     o += bil(LX, y + 5, 15, NAVY, it, en, anchor='end', font=DISP, extra=' fill-opacity=".9"')
-    x = GX0 + a * BW2
-    w = (b - a) * BW2
     o.append('<rect x="%.1f" y="%.1f" width="%.1f" height="16" rx="2" fill="%s" fill-opacity=".82"/>'
-             % (x + 4, y - 8, w - 8, col))
-
-o.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-opacity=".18"/>'
-         % (TOP + len(LINES) * RH + 18, GX1, TOP + len(LINES) * RH + 18, NAVY))
-o += bil(0, TOP + len(LINES) * RH + 50, 15, NAVY,
-         'Le prime tre linee coprono l\u2019intero ciclo: i criteri si definiscono prima, si verificano dopo.',
-         'The first three lines span the whole cycle: criteria are set early and verified later.',
-         font=DISP, extra=' fill-opacity=".85"')
+             % (GX0 + a * BW + 4, y - 8, (b - a) * BW - 8, NAVY if full else TEAL))
 o.append('</svg>')
 open('fig_art_lines.svg', 'w', encoding='utf-8').write('\n'.join(o))
 print('fig_art_lines.svg', len('\n'.join(o)), 'chars')

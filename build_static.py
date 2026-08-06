@@ -547,13 +547,15 @@ from articles import ARTICLES, FIG_ORIGIN, FIG_LINES
 
 FIG_SVG = {
     FIG_ORIGIN: ('content/fig_art_origin.svg',
-                 ('Piu’ lunga la freccia, piu’ tardi il problema si scopre e piu’ costa correggerlo. '
-                  'Esempi dimostrativi.',
-                  'The longer the arrow, the later the problem is found and the more it costs to fix. '
-                  'Illustrative examples.')),
+                 ('Il cuneo si allunga con il ritardo e si ingrossa con il costo: '
+                  'lo stesso errore, scoperto due fasi dopo, si paga il doppio. Esempi dimostrativi.',
+                  'The wedge lengthens with the delay and thickens with the cost: '
+                  'the same mistake, found two stages later, costs twice as much. Illustrative examples.')),
     FIG_LINES:  ('content/fig_art_lines.svg',
-                 ('Copertura delle cinque linee di servizio lungo il ciclo di progetto.',
-                  'Coverage of the five service lines across the project lifecycle.')),
+                 ('Chi fissa i criteri all’inizio è lo stesso che ne verifica il rispetto alla fine: '
+                  'è lì che l’indipendenza conta.',
+                  'The people who set the criteria at the start are the ones who verify them at the end: '
+                  'that is where independence counts.')),
 }
 
 

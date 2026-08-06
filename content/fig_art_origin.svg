@@ -1,50 +1,51 @@
-<svg viewBox="0 0 1300 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Examples of offshore project problems, each shown from the phase where it originates to the phase where it is found">
-<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#C9821E"/></marker></defs>
-<text class="it" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">Dove nascono i problemi, dove si scoprono</text>
-<text class="en" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">Where problems start, where they are found</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">OGNI FRECCIA VA DA DOVE IL PROBLEMA NASCE A DOVE SI SCOPRE – ESEMPI, NON CASISTICA MISURATA</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">EACH ARROW RUNS FROM WHERE A PROBLEM STARTS TO WHERE IT IS FOUND – EXAMPLES, NOT MEASURED CASES</text>
-<rect x="310.0" y="104" width="323.3" height="352" fill="#009AA6" fill-opacity=".055"/>
-<line x1="310.0" y1="104" x2="310.0" y2="456" stroke="#0B2545" stroke-opacity=".09"/>
-<line x1="471.7" y1="104" x2="471.7" y2="456" stroke="#0B2545" stroke-opacity=".09"/>
-<line x1="633.3" y1="104" x2="633.3" y2="456" stroke="#0B2545" stroke-opacity=".09"/>
-<line x1="795.0" y1="104" x2="795.0" y2="456" stroke="#0B2545" stroke-opacity=".09"/>
-<line x1="956.7" y1="104" x2="956.7" y2="456" stroke="#0B2545" stroke-opacity=".09"/>
-<line x1="1118.3" y1="104" x2="1118.3" y2="456" stroke="#0B2545" stroke-opacity=".09"/>
-<line x1="1280.0" y1="104" x2="1280.0" y2="456" stroke="#0B2545" stroke-opacity=".09"/>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="390.8" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">SPECIFICA</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="390.8" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">SPECIFICATION</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="552.5" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">GARA</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="552.5" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">TENDER</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="714.2" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">MOBILITAZIONE</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="714.2" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">MOBILISATION</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="875.8" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACQUISIZIONE</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="875.8" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACQUISITION</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1037.5" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">PROCESSING</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1037.5" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">PROCESSING</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1199.2" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACCETTAZIONE</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1199.2" y="132.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACCEPTANCE</text>
-<text class="it" font-family="Archivo, sans-serif" x="270.0" y="195.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Tolleranza non definita</text>
-<text class="en" font-family="Archivo, sans-serif" x="270.0" y="195.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Undefined tolerance</text>
-<circle cx="390.8" cy="190" r="6.5" fill="#0B2545"/>
-<line x1="401.8" y1="190" x2="1193.2" y2="190" stroke="#C9821E" stroke-width="2" stroke-opacity=".55" marker-end="url(#ar)"/>
-<text class="it" font-family="Archivo, sans-serif" x="270.0" y="257.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Criterio di accettazione ambiguo</text>
-<text class="en" font-family="Archivo, sans-serif" x="270.0" y="257.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Ambiguous acceptance criterion</text>
-<circle cx="390.8" cy="252" r="6.5" fill="#0B2545"/>
-<line x1="401.8" y1="252" x2="1031.5" y2="252" stroke="#C9821E" stroke-width="2" stroke-opacity=".55" marker-end="url(#ar)"/>
-<text class="it" font-family="Archivo, sans-serif" x="270.0" y="319.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Downtime meteo fuori programma</text>
-<text class="en" font-family="Archivo, sans-serif" x="270.0" y="319.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Weather downtime off schedule</text>
-<circle cx="552.5" cy="314" r="6.5" fill="#0B2545"/>
-<line x1="563.5" y1="314" x2="869.8" y2="314" stroke="#C9821E" stroke-width="2" stroke-opacity=".55" marker-end="url(#ar)"/>
-<text class="it" font-family="Archivo, sans-serif" x="270.0" y="381.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Calibrazione non testimoniata</text>
-<text class="en" font-family="Archivo, sans-serif" x="270.0" y="381.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Calibration not witnessed</text>
-<circle cx="714.2" cy="376" r="6.5" fill="#0B2545"/>
-<line x1="725.2" y1="376" x2="1031.5" y2="376" stroke="#C9821E" stroke-width="2" stroke-opacity=".55" marker-end="url(#ar)"/>
-<text class="it" font-family="Archivo, sans-serif" x="270.0" y="443.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Posizionamento non pattuito</text>
-<text class="en" font-family="Archivo, sans-serif" x="270.0" y="443.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Positioning not agreed</text>
-<circle cx="552.5" cy="438" r="6.5" fill="#0B2545"/>
-<line x1="563.5" y1="438" x2="708.2" y2="438" stroke="#C9821E" stroke-width="2" stroke-opacity=".55" marker-end="url(#ar)"/>
-<line x1="310.0" y1="468" x2="633.3" y2="468" stroke="#009AA6" stroke-width="2" stroke-opacity=".55"/>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="310.0" y="490.0" font-size="14" fill="#009AA6" text-anchor="start">QUI I CRITERI SI POSSONO ANCORA FISSARE</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="310.0" y="490.0" font-size="14" fill="#009AA6" text-anchor="start">THE CRITERIA CAN STILL BE SET HERE</text>
+<svg viewBox="0 0 1300 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Examples of offshore project problems, each shown from the phase where it originates to the phase where it is found">
+<text class="it" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">Quanto tardi si scopre, quanto costa rimediare</text>
+<text class="en" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">How late it is found, how much it costs to put right</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">OGNI CUNEO VA DA DOVE IL PROBLEMA NASCE A DOVE SI SCOPRE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">EACH WEDGE RUNS FROM WHERE A PROBLEM STARTS TO WHERE IT IS FOUND</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="98.0" font-size="14" fill="#8B9598" text-anchor="start">LO SPESSORE CRESCE CON IL COSTO DI RIMEDIARE – SCALA QUALITATIVA, ESEMPI NON MISURATI</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="98.0" font-size="14" fill="#8B9598" text-anchor="start">THE WEDGE THICKENS WITH THE COST OF PUTTING IT RIGHT – QUALITATIVE SCALE, NOT MEASURED</text>
+<rect x="310.0" y="122" width="323.3" height="352" fill="#009AA6" fill-opacity=".055"/>
+<line x1="310.0" y1="122" x2="310.0" y2="474" stroke="#0B2545" stroke-opacity=".09"/>
+<line x1="471.7" y1="122" x2="471.7" y2="474" stroke="#0B2545" stroke-opacity=".09"/>
+<line x1="633.3" y1="122" x2="633.3" y2="474" stroke="#0B2545" stroke-opacity=".09"/>
+<line x1="795.0" y1="122" x2="795.0" y2="474" stroke="#0B2545" stroke-opacity=".09"/>
+<line x1="956.7" y1="122" x2="956.7" y2="474" stroke="#0B2545" stroke-opacity=".09"/>
+<line x1="1118.3" y1="122" x2="1118.3" y2="474" stroke="#0B2545" stroke-opacity=".09"/>
+<line x1="1280.0" y1="122" x2="1280.0" y2="474" stroke="#0B2545" stroke-opacity=".09"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="390.8" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">SPECIFICA</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="390.8" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">SPECIFICATION</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="552.5" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">GARA</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="552.5" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">TENDER</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="714.2" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">MOBILITAZIONE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="714.2" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">MOBILISATION</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="875.8" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACQUISIZIONE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="875.8" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACQUISITION</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1037.5" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">PROCESSING</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1037.5" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">PROCESSING</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1199.2" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACCETTAZIONE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1199.2" y="150.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACCEPTANCE</text>
+<text class="it" font-family="Archivo, sans-serif" x="270.0" y="213.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Tolleranza non definita</text>
+<text class="en" font-family="Archivo, sans-serif" x="270.0" y="213.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Undefined tolerance</text>
+<circle cx="390.8" cy="208" r="6.5" fill="#0B2545"/>
+<polygon points="401.8,206.5 1199.2,194.5 1199.2,221.5 401.8,209.5" fill="#C9821E" fill-opacity=".78"/>
+<text class="it" font-family="Archivo, sans-serif" x="270.0" y="275.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Criterio di accettazione ambiguo</text>
+<text class="en" font-family="Archivo, sans-serif" x="270.0" y="275.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Ambiguous acceptance criterion</text>
+<circle cx="390.8" cy="270" r="6.5" fill="#0B2545"/>
+<polygon points="401.8,268.5 1037.5,260.0 1037.5,280.0 401.8,271.5" fill="#C9821E" fill-opacity=".78"/>
+<text class="it" font-family="Archivo, sans-serif" x="270.0" y="337.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Downtime meteo fuori programma</text>
+<text class="en" font-family="Archivo, sans-serif" x="270.0" y="337.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Weather downtime off schedule</text>
+<circle cx="552.5" cy="332" r="6.5" fill="#0B2545"/>
+<polygon points="563.5,330.5 875.8,325.0 875.8,339.0 563.5,333.5" fill="#C9821E" fill-opacity=".78"/>
+<text class="it" font-family="Archivo, sans-serif" x="270.0" y="399.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Calibrazione non testimoniata</text>
+<text class="en" font-family="Archivo, sans-serif" x="270.0" y="399.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Calibration not witnessed</text>
+<circle cx="714.2" cy="394" r="6.5" fill="#0B2545"/>
+<polygon points="725.2,392.5 1037.5,384.0 1037.5,404.0 725.2,395.5" fill="#C9821E" fill-opacity=".78"/>
+<text class="it" font-family="Archivo, sans-serif" x="270.0" y="461.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Posizionamento non pattuito</text>
+<text class="en" font-family="Archivo, sans-serif" x="270.0" y="461.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Positioning not agreed</text>
+<circle cx="552.5" cy="456" r="6.5" fill="#0B2545"/>
+<polygon points="563.5,454.5 714.2,451.5 714.2,460.5 563.5,457.5" fill="#C9821E" fill-opacity=".78"/>
+<line x1="310.0" y1="486" x2="633.3" y2="486" stroke="#009AA6" stroke-width="2" stroke-opacity=".55"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="310.0" y="508.0" font-size="14" fill="#009AA6" text-anchor="start">QUI I CRITERI SI POSSONO ANCORA FISSARE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="310.0" y="508.0" font-size="14" fill="#009AA6" text-anchor="start">THE CRITERIA CAN STILL BE SET HERE</text>
 </svg>
