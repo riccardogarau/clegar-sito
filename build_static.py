@@ -206,6 +206,8 @@ PAGES = [
     ('excellence', 'operational-excellence/',   'en/operational-excellence/'),
     ('insights',   'insights/',                 'en/insights/'),
     ('contatti',   'contatti/',                 'en/contact/'),
+    # fuori dal menu: raggiungibile dal footer, il menu resta a 8 voci
+    ('privacy',    'privacy/',                  'en/privacy/'),
 ]
 SLUG = {k: {'it': i, 'en': e} for k, i, e in PAGES}
 
@@ -259,6 +261,11 @@ META = {
           "Contattate CLEGAR per una campagna geofisica da impostare o un dataset da verificare. Rispondiamo entro due giorni lavorativi, in italiano o in inglese."),
    'en': ("Contact | CLEGAR",
           "Get in touch with CLEGAR about a geophysical campaign to set up or a dataset to verify. We reply within two working days, in English or Italian.")},
+ 'privacy': {
+   'it': ("Informativa sulla privacy | CLEGAR",
+          "Quali dati personali raccoglie www.clegar.it, con quale base giuridica, per quanto tempo li conserva e come esercitare i diritti previsti dal GDPR."),
+   'en': ("Privacy notice | CLEGAR",
+          "What personal data www.clegar.it collects, on what legal basis, how long they are kept and how to exercise the rights granted by the GDPR.")},
 }
 
 SERVICE_KEYS = ['geoscience', 'pm', 'advisory', 'owners', 'excellence']
@@ -732,6 +739,7 @@ for key, it_s, en_s in SITEMAP_ENTRIES:
     pr = ('1.0' if key == 'home'
           else '0.7' if key == 'contatti'
           else '0.8' if key == 'article'
+          else '0.3' if key == 'privacy'
           else '0.9')
     for cur in (it_s, en_s):
         x += ['  <url>', f'    <loc>{DOMAIN}/{cur}</loc>',

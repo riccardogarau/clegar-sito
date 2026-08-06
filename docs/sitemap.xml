@@ -146,6 +146,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/privacy/"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/privacy/"/>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/presentazione-clegar/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/presentazione-clegar/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/introducing-clegar/"/>
