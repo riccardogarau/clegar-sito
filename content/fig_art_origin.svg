@@ -1,44 +1,44 @@
-<svg viewBox="0 0 1400 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Where offshore project problems originate compared with where they surface">
+<svg viewBox="0 0 1300 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Where offshore project problems originate compared with where they surface">
 <defs><marker id="fa" viewBox="0 0 9 9" refX="8" refY="4.5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L8,4.5 L0,8 Z" fill="#C9821E" fill-opacity=".55"/></marker></defs>
-<text class="it" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="16" fill="#0B2545" text-anchor="start">Dove nascono i problemi, dove si manifestano</text>
-<text class="en" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="16" fill="#0B2545" text-anchor="start">Where problems originate, where they surface</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="10.5" fill="#8B9598" text-anchor="start">SCHEMA QUALITATIVO — NON SONO DATI MISURATI</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="10.5" fill="#8B9598" text-anchor="start">QUALITATIVE SCHEMATIC — NOT MEASURED DATA</text>
-<rect x="150.0" y="110" width="191.7" height="450" fill="#0B2545" fill-opacity=".025"/>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="245.8" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">SPECIFICA</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="245.8" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">SPECIFICATION</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="437.5" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">GARA</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="437.5" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">TENDER</text>
-<rect x="533.3" y="110" width="191.7" height="450" fill="#0B2545" fill-opacity=".025"/>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="629.2" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">MOBILITAZIONE</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="629.2" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">MOBILISATION</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="820.8" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACQUISIZIONE</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="820.8" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACQUISITION</text>
-<rect x="916.7" y="110" width="191.7" height="450" fill="#0B2545" fill-opacity=".025"/>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1012.5" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">PROCESSING</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1012.5" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">PROCESSING</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1204.2" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACCETTAZIONE</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1204.2" y="132.0" font-size="11" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACCEPTANCE</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="194.0" font-size="11" fill="#0B2545" text-anchor="start">ORIGINE DEL PROBLEMA</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="194.0" font-size="11" fill="#0B2545" text-anchor="start">WHERE IT ORIGINATES</text>
-<circle cx="245.8" cy="190" r="66.4" fill="#0B2545" fill-opacity="0.64"/>
-<circle cx="437.5" cy="190" r="40.0" fill="#0B2545" fill-opacity="0.40"/>
-<circle cx="629.2" cy="190" r="32.8" fill="#0B2545" fill-opacity="0.33"/>
-<circle cx="820.8" cy="190" r="28.0" fill="#0B2545" fill-opacity="0.29"/>
-<circle cx="1012.5" cy="190" r="25.6" fill="#0B2545" fill-opacity="0.27"/>
-<circle cx="1204.2" cy="190" r="23.2" fill="#0B2545" fill-opacity="0.25"/>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="434.0" font-size="11" fill="#0B2545" text-anchor="start">DOVE DIVENTA VISIBILE</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="434.0" font-size="11" fill="#0B2545" text-anchor="start">WHERE IT BECOMES VISIBLE</text>
-<circle cx="245.8" cy="430" r="18.4" fill="#C9821E" fill-opacity="0.20"/>
-<circle cx="437.5" cy="430" r="20.8" fill="#C9821E" fill-opacity="0.22"/>
-<circle cx="629.2" cy="430" r="25.6" fill="#C9821E" fill-opacity="0.27"/>
-<circle cx="820.8" cy="430" r="35.2" fill="#C9821E" fill-opacity="0.36"/>
-<circle cx="1012.5" cy="430" r="49.6" fill="#C9821E" fill-opacity="0.49"/>
-<circle cx="1204.2" cy="430" r="66.4" fill="#C9821E" fill-opacity="0.64"/>
-<path d="M245.8,252 C505.8,380 904.2,320 1200.2,370" fill="none" stroke="#C9821E" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#fa)"/>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="725.0" y="286.0" font-size="11.5" fill="#C9821E" text-anchor="middle">IL COSTO DELLA CORREZIONE CRESCE LUNGO QUESTO PERCORSO</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="725.0" y="286.0" font-size="11.5" fill="#C9821E" text-anchor="middle">THE COST OF FIXING IT GROWS ALONG THIS PATH</text>
+<text class="it" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">Dove nascono i problemi, dove si manifestano</text>
+<text class="en" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">Where problems originate, where they surface</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">SCHEMA QUALITATIVO – NON SONO DATI MISURATI</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">QUALITATIVE SCHEMATIC – NOT MEASURED DATA</text>
+<rect x="260.0" y="110" width="173.3" height="450" fill="#0B2545" fill-opacity=".025"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="346.7" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">SPECIFICA</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="346.7" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">SPECIFICATION</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="520.0" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">GARA</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="520.0" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">TENDER</text>
+<rect x="606.7" y="110" width="173.3" height="450" fill="#0B2545" fill-opacity=".025"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="693.3" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">MOBILITAZIONE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="693.3" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">MOBILISATION</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="866.7" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACQUISIZIONE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="866.7" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACQUISITION</text>
+<rect x="953.3" y="110" width="173.3" height="450" fill="#0B2545" fill-opacity=".025"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1040.0" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">PROCESSING</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1040.0" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">PROCESSING</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1213.3" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACCETTAZIONE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1213.3" y="132.0" font-size="15" fill="#0B2545" text-anchor="middle" fill-opacity=".72">ACCEPTANCE</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="194.0" font-size="15" fill="#0B2545" text-anchor="start">ORIGINE DEL PROBLEMA</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="194.0" font-size="15" fill="#0B2545" text-anchor="start">WHERE IT ORIGINATES</text>
+<circle cx="346.7" cy="190" r="66.4" fill="#0B2545" fill-opacity="0.64"/>
+<circle cx="520.0" cy="190" r="40.0" fill="#0B2545" fill-opacity="0.40"/>
+<circle cx="693.3" cy="190" r="32.8" fill="#0B2545" fill-opacity="0.33"/>
+<circle cx="866.7" cy="190" r="28.0" fill="#0B2545" fill-opacity="0.29"/>
+<circle cx="1040.0" cy="190" r="25.6" fill="#0B2545" fill-opacity="0.27"/>
+<circle cx="1213.3" cy="190" r="23.2" fill="#0B2545" fill-opacity="0.25"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="434.0" font-size="15" fill="#0B2545" text-anchor="start">DOVE DIVENTA VISIBILE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="434.0" font-size="15" fill="#0B2545" text-anchor="start">WHERE IT BECOMES VISIBLE</text>
+<circle cx="346.7" cy="430" r="18.4" fill="#C9821E" fill-opacity="0.20"/>
+<circle cx="520.0" cy="430" r="20.8" fill="#C9821E" fill-opacity="0.22"/>
+<circle cx="693.3" cy="430" r="25.6" fill="#C9821E" fill-opacity="0.27"/>
+<circle cx="866.7" cy="430" r="35.2" fill="#C9821E" fill-opacity="0.36"/>
+<circle cx="1040.0" cy="430" r="49.6" fill="#C9821E" fill-opacity="0.49"/>
+<circle cx="1213.3" cy="430" r="66.4" fill="#C9821E" fill-opacity="0.64"/>
+<path d="M346.7,252 C606.7,380 913.3,320 1209.3,370" fill="none" stroke="#C9821E" stroke-width="1.6" stroke-dasharray="7 5" marker-end="url(#fa)"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="780.0" y="286.0" font-size="15" fill="#C9821E" text-anchor="middle">IL COSTO DELLA CORREZIONE CRESCE LUNGO QUESTO PERCORSO</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="780.0" y="286.0" font-size="15" fill="#C9821E" text-anchor="middle">THE COST OF FIXING IT GROWS ALONG THIS PATH</text>
 <line x1="0" y1="526" x2="1300" y2="526" stroke="#0B2545" stroke-opacity=".18"/>
-<text class="it" font-family="Archivo, sans-serif" x="0.0" y="558.0" font-size="13.5" fill="#0B2545" text-anchor="start" fill-opacity=".85">Una tolleranza non definita in specifica diventa una discussione contrattuale in accettazione.</text>
-<text class="en" font-family="Archivo, sans-serif" x="0.0" y="558.0" font-size="13.5" fill="#0B2545" text-anchor="start" fill-opacity=".85">A tolerance left undefined in the specification becomes a contractual argument at acceptance.</text>
+<text class="it" font-family="Archivo, sans-serif" x="0.0" y="558.0" font-size="15" fill="#0B2545" text-anchor="start" fill-opacity=".85">Una tolleranza non definita in specifica diventa una discussione contrattuale in accettazione.</text>
+<text class="en" font-family="Archivo, sans-serif" x="0.0" y="558.0" font-size="15" fill="#0B2545" text-anchor="start" fill-opacity=".85">A tolerance left undefined in the specification becomes a contractual argument at acceptance.</text>
 </svg>

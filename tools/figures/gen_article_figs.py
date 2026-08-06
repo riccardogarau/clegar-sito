@@ -15,7 +15,7 @@ def bil(x, y, size, fill, it, en, anchor='start', font=MONO, extra=''):
 
 
 # ═══════════════════════════════════ FIG A — origin vs surfacing of problems
-W, H = 1400, 620
+W, H = 1300, 620
 PHASES = [
     ('Specifica',      'Specification'),
     ('Gara',           'Tender'),
@@ -24,7 +24,7 @@ PHASES = [
     ('Processing',     'Processing'),
     ('Accettazione',   'Acceptance'),
 ]
-X0, X1 = 150, 1300
+X0, X1 = 260, 1300
 ROW_A, ROW_B = 190, 430          # origin row, surfacing row
 BW = (X1 - X0) / len(PHASES)
 
@@ -37,12 +37,12 @@ o = ['<svg viewBox="0 0 %d %d" xmlns="http://www.w3.org/2000/svg" role="img" '
 o.append('<defs><marker id="fa" viewBox="0 0 9 9" refX="8" refY="4.5" markerWidth="7" markerHeight="7" '
          'orient="auto"><path d="M0,1 L8,4.5 L0,8 Z" fill="%s" fill-opacity=".55"/></marker></defs>' % AMBER)
 
-o += bil(0, 52, 16, NAVY,
+o += bil(0, 52, 18, NAVY,
          'Dove nascono i problemi, dove si manifestano',
          'Where problems originate, where they surface', font=DISP)
-o += bil(0, 76, 10.5, STEEL,
-         'SCHEMA QUALITATIVO — NON SONO DATI MISURATI',
-         'QUALITATIVE SCHEMATIC — NOT MEASURED DATA')
+o += bil(0, 76, 14, STEEL,
+         'SCHEMA QUALITATIVO – NON SONO DATI MISURATI',
+         'QUALITATIVE SCHEMATIC – NOT MEASURED DATA')
 
 # phase columns
 for i, (it, en) in enumerate(PHASES):
@@ -50,10 +50,10 @@ for i, (it, en) in enumerate(PHASES):
     if i % 2 == 0:
         o.append('<rect x="%.1f" y="110" width="%.1f" height="%d" fill="%s" fill-opacity=".025"/>'
                  % (x, BW, ROW_B + 130 - 110, NAVY))
-    o += bil(x + BW / 2, 132, 11, NAVY, it.upper(), en.upper(), anchor='middle', extra=' fill-opacity=".72"')
+    o += bil(x + BW / 2, 132, 15, NAVY, it.upper(), en.upper(), anchor='middle', extra=' fill-opacity=".72"')
 
 # row A — origin
-o += bil(0, ROW_A + 4, 11, NAVY, 'ORIGINE DEL PROBLEMA', 'WHERE IT ORIGINATES')
+o += bil(0, ROW_A + 4, 15, NAVY, 'ORIGINE DEL PROBLEMA', 'WHERE IT ORIGINATES')
 for i, v in enumerate(ORIGIN):
     x = X0 + i * BW + BW / 2
     r = 16 + v * 120
@@ -61,7 +61,7 @@ for i, v in enumerate(ORIGIN):
              % (x, ROW_A, r, NAVY, 0.18 + v * 1.1))
 
 # row B — surfacing
-o += bil(0, ROW_B + 4, 11, NAVY, 'DOVE DIVENTA VISIBILE', 'WHERE IT BECOMES VISIBLE')
+o += bil(0, ROW_B + 4, 15, NAVY, 'DOVE DIVENTA VISIBILE', 'WHERE IT BECOMES VISIBLE')
 for i, v in enumerate(SURFACE):
     x = X0 + i * BW + BW / 2
     r = 16 + v * 120
@@ -74,14 +74,14 @@ ex = X0 + 5 * BW + BW / 2
 o.append('<path d="M%.1f,%d C%.1f,%d %.1f,%d %.1f,%d" fill="none" stroke="%s" stroke-width="1.6" '
          'stroke-dasharray="7 5" marker-end="url(#fa)"/>'
          % (sx, ROW_A + 62, sx + 260, ROW_A + 190, ex - 300, ROW_B - 110, ex - 4, ROW_B - 60, AMBER))
-o += bil((sx + ex) / 2, ROW_A + 96, 11.5, AMBER,
+o += bil((sx + ex) / 2, ROW_A + 96, 15, AMBER,
          'IL COSTO DELLA CORREZIONE CRESCE LUNGO QUESTO PERCORSO',
          'THE COST OF FIXING IT GROWS ALONG THIS PATH', anchor='middle')
 
 # closing note
 o.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-opacity=".18"/>'
          % (0, ROW_B + 96, X1, ROW_B + 96, NAVY))
-o += bil(0, ROW_B + 128, 13.5, NAVY,
+o += bil(0, ROW_B + 128, 15, NAVY,
          'Una tolleranza non definita in specifica diventa una discussione contrattuale in accettazione.',
          'A tolerance left undefined in the specification becomes a contractual argument at acceptance.',
          font=DISP, extra=' fill-opacity=".85"')
@@ -91,7 +91,7 @@ print('fig_art_origin.svg', len('\n'.join(o)), 'chars')
 
 
 # ═══════════════════════════════════ FIG B — service lines across lifecycle
-W, H = 1400, 560
+W, H = 1330, 560
 LINES = [
     ('Marine Geoscience',            'Marine Geoscience',            0, 6, NAVY),
     ('Project Management',           'Project Management',           0, 6, BLUE),
@@ -106,23 +106,23 @@ BW2 = (GX1 - GX0) / 6
 
 o = ['<svg viewBox="0 0 %d %d" xmlns="http://www.w3.org/2000/svg" role="img" '
      'aria-label="Coverage of the five CLEGAR service lines across the project lifecycle">' % (W, H)]
-o += bil(0, 52, 16, NAVY,
+o += bil(0, 52, 18, NAVY,
          'Le cinque linee di servizio lungo il ciclo di progetto',
          'The five service lines across the project lifecycle', font=DISP)
-o += bil(0, 76, 10.5, STEEL,
+o += bil(0, 76, 14, STEEL,
          'DOVE INTERVIENE CIASCUNA LINEA', 'WHERE EACH LINE APPLIES')
 
 for i, (it, en) in enumerate(PHASES):
     x = GX0 + i * BW2
     o.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-opacity=".1"/>'
              % (x, 120, x, TOP + len(LINES) * RH - 10, NAVY))
-    o += bil(x + BW2 / 2, 142, 10.5, NAVY, it.upper(), en.upper(), anchor='middle', extra=' fill-opacity=".7"')
+    o += bil(x + BW2 / 2, 142, 14, NAVY, it.upper(), en.upper(), anchor='middle', extra=' fill-opacity=".7"')
 o.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-opacity=".1"/>'
          % (GX1, 120, GX1, TOP + len(LINES) * RH - 10, NAVY))
 
 for j, (it, en, a, b, col) in enumerate(LINES):
     y = TOP + j * RH
-    o += bil(LX, y + 5, 13.5, NAVY, it, en, anchor='end', font=DISP, extra=' fill-opacity=".9"')
+    o += bil(LX, y + 5, 15, NAVY, it, en, anchor='end', font=DISP, extra=' fill-opacity=".9"')
     x = GX0 + a * BW2
     w = (b - a) * BW2
     o.append('<rect x="%.1f" y="%.1f" width="%.1f" height="16" rx="2" fill="%s" fill-opacity=".82"/>'
@@ -130,7 +130,7 @@ for j, (it, en, a, b, col) in enumerate(LINES):
 
 o.append('<line x1="0" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-opacity=".18"/>'
          % (TOP + len(LINES) * RH + 18, GX1, TOP + len(LINES) * RH + 18, NAVY))
-o += bil(0, TOP + len(LINES) * RH + 50, 13.5, NAVY,
+o += bil(0, TOP + len(LINES) * RH + 50, 15, NAVY,
          'Le prime tre linee coprono l\u2019intero ciclo: i criteri si definiscono prima, si verificano dopo.',
          'The first three lines span the whole cycle: criteria are set early and verified later.',
          font=DISP, extra=' fill-opacity=".85"')
