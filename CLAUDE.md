@@ -127,8 +127,22 @@ riapre un problema già risolto.
 ### Testo
 - I trattini fra parole sono en dash (–), non em dash (—). I trattini
   interni alle parole composte (`close-out`, `meteo-marini`) restano
-  trattini semplici.
+  trattini semplici. Fa eccezione il trattino che separa marchio e
+  descrizione — titolo delle pagine, `alt` del logo, oggetto delle email
+  — che resta em dash: lì non separa parole di una frase.
 - Registro impersonale, "voi" professionale, mai il "tu".
+
+### Pubblicazione
+- GitHub Pages pubblica `docs/` del branch `main`. **Un solo `CNAME` nel
+  repo**, quello che `build_static.py` scrive in `docs/`: quando ce n'era
+  anche uno nella radice, la build di Pages falliva senza dire perché.
+- **Un trigger alla volta.** Ogni push, ogni cambio di impostazione e ogni
+  ricostruzione forzata avvia un deploy che *annulla quello in corso*. Il
+  log riporta allora "Deployment cancelled", che sembra un errore del sito
+  e non lo è. Si pusha una volta sola e si aspetta che finisca.
+- Se una build fallisce davvero, la diagnosi non sta nell'API di Pages —
+  che risponde solo "Page build failed" — ma nei log del workflow:
+  `gh run list` e `gh run view <id> --log-failed`.
 
 ---
 
