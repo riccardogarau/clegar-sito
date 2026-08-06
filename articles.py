@@ -36,11 +36,11 @@ ARTICLES = [
         },
         'body': {
             'en': """
-<p class="lede">CLEGAR is an independent consultancy for marine and offshore projects. We plan geophysical surveys, verify the data they produce, and represent the client where the decisions that matter are actually made — on board, on the quayside, and across the contract table.</p>
+<p class="lede">CLEGAR is an independent consultancy for marine and offshore projects. We plan geophysical surveys, verify the data they produce, and represent the client where the decisions that matter are actually made – on board, on the quayside, and across the contract table.</p>
 
 <h2>Why CLEGAR exists</h2>
 
-<p>Most problems on an offshore project don't start offshore. They start weeks earlier, in a specification — with a tolerance nobody defined precisely, or an acceptance criterion the client and the contractor each read differently.</p>
+<p>Most problems on an offshore project don't start offshore. They start weeks earlier, in a specification – with a tolerance nobody defined precisely, or an acceptance criterion the client and the contractor each read differently.</p>
 
 <p>By the time the data comes back and someone has to decide whether it's good enough, the argument has no fixed reference point. It gets settled by whoever is more persuasive in the room, not by what the deliverable actually shows against what was agreed.</p>
 
@@ -52,7 +52,7 @@ ARTICLES = [
 
 <p>We don't sell survey equipment. We don't acquire data ourselves. We hold no stake in the supply chain we're asked to assess.</p>
 
-<p>This is a narrow, specific kind of independence — not a marketing claim, but a structural one: nothing in how CLEGAR is paid depends on which contractor, which vessel, or which technology a client ends up choosing.</p>
+<p>This is a narrow, specific kind of independence – not a marketing claim, but a structural one: nothing in how CLEGAR is paid depends on which contractor, which vessel, or which technology a client ends up choosing.</p>
 
 <h2>Five service lines</h2>
 
@@ -68,11 +68,11 @@ ARTICLES = [
 
 <h2>Who we work with</h2>
 
-<p>Offshore wind developers, marine contractors, and asset owners who need a technical partner that reduces risk and improves decision-making at each stage of a project — from the first specification to the final acceptance.</p>
+<p>Offshore wind developers, marine contractors, and asset owners who need a technical partner that reduces risk and improves decision-making at each stage of a project – from the first specification to the final acceptance.</p>
 
 <h2>What comes next</h2>
 
-<p>This is the first of a series of technical articles CLEGAR will publish covering real cases from marine geoscience, project management, and offshore operations — the kind of worked examples that show how a tolerance, a schedule, or a mobilisation record actually gets checked in practice, not just described in general terms.</p>
+<p>This is the first of a series of technical articles CLEGAR will publish covering real cases from marine geoscience, project management, and offshore operations – the kind of worked examples that show how a tolerance, a schedule, or a mobilisation record actually gets checked in practice, not just described in general terms.</p>
 
 <div class="callout">
   <p>If you're planning a survey, reviewing a dataset you're not sure you should accept, or setting up a specification for an upcoming campaign, that conversation is free.</p>
