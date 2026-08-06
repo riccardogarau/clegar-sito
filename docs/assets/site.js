@@ -181,6 +181,13 @@
     });
   })();
 
+  /* Il modulo contatti esiste su una pagina sola, quindi la sua
+     inizializzazione si interrompe subito altrove. Quel "return" deve
+     uscire da QUESTA funzione e non da quella esterna: prima non era
+     cosi', e su ogni pagina senza modulo tutto il codice successivo
+     restava non eseguito. Chi aggiunge codice in fondo al file lo
+     scopriva solo provandolo in pagina. */
+  (function () {
   var send = document.getElementById('f-send');
   if (!send) return;
   var statusEl = document.getElementById('f-status');
@@ -230,4 +237,69 @@
       .catch(function () { say(MSG.failed[lang], '#C9821E'); })
       .then(function () { send.disabled = false; });
   });
+  })();
+
+
+  /* ============================================================
+     Condivisione degli articoli.
+     LinkedIn ed Email sono link normali: funzionano anche senza JS e
+     non caricano niente da terzi. Il widget ufficiale di LinkedIn
+     porterebbe con se' un SDK che traccia il visitatore prima del
+     consenso, cosa che l'informativa esclude.
+     Il terzo pulsante apre il pannello di condivisione del sistema
+     dove esiste (mobile), altrimenti copia il link negli appunti.
+     ============================================================ */
+  (function () {
+    var btns = document.querySelectorAll('[data-share-url]');
+    if (!btns.length) return;
+
+    var SH = {
+      native: { it: 'Condividi', en: 'Share' },
+      copied: { it: 'Link copiato', en: 'Link copied' },
+      failed: { it: 'Copia non riuscita', en: 'Could not copy' }
+    };
+    var hasNative = (typeof navigator.share === 'function');
+
+    Array.prototype.forEach.call(btns, function (b) {
+      var idle = b.textContent;
+      if (hasNative) { idle = SH.native[lang]; b.textContent = idle; }
+
+      function flash(msg, ok) {
+        b.textContent = msg;
+        if (ok) b.setAttribute('data-copied', '1');
+        setTimeout(function () {
+          b.textContent = idle;
+          b.removeAttribute('data-copied');
+        }, 2400);
+      }
+
+      b.addEventListener('click', function () {
+        var url = b.getAttribute('data-share-url');
+        var title = b.getAttribute('data-share-title') || document.title;
+
+        if (hasNative) {
+          /* l'utente che chiude il pannello non e' un errore: niente messaggio */
+          navigator.share({ title: title, url: url }).catch(function () {});
+          return;
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url).then(
+            function () { flash(SH.copied[lang], true); },
+            function () { flash(SH.failed[lang], false); });
+          return;
+        }
+        /* browser senza clipboard API: campo temporaneo fuori schermo */
+        var t = document.createElement('input');
+        t.value = url;
+        t.setAttribute('aria-hidden', 'true');
+        t.style.cssText = 'position:fixed;top:-100px;opacity:0';
+        document.body.appendChild(t);
+        t.select();
+        var ok = false;
+        try { ok = document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(t);
+        flash(ok ? SH.copied[lang] : SH.failed[lang], ok);
+      });
+    });
+  })();
 })();

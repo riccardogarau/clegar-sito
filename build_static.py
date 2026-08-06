@@ -1,4 +1,5 @@
 import os, re, json, base64, shutil
+from urllib.parse import quote
 from lxml import html as LH, etree
 
 SRC   = 'content/site2.html'
@@ -186,6 +187,25 @@ css += """
 .art-back:hover{color:var(--teal)}
 .article-wide{max-width:none}
 .article-wide .svc-fig{max-width:none}
+
+/* ---------- condivisione in fondo all'articolo ---------- */
+.share{
+  display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;max-width:44rem;
+  margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);
+}
+.share-label{
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--steel);margin-right:.35rem;
+}
+.share-btn{
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;background:none;cursor:pointer;
+  border:1px solid var(--line);padding:0 .95rem;min-height:44px;
+  display:inline-flex;align-items:center;transition:border-color .2s,color .2s;
+}
+.share-btn:hover,.share-btn:focus-visible{border-color:var(--teal);color:var(--teal)}
+.share-btn[data-copied]{border-color:var(--teal);color:var(--teal)}
+.share .art-back{margin-top:0}
 """ + MOBILE_CSS
 open(f'{OUT}/assets/style.css', 'w', encoding='utf-8').write(css)
 
@@ -610,6 +630,24 @@ def build_article(art, lang):
         '<div class="art-meta"><time datetime="' + art['date'] + '">'
         + month_name(art['date'], lang) + '</time><span>Insights</span></div>')
 
+    # Condivisione: link normali, nessuno script di terze parti. Il widget
+    # ufficiale di LinkedIn carica un SDK che traccia il visitatore prima del
+    # consenso, che l'informativa esclude. Un link non traccia nessuno finche'
+    # non viene cliccato.
+    url = DOMAIN + '/' + slug
+    attr = lambda s: s.replace('&', '&amp;').replace('"', '&quot;')
+    lab = {'it': ('Condividi', 'Copia link'), 'en': ('Share', 'Copy link')}[lang]
+    share = (
+        '<div class="share">'
+        '<span class="share-label">' + lab[0] + '</span>'
+        '<a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url='
+        + quote(url, safe='') + '" target="_blank" rel="noopener">LinkedIn</a>'
+        '<a class="share-btn" href="mailto:?subject=' + quote(art['title'][lang], safe='')
+        + '&amp;body=' + quote(art['title'][lang] + '\n' + url, safe='') + '">Email</a>'
+        '<button class="share-btn" type="button" data-share-url="' + attr(url)
+        + '" data-share-title="' + attr(art['title'][lang]) + '">' + lab[1] + '</button>'
+        '</div>')
+
     body = ('<section class="page">\n'
             '  <div class="svc-hero"><div class="wrap">\n'
             + head_block
@@ -617,6 +655,7 @@ def build_article(art, lang):
             '  </div></div>\n'
             '  <div class="band band-white band-pad"><div class="wrap">\n'
             '    <div class="article">' + body_html + '</div>\n'
+            '    ' + share + '\n'
             '    <a class="art-back" href="' + root + SLUG['insights'][lang] + '">&larr; ' + back + '</a>\n'
             '  </div></div>\n'
             '</section>')
