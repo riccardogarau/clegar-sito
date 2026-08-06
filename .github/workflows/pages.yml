@@ -1,0 +1,43 @@
+name: Pubblica il sito
+
+# Sostituisce la pubblicazione automatica di GitHub, che non e' un file di
+# questo repo e quindi non si puo' configurare. Serve per due difetti visti
+# il 6 agosto 2026: deploy che si annullavano a vicenda, e un deploy fermo in
+# coda che ha superato il timeout di dieci minuti del passo di pubblicazione.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un deploy alla volta, senza annullare quello in corso: annullandolo si
+# ottiene un "Deployment cancelled" che sembra un guasto del sito e non lo e'.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      # docs/ e' gia' compilato e committato: non serve nessun passo di build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          # il valore predefinito e' 600000 (dieci minuti), troppo poco quando
+          # la coda di GitHub e' lenta: e' cosi' che il deploy e' fallito
+          timeout: 1800000
