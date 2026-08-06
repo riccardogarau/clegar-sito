@@ -91,7 +91,10 @@ print('fig_art_origin.svg', len('\n'.join(o)), 'chars')
 
 
 # ═══════════════════════════════════ FIG B — service lines across lifecycle
-W, H = 1330, 560
+# +2 px oltre l'ultima linea della griglia (GX1=1330): sul bordo esatto
+# meta' del tratto cadrebbe fuori dal viewBox e quella linea si vedrebbe
+# piu' chiara delle altre
+W, H = 1332, 560
 LINES = [
     ('Marine Geoscience',            'Marine Geoscience',            0, 6, NAVY),
     ('Project Management',           'Project Management',           0, 6, BLUE),
