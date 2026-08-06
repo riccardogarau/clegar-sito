@@ -547,8 +547,10 @@ from articles import ARTICLES, FIG_ORIGIN, FIG_LINES
 
 FIG_SVG = {
     FIG_ORIGIN: ('content/fig_art_origin.svg',
-                 ('Schema qualitativo: i problemi nascono in specifica e diventano visibili in accettazione.',
-                  'Qualitative schematic: problems originate in the specification and surface at acceptance.')),
+                 ('Piu’ lunga la freccia, piu’ tardi il problema si scopre e piu’ costa correggerlo. '
+                  'Esempi dimostrativi.',
+                  'The longer the arrow, the later the problem is found and the more it costs to fix. '
+                  'Illustrative examples.')),
     FIG_LINES:  ('content/fig_art_lines.svg',
                  ('Copertura delle cinque linee di servizio lungo il ciclo di progetto.',
                   'Coverage of the five service lines across the project lifecycle.')),

@@ -15,7 +15,7 @@ def bil(x, y, size, fill, it, en, anchor='start', font=MONO, extra=''):
 
 
 # ═══════════════════════════════════ FIG A — origin vs surfacing of problems
-W, H = 1300, 620
+W, H = 1300, 520
 PHASES = [
     ('Specifica',      'Specification'),
     ('Gara',           'Tender'),
@@ -24,67 +24,77 @@ PHASES = [
     ('Processing',     'Processing'),
     ('Accettazione',   'Acceptance'),
 ]
-X0, X1 = 260, 1300
-ROW_A, ROW_B = 190, 430          # origin row, surfacing row
-BW = (X1 - X0) / len(PHASES)
+# Non una distribuzione: casi nominati. Due istogrammi di numeri inventati
+# dicono soltanto "questa serie pende a sinistra, quest'altra a destra", e
+# non mostrano ne' il legame fra un problema e la sua scoperta, ne' il
+# ritardo che li separa - che e' il punto dell'articolo. Qui ogni riga e' un
+# problema solo: parte da dove nasce e finisce dove si scopre, e la
+# lunghezza della freccia E' il ritardo.
+LX = 270                         # le etichette finiscono qui
+GX0, GX1 = 310, 1280             # la linea temporale occupa il resto
+BW = (GX1 - GX0) / len(PHASES)
+TOP, RH = 190, 62                # prima riga e passo verticale
+BAND_TOP, BAND_BOT = 104, 456
+OPEN_PHASES = 2                  # specifica e gara: qui i criteri sono ancora modificabili
 
-# qualitative weight of where issues originate / where they become visible
-ORIGIN  = [0.42, 0.20, 0.14, 0.10, 0.08, 0.06]
-SURFACE = [0.02, 0.04, 0.08, 0.16, 0.28, 0.42]
+# origine e scoperta di ciascun caso, come indici di PHASES.
+# Sono esempi tratti dal testo dell'articolo, non una casistica misurata:
+# per questo la didascalia lo dichiara.
+CASES = [
+    ('Tolleranza non definita',          'Undefined tolerance',            0, 5),
+    ('Criterio di accettazione ambiguo', 'Ambiguous acceptance criterion', 0, 4),
+    ('Downtime meteo fuori programma',   'Weather downtime off schedule',  1, 3),
+    ('Calibrazione non testimoniata',    'Calibration not witnessed',      2, 4),
+    ('Posizionamento non pattuito',      'Positioning not agreed',         1, 2),
+]
+
+centre = lambda i: GX0 + i * BW + BW / 2
 
 o = ['<svg viewBox="0 0 %d %d" xmlns="http://www.w3.org/2000/svg" role="img" '
-     'aria-label="Where offshore project problems originate compared with where they surface">' % (W, H)]
-o.append('<defs><marker id="fa" viewBox="0 0 9 9" refX="8" refY="4.5" markerWidth="7" markerHeight="7" '
-         'orient="auto"><path d="M0,1 L8,4.5 L0,8 Z" fill="%s" fill-opacity=".55"/></marker></defs>' % AMBER)
+     'aria-label="Examples of offshore project problems, each shown from the phase where it '
+     'originates to the phase where it is found">' % (W, H)]
+o.append('<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" '
+         'orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="%s"/></marker></defs>' % AMBER)
 
 o += bil(0, 52, 18, NAVY,
-         'Dove nascono i problemi, dove si manifestano',
-         'Where problems originate, where they surface', font=DISP)
+         'Dove nascono i problemi, dove si scoprono',
+         'Where problems start, where they are found', font=DISP)
+# il sottotitolo spiega come si legge la figura e dichiara che sono esempi:
+# viaggia con l'immagine anche quando si apre a schermo intero
 o += bil(0, 76, 14, STEEL,
-         'SCHEMA QUALITATIVO – NON SONO DATI MISURATI',
-         'QUALITATIVE SCHEMATIC – NOT MEASURED DATA')
+         'OGNI FRECCIA VA DA DOVE IL PROBLEMA NASCE A DOVE SI SCOPRE – ESEMPI, NON CASISTICA MISURATA',
+         'EACH ARROW RUNS FROM WHERE A PROBLEM STARTS TO WHERE IT IS FOUND – EXAMPLES, NOT MEASURED CASES')
 
-# phase columns
+# La fascia sulle prime due fasi e' l'unica area colorata della figura: le
+# strisce alternate di prima le farebbero concorrenza con un secondo grigio
+# che non significa niente. Al loro posto, linee sottili ai bordi di colonna,
+# che servono a mappare la punta della freccia sulla sua fase.
+o.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s" fill-opacity=".055"/>'
+         % (GX0, BAND_TOP, OPEN_PHASES * BW, BAND_BOT - BAND_TOP, TEAL))
+for i in range(len(PHASES) + 1):
+    o.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-opacity=".09"/>'
+             % (GX0 + i * BW, BAND_TOP, GX0 + i * BW, BAND_BOT, NAVY))
+
 for i, (it, en) in enumerate(PHASES):
-    x = X0 + i * BW
-    if i % 2 == 0:
-        o.append('<rect x="%.1f" y="110" width="%.1f" height="%d" fill="%s" fill-opacity=".025"/>'
-                 % (x, BW, ROW_B + 130 - 110, NAVY))
-    o += bil(x + BW / 2, 132, 15, NAVY, it.upper(), en.upper(), anchor='middle', extra=' fill-opacity=".72"')
+    o += bil(centre(i), 132, 14, NAVY, it.upper(), en.upper(), anchor='middle', extra=' fill-opacity=".72"')
 
-# row A — origin
-o += bil(0, ROW_A + 4, 15, NAVY, 'ORIGINE DEL PROBLEMA', 'WHERE IT ORIGINATES')
-for i, v in enumerate(ORIGIN):
-    x = X0 + i * BW + BW / 2
-    r = 16 + v * 120
-    o.append('<circle cx="%.1f" cy="%d" r="%.1f" fill="%s" fill-opacity="%.2f"/>'
-             % (x, ROW_A, r, NAVY, 0.18 + v * 1.1))
+# una riga per caso: pallino dove nasce, freccia fino a dove si scopre
+for j, (it, en, a, b) in enumerate(CASES):
+    y = TOP + j * RH
+    o += bil(LX, y + 5, 15, NAVY, it, en, anchor='end', font=DISP, extra=' fill-opacity=".9"')
+    x0, x1 = centre(a), centre(b)
+    o.append('<circle cx="%.1f" cy="%d" r="6.5" fill="%s"/>' % (x0, y, NAVY))
+    o.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-width="2" '
+             'stroke-opacity=".55" marker-end="url(#ar)"/>' % (x0 + 11, y, x1 - 6, y, AMBER))
 
-# row B — surfacing
-o += bil(0, ROW_B + 4, 15, NAVY, 'DOVE DIVENTA VISIBILE', 'WHERE IT BECOMES VISIBLE')
-for i, v in enumerate(SURFACE):
-    x = X0 + i * BW + BW / 2
-    r = 16 + v * 120
-    o.append('<circle cx="%.1f" cy="%d" r="%.1f" fill="%s" fill-opacity="%.2f"/>'
-             % (x, ROW_B, r, AMBER, 0.18 + v * 1.1))
-
-# the lag: specification -> acceptance
-sx = X0 + 0 * BW + BW / 2
-ex = X0 + 5 * BW + BW / 2
-o.append('<path d="M%.1f,%d C%.1f,%d %.1f,%d %.1f,%d" fill="none" stroke="%s" stroke-width="1.6" '
-         'stroke-dasharray="7 5" marker-end="url(#fa)"/>'
-         % (sx, ROW_A + 62, sx + 260, ROW_A + 190, ex - 300, ROW_B - 110, ex - 4, ROW_B - 60, AMBER))
-o += bil((sx + ex) / 2, ROW_A + 96, 15, AMBER,
-         'IL COSTO DELLA CORREZIONE CRESCE LUNGO QUESTO PERCORSO',
-         'THE COST OF FIXING IT GROWS ALONG THIS PATH', anchor='middle')
-
-# closing note
-o.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-opacity=".18"/>'
-         % (0, ROW_B + 96, X1, ROW_B + 96, NAVY))
-o += bil(0, ROW_B + 128, 15, NAVY,
-         'Una tolleranza non definita in specifica diventa una discussione contrattuale in accettazione.',
-         'A tolerance left undefined in the specification becomes a contractual argument at acceptance.',
-         font=DISP, extra=' fill-opacity=".85"')
+# la parentesi sotto la fascia: dice dove i criteri si possono ancora fissare,
+# cioe' dove entra CLEGAR. L'etichetta sta sotto e non dentro, altrimenti la
+# versione italiana sarebbe piu' larga della fascia stessa.
+o.append('<line x1="%.1f" y1="468" x2="%.1f" y2="468" stroke="%s" stroke-width="2" stroke-opacity=".55"/>'
+         % (GX0, GX0 + OPEN_PHASES * BW, TEAL))
+o += bil(GX0, 490, 14, TEAL,
+         'QUI I CRITERI SI POSSONO ANCORA FISSARE',
+         'THE CRITERIA CAN STILL BE SET HERE')
 o.append('</svg>')
 open('fig_art_origin.svg', 'w', encoding='utf-8').write('\n'.join(o))
 print('fig_art_origin.svg', len('\n'.join(o)), 'chars')
