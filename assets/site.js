@@ -14,8 +14,11 @@
        Web3Forms  https://web3forms.com ->  https://api.web3forms.com/submit
      Left empty, the button opens the visitor's mail client instead.
      ============================================================ */
-  var FORM_ENDPOINT = '';
-  var WEB3FORMS_KEY = '';
+  /* La access key di Web3Forms e' pubblica per progetto: e' un alias
+     dell'indirizzo email, non un segreto, e sta qui perche' e' li' che
+     serve. Non va trattata come una credenziale. */
+  var FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+  var WEB3FORMS_KEY = '0a91c0c0-e6c9-41b7-8936-27c0e68b97c2';
 
   var MSG = {
     missing: {it:'Servono un indirizzo email valido e una descrizione.', en:'A valid email address and a description are required.'},
