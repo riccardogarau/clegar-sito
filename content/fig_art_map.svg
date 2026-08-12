@@ -65,8 +65,8 @@
 <circle cx="742" cy="452" r="4.5" fill="#8B9598" fill-opacity=".9"/>
 <circle cx="1104" cy="428" r="4.5" fill="#8B9598" fill-opacity=".9"/>
 <line x1="830" y1="270" x2="852" y2="270" stroke="#C9821E" stroke-opacity=".5"/>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="860.0" y="265.0" font-size="14" fill="#C9821E" text-anchor="start">31 SCARTI – IL FONDALE SI È MOSSO</text>
-<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="860.0" y="265.0" font-size="14" fill="#C9821E" text-anchor="start">31 FAILURES – THE SEABED MOVED</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="860.0" y="265.0" font-size="14" fill="#C9821E" text-anchor="start">31 SCARTI, TUTTI QUI</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="860.0" y="265.0" font-size="14" fill="#C9821E" text-anchor="start">31 FAILURES, ALL HERE</text>
 <circle cx="506" cy="516" r="5" fill="#8B9598"/>
 <text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="520.0" y="521.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">A – RUMORE</text>
 <text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="520.0" y="521.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">A – NOISE</text>

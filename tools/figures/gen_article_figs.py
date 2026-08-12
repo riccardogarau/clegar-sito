@@ -293,8 +293,12 @@ for cx, cy in ((548, 214), (566, 402), (992, 186), (1210, 320), (742, 452), (110
 
 o.append('<line x1="%d" y1="270" x2="852" y2="270" stroke="%s" stroke-opacity=".5"/>'
          % (SWX1, AMBER))
+# L'etichetta dice dove cadono, non perche'. Il testo dell'articolo spiega
+# che una parte della differenza puo' venire dalla pendenza e non dalla
+# mobilita' del fondale: la figura non puo' anticipare una conclusione che
+# il testo raggiunge solo dopo aver separato le due componenti.
 o += bil(860, 265, 14, AMBER,
-         '31 SCARTI – IL FONDALE SI È MOSSO', '31 FAILURES – THE SEABED MOVED')
+         '31 SCARTI, TUTTI QUI', '31 FAILURES, ALL HERE')
 
 for x, col, it, en in ((BX0, STEEL, 'A – RUMORE', 'A – NOISE'),
                        (720, BLUE, 'B – SISTEMATICO', 'B – SYSTEMATIC'),
