@@ -188,6 +188,42 @@ css += """
 .article-wide{max-width:none}
 .article-wide .svc-fig{max-width:none}
 
+/* ---------- tabelle negli articoli ----------
+   Le cifre sono in mono e allineate a destra: incolonnate si confrontano,
+   in proporzionale no. Il contenitore scorre in orizzontale, perche' una
+   tabella larga e' l'unico modo in cui questo sito puo' spingere la pagina
+   di lato, e la regola e' che non succeda mai. */
+.tablewrap{overflow-x:auto;margin:2rem 0;max-width:44rem;-webkit-overflow-scrolling:touch}
+.article table{border-collapse:collapse;width:100%;min-width:32rem;font-size:.94rem}
+.article th,.article td{
+  text-align:left;padding:.7rem .9rem;border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+.article thead th{
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--steel);font-weight:400;border-bottom:1px solid var(--ink);white-space:nowrap;
+}
+.article tbody tr:last-child td{border-bottom:1px solid var(--line)}
+.article td.num,.article th.num{font-family:var(--mono);text-align:right;white-space:nowrap}
+.article table caption{
+  caption-side:bottom;text-align:left;padding-top:.8rem;
+  font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--steel);line-height:1.7;
+}
+
+/* ---------- il numero che l'articolo mette in discussione ---------- */
+.pull{
+  margin:2.4rem 0;padding:1.6rem 0 1.6rem 1.6rem;border-left:2px solid var(--teal);
+  max-width:44rem;
+}
+.pull strong{
+  display:block;font-size:clamp(1.6rem,4vw,2.3rem);line-height:1.15;letter-spacing:-.01em;
+}
+.pull span{
+  display:block;margin-top:.6rem;font-family:var(--mono);font-size:.64rem;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--steel);
+}
+
 /* ---------- condivisione in fondo all'articolo ---------- */
 .share{
   display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;max-width:44rem;
@@ -563,7 +599,7 @@ def build(key, lang):
 
 
 # ══════════════════════════════════════════ Insights: indice e articoli
-from articles import ARTICLES, FIG_ORIGIN, FIG_LINES
+from articles import ARTICLES, FIG_ORIGIN, FIG_LINES, FIG_TVU, FIG_MAP
 
 FIG_SVG = {
     FIG_ORIGIN: ('content/fig_art_origin.svg',
@@ -576,6 +612,16 @@ FIG_SVG = {
                   'è lì che l’indipendenza conta.',
                   'The people who set the criteria at the start are the ones who verify them at the end: '
                   'that is where independence counts.')),
+    FIG_TVU:    ('content/fig_art_tvu.svg',
+                 ('√2 × TVU è il 41% più largo di TVU: la fascia grigia è la distanza fra il test '
+                  'giusto e quello sbagliato. Scarti dell’esempio sintetico.',
+                  '√2 × TVU is 41% wider than TVU: the grey band is the distance between the right '
+                  'test and the wrong one. Failures from the synthetic example.')),
+    FIG_MAP:    ('content/fig_art_map.svg',
+                 ('Trentuno scarti sono il 2,5% del dataset, ma cadono dove passerà il cavo: '
+                  'è lì che il numero di sintesi smette di bastare. Esempio sintetico.',
+                  'Thirty-one failures are 2.5% of the dataset, but they fall where the cable will '
+                  'run: that is where the headline number stops being enough. Synthetic example.')),
 }
 
 

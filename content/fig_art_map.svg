@@ -1,0 +1,79 @@
+<svg viewBox="0 0 1300 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The same crossline result shown as a single pass rate and as a map, where the failures cluster in a mobile sand wave field">
+<text class="it" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">Lo stesso risultato, letto in due modi</text>
+<text class="en" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">The same result, read two ways</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">GLI STESSI 45 SCARTI SU 1.240 INCROCI – ESEMPIO SINTETICO</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">THE SAME 45 FAILURES OUT OF 1,240 CROSSINGS – SYNTHETIC EXAMPLE</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="246.0" font-size="14" fill="#8B9598" text-anchor="start">1.240 INCROCI</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="246.0" font-size="14" fill="#8B9598" text-anchor="start">1,240 CROSSINGS</text>
+<text class="it" font-family="Archivo, sans-serif" x="0.0" y="322.0" font-size="64" fill="#0B2545" text-anchor="start">96,4%</text>
+<text class="en" font-family="Archivo, sans-serif" x="0.0" y="322.0" font-size="64" fill="#0B2545" text-anchor="start">96.4%</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="356.0" font-size="14" fill="#8B9598" text-anchor="start">ENTRO TOLLERANZA</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="356.0" font-size="14" fill="#8B9598" text-anchor="start">WITHIN TOLERANCE</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="404.0" font-size="14" fill="#8B9598" text-anchor="start">IL RILIEVO PASSA</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="404.0" font-size="14" fill="#8B9598" text-anchor="start">THE SURVEY PASSES</text>
+<line x1="430" y1="150" x2="430" y2="470" stroke="#0B2545" stroke-opacity=".18"/>
+<rect x="500" y="150" width="790" height="320" fill="none" stroke="#0B2545" stroke-opacity=".3"/>
+<rect x="600" y="200" width="230" height="140" fill="#009AA6" fill-opacity=".09"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="600.0" y="190.0" font-size="14" fill="#009AA6" text-anchor="start">CAMPO DI SAND WAVE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="600.0" y="190.0" font-size="14" fill="#009AA6" text-anchor="start">SAND WAVE FIELD</text>
+<polyline points="500,430 700,320 900,282 1290,250" fill="none" stroke="#0B2545" stroke-width="2" stroke-opacity=".45" stroke-dasharray="8 6"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1284.0" y="236.0" font-size="14" fill="#0B2545" text-anchor="end" fill-opacity=".65">TRACCIATO CAVO IN PROGETTO</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1284.0" y="236.0" font-size="14" fill="#0B2545" text-anchor="end" fill-opacity=".65">PROPOSED CABLE ROUTE</text>
+<circle cx="802.5" cy="322.0" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="795.8" cy="221.7" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="734.0" cy="261.2" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="721.2" cy="227.1" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="651.6" cy="263.6" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="657.5" cy="264.8" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="617.1" cy="221.9" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="758.3" cy="260.9" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="717.6" cy="297.2" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="686.0" cy="218.7" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="773.3" cy="280.3" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="747.5" cy="284.0" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="812.0" cy="254.1" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="768.5" cy="254.8" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="729.8" cy="288.6" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="676.8" cy="221.9" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="709.7" cy="295.3" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="733.7" cy="263.9" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="744.3" cy="233.1" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="648.8" cy="249.5" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="780.1" cy="234.7" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="635.5" cy="223.4" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="620.0" cy="244.0" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="730.0" cy="307.2" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="680.1" cy="254.9" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="671.4" cy="247.4" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="772.2" cy="275.7" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="665.2" cy="224.4" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="773.5" cy="294.0" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="782.7" cy="239.6" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="724.4" cy="318.6" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="900.0" cy="442.0" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="948.6" cy="431.7" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="997.1" cy="421.4" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="1045.7" cy="411.1" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="1094.3" cy="400.9" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="1142.9" cy="390.6" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="1191.4" cy="380.3" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="1240.0" cy="370.0" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="548" cy="214" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<circle cx="566" cy="402" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<circle cx="992" cy="186" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<circle cx="1210" cy="320" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<circle cx="742" cy="452" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<circle cx="1104" cy="428" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<line x1="830" y1="270" x2="852" y2="270" stroke="#C9821E" stroke-opacity=".5"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="860.0" y="265.0" font-size="14" fill="#C9821E" text-anchor="start">31 SCARTI – IL FONDALE SI È MOSSO</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="860.0" y="265.0" font-size="14" fill="#C9821E" text-anchor="start">31 FAILURES – THE SEABED MOVED</text>
+<circle cx="506" cy="516" r="5" fill="#8B9598"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="520.0" y="521.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">A – RUMORE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="520.0" y="521.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">A – NOISE</text>
+<circle cx="726" cy="516" r="5" fill="#3B87BE"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="740.0" y="521.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">B – SISTEMATICO</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="740.0" y="521.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">B – SYSTEMATIC</text>
+<circle cx="966" cy="516" r="5" fill="#C9821E"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="980.0" y="521.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">C – VARIAZIONE REALE</text>
+<text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="980.0" y="521.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">C – REAL CHANGE</text>
+</svg>

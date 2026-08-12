@@ -157,3 +157,150 @@ for j, (it, en, a, b) in enumerate(LINES):
 o.append('</svg>')
 open('fig_art_lines.svg', 'w', encoding='utf-8').write('\n'.join(o))
 print('fig_art_lines.svg', len('\n'.join(o)), 'chars')
+
+
+# ═══════════════════════════════════ FIG C — inviluppo di tolleranza IHO S-44
+# Le curve non sono sintetiche: escono dalla formula dello standard per
+# l'Order 1a. Sintetici sono solo i 45 scarti, che l'articolo dichiara tali.
+# La figura mostra cio' che la tabella non puo' mostrare: quanto la scelta
+# della soglia sposti l'esito, e che gli scarti si addensano a una profondita'
+# precisa invece di distribuirsi.
+import math, random
+
+W, H = 1300, 560
+# PX1 sta 30 px dentro il bordo: l'ultima etichetta dell'asse e' centrata sul
+# suo punto, e con il disegno fino a 1290 sarebbe uscita dalla tela per meta'
+PX0, PX1 = 170, 1260              # area di disegno
+PY0, PY1 = 470, 130               # y di 0 m e di 1,6 m
+D0, D1 = 20, 60                   # profondita' rappresentate
+VMAX = 1.6
+A_CONST, B_CONST = 0.50, 0.013    # Order 1a
+
+tvu = lambda d: math.sqrt(A_CONST ** 2 + (B_CONST * d) ** 2)
+sx = lambda d: PX0 + (d - D0) / (D1 - D0) * (PX1 - PX0)
+sy = lambda v: PY0 - v / VMAX * (PY0 - PY1)
+
+o = ['<svg viewBox="0 0 %d %d" xmlns="http://www.w3.org/2000/svg" role="img" '
+     'aria-label="Crossing differences plotted against the IHO S-44 Order 1a tolerance '
+     'envelope, showing the failures clustered at one depth range">' % (W, H)]
+
+o += bil(0, 52, 18, NAVY,
+         'L’inviluppo di tolleranza, e dove gli scarti si addensano',
+         'The tolerance envelope, and where the failures cluster', font=DISP)
+o += bil(0, 76, 14, STEEL,
+         'CURVE CALCOLATE DALLO STANDARD – I 45 SCARTI SONO DELL’ESEMPIO SINTETICO',
+         'CURVES COMPUTED FROM THE STANDARD – THE 45 FAILURES ARE FROM THE SYNTHETIC EXAMPLE')
+
+# legenda dei tre gruppi
+for x, col, it, en in ((0, STEEL, 'A – RUMORE', 'A – NOISE'),
+                       (300, BLUE, 'B – SISTEMATICO', 'B – SYSTEMATIC'),
+                       (600, AMBER, 'C – VARIAZIONE REALE', 'C – REAL CHANGE')):
+    o.append('<circle cx="%d" cy="100" r="5" fill="%s"/>' % (x + 6, col))
+    o += bil(x + 20, 105, 14, NAVY, it, en, extra=' fill-opacity=".8"')
+
+# griglia e assi
+for v in (0.4, 0.8, 1.2, 1.6):
+    o.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-opacity=".09"/>'
+             % (PX0, sy(v), PX1, sy(v), NAVY))
+    o += bil(PX0 - 16, sy(v) + 5, 14, STEEL, ('%.1f' % v).replace('.', ','), '%.1f' % v,
+             anchor='end')
+o += bil(PX0 - 16, PY0 + 5, 14, STEEL, '0', '0', anchor='end')
+o += bil(0, PY1 - 14, 14, STEEL, 'DIFFERENZA ALL’INCROCIO (m)', 'CROSSING DIFFERENCE (m)')
+o.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-opacity=".28"/>'
+         % (PX0, PY0, PX1, PY0, NAVY))
+for d in range(D0, D1 + 1, 10):
+    o.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%d" stroke="%s" stroke-opacity=".28"/>'
+             % (sx(d), PY0, sx(d), PY0 + 7, NAVY))
+    o += bil(sx(d), PY0 + 28, 14, NAVY, '%d m' % d, '%d m' % d, anchor='middle',
+             extra=' fill-opacity=".72"')
+o += bil(PX1, PY0 + 56, 14, STEEL, 'PROFONDITÀ', 'WATER DEPTH', anchor='end')
+
+# la fascia fra le due soglie: e' la differenza fra il test giusto e quello sbagliato
+step = [D0 + i for i in range(D1 - D0 + 1)]
+up = ' '.join('%.1f,%.1f' % (sx(d), sy(math.sqrt(2) * tvu(d))) for d in step)
+dn = ' '.join('%.1f,%.1f' % (sx(d), sy(tvu(d))) for d in reversed(step))
+o.append('<polygon points="%s %s" fill="%s" fill-opacity=".07"/>' % (up, dn, NAVY))
+for f, dash in ((lambda d: math.sqrt(2) * tvu(d), ''), (tvu, ' stroke-dasharray="6 5"')):
+    pts = ' '.join('%.1f,%.1f' % (sx(d), sy(f(d))) for d in step)
+    o.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2"%s/>' % (pts, NAVY, dash))
+o += bil(PX1 - 6, sy(math.sqrt(2) * tvu(58)) - 14, 14, NAVY, '√2 × TVU', '√2 × TVU', anchor='end')
+o += bil(PX1 - 6, sy(tvu(58)) + 26, 14, NAVY, 'TVU', 'TVU', anchor='end',
+         extra=' fill-opacity=".7"')
+
+# i 45 scarti. Seme fisso: la build deve restare riproducibile.
+rnd = random.Random(11)
+for lo, hi, n, over, col in ((24, 31, 6, 0.16, STEEL),
+                             (44, 58, 8, 0.26, BLUE),
+                             (26, 34, 31, 0.46, AMBER)):
+    for _ in range(n):
+        d = rnd.uniform(lo, hi)
+        v = math.sqrt(2) * tvu(d) + rnd.uniform(0.03, over)
+        o.append('<circle cx="%.1f" cy="%.1f" r="4.5" fill="%s" fill-opacity=".85"/>'
+                 % (sx(d), sy(min(v, VMAX - 0.02)), col))
+o.append('</svg>')
+open('fig_art_tvu.svg', 'w', encoding='utf-8').write('\n'.join(o))
+print('fig_art_tvu.svg', len('\n'.join(o)), 'chars')
+
+
+# ═══════════════════════════════════ FIG D — la percentuale contro la mappa
+# La tesi dell'articolo in un'immagine: a sinistra la sintesi scalare, a
+# destra il fenomeno spaziale che quella sintesi comprime. I 45 scarti sono
+# gli stessi nelle due meta'.
+W, H = 1300, 560
+BX0, BX1, BY0, BY1 = 500, 1290, 150, 470       # il blocco di rilievo
+SWX0, SWX1, SWY0, SWY1 = 600, 830, 200, 340    # il campo di sand wave
+
+o = ['<svg viewBox="0 0 %d %d" xmlns="http://www.w3.org/2000/svg" role="img" '
+     'aria-label="The same crossline result shown as a single pass rate and as a map, '
+     'where the failures cluster in a mobile sand wave field">' % (W, H)]
+
+o += bil(0, 52, 18, NAVY,
+         'Lo stesso risultato, letto in due modi',
+         'The same result, read two ways', font=DISP)
+o += bil(0, 76, 14, STEEL,
+         'GLI STESSI 45 SCARTI SU 1.240 INCROCI – ESEMPIO SINTETICO',
+         'THE SAME 45 FAILURES OUT OF 1,240 CROSSINGS – SYNTHETIC EXAMPLE')
+
+# meta' sinistra: la sintesi
+o += bil(0, 246, 14, STEEL, '1.240 INCROCI', '1,240 CROSSINGS')
+o += bil(0, 322, 64, NAVY, '96,4%', '96.4%', font=DISP)
+o += bil(0, 356, 14, STEEL, 'ENTRO TOLLERANZA', 'WITHIN TOLERANCE')
+o += bil(0, 404, 14, STEEL, 'IL RILIEVO PASSA', 'THE SURVEY PASSES')
+o.append('<line x1="430" y1="150" x2="430" y2="470" stroke="%s" stroke-opacity=".18"/>' % NAVY)
+
+# meta' destra: il blocco, il campo di sand wave, il tracciato in progetto
+o.append('<rect x="%d" y="%d" width="%d" height="%d" fill="none" stroke="%s" stroke-opacity=".3"/>'
+         % (BX0, BY0, BX1 - BX0, BY1 - BY0, NAVY))
+o.append('<rect x="%d" y="%d" width="%d" height="%d" fill="%s" fill-opacity=".09"/>'
+         % (SWX0, SWY0, SWX1 - SWX0, SWY1 - SWY0, TEAL))
+o += bil(SWX0, SWY0 - 10, 14, TEAL, 'CAMPO DI SAND WAVE', 'SAND WAVE FIELD')
+o.append('<polyline points="%d,430 700,320 900,282 %d,250" fill="none" stroke="%s" '
+         'stroke-width="2" stroke-opacity=".45" stroke-dasharray="8 6"/>' % (BX0, BX1, NAVY))
+o += bil(BX1 - 6, 236, 14, NAVY, 'TRACCIATO CAVO IN PROGETTO', 'PROPOSED CABLE ROUTE',
+         anchor='end', extra=' fill-opacity=".65"')
+
+# gli scarti. Seme fisso: la build deve restare riproducibile.
+rnd = random.Random(23)
+for _ in range(31):                                   # gruppo C, dentro le sand wave
+    o.append('<circle cx="%.1f" cy="%.1f" r="4.5" fill="%s" fill-opacity=".9"/>'
+             % (rnd.uniform(SWX0 + 12, SWX1 - 12), rnd.uniform(SWY0 + 12, SWY1 - 12), AMBER))
+for i in range(8):                                    # gruppo B, tutti sulla stessa linea
+    t = i / 7
+    o.append('<circle cx="%.1f" cy="%.1f" r="4.5" fill="%s" fill-opacity=".9"/>'
+             % (900 + t * 340, 442 - t * 72, BLUE))
+for cx, cy in ((548, 214), (566, 402), (992, 186), (1210, 320), (742, 452), (1104, 428)):
+    o.append('<circle cx="%d" cy="%d" r="4.5" fill="%s" fill-opacity=".9"/>' % (cx, cy, STEEL))
+
+o.append('<line x1="%d" y1="270" x2="852" y2="270" stroke="%s" stroke-opacity=".5"/>'
+         % (SWX1, AMBER))
+o += bil(860, 265, 14, AMBER,
+         '31 SCARTI – IL FONDALE SI È MOSSO', '31 FAILURES – THE SEABED MOVED')
+
+for x, col, it, en in ((BX0, STEEL, 'A – RUMORE', 'A – NOISE'),
+                       (720, BLUE, 'B – SISTEMATICO', 'B – SYSTEMATIC'),
+                       (960, AMBER, 'C – VARIAZIONE REALE', 'C – REAL CHANGE')):
+    o.append('<circle cx="%d" cy="516" r="5" fill="%s"/>' % (x + 6, col))
+    o += bil(x + 20, 521, 14, NAVY, it, en, extra=' fill-opacity=".8"')
+o.append('</svg>')
+open('fig_art_map.svg', 'w', encoding='utf-8').write('\n'.join(o))
+print('fig_art_map.svg', len('\n'.join(o)), 'chars')

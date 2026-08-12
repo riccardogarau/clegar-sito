@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leggere un crossline check come una mappa | Insights</title>
+<meta name="description" content="Perché la percentuale di incroci entro tolleranza nasconde il risultato di un’analisi crossline, e che cosa chiedere nella specifica prima dell’acquisizione.">
+<link rel="canonical" href="https://www.clegar.it/insights/crossline-check-come-mappa/">
+<link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/crossline-check-come-mappa/">
+<link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/crossline-check-as-a-map/">
+<link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/crossline-check-come-mappa/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CLEGAR">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Leggere un crossline check come una mappa | Insights">
+<meta property="og:description" content="Perché la percentuale di incroci entro tolleranza nasconde il risultato di un’analisi crossline, e che cosa chiedere nella specifica prima dell’acquisizione.">
+<meta property="og:url" content="https://www.clegar.it/insights/crossline-check-come-mappa/">
+<meta property="og:image" content="https://www.clegar.it/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Leggere un crossline check come una mappa | Insights">
+<meta name="twitter:description" content="Perché la percentuale di incroci entro tolleranza nasconde il risultato di un’analisi crossline, e che cosa chiedere nella specifica prima dell’acquisizione.">
+<meta name="twitter:image" content="https://www.clegar.it/assets/og.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B2545">
+<!-- Google Search Console: sostituire con il proprio codice di verifica -->
+<!-- <meta name="google-site-verification" content="INCOLLA_QUI_IL_CODICE"> -->
+<link rel="icon" href="../../assets/mark.png">
+<link rel="apple-touch-icon" href="../../assets/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Leggere un crossline check come una mappa, non come una percentuale","description":"Perché la percentuale di incroci entro tolleranza nasconde il risultato di un’analisi crossline, e che cosa chiedere nella specifica prima dell’acquisizione.","datePublished":"2026-08-12","dateModified":"2026-08-12","inLanguage":"it","author":{"@type":"Organization","name":"CLEGAR","url":"https://www.clegar.it/"},"publisher":{"@id":"https://www.clegar.it/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.clegar.it/insights/crossline-check-come-mappa/"},"image":"https://www.clegar.it/assets/og.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.clegar.it/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://www.clegar.it/insights/"},{"@type":"ListItem","position":3,"name":"Leggere un crossline check come una mappa, non come una percentuale","item":"https://www.clegar.it/insights/crossline-check-come-mappa/"}]}</script>
+
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-row">
+    <a class="brand" aria-label="CLEGAR" href="../../">
+      <img src="../../assets/logo.png" alt="CLEGAR — Marine Geoscience &amp; Offshore Advisory">
+    </a>
+    <div class="masthead-meta">
+      <a class="hide-sm" href="mailto:info@clegar.it">info@clegar.it</a>
+      <div class="langsw" role="group" aria-label="Language / Lingua">
+        <a href="../../insights/" aria-current="true">IT</a><a href="../../en/insights/" hreflang="en">EN</a></div>
+      <a class="btn-contact" href="../../contatti/">
+        <span class="it">Parliamone</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<nav class="tabbar" aria-label="Navigazione principale">
+  <div class="tabbar-inner">
+    <a class="tab" href="../../">Home</a>
+    <a class="tab" href="../../geoscienze-marine/">Marine Geoscience</a>
+    <a class="tab" href="../../project-management/">Project Management</a>
+    <a class="tab" href="../../technical-advisory/">Technical Advisory</a>
+    <a class="tab" href="../../owners-engineering/">Owner's Engineering</a>
+    <a class="tab" href="../../operational-excellence/">Operational Excellence</a>
+    <a class="tab" href="../../insights/" aria-current="page">Insights</a>
+    <a class="tab" href="../../contatti/">Contatti</a>
+  </div>
+</nav>
+<main id="main">
+<section class="page">
+  <div class="svc-hero"><div class="wrap">
+<div class="art-meta"><time datetime="2026-08-12">12 agosto 2026</time><span>Insights</span></div><h1>Leggere un crossline check come una mappa, non come una percentuale</h1>
+  </div></div>
+  <div class="band band-white band-pad"><div class="wrap">
+    <div class="article">
+<p class="lede">L'analisi delle crossline è uno dei pochi prodotti di QC di un rilievo batimetrico che confronta il dataset con se stesso. Due linee di acquisizione attraversano lo stesso punto del fondale, acquisite in momenti diversi, su rotte diverse, in condizioni di marea e di velocità del suono diverse. La profondità che riportano nel punto di incrocio dovrebbe coincidere. Quanto strettamente coincide è un'affermazione diretta e misurabile su quanto il dataset sia affidabile.</p>
+
+<p>Nella pratica, questo controllo viene spesso ridotto a un singolo numero nel report finale – una percentuale di incroci entro tolleranza – e letto come si legge un voto di promozione. È in quella riduzione che l'informazione utile va perduta.</p>
+
+<h2>L'inviluppo di tolleranza</h2>
+
+<p>Lo standard IHO S-44 non prescrive una procedura di crossline analysis. Quello che definisce è la Total Vertical Uncertainty (TVU) ammessa a una data profondità, al livello di confidenza del 95%:</p>
+
+<p><strong>TVU = √( a² + (b × d)² )</strong></p>
+
+<p>dove <em>d</em> è la profondità e <em>a</em> e <em>b</em> sono le costanti fissate dall'ordine di rilievo. Per l'<strong>Order 1a</strong>, l'ordine più comunemente specificato per le site investigation nell'eolico offshore:</p>
+
+<ul>
+  <li>a = 0,50 m (componente indipendente dalla profondità)</li>
+  <li>b = 0,013 (componente dipendente dalla profondità)</li>
+</ul>
+
+<p>Che dà, su un sito tipico del Mare del Nord meridionale:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Profondità</th><th class="num">TVU ammessa (Order 1a)</th><th class="num">Soglia sugli incroci (√2 × TVU)</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">20 m</td><td class="num">0,56 m</td><td class="num">0,80 m</td></tr>
+<tr><td class="num">30 m</td><td class="num">0,63 m</td><td class="num">0,90 m</td></tr>
+<tr><td class="num">40 m</td><td class="num">0,72 m</td><td class="num">1,02 m</td></tr>
+<tr><td class="num">50 m</td><td class="num">0,82 m</td><td class="num">1,16 m</td></tr>
+<tr><td class="num">60 m</td><td class="num">0,93 m</td><td class="num">1,31 m</td></tr>
+</tbody>
+</table>
+</div>
+
+<figure class="svc-fig" data-zoomable="1">
+<svg viewBox="0 0 1300 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Crossing differences plotted against the IHO S-44 Order 1a tolerance envelope, showing the failures clustered at one depth range">
+<text class="it" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">L’inviluppo di tolleranza, e dove gli scarti si addensano</text>
+
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">CURVE CALCOLATE DALLO STANDARD – I 45 SCARTI SONO DELL’ESEMPIO SINTETICO</text>
+
+<circle cx="6" cy="100" r="5" fill="#8B9598"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="20.0" y="105.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">A – RUMORE</text>
+
+<circle cx="306" cy="100" r="5" fill="#3B87BE"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="320.0" y="105.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">B – SISTEMATICO</text>
+
+<circle cx="606" cy="100" r="5" fill="#C9821E"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="620.0" y="105.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">C – VARIAZIONE REALE</text>
+
+<line x1="170" y1="385.0" x2="1260" y2="385.0" stroke="#0B2545" stroke-opacity=".09"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="154.0" y="390.0" font-size="14" fill="#8B9598" text-anchor="end">0,4</text>
+
+<line x1="170" y1="300.0" x2="1260" y2="300.0" stroke="#0B2545" stroke-opacity=".09"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="154.0" y="305.0" font-size="14" fill="#8B9598" text-anchor="end">0,8</text>
+
+<line x1="170" y1="215.0" x2="1260" y2="215.0" stroke="#0B2545" stroke-opacity=".09"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="154.0" y="220.0" font-size="14" fill="#8B9598" text-anchor="end">1,2</text>
+
+<line x1="170" y1="130.0" x2="1260" y2="130.0" stroke="#0B2545" stroke-opacity=".09"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="154.0" y="135.0" font-size="14" fill="#8B9598" text-anchor="end">1,6</text>
+
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="154.0" y="475.0" font-size="14" fill="#8B9598" text-anchor="end">0</text>
+
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="116.0" font-size="14" fill="#8B9598" text-anchor="start">DIFFERENZA ALL’INCROCIO (m)</text>
+
+<line x1="170" y1="470" x2="1260" y2="470" stroke="#0B2545" stroke-opacity=".28"/>
+<line x1="170.0" y1="470" x2="170.0" y2="477" stroke="#0B2545" stroke-opacity=".28"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="170.0" y="498.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">20 m</text>
+
+<line x1="442.5" y1="470" x2="442.5" y2="477" stroke="#0B2545" stroke-opacity=".28"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="442.5" y="498.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">30 m</text>
+
+<line x1="715.0" y1="470" x2="715.0" y2="477" stroke="#0B2545" stroke-opacity=".28"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="715.0" y="498.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">40 m</text>
+
+<line x1="987.5" y1="470" x2="987.5" y2="477" stroke="#0B2545" stroke-opacity=".28"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="987.5" y="498.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">50 m</text>
+
+<line x1="1260.0" y1="470" x2="1260.0" y2="477" stroke="#0B2545" stroke-opacity=".28"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1260.0" y="498.0" font-size="14" fill="#0B2545" text-anchor="middle" fill-opacity=".72">60 m</text>
+
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1260.0" y="526.0" font-size="14" fill="#8B9598" text-anchor="end">PROFONDITÀ</text>
+
+<polygon points="170.0,300.6 197.2,298.8 224.5,296.9 251.8,294.9 279.0,292.9 306.2,290.8 333.5,288.6 360.8,286.4 388.0,284.1 415.2,281.8 442.5,279.4 469.8,277.0 497.0,274.5 524.2,272.0 551.5,269.4 578.8,266.8 606.0,264.2 633.2,261.5 660.5,258.8 687.8,256.0 715.0,253.2 742.2,250.4 769.5,247.5 796.8,244.6 824.0,241.7 851.2,238.7 878.5,235.7 905.8,232.7 933.0,229.7 960.2,226.6 987.5,223.6 1014.8,220.4 1042.0,217.3 1069.2,214.2 1096.5,211.0 1123.8,207.8 1151.0,204.6 1178.2,201.4 1205.5,198.1 1232.8,194.8 1260.0,191.6 1260.0,273.1 1232.8,275.4 1205.5,277.7 1178.2,280.0 1151.0,282.3 1123.8,284.6 1096.5,286.9 1069.2,289.1 1042.0,291.3 1014.8,293.5 987.5,295.7 960.2,297.9 933.0,300.1 905.8,302.2 878.5,304.4 851.2,306.5 824.0,308.6 796.8,310.6 769.5,312.7 742.2,314.7 715.0,316.7 687.8,318.7 660.5,320.6 633.2,322.6 606.0,324.5 578.8,326.3 551.5,328.2 524.2,330.0 497.0,331.8 469.8,333.5 442.5,335.3 415.2,336.9 388.0,338.6 360.8,340.2 333.5,341.8 306.2,343.3 279.0,344.8 251.8,346.2 224.5,347.6 197.2,348.9 170.0,350.2" fill="#0B2545" fill-opacity=".07"/>
+<polyline points="170.0,300.6 197.2,298.8 224.5,296.9 251.8,294.9 279.0,292.9 306.2,290.8 333.5,288.6 360.8,286.4 388.0,284.1 415.2,281.8 442.5,279.4 469.8,277.0 497.0,274.5 524.2,272.0 551.5,269.4 578.8,266.8 606.0,264.2 633.2,261.5 660.5,258.8 687.8,256.0 715.0,253.2 742.2,250.4 769.5,247.5 796.8,244.6 824.0,241.7 851.2,238.7 878.5,235.7 905.8,232.7 933.0,229.7 960.2,226.6 987.5,223.6 1014.8,220.4 1042.0,217.3 1069.2,214.2 1096.5,211.0 1123.8,207.8 1151.0,204.6 1178.2,201.4 1205.5,198.1 1232.8,194.8 1260.0,191.6" fill="none" stroke="#0B2545" stroke-width="2"/>
+<polyline points="170.0,350.2 197.2,348.9 224.5,347.6 251.8,346.2 279.0,344.8 306.2,343.3 333.5,341.8 360.8,340.2 388.0,338.6 415.2,336.9 442.5,335.3 469.8,333.5 497.0,331.8 524.2,330.0 551.5,328.2 578.8,326.3 606.0,324.5 633.2,322.6 660.5,320.6 687.8,318.7 715.0,316.7 742.2,314.7 769.5,312.7 796.8,310.6 824.0,308.6 851.2,306.5 878.5,304.4 905.8,302.2 933.0,300.1 960.2,297.9 987.5,295.7 1014.8,293.5 1042.0,291.3 1069.2,289.1 1096.5,286.9 1123.8,284.6 1151.0,282.3 1178.2,280.0 1205.5,277.7 1232.8,275.4 1260.0,273.1" fill="none" stroke="#0B2545" stroke-width="2" stroke-dasharray="6 5"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1254.0" y="184.1" font-size="14" fill="#0B2545" text-anchor="end">√2 × TVU</text>
+
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1254.0" y="303.7" font-size="14" fill="#0B2545" text-anchor="end" fill-opacity=".7">TVU</text>
+
+<circle cx="365.3" cy="264.2" r="4.5" fill="#8B9598" fill-opacity=".85"/>
+<circle cx="455.3" cy="259.1" r="4.5" fill="#8B9598" fill-opacity=".85"/>
+<circle cx="375.9" cy="262.6" r="4.5" fill="#8B9598" fill-opacity=".85"/>
+<circle cx="314.2" cy="269.6" r="4.5" fill="#8B9598" fill-opacity=".85"/>
+<circle cx="399.2" cy="254.9" r="4.5" fill="#8B9598" fill-opacity=".85"/>
+<circle cx="297.0" cy="276.8" r="4.5" fill="#8B9598" fill-opacity=".85"/>
+<circle cx="858.6" cy="192.0" r="4.5" fill="#3B87BE" fill-opacity=".85"/>
+<circle cx="1088.5" cy="203.5" r="4.5" fill="#3B87BE" fill-opacity=".85"/>
+<circle cx="1198.7" cy="145.4" r="4.5" fill="#3B87BE" fill-opacity=".85"/>
+<circle cx="1073.5" cy="177.2" r="4.5" fill="#3B87BE" fill-opacity=".85"/>
+<circle cx="884.1" cy="228.0" r="4.5" fill="#3B87BE" fill-opacity=".85"/>
+<circle cx="1025.6" cy="209.9" r="4.5" fill="#3B87BE" fill-opacity=".85"/>
+<circle cx="896.6" cy="215.6" r="4.5" fill="#3B87BE" fill-opacity=".85"/>
+<circle cx="835.5" cy="211.4" r="4.5" fill="#3B87BE" fill-opacity=".85"/>
+<circle cx="429.5" cy="197.2" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="446.7" cy="214.2" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="442.5" cy="212.5" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="433.2" cy="248.5" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="551.0" cy="172.1" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="516.7" cy="201.7" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="402.2" cy="255.6" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="396.5" cy="270.6" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="500.6" cy="231.2" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="518.1" cy="230.9" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="542.4" cy="186.5" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="333.6" cy="263.1" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="531.9" cy="222.0" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="547.2" cy="227.2" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="349.4" cy="223.4" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="503.2" cy="242.9" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="352.5" cy="250.3" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="543.7" cy="194.5" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="359.2" cy="257.6" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="355.5" cy="275.0" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="507.3" cy="251.0" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="455.4" cy="231.0" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="375.1" cy="212.0" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="362.1" cy="221.1" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="358.9" cy="241.7" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="379.9" cy="253.8" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="545.2" cy="190.3" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="399.8" cy="195.9" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="379.4" cy="242.5" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="519.8" cy="207.4" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+<circle cx="355.4" cy="190.1" r="4.5" fill="#C9821E" fill-opacity=".85"/>
+</svg>
+<p class="fig-hint">Tocca il grafico per ingrandirlo</p>
+<figcaption class="fig-cap">√2 × TVU è il 41% più largo di TVU: la fascia grigia è la distanza fra il test giusto e quello sbagliato. Scarti dell’esempio sintetico.</figcaption>
+</figure>
+
+<p>La seconda colonna è quella che viene saltata. La differenza in un punto di incrocio è il disaccordo tra <em>due</em> misure indipendenti, ciascuna con la propria incertezza. Confrontare quella differenza con un singolo valore di TVU è il test sbagliato: le due incertezze si compongono in quadratura, quindi l'inviluppo per la differenza è √2 × TVU. Specificare quale delle due soglie si applica è una decisione contrattuale, non un dettaglio tecnico, e va scritta nella specifica prima dell'acquisizione anziché discussa dopo la consegna.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori riportati di seguito sono sintetici – costruiti per illustrare il metodo, non tratti da lavori per clienti – ma la struttura è una che ricorre.</p>
+
+<p>Un rilievo di site investigation su un'area di sviluppo eolico, profondità tra 22 m e 58 m, acquisito in Order 1a. L'analisi delle crossline produce 1.240 punti di incrocio. La riga di sintesi nel report recita:</p>
+
+<div class="pull"><strong>96,4%</strong><span>degli incroci entro tolleranza</span></div>
+
+<p>Con quasi qualsiasi criterio di accettazione di progetto, il rilievo passa. È un buon numero. Il dataset viene approvato.</p>
+
+<p>Ora lo stesso risultato, risolto spazialmente. I 45 incroci fuori tolleranza non sono distribuiti casualmente sul blocco. Ricadono in tre gruppi:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Gruppo</th><th class="num">Incroci fuori tolleranza</th><th class="num">Intervallo di profondità</th><th>Caratteristiche del fondale</th></tr>
+</thead>
+<tbody>
+<tr><td>A</td><td class="num">6</td><td class="num">24–31 m</td><td>piatto, sabbioso – isolati, nessuno schema</td></tr>
+<tr><td>B</td><td class="num">8</td><td class="num">44–58 m</td><td>piatto – tutti dalla stessa linea, stessa giornata</td></tr>
+<tr><td>C</td><td class="num">31</td><td class="num">26–34 m</td><td>campo di sand wave mobili</td></tr>
+</tbody>
+</table>
+</div>
+
+<figure class="svc-fig" data-zoomable="1">
+<svg viewBox="0 0 1300 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The same crossline result shown as a single pass rate and as a map, where the failures cluster in a mobile sand wave field">
+<text class="it" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">Lo stesso risultato, letto in due modi</text>
+
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">GLI STESSI 45 SCARTI SU 1.240 INCROCI – ESEMPIO SINTETICO</text>
+
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="246.0" font-size="14" fill="#8B9598" text-anchor="start">1.240 INCROCI</text>
+
+<text class="it" font-family="Archivo, sans-serif" x="0.0" y="322.0" font-size="64" fill="#0B2545" text-anchor="start">96,4%</text>
+
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="356.0" font-size="14" fill="#8B9598" text-anchor="start">ENTRO TOLLERANZA</text>
+
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="404.0" font-size="14" fill="#8B9598" text-anchor="start">IL RILIEVO PASSA</text>
+
+<line x1="430" y1="150" x2="430" y2="470" stroke="#0B2545" stroke-opacity=".18"/>
+<rect x="500" y="150" width="790" height="320" fill="none" stroke="#0B2545" stroke-opacity=".3"/>
+<rect x="600" y="200" width="230" height="140" fill="#009AA6" fill-opacity=".09"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="600.0" y="190.0" font-size="14" fill="#009AA6" text-anchor="start">CAMPO DI SAND WAVE</text>
+
+<polyline points="500,430 700,320 900,282 1290,250" fill="none" stroke="#0B2545" stroke-width="2" stroke-opacity=".45" stroke-dasharray="8 6"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="1284.0" y="236.0" font-size="14" fill="#0B2545" text-anchor="end" fill-opacity=".65">TRACCIATO CAVO IN PROGETTO</text>
+
+<circle cx="802.5" cy="322.0" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="795.8" cy="221.7" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="734.0" cy="261.2" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="721.2" cy="227.1" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="651.6" cy="263.6" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="657.5" cy="264.8" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="617.1" cy="221.9" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="758.3" cy="260.9" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="717.6" cy="297.2" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="686.0" cy="218.7" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="773.3" cy="280.3" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="747.5" cy="284.0" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="812.0" cy="254.1" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="768.5" cy="254.8" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="729.8" cy="288.6" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="676.8" cy="221.9" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="709.7" cy="295.3" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="733.7" cy="263.9" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="744.3" cy="233.1" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="648.8" cy="249.5" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="780.1" cy="234.7" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="635.5" cy="223.4" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="620.0" cy="244.0" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="730.0" cy="307.2" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="680.1" cy="254.9" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="671.4" cy="247.4" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="772.2" cy="275.7" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="665.2" cy="224.4" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="773.5" cy="294.0" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="782.7" cy="239.6" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="724.4" cy="318.6" r="4.5" fill="#C9821E" fill-opacity=".9"/>
+<circle cx="900.0" cy="442.0" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="948.6" cy="431.7" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="997.1" cy="421.4" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="1045.7" cy="411.1" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="1094.3" cy="400.9" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="1142.9" cy="390.6" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="1191.4" cy="380.3" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="1240.0" cy="370.0" r="4.5" fill="#3B87BE" fill-opacity=".9"/>
+<circle cx="548" cy="214" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<circle cx="566" cy="402" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<circle cx="992" cy="186" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<circle cx="1210" cy="320" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<circle cx="742" cy="452" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<circle cx="1104" cy="428" r="4.5" fill="#8B9598" fill-opacity=".9"/>
+<line x1="830" y1="270" x2="852" y2="270" stroke="#C9821E" stroke-opacity=".5"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="860.0" y="265.0" font-size="14" fill="#C9821E" text-anchor="start">31 SCARTI – IL FONDALE SI È MOSSO</text>
+
+<circle cx="506" cy="516" r="5" fill="#8B9598"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="520.0" y="521.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">A – RUMORE</text>
+
+<circle cx="726" cy="516" r="5" fill="#3B87BE"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="740.0" y="521.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">B – SISTEMATICO</text>
+
+<circle cx="966" cy="516" r="5" fill="#C9821E"/>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="980.0" y="521.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">C – VARIAZIONE REALE</text>
+
+</svg>
+<p class="fig-hint">Tocca il grafico per ingrandirlo</p>
+<figcaption class="fig-cap">Trentuno scarti sono il 2,5% del dataset, ma cadono dove passerà il cavo: è lì che il numero di sintesi smette di bastare. Esempio sintetico.</figcaption>
+</figure>
+
+<p>Tre risultati diversi, tre conseguenze diverse.</p>
+
+<p><strong>Il gruppo A</strong> è rumore. Sei incroci isolati su 1.240, senza schema spaziale o temporale. È l'aspetto che ha un dataset sano sulle code della distribuzione.</p>
+
+<p><strong>Il gruppo B</strong> è un errore sistematico. Tutti e otto gli scarti provengono da una singola linea acquisita in una singola giornata. Quella firma – raggruppata nel tempo, non nello spazio – punta al riferimento verticale: una correzione di marea applicata dalla stazione sbagliata, una variazione di pescaggio non registrata dopo il bunkeraggio, un profilo di velocità del suono ormai fuori dalla propria finestra di validità. È un difetto reale, ed è anche il più semplice dei tre da risolvere, perché uno scostamento sistematico su una linea nota può essere quantificato e corretto anziché riacquisito.</p>
+
+<p><strong>Il gruppo C</strong> è quello che conta. Trentuno scarti concentrati in un campo di sand wave mobili, su un intervallo di profondità tra 26 e 34 m. Qui le due linee sono realmente in disaccordo, ed entrambe possono essere corrette: il fondale si è spostato tra un passaggio e l'altro. Nessun riprocessing le riconcilierà, perché non c'è nulla da riconciliare – le misure descrivono due stati diversi di una superficie che cambia.</p>
+
+<h2>Perché la percentuale nasconde il risultato</h2>
+
+<p>Il 96,4% di sintesi tratta tutti e 45 gli scarti come equivalenti. Risolti spazialmente, sono tre risultati distinti che richiedono tre risposte distinte: accettare, correggere e – per il gruppo C – escalare.</p>
+
+<p>Il gruppo C conta per dove si trova, non per quanto è grande. Trentuno incroci sono il 2,5% del dataset. Ma se una posizione di fondazione proposta o un tracciato cavo attraversa quel campo di sand wave, il rilievo ha appena prodotto evidenza quantitativa di mobilità del fondale esattamente nell'area in cui verranno progettate la profondità di interro e la protezione allo scalzamento. Non è una non conformità di QC da dispositare e chiudere. È un dato di geohazard, e appartiene alla discussione ingegneristica, non a un allegato.</p>
+
+<p>La percentuale non può dirti questo. È una sintesi scalare di un fenomeno spaziale, e la struttura spaziale è l'intero risultato.</p>
+
+<h2>Cosa chiedere nella specifica</h2>
+
+<p>Gran parte di ciò che rende utile un crossline check si decide prima che la nave salpi:</p>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Indicare quale soglia si applica</strong><span class="t"> – TVU o √2 × TVU – e a quale livello di confidenza. Non lasciarlo dedurre dallo standard.</span></span></li>
+  <li><span class="k">02</span><span><strong>Richiedere il risultato delle crossline come superficie rappresentata graficamente</strong><span class="t">, non solo come statistica di sintesi. Una mappa delle differenze con l'inviluppo di tolleranza applicato mostra una struttura che una percentuale non può mostrare.</span></span></li>
+  <li><span class="k">03</span><span><strong>Richiedere che gli scarti siano raggruppati e attribuiti</strong><span class="t"> – rumore, sistematico o variazione reale – anziché elencati. L'attribuzione è l'analisi; l'elenco ne è soltanto il dato di ingresso.</span></span></li>
+  <li><span class="k">04</span><span><strong>Definire cosa succede dopo per ciascuna attribuzione.</strong><span class="t"> Uno scostamento sistematico si corregge. Una variazione reale del fondale si porta al team di ingegneria. Senza questo definito in anticipo, entrambi gli esiti tendono a ricevere lo stesso trattamento: una nota nel report.</span></span></li>
+  <li><span class="k">05</span><span><strong>Fissare la densità delle crossline</strong><span class="t"> – un riferimento diffuso è una lunghezza complessiva pari a circa il 5% delle mainline, ma il valore corretto dipende dal sito e dalle decisioni che i dati dovranno supportare.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Un crossline check risponde a una domanda più stretta di quanto sembri. Non dice se i dati sono buoni. Dice dove due misure indipendenti dello stesso fondale sono in disaccordo, e di quanto – e il valore sta nel leggerlo come una mappa di dove la confidenza è più bassa, non come un voto.</p>
+
+<p>Un dataset che passa al 96,4% non è uniformemente affidabile al 96,4%. È altamente affidabile sulla maggior parte del blocco e meno affidabile in un'area specifica – e in questo esempio, quell'area è dove si fa l'ingegneria.</p>
+
+<div class="callout">
+  <p>CLEGAR fornisce QC indipendente e technical assurance su dataset geofisici per sviluppatori, contractor e asset owner dell'offshore. Se stai redigendo la specifica di un rilievo, o stai valutando un dataset che hai ricevuto, quella conversazione è gratuita.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+</div>
+    <div class="share"><span class="share-label">Condividi</span><a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.clegar.it%2Finsights%2Fcrossline-check-come-mappa%2F" target="_blank" rel="noopener">LinkedIn</a><a class="share-btn" href="mailto:?subject=Leggere%20un%20crossline%20check%20come%20una%20mappa%2C%20non%20come%20una%20percentuale&amp;body=Leggere%20un%20crossline%20check%20come%20una%20mappa%2C%20non%20come%20una%20percentuale%0Ahttps%3A%2F%2Fwww.clegar.it%2Finsights%2Fcrossline-check-come-mappa%2F">Email</a><button class="share-btn" type="button" data-share-url="https://www.clegar.it/insights/crossline-check-come-mappa/" data-share-title="Leggere un crossline check come una mappa, non come una percentuale">Copia link</button></div>
+    <a class="art-back" href="../../insights/">&larr; Tutti gli articoli</a>
+  </div></div>
+</section>
+</main>
+<footer class="foot">
+  <img class="foot-mark" src="../../assets/mark.png" alt="">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <img class="foot-word" src="../../assets/logo-white.png" alt="CLEGAR">
+        <p class="it">Consulenza indipendente in geoscienze marine, gestione progetti e assurance tecnica per l'offshore.</p>
+        
+      </div>
+      <div>
+        <h5 class="it">Servizi</h5>
+        <nav class="foot-nav">
+          <a href="../../geoscienze-marine/">Marine Geoscience</a>
+          <a href="../../project-management/">Project Management</a>
+          <a href="../../technical-advisory/">Technical Advisory &amp; Assurance</a>
+          <a href="../../owners-engineering/">Owner's Engineering</a>
+          <a href="../../operational-excellence/">Operational Excellence</a>
+        </nav>
+      </div>
+      <div>
+        <h5 class="it">Contatti</h5>
+        <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+        <p><a href="https://www.linkedin.com/company/clegar" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr">2026</span> CLEGAR S.r.l. – P.IVA/VAT 07422540828</span>
+      <span><a class="it" href="../../privacy/">Privacy e cookie</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
