@@ -599,7 +599,8 @@ def build(key, lang):
 
 
 # ══════════════════════════════════════════ Insights: indice e articoli
-from articles import ARTICLES, FIG_ORIGIN, FIG_LINES, FIG_TVU, FIG_MAP
+from articles import (ARTICLES, FIG_ORIGIN, FIG_LINES, FIG_TVU, FIG_MAP,
+                      FIG_WORK, FIG_SWAP)
 
 FIG_SVG = {
     FIG_ORIGIN: ('content/fig_art_origin.svg',
@@ -622,6 +623,18 @@ FIG_SVG = {
                   'è lì che il numero di sintesi smette di bastare. Esempio sintetico.',
                   'Thirty-one failures are 2.5% of the dataset, but they fall where the cable will '
                   'run: that is where the headline number stops being enough. Synthetic example.')),
+    FIG_WORK:   ('content/fig_art_work.svg',
+                 ('La franchigia fissa del 15% era quasi giusta per il geofisico e sbagliata '
+                  'di sette giorni per il geotecnico. Esempio sintetico.',
+                  'The flat 15% allowance was nearly right for the geophysical work and seven '
+                  'days out for the geotechnical. Synthetic example.')),
+    FIG_SWAP:   ('content/fig_art_swap.svg',
+                 ('Le mitigazioni del piano – standby nave, trasduttore di scorta, tecnico di '
+                  'processing in più – restano tutte su Path A, che ora ha float. Il percorso che '
+                  'vincola non ne ha nessuna.',
+                  'The plan’s mitigations – vessel standby, spare transducer, extra '
+                  'processor – all remain on Path A, which now carries float. The path that '
+                  'binds has none.')),
 }
 
 

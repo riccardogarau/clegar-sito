@@ -308,3 +308,160 @@ for x, col, it, en in ((BX0, STEEL, 'A – RUMORE', 'A – NOISE'),
 o.append('</svg>')
 open('fig_art_map.svg', 'w', encoding='utf-8').write('\n'.join(o))
 print('fig_art_map.svg', len('\n'.join(o)), 'chars')
+
+
+# ═══════════════════════════════════ FIG E — finestra operativa per attivita'
+# La curva non e' inventata: e' una Weibull a due parametri, la distribuzione
+# standard per l'altezza d'onda significativa, con forma e scala ricavate
+# imponendo che passi esattamente per i due punti che l'articolo dichiara
+# (62% a 1,5 m e 84% a 2,5 m). Cosi' il disegno non aggiunge assunzioni al
+# testo: le mostra soltanto.
+W, H = 1300, 520
+QX0, QX1, QY0, QY1 = 170, 760, 420, 130
+HS_MAX = 4.0
+K_W = math.log(math.log(1 - .84) / math.log(1 - .62)) / math.log(2.5 / 1.5)
+LAM_W = 1.5 / (-math.log(1 - .62)) ** (1 / K_W)
+cdf = lambda x: 1 - math.exp(-(x / LAM_W) ** K_W)
+qx = lambda h: QX0 + h / HS_MAX * (QX1 - QX0)
+qy = lambda p: QY0 - p * (QY0 - QY1)
+
+BX, DAY = 840, 16                 # pannello destro: 16 px per giorno
+
+o = ['<svg viewBox="0 0 %d %d" xmlns="http://www.w3.org/2000/svg" role="img" '
+     'aria-label="Why the same weather window costs the two activities a different '
+     'number of calendar days">' % (W, H)]
+o += bil(0, 52, 18, NAVY,
+         'La stessa finestra meteo, due costi diversi',
+         'The same weather window, two different costs', font=DISP)
+o += bil(0, 76, 14, STEEL,
+         'CURVA RICAVATA DAI DUE VALORI DICHIARATI NELL’ARTICOLO – ESEMPIO SINTETICO',
+         'CURVE DERIVED FROM THE TWO VALUES STATED IN THE ARTICLE – SYNTHETIC EXAMPLE')
+o += bil(0, 112, 14, STEEL, 'FINESTRA OPERATIVA', 'WORKABLE SHARE OF WINDOW')
+
+for p in (0, .25, .50, .75, 1.0):
+    o.append('<line x1="%d" y1="%.1f" x2="%d" y2="%.1f" stroke="%s" stroke-opacity=".09"/>'
+             % (QX0, qy(p), QX1, qy(p), NAVY))
+    o += bil(QX0 - 16, qy(p) + 5, 14, STEEL, '%d%%' % (p * 100), '%d%%' % (p * 100), anchor='end')
+o.append('<line x1="%d" y1="%d" x2="%d" y2="%d" stroke="%s" stroke-opacity=".28"/>'
+         % (QX0, QY0, QX1, QY0, NAVY))
+for h in (0, 4):
+    o += bil(qx(h), QY0 + 26, 14, STEEL, '%d m' % h, '%d m' % h, anchor='middle')
+o += bil((QX0 + QX1) / 2, QY0 + 56, 14, STEEL,
+         'ALTEZZA D’ONDA SIGNIFICATIVA', 'SIGNIFICANT WAVE HEIGHT', anchor='middle')
+
+pts = ' '.join('%.1f,%.1f' % (qx(i * HS_MAX / 120), qy(cdf(i * HS_MAX / 120))) for i in range(121))
+o.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.4"/>' % (pts, NAVY))
+
+# i due limiti operativi, ciascuno con il colore della propria attivita'
+for lim, col, share in ((2.5, NAVY, .84), (1.5, AMBER, .62)):
+    o.append('<line x1="%.1f" y1="%d" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.6" '
+             'stroke-dasharray="5 4" stroke-opacity=".75"/>' % (qx(lim), QY0, qx(lim), qy(share), col))
+    o.append('<line x1="%d" y1="%.1f" x2="%.1f" y2="%.1f" stroke="%s" stroke-width="1.6" '
+             'stroke-dasharray="5 4" stroke-opacity=".75"/>' % (QX0, qy(share), qx(lim), qy(share), col))
+    o.append('<circle cx="%.1f" cy="%.1f" r="5.5" fill="%s"/>' % (qx(lim), qy(share), col))
+    o += bil(qx(lim) - 12, qy(share) - 12, 14, col, '%d%%' % (share * 100), '%d%%' % (share * 100),
+             anchor='end')
+    t = ('%.1f m' % lim).replace('.', ',')
+    o += bil(qx(lim), QY0 + 26, 14, col, 'Hs ≤ ' + t, 'Hs ≤ %.1f m' % lim, anchor='middle')
+
+# pannello destro: quanti giorni di calendario costa ciascuna attivita'
+o.append('<line x1="800" y1="130" x2="800" y2="460" stroke="%s" stroke-opacity=".18"/>' % NAVY)
+o += bil(BX, 112, 14, STEEL, 'GIORNI NECESSARI', 'CALENDAR DAYS NEEDED')
+for y, col, lab_it, lab_en, prod, wait in (
+        (190, NAVY,  'GEOFISICO – Hs ≤ 2,5 m',  'GEOPHYSICAL – Hs ≤ 2.5 m',  22, 4),
+        (310, AMBER, 'GEOTECNICO – Hs ≤ 1,5 m', 'GEOTECHNICAL – Hs ≤ 1.5 m', 14, 9)):
+    o += bil(BX, y, 14, col, lab_it, lab_en)
+    o.append('<rect x="%d" y="%d" width="%d" height="30" fill="%s" fill-opacity=".85"/>'
+             % (BX, y + 16, prod * DAY, col))
+    o.append('<rect x="%d" y="%d" width="%d" height="30" fill="%s" fill-opacity=".22"/>'
+             % (BX + prod * DAY, y + 16, wait * DAY, col))
+    o += bil(BX, y + 72, 14, STEEL,
+             '%d PRODUTTIVI + %d DI ATTESA = %d DI CALENDARIO' % (prod, wait, prod + wait),
+             '%d PRODUCTIVE + %d WAITING = %d CALENDAR' % (prod, wait, prod + wait))
+o.append('</svg>')
+open('fig_art_work.svg', 'w', encoding='utf-8').write('\n'.join(o))
+print('fig_art_work.svg', len('\n'.join(o)), 'chars')
+
+
+# ═══════════════════════════════════ FIG F — lo scambio del percorso critico
+# Quattro barre: i due percorsi come pianificati e come ricalcolati. Il colore
+# non distingue i percorsi ma l'esposizione al meteo, perche' e' quella la
+# variabile dell'articolo: cosi' si vede che il segmento che si gonfia e'
+# offshore, e che il blocco piu' lungo del percorso vincolante e' invece a
+# terra - cioe' dov'e' la leva di recupero. Le mitigazioni restano alla
+# didascalia: in figura sarebbero il quarto messaggio e la sovraccaricherebbero.
+W, H = 1300, 540
+PX, DAYW = 290, 700 / 48.0        # 48 giorni e' il percorso piu' lungo
+LXP = 230
+
+PATHS = {
+    'A_plan': [('Mobilitazione','Mobilisation',4,0), ('Calibrazione','Calibration',2,1),
+               ('Transito','Transit',1,1), ('Acquisizione','Acquisition',25,1),
+               ('Processing','Processing',10,0), ('Interpretazione','Interpretation',3,0)],
+    'B_plan': [('Mobilitazione','Mobilisation',5,0), ('Transito','Transit',1,1),
+               ('Campionamento','Sampling & CPT',16,1), ('Laboratorio','Laboratory',14,0),
+               ('Reporting','Reporting',5,0)],
+}
+PATHS['A_rec'] = [(a,b,26 if a=='Acquisizione' else c,d) for a,b,c,d in PATHS['A_plan']]
+PATHS['B_rec'] = [(a,b,23 if a=='Campionamento' else c,d) for a,b,c,d in PATHS['B_plan']]
+tot = lambda k: sum(s[2] for s in PATHS[k])
+
+o = ['<svg viewBox="0 0 %d %d" xmlns="http://www.w3.org/2000/svg" role="img" '
+     'aria-label="The two paths as planned and recomputed: the critical path swaps from '
+     'the geophysical to the geotechnical one">' % (W, H)]
+o += bil(0, 52, 18, NAVY,
+         'Il percorso critico si scambia', 'The critical path swaps over', font=DISP)
+o += bil(0, 76, 14, STEEL,
+         'IL COLORE DISTINGUE CIO’ CHE IL METEO PUO’ FERMARE DA CIO’ CHE E’ A TERRA',
+         'COLOUR SEPARATES WHAT THE WEATHER CAN STOP FROM WHAT SITS ONSHORE')
+
+for gy, keys, hdr_it, hdr_en in ((150, ('A_plan','B_plan'), 'COME PIANIFICATO, FRANCHIGIA METEO PIATTA DEL 15%',
+                                  'AS PLANNED, FLAT 15% WEATHER ALLOWANCE'),
+                                 (340, ('A_rec','B_rec'), 'RICALCOLATO SULLA FINESTRA OPERATIVA',
+                                  'RECOMPUTED ON WORKABILITY')):
+    o += bil(0, gy, 14, NAVY, hdr_it, hdr_en, extra=' fill-opacity=".8"')
+    crit = max(tot(k) for k in keys)
+    for i, k in enumerate(keys):
+        y = gy + 40 + i * 60
+        it_lab = 'Path A – Geofisico' if k[0] == 'A' else 'Path B – Geotecnico'
+        en_lab = 'Path A – Geophysical' if k[0] == 'A' else 'Path B – Geotechnical'
+        o += bil(LXP, y + 5, 15, NAVY, it_lab, en_lab, anchor='end', font=DISP,
+                 extra=' fill-opacity=".9"')
+        x = PX
+        for _, _, days, exposed in PATHS[k]:
+            o.append('<rect x="%.1f" y="%d" width="%.1f" height="26" fill="%s" fill-opacity="%s"/>'
+                     % (x + .6, y - 13, days * DAYW - 1.2, NAVY, '.85' if exposed else '.22'))
+            x += days * DAYW
+        if tot(k) < crit:
+            o.append('<rect x="%.1f" y="%d" width="%.1f" height="26" fill="none" stroke="%s" '
+                     'stroke-opacity=".45" stroke-dasharray="4 3"/>'
+                     % (x + .6, y - 13, (crit - tot(k)) * DAYW - 1.2, NAVY))
+        end = PX + crit * DAYW + 14
+        if tot(k) == crit:
+            o += bil(end, y + 5, 14, AMBER, '%d GIORNI – CRITICO' % tot(k),
+                     '%d DAYS – CRITICAL' % tot(k))
+        else:
+            o += bil(end, y + 5, 14, STEEL, '%d GIORNI – FLOAT %d' % (tot(k), crit - tot(k)),
+                     '%d DAYS – FLOAT %d' % (tot(k), crit - tot(k)))
+
+# dove sono finiti i giorni in piu'
+for k, key, delta in (('A_rec', 'Acquisizione', 1), ('B_rec', 'Campionamento', 7)):
+    y = 340 + 40 + (0 if k[0] == 'A' else 60)
+    x = PX
+    for name, _, days, _ in PATHS[k]:
+        if name == key:
+            o += bil(x + days * DAYW / 2, y - 20, 14, AMBER, '+%d' % delta, '+%d' % delta,
+                     anchor='middle')
+            break
+        x += days * DAYW
+
+for x, op, it, en in ((290, '.85', 'ESPOSTO AL METEO', 'WEATHER-EXPOSED'),
+                      (620, '.22', 'A TERRA', 'ONSHORE')):
+    o.append('<rect x="%d" y="505" width="16" height="16" fill="%s" fill-opacity="%s"/>' % (x, NAVY, op))
+    o += bil(x + 26, 518, 14, NAVY, it, en, extra=' fill-opacity=".8"')
+o.append('<rect x="900" y="505" width="16" height="16" fill="none" stroke="%s" '
+         'stroke-opacity=".45" stroke-dasharray="4 3"/>' % NAVY)
+o += bil(926, 518, 14, NAVY, 'FLOAT', 'FLOAT', extra=' fill-opacity=".8"')
+o.append('</svg>')
+open('fig_art_swap.svg', 'w', encoding='utf-8').write('\n'.join(o))
+print('fig_art_swap.svg', len('\n'.join(o)), 'chars')

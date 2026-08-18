@@ -26,7 +26,8 @@ if '--figures' in sys.argv:
     # le figure degli articoli vivono in content/; lo script le scrive lì
     run(['tools/figures/gen_article_figs.py'])
     for f in ('fig_art_origin.svg', 'fig_art_lines.svg',
-              'fig_art_tvu.svg', 'fig_art_map.svg'):
+              'fig_art_tvu.svg', 'fig_art_map.svg',
+              'fig_art_work.svg', 'fig_art_swap.svg'):
         if os.path.exists(f):
             os.replace(f, os.path.join('content', f))
     print('figure articoli rigenerate in content/')

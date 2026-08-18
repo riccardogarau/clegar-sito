@@ -10,8 +10,312 @@ FIG_ORIGIN = '__FIG_ORIGIN__'
 FIG_LINES = '__FIG_LINES__'
 FIG_TVU = '__FIG_TVU__'
 FIG_MAP = '__FIG_MAP__'
+FIG_WORK = '__FIG_WORK__'
+FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
+    {
+        'id': 'critical-path',
+        'date': '2026-08-12',
+        'slug': {'it': 'quando-il-percorso-critico-si-sposta', 'en': 'when-the-critical-path-moves'},
+        'title': {
+            'it': 'Quando il percorso critico si sposta',
+            'en': 'When the critical path moves',
+        },
+        'meta_title': {
+            'it': 'Quando il percorso critico si sposta | Insights',
+            'en': 'When the critical path moves | Insights',
+        },
+        'desc': {
+            'it': ('Perché una franchigia meteo unica per tutte le attività offshore sposta il '
+                   'percorso critico senza che nessuno se ne accorga, e come si ricalcola sulla '
+                   'finestra operativa.'),
+            'en': ('Why a single weather allowance across all offshore activities moves the critical '
+                   'path without anyone noticing, and how to recompute it on workability.'),
+        },
+        'abstract': {
+            'it': ('Il percorso critico non è una proprietà del progetto: è una proprietà delle '
+                   'assunzioni su cui il programma è stato costruito. Su una campagna offshore, '
+                   'quella che lavora di più è l’assunzione sul meteo.'),
+            'en': ('A critical path is not a property of the project. It is a property of the '
+                   'assumptions the schedule was built on – and offshore, the assumption doing the '
+                   'most work is the one about weather.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Il percorso critico della maggior parte delle campagne offshore viene calcolato una volta, presentato al kick-off, e poi richiamato solo quando qualcosa è già andato storto. A quel punto, di solito, è il percorso critico sbagliato – non perché il pianificatore abbia commesso un errore di calcolo, ma perché il programma è stato costruito su un'ipotesi meteo che tratta ogni attività offshore come ugualmente esposta.</p>
+
+<p>Non sono ugualmente esposte. Ed è quella differenza a decidere quale percorso sia effettivamente vincolante.</p>
+
+<h2>Il problema della franchigia fissa</h2>
+
+<p>La maggior parte dei programmi di campagna applica un'unica franchigia meteo a tutto il lavoro offshore – 15%, 20%, qualunque valore abbia usato l'ultimo progetto. È un numero che sembra ragionevole, e viene applicato in modo uniforme perché applicarlo in qualunque altro modo richiede un'analisi della finestra operativa per cui, in fase di gara, nessuno ha previsto tempo.</p>
+
+<p>Ma il meteo non ritarda le attività in proporzione alla loro durata. Le ritarda in proporzione a quanto spesso lo stato del mare supera <em>il proprio</em> limite operativo. Una linea di acquisizione multibeam e una prova CPT non si fermano alla stessa altezza d'onda significativa, e in una stagione marginale è nello scarto fra queste due soglie che il programma finisce davvero per fallire.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori riportati di seguito sono sintetici – costruiti per illustrare il metodo, non tratti da lavori per clienti – ma la struttura è una che ricorre.</p>
+
+<p>Una campagna di site investigation combinata: uno spread geofisico e uno spread geotecnico, che procedono in parallelo su navi separate, entrambi confluenti in un'unica milestone – un ground model integrato consegnato al progettista delle fondazioni.</p>
+
+<p><strong>Come pianificato al kick-off</strong>, con una franchigia meteo fissa del 15% applicata a entrambe le attività offshore:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Path A – Geofisico</th><th class="num">Giorni</th></tr>
+</thead>
+<tbody>
+<tr><td>Mobilitazione</td><td class="num">4</td></tr>
+<tr><td>Calibrazione e patch test</td><td class="num">2</td></tr>
+<tr><td>Transito</td><td class="num">1</td></tr>
+<tr><td>Acquisizione (22 + 15%)</td><td class="num">25</td></tr>
+<tr><td>Processing</td><td class="num">10</td></tr>
+<tr><td>Interpretazione e integrazione</td><td class="num">3</td></tr>
+<tr><td><strong>Totale</strong></td><td class="num"><strong>45</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Path B – Geotecnico</th><th class="num">Giorni</th></tr>
+</thead>
+<tbody>
+<tr><td>Mobilitazione</td><td class="num">5</td></tr>
+<tr><td>Transito</td><td class="num">1</td></tr>
+<tr><td>Campionamento e CPT (14 + 15%)</td><td class="num">16</td></tr>
+<tr><td>Prove di laboratorio</td><td class="num">14</td></tr>
+<tr><td>Factual Report</td><td class="num">5</td></tr>
+<tr><td><strong>Totale</strong></td><td class="num"><strong>41</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Path A è critico a 45 giorni. Path B ha 4 giorni di float. La milestone di handover si colloca al giorno 45.</p>
+
+<p>Tutto il piano di mitigazione discende da questa lettura: una clausola di standby sulla nave di rilievo, una testa trasduttore MBES di scorta spedita al porto di mobilitazione, un tecnico di processing in più nel team per comprimere il blocco di 10 giorni di processing se l'acquisizione sfora. Tutto questo protegge Path A.</p>
+
+<h2>Lo stesso programma, con la finestra operativa applicata</h2>
+
+<p>Ora si sostituisca la franchigia fissa con il limite operativo proprio di ciascuna attività, valutato rispetto alle statistiche hindcast meteo-marine per la finestra di acquisizione su quel sito:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Attività</th><th class="num">Limite operativo</th><th class="num">Finestra operativa</th><th class="num">Giorni produttivi richiesti</th><th class="num">Giorni di calendario necessari</th></tr>
+</thead>
+<tbody>
+<tr><td>Acquisizione geofisica</td><td class="num">Hs ≤ 2,5 m</td><td class="num">84%</td><td class="num">22</td><td class="num">26</td></tr>
+<tr><td>Campionamento geotecnico e CPT</td><td class="num">Hs ≤ 1,5 m</td><td class="num">62%</td><td class="num">14</td><td class="num">23</td></tr>
+</tbody>
+</table>
+</div>
+
+__FIG_WORK__
+
+<p>L'acquisizione geofisica richiedeva 25 giorni di calendario con la franchigia fissa e ne richiede 26 – l'ipotesi era vicina al vero. Il campionamento geotecnico richiedeva 16 giorni e ne richiede 23. La franchigia fissa lo aveva sottostimato di sette giorni.</p>
+
+<p>Ricalcolato:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th></th><th class="num">Pianificato</th><th class="num">Ricalcolato</th><th class="num">Variazione</th></tr>
+</thead>
+<tbody>
+<tr><td>Path A – Geofisico</td><td class="num">45</td><td class="num">46</td><td class="num">+1</td></tr>
+<tr><td>Path B – Geotecnico</td><td class="num">41</td><td class="num">48</td><td class="num">+7</td></tr>
+</tbody>
+</table>
+</div>
+
+<p><strong>Path B è ora critico a 48 giorni. Path A ha 2 giorni di float.</strong></p>
+
+__FIG_SWAP__
+
+<h2>Che cosa è cambiato davvero</h2>
+
+<p>La milestone è slittata di tre giorni. Questa è la conseguenza visibile, ed è la minore delle due.</p>
+
+<p>La conseguenza maggiore è che ogni mitigazione del piano è ora puntata sul percorso sbagliato. La clausola di standby, il trasduttore di scorta, il tecnico di processing in più – tutto questo protegge un percorso che non è più vincolante e che ora ha a sua volta del float. Nel frattempo il percorso che è davvero vincolante non ha alcuna mitigazione associata, perché al kick-off non ne aveva bisogno.</p>
+
+<p>Questo è il modo di fallire che vale la pena nominare: non che il programma sia in ritardo, ma che le misure protettive del progetto siano state allocate su un percorso critico che ha smesso di essere critico nel momento stesso in cui è stato applicato un modello meteo realistico – e nessuno lo ha ricalcolato.</p>
+
+<h2>Dove sta davvero la leva di recupero</h2>
+
+<p>Una volta che Path B è critico, l'istinto è proteggere l'operazione di campionamento: estendere il noleggio della nave, aggiungere un giorno di standby meteo, spostare più avanti la finestra. Sono tutte soluzioni costose, e nessuna è affidabile, perché il vincolo è lo stato del mare e lo stato del mare non è negoziabile.</p>
+
+<p>La leva di recupero su Path B è il blocco di 14 giorni di prove di laboratorio – a terra, indipendente dal meteo e comprimibile. Accelerare i tempi di laboratorio da 14 a 9 giorni riporta Path B a 43 giorni, a una frazione del costo di un giorno di standby nave e senza alcun rischio meteo.</p>
+
+<p>Questo, però, non ripristina la milestone originale. Con Path B a 43 giorni, torna a essere vincolante Path A a 46, e lo slittamento si riduce da tre giorni a uno. Recuperare quell'ultimo giorno significa tornare al percorso geofisico e comprimere il blocco di 10 giorni di processing – esattamente ciò per cui era previsto il tecnico di processing in più nel piano di mitigazione originale. Quella mitigazione non era sbagliata. Era prematura: proteggeva un percorso che aveva smesso di essere vincolante, ed è tornata utile solo una volta che l'altro percorso è stato riportato sotto controllo.</p>
+
+<p>È la stessa lezione applicata due volte all'interno di un solo esempio. Si comprime il percorso vincolante, e la classifica cambia di nuovo.</p>
+
+<p>Quell’opzione è sempre stata disponibile. È rimasta invisibile finché il piano mostrava il percorso geotecnico con un float comodo.</p>
+
+<h2>Che cosa richiedere nella pianificazione della campagna</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Una franchigia meteo per attività, derivata dai limiti operativi.</strong><span class="t"> Un unico numero applicato a tutto l'ambito offshore non è una franchigia meteo, è un segnaposto. Il limite di ciascuna attività va valutato rispetto alle statistiche meteo-marine del sito per la finestra reale.</span></span></li>
+  <li><span class="k">02</span><span><strong>La base della finestra operativa dichiarata esplicitamente</strong><span class="t"> – quale dataset hindcast, quali anni, quale percentile. Queste ipotesi guidano il programma più di qualsiasi stima di durata, e sono di solito la parte meno documentata del piano.</span></span></li>
+  <li><span class="k">03</span><span><strong>Il percorso critico ricalcolato ogni settimana, sui dati reali.</strong><span class="t"> Non la baseline ripresentata – ricalcolato, con il downtime reale a oggi e una stima aggiornata della finestra operativa futura. Il percorso vincolante alla quarta settimana spesso non è quello che vincolava al kick-off.</span></span></li>
+  <li><span class="k">04</span><span><strong>La mitigazione mappata sul percorso critico corrente, non su quello di baseline.</strong><span class="t"> Se il percorso critico si sposta e il registro delle mitigazioni non lo segue, il progetto sta pagando una protezione di cui non ha più bisogno.</span></span></li>
+  <li><span class="k">05</span><span><strong>Una soglia di quasi-criticità definita.</strong><span class="t"> Qualsiasi percorso entro, diciamo, cinque giorni dal critico va monitorato con la stessa disciplina del percorso critico stesso. Nel lavoro offshore la classifica cambia troppo facilmente per monitorare solo la voce in testa.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Un percorso critico non è una proprietà del progetto. È una proprietà delle ipotesi su cui è stato costruito il programma – e in una campagna offshore, l'ipotesi che lavora di più è quella sul meteo.</p>
+
+<p>Si cambi il modello meteo da una percentuale fissa a limiti operativi reali, e la classifica dei percorsi cambia con esso. Il programma che ne risulta non è più pessimistico. È puntato sul problema giusto.</p>
+
+<div class="callout">
+  <p>CLEGAR fornisce project management indipendente e technical assurance per campagne offshore. Se state pianificando una finestra di rilievo, o state rivedendo un programma che vi è stato consegnato, quella conversazione è gratuita.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">The critical path on most offshore campaigns is computed once, presented at kick-off, and then referred to only when something has already gone wrong. By that point it is usually the wrong critical path – not because the planner made an arithmetic error, but because the schedule was built on a weather assumption that treats every offshore activity as equally exposed.</p>
+
+<p>They are not equally exposed. And the difference decides which path actually binds.</p>
+
+<h2>The flat allowance problem</h2>
+
+<p>Most campaign schedules apply a single weather allowance across all offshore work – 15%, 20%, whatever the last project used. It is a reasonable-looking number, and it is applied uniformly because applying it any other way requires a workability analysis that takes time nobody has budgeted at tender stage.</p>
+
+<p>But weather does not delay activities in proportion to their duration. It delays them in proportion to how often the sea state exceeds <em>their own</em> operating limit. A multibeam acquisition line and a CPT deployment do not stop at the same significant wave height, and in a marginal season the gap between those two thresholds is where the schedule actually fails.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are synthetic – built to illustrate the method, not taken from client work – but the structure is one that recurs.</p>
+
+<p>A combined site investigation campaign: a geophysical spread and a geotechnical spread, running in parallel on separate vessels, both feeding a single milestone – an integrated ground model handed to the foundation designer.</p>
+
+<p><strong>As planned at kick-off</strong>, with a flat 15% weather allowance applied to both offshore activities:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Path A – Geophysical</th><th class="num">Days</th></tr>
+</thead>
+<tbody>
+<tr><td>Mobilisation</td><td class="num">4</td></tr>
+<tr><td>Calibration &amp; patch test</td><td class="num">2</td></tr>
+<tr><td>Transit</td><td class="num">1</td></tr>
+<tr><td>Acquisition (22 + 15%)</td><td class="num">25</td></tr>
+<tr><td>Processing</td><td class="num">10</td></tr>
+<tr><td>Interpretation &amp; integration</td><td class="num">3</td></tr>
+<tr><td><strong>Total</strong></td><td class="num"><strong>45</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Path B – Geotechnical</th><th class="num">Days</th></tr>
+</thead>
+<tbody>
+<tr><td>Mobilisation</td><td class="num">5</td></tr>
+<tr><td>Transit</td><td class="num">1</td></tr>
+<tr><td>Sampling &amp; CPT (14 + 15%)</td><td class="num">16</td></tr>
+<tr><td>Laboratory testing</td><td class="num">14</td></tr>
+<tr><td>Factual reporting</td><td class="num">5</td></tr>
+<tr><td><strong>Total</strong></td><td class="num"><strong>41</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Path A is critical at 45 days. Path B carries 4 days of float. The handover milestone sits at day 45.</p>
+
+<p>Everything in the mitigation plan follows from that reading: a standby clause on the survey vessel, a spare MBES transducer head shipped to the mobilisation port, an extra processor on the team to compress the 10-day processing block if acquisition overruns. All of it protects Path A.</p>
+
+<h2>The same schedule, with workability applied</h2>
+
+<p>Now replace the flat allowance with each activity's own operating limit, assessed against metocean hindcast statistics for the acquisition window at that site:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Activity</th><th class="num">Operating limit</th><th class="num">Workable proportion of window</th><th class="num">Productive days required</th><th class="num">Calendar days needed</th></tr>
+</thead>
+<tbody>
+<tr><td>Geophysical acquisition</td><td class="num">Hs ≤ 2.5 m</td><td class="num">84%</td><td class="num">22</td><td class="num">26</td></tr>
+<tr><td>Geotechnical sampling &amp; CPT</td><td class="num">Hs ≤ 1.5 m</td><td class="num">62%</td><td class="num">14</td><td class="num">23</td></tr>
+</tbody>
+</table>
+</div>
+
+__FIG_WORK__
+
+<p>The geophysical acquisition needed 25 calendar days under the flat allowance and needs 26 – the assumption was close to right. The geotechnical sampling needed 16 and needs 23. The flat allowance under-provisioned it by seven days.</p>
+
+<p>Recomputed:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th></th><th class="num">Planned</th><th class="num">Recomputed</th><th class="num">Change</th></tr>
+</thead>
+<tbody>
+<tr><td>Path A – Geophysical</td><td class="num">45</td><td class="num">46</td><td class="num">+1</td></tr>
+<tr><td>Path B – Geotechnical</td><td class="num">41</td><td class="num">48</td><td class="num">+7</td></tr>
+</tbody>
+</table>
+</div>
+
+<p><strong>Path B is now critical at 48 days. Path A has 2 days of float.</strong></p>
+
+__FIG_SWAP__
+
+<h2>What actually changed</h2>
+
+<p>The milestone slipped three days. That is the visible consequence, and it is the smaller one.</p>
+
+<p>The larger consequence is that every mitigation in the plan is now pointed at the wrong path. The standby clause, the spare transducer, the extra processor – all of it protects a path that is no longer binding and now carries float of its own. Meanwhile the path that does bind has no mitigation attached to it at all, because at kick-off it did not need any.</p>
+
+<p>This is the failure mode worth naming: not that the schedule was late, but that the project's protective measures were allocated against a critical path that stopped being critical the moment a realistic weather model was applied – and nobody recomputed.</p>
+
+<h2>Where the recovery lever actually is</h2>
+
+<p>Once Path B is critical, the instinct is to protect the sampling operation: extend the vessel charter, add a weather standby day, push the window later. All of these are expensive, and none of them are reliable, because the constraint is the sea state and the sea state is not negotiable.</p>
+
+<p>The recovery lever on Path B is the 14-day laboratory testing block – onshore, weather-independent, and compressible. Expediting lab turnaround from 14 days to 9 pulls Path B back to 43 days, at a fraction of the cost of a vessel standby day and with none of the weather risk.</p>
+
+<p>It does not, however, restore the original milestone. With Path B at 43 days, Path A binds again at 46, and the slip narrows from three days to one. Recovering that last day means going back to the geophysical path and compressing the 10-day processing block – which is precisely what the extra processor in the original mitigation plan was for. That mitigation was not wrong. It was premature: it protected a path that had stopped binding, and became useful again only once the other path had been brought back under control.</p>
+
+<p>This is the same lesson applied twice inside a single example. Compress the binding path, and the ranking changes again.</p>
+
+<p>That option was always available. It was invisible for as long as the plan showed the geotechnical path carrying comfortable float.</p>
+
+<h2>What to require in campaign planning</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>A per-activity weather allowance, derived from operating limits.</strong><span class="t"> One number applied across the whole offshore scope is not a weather allowance, it is a placeholder. Each activity's limit assessed against site metocean statistics for the actual window.</span></span></li>
+  <li><span class="k">02</span><span><strong>The workability basis stated explicitly</strong><span class="t"> – which hindcast dataset, which years, which percentile. These assumptions drive the schedule more than any duration estimate, and they are usually the least documented part of the plan.</span></span></li>
+  <li><span class="k">03</span><span><strong>The critical path recomputed weekly, on actuals.</strong><span class="t"> Not the baseline re-presented – recomputed, with real downtime to date and an updated forward workability estimate. The path that binds in week four is often not the one that bound at kick-off.</span></span></li>
+  <li><span class="k">04</span><span><strong>Mitigation mapped to the current critical path, not the baseline one.</strong><span class="t"> If the critical path moves and the mitigation register does not follow it, the project is paying for protection it no longer needs.</span></span></li>
+  <li><span class="k">05</span><span><strong>A near-critical threshold defined.</strong><span class="t"> Any path within, say, five days of critical gets tracked with the same discipline as the critical path itself. On offshore work the ranking changes too easily to monitor only the top item.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>A critical path is not a property of the project. It is a property of the assumptions the schedule was built on – and on an offshore campaign, the assumption doing the most work is the one about weather.</p>
+
+<p>Change the weather model from a flat percentage to actual operating limits, and the ranking of the paths changes with it. The schedule that results is not more pessimistic. It is pointed at the right problem.</p>
+
+<div class="callout">
+  <p>CLEGAR provides independent project management and technical assurance for offshore campaigns. If you are planning a survey window, or reviewing a schedule you have been given, that conversation is free.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
     {
         'id': 'crossline-check',
         'date': '2026-08-12',
@@ -144,7 +448,7 @@ __FIG_MAP__
 <p>Un dataset che passa al 96,4% non è uniformemente affidabile al 96,4%. È altamente affidabile sulla maggior parte del blocco e meno affidabile in un'area specifica – e in questo esempio, quell'area è dove si fa l'ingegneria.</p>
 
 <div class="callout">
-  <p>CLEGAR fornisce QC indipendente e technical assurance su dataset geofisici per sviluppatori, contractor e asset owner dell'offshore. Se stai redigendo la specifica di un rilievo, o stai valutando un dataset che hai ricevuto, quella conversazione è gratuita.</p>
+  <p>CLEGAR fornisce QC indipendente e technical assurance su dataset geofisici per sviluppatori, contractor e asset owner dell'offshore. Se state redigendo la specifica di un rilievo, o state valutando un dataset che avete ricevuto, quella conversazione è gratuita.</p>
 </div>
 
 <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
