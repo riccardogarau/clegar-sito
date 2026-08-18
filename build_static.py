@@ -624,13 +624,13 @@ FIG_SVG = {
                   'Thirty-one failures are 2.5% of the dataset, but they fall where the cable will '
                   'run: that is where the headline number stops being enough. Synthetic example.')),
     FIG_WORK:   ('content/fig_art_work.svg',
-                 ('La franchigia fissa del 15% era quasi giusta per il geofisico e sbagliata '
+                 ('Il weather allowance unico del 15% era quasi giusto per il geofisico e sbagliato '
                   'di sette giorni per il geotecnico. Esempio sintetico.',
                   'The flat 15% allowance was nearly right for the geophysical work and seven '
                   'days out for the geotechnical. Synthetic example.')),
     FIG_SWAP:   ('content/fig_art_swap.svg',
                  ('Le mitigazioni del piano – standby nave, trasduttore di scorta, tecnico di '
-                  'processing in più – restano tutte su Path A, che ora ha float. Il percorso che '
+                  'processing in più – restano tutte su Path A, che ora ha float. Il path che '
                   'vincola non ne ha nessuna.',
                   'The plan’s mitigations – vessel standby, spare transducer, extra '
                   'processor – all remain on Path A, which now carries float. The path that '

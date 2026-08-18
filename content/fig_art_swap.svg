@@ -1,9 +1,9 @@
 <svg viewBox="0 0 1300 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The two paths as planned and recomputed: the critical path swaps from the geophysical to the geotechnical one">
-<text class="it" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">Il percorso critico si scambia</text>
+<text class="it" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">Il critical path si scambia</text>
 <text class="en" font-family="Archivo, sans-serif" x="0.0" y="52.0" font-size="18" fill="#0B2545" text-anchor="start">The critical path swaps over</text>
 <text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">IL COLORE DISTINGUE CIO’ CHE IL METEO PUO’ FERMARE DA CIO’ CHE E’ A TERRA</text>
 <text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="76.0" font-size="14" fill="#8B9598" text-anchor="start">COLOUR SEPARATES WHAT THE WEATHER CAN STOP FROM WHAT SITS ONSHORE</text>
-<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="150.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">COME PIANIFICATO, FRANCHIGIA METEO PIATTA DEL 15%</text>
+<text class="it" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="150.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">COME PIANIFICATO, WEATHER ALLOWANCE UNICO DEL 15%</text>
 <text class="en" font-family="IBM Plex Mono, monospace" letter-spacing="1.1" x="0.0" y="150.0" font-size="14" fill="#0B2545" text-anchor="start" fill-opacity=".8">AS PLANNED, FLAT 15% WEATHER ALLOWANCE</text>
 <text class="it" font-family="Archivo, sans-serif" x="230.0" y="195.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Path A – Geofisico</text>
 <text class="en" font-family="Archivo, sans-serif" x="230.0" y="195.0" font-size="15" fill="#0B2545" text-anchor="end" fill-opacity=".9">Path A – Geophysical</text>

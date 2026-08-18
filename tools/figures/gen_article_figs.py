@@ -410,12 +410,12 @@ o = ['<svg viewBox="0 0 %d %d" xmlns="http://www.w3.org/2000/svg" role="img" '
      'aria-label="The two paths as planned and recomputed: the critical path swaps from '
      'the geophysical to the geotechnical one">' % (W, H)]
 o += bil(0, 52, 18, NAVY,
-         'Il percorso critico si scambia', 'The critical path swaps over', font=DISP)
+         'Il critical path si scambia', 'The critical path swaps over', font=DISP)
 o += bil(0, 76, 14, STEEL,
          'IL COLORE DISTINGUE CIO’ CHE IL METEO PUO’ FERMARE DA CIO’ CHE E’ A TERRA',
          'COLOUR SEPARATES WHAT THE WEATHER CAN STOP FROM WHAT SITS ONSHORE')
 
-for gy, keys, hdr_it, hdr_en in ((150, ('A_plan','B_plan'), 'COME PIANIFICATO, FRANCHIGIA METEO PIATTA DEL 15%',
+for gy, keys, hdr_it, hdr_en in ((150, ('A_plan','B_plan'), 'COME PIANIFICATO, WEATHER ALLOWANCE UNICO DEL 15%',
                                   'AS PLANNED, FLAT 15% WEATHER ALLOWANCE'),
                                  (340, ('A_rec','B_rec'), 'RICALCOLATO SULLA FINESTRA OPERATIVA',
                                   'RECOMPUTED ON WORKABILITY')):
