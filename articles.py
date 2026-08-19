@@ -43,7 +43,7 @@ ARTICLES = [
         },
         'body': {
             'it': """
-<p class="lede">Il critical path della maggior parte delle campagne offshore viene calcolato una volta, presentato al kick-off, e poi richiamato solo quando qualcosa è già andato storto. A quel punto, di solito, è il critical path sbagliato – non perché il planner abbia commesso un errore di calcolo, ma perché il programma è stato costruito su un'ipotesi meteo che tratta ogni attività offshore come ugualmente esposta.</p>
+<p class="lede">Il critical path della maggior parte delle campagne offshore viene calcolato una volta, presentato al kick-off, e poi richiamato solo quando qualcosa è già andato storto. A quel punto, di solito, è il critical path sbagliato – non perché il planner abbia commesso un errore di calcolo, ma perché il programma è stato costruito su un'assunzione meteo che tratta ogni attività offshore come ugualmente esposta.</p>
 
 <p>Non sono ugualmente esposte. Ed è quella differenza a decidere quale path sia effettivamente vincolante.</p>
 
@@ -55,9 +55,9 @@ ARTICLES = [
 
 <h2>Un esempio pratico</h2>
 
-<p>I valori riportati di seguito sono sintetici – costruiti per illustrare il metodo, non tratti da lavori per clienti – ma la struttura è una che ricorre.</p>
+<p>I valori riportati di seguito sono sintetici – costruiti per illustrare il metodo, non tratti da progetti reali – ma la struttura è una che ricorre.</p>
 
-<p>Una campagna di site investigation combinata: uno spread geofisico e uno spread geotecnico, che procedono in parallelo su navi separate, entrambi confluenti in un'unica milestone – un ground model integrato consegnato al progettista delle fondazioni.</p>
+<p>Una campagna di site investigation combinata: uno spread geofisico e uno spread geotecnico, che procedono in parallelo su navi separate, entrambi confluenti in un unico obiettivo – un ground model integrato consegnato al progettista delle fondazioni.</p>
 
 <p><strong>Come pianificato al kick-off</strong>, con un weather allowance fisso del 15% applicato a entrambe le attività offshore:</p>
 
@@ -96,7 +96,7 @@ ARTICLES = [
 
 <p>Path A è critico a 45 giorni. Path B ha 4 giorni di float. La milestone di handover si colloca al giorno 45.</p>
 
-<p>Tutto il piano di mitigazione discende da questa lettura: una clausola di standby sulla nave di rilievo, una testa trasduttore MBES di scorta spedita al porto di mobilitazione, un tecnico di processing in più nel team per comprimere il blocco di 10 giorni di processing se l'acquisizione sfora. Tutto questo protegge Path A.</p>
+<p>Tutto il piano di mitigazione nasce da questa lettura: una clausola di standby nel contratto della nave da rilievo, che fissa in anticipo quanto si paga nei giorni di fermo, un trasduttore MBES di ricambio spedito al porto di mobilitazione, un tecnico di processing in più nel team per comprimere il blocco di 10 giorni di processing se l'acquisizione sfora. Tutto questo protegge Path A.</p>
 
 <h2>Lo stesso programma, con la finestra operativa applicata</h2>
 
@@ -116,7 +116,7 @@ ARTICLES = [
 
 __FIG_WORK__
 
-<p>L'acquisizione geofisica richiedeva 25 giorni di calendario con il weather allowance unico e ne richiede 26 – l'ipotesi era vicina al vero. Il campionamento geotecnico richiedeva 16 giorni e ne richiede 23. Il weather allowance unico lo aveva sottostimato di sette giorni.</p>
+<p>Per l'acquisizione geofisica il weather allowance unico prevedeva 25 giorni di calendario, e ne servono 26: l'assunzione era quasi giusta. Per il campionamento geotecnico ne prevedeva 16, e ne servono 23. Sette giorni in meno del necessario.</p>
 
 <p>Ricalcolato:</p>
 
@@ -140,15 +140,15 @@ __FIG_SWAP__
 
 <p>La milestone è slittata di tre giorni. Questa è la conseguenza visibile, ed è la minore delle due.</p>
 
-<p>La conseguenza maggiore è che ogni mitigazione del piano è ora puntata sul path sbagliato. La clausola di standby, il trasduttore di scorta, il tecnico di processing in più – tutto questo protegge un path che non è più vincolante e che ora ha a sua volta del float. Nel frattempo il path che è davvero vincolante non ha alcuna mitigazione associata, perché al kick-off non ne aveva bisogno.</p>
+<p>La conseguenza maggiore è che tutte le mitigazioni del piano proteggono ormai il path sbagliato. La clausola di standby, il trasduttore di ricambio, il tecnico di processing in più: difendono un path che non vincola più e che ora ha float suo. Il path che vincola davvero, invece, non ha alcuna protezione: al kick-off aveva quattro giorni di float, quindi nessuno gliene ha assegnata.</p>
 
 <p>È questo il failure mode che vale la pena nominare: non che il programma sia in ritardo, ma che le misure protettive del progetto siano state allocate su un critical path che ha smesso di essere critico nel momento stesso in cui è stato applicato un modello meteo realistico – e nessuno lo ha ricalcolato.</p>
 
-<h2>Dove sta davvero la leva di recupero</h2>
+<h2>Dove si può davvero recuperare tempo</h2>
 
-<p>Una volta che Path B è critico, l'istinto è proteggere l'operazione di campionamento: estendere il noleggio della nave, aggiungere un giorno di standby meteo, spostare più avanti la finestra. Sono tutte soluzioni costose, e nessuna è affidabile, perché il vincolo è lo stato del mare e lo stato del mare non è negoziabile.</p>
+<p>Quando a vincolare è Path B, l'istinto è proteggere l'operazione di campionamento: estendere il noleggio della nave, aggiungere un giorno di standby meteo, spostare più avanti la finestra. Sono tutte soluzioni costose, e nessuna è affidabile, perché il vincolo è lo stato del mare e lo stato del mare non è negoziabile.</p>
 
-<p>La leva di recupero su Path B è il blocco di 14 giorni di prove di laboratorio – a terra, indipendente dal meteo e comprimibile. Accelerare i tempi di laboratorio da 14 a 9 giorni riporta Path B a 43 giorni, a una frazione del costo di un giorno di standby nave e senza alcun rischio meteo.</p>
+<p>Su Path B l'unico blocco su cui si può davvero intervenire è quello delle prove di laboratorio: quattordici giorni a terra, che il meteo non tocca e che si possono comprimere. Accelerare i tempi di laboratorio da 14 a 9 giorni riporta Path B a 43 giorni, a una frazione del costo di un giorno di standby nave e senza alcun rischio meteo.</p>
 
 <p>Questo, però, non ripristina la milestone originale. Con Path B a 43 giorni, torna a vincolare Path A, a 46 giorni, e lo slittamento si riduce da tre giorni a uno. Recuperare quell'ultimo giorno significa tornare al path geofisico e comprimere il blocco di 10 giorni di processing – esattamente ciò per cui era previsto il tecnico di processing in più nel piano di mitigazione originale. Quella mitigazione non era sbagliata. Era prematura: proteggeva un path che aveva smesso di essere vincolante, ed è tornata utile solo una volta che l'altro path è stato riportato sotto controllo.</p>
 
@@ -168,12 +168,12 @@ __FIG_SWAP__
 
 <h2>Il punto di fondo</h2>
 
-<p>Un critical path non è una proprietà del progetto. È una proprietà delle ipotesi su cui è stato costruito il programma – e in una campagna offshore, l'ipotesi che lavora di più è quella sul meteo.</p>
+<p>Un critical path non è una proprietà del progetto. È una proprietà delle assunzioni su cui è stato costruito il programma – e in una campagna offshore, l'assunzione che lavora di più è quella sul meteo.</p>
 
-<p>Basta sostituire la percentuale fissa con i limiti operativi reali perché cambi anche quale path vincola. Il programma che ne risulta non è più pessimistico. È puntato sul problema giusto.</p>
+<p>Se al posto della percentuale fissa si usano i limiti operativi reali, non cambia soltanto la durata delle attività: cambia quale path vincola. Il programma che ne risulta non è più pessimistico. È puntato sul problema giusto.</p>
 
 <div class="callout">
-  <p>CLEGAR fornisce project management indipendente e technical assurance per campagne offshore. Se state pianificando un rilievo, o state rivedendo un programma che vi è stato consegnato, quella conversazione è gratuita.</p>
+  <p>CLEGAR fornisce project management e technical assurance per campagne offshore. Se state pianificando un rilievo, o state rivedendo un programma che vi è stato consegnato, ne parliamo volentieri.</p>
 </div>
 
 <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
@@ -191,7 +191,7 @@ __FIG_SWAP__
 
 <h2>A worked example</h2>
 
-<p>The figures below are synthetic – built to illustrate the method, not taken from client work – but the structure is one that recurs.</p>
+<p>The figures below are synthetic – built to illustrate the method, not taken from real projects – but the structure is one that recurs.</p>
 
 <p>A combined site investigation campaign: a geophysical spread and a geotechnical spread, running in parallel on separate vessels, both feeding a single milestone – an integrated ground model handed to the foundation designer.</p>
 
@@ -232,7 +232,7 @@ __FIG_SWAP__
 
 <p>Path A is critical at 45 days. Path B carries 4 days of float. The handover milestone sits at day 45.</p>
 
-<p>Everything in the mitigation plan follows from that reading: a standby clause on the survey vessel, a spare MBES transducer head shipped to the mobilisation port, an extra processor on the team to compress the 10-day processing block if acquisition overruns. All of it protects Path A.</p>
+<p>Everything in the mitigation plan follows from that reading: a standby clause in the survey vessel contract, fixing in advance what an idle day costs, a spare MBES transducer head shipped to the mobilisation port, an extra processor on the team to compress the 10-day processing block if acquisition overruns. All of it protects Path A.</p>
 
 <h2>The same schedule, with workability applied</h2>
 
@@ -276,7 +276,7 @@ __FIG_SWAP__
 
 <p>The milestone slipped three days. That is the visible consequence, and it is the smaller one.</p>
 
-<p>The larger consequence is that every mitigation in the plan is now pointed at the wrong path. The standby clause, the spare transducer, the extra processor – all of it protects a path that is no longer binding and now carries float of its own. Meanwhile the path that does bind has no mitigation attached to it at all, because at kick-off it did not need any.</p>
+<p>The larger consequence is that every mitigation in the plan is now pointed at the wrong path. The standby clause, the spare transducer, the extra processor – all of it protects a path that is no longer binding and now carries float of its own. The path that actually binds, by contrast, has no protection at all: at kick-off it carried four days of float, so nobody assigned it any.</p>
 
 <p>This is the failure mode worth naming: not that the schedule was late, but that the project's protective measures were allocated against a critical path that stopped being critical the moment a realistic weather model was applied – and nobody recomputed.</p>
 
@@ -309,7 +309,7 @@ __FIG_SWAP__
 <p>Change the weather model from a flat percentage to actual operating limits, and the ranking of the paths changes with it. The schedule that results is not more pessimistic. It is pointed at the right problem.</p>
 
 <div class="callout">
-  <p>CLEGAR provides independent project management and technical assurance for offshore campaigns. If you are planning a survey, or reviewing a schedule you have been given, that conversation is free.</p>
+  <p>CLEGAR provides project management and technical assurance for offshore campaigns. If you are planning a survey, or reviewing a schedule you have been given, we are glad to talk it through.</p>
 </div>
 
 <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
@@ -448,7 +448,7 @@ __FIG_MAP__
 <p>Un dataset che passa al 96,4% non è uniformemente affidabile al 96,4%. È altamente affidabile sulla maggior parte del blocco e meno affidabile in un'area specifica – e in questo esempio, quell'area è dove si fa l'ingegneria.</p>
 
 <div class="callout">
-  <p>CLEGAR fornisce QC indipendente e technical assurance su dataset geofisici per sviluppatori, contractor e asset owner dell'offshore. Se state redigendo la specifica di un rilievo, o state valutando un dataset che avete ricevuto, quella conversazione è gratuita.</p>
+  <p>CLEGAR fornisce QC indipendente e technical assurance su dataset geofisici per sviluppatori, contractor e asset owner dell'offshore. Se state redigendo la specifica di un rilievo, o state valutando un dataset che avete ricevuto, ne parliamo volentieri.</p>
 </div>
 
 <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
@@ -558,7 +558,7 @@ __FIG_MAP__
 <p>A dataset that passes at 96.4% is not uniformly 96.4% reliable. It is highly reliable across most of the block and least reliable in one specific area – and in this example, that area is where the engineering happens.</p>
 
 <div class="callout">
-  <p>CLEGAR provides independent QC and technical assurance on geophysical datasets for offshore developers, contractors and asset owners. If you are specifying a survey, or reviewing one you have received, that conversation is free.</p>
+  <p>CLEGAR provides independent QC and technical assurance on geophysical datasets for offshore developers, contractors and asset owners. If you are specifying a survey, or reviewing one you have received, we are glad to talk it through.</p>
 </div>
 
 <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
@@ -630,7 +630,7 @@ __FIG_MAP__
 <p>This is the first of a series of technical articles CLEGAR will publish covering real cases from marine geoscience, project management, and offshore operations – the kind of worked examples that show how a tolerance, a schedule, or a mobilisation record actually gets checked in practice, not just described in general terms.</p>
 
 <div class="callout">
-  <p>If you're planning a survey, reviewing a dataset you're not sure you should accept, or setting the requirements for an upcoming campaign, that conversation is free.</p>
+  <p>If you're planning a survey, reviewing a dataset you're not sure you should accept, or setting the requirements for an upcoming campaign, we are glad to talk it through.</p>
 </div>
 
 <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
@@ -675,7 +675,7 @@ __FIG_MAP__
 <p>Questo è il primo di una serie di articoli tecnici che CLEGAR pubblicherà su casi reali di geoscienze marine, project management e operazioni offshore: esempi lavorati che mostrano come una tolleranza, un programma o un verbale di mobilitazione vengano verificati nella pratica, e non soltanto descritti in termini generali.</p>
 
 <div class="callout">
-  <p>Se state pianificando un'indagine, valutando un dataset che non siete sicuri di dover accettare, o impostando i requisiti di una campagna in arrivo, quella conversazione non ha costo.</p>
+  <p>Se state pianificando un'indagine, valutando un dataset che non siete sicuri di dover accettare, o impostando i requisiti di una campagna in arrivo, ne parliamo volentieri.</p>
 </div>
 
 <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>

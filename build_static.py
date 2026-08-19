@@ -193,8 +193,11 @@ css += """
    in proporzionale no. Il contenitore scorre in orizzontale, perche' una
    tabella larga e' l'unico modo in cui questo sito puo' spingere la pagina
    di lato, e la regola e' che non succeda mai. */
-.tablewrap{overflow-x:auto;margin:2rem 0;max-width:44rem;-webkit-overflow-scrolling:touch}
-.article table{border-collapse:collapse;width:100%;min-width:32rem;font-size:.94rem}
+.tablewrap{overflow-x:auto;margin:2rem 0;max-width:100%;-webkit-overflow-scrolling:touch}
+/* larghezza guidata dal contenuto: una tabella a cinque colonne prende lo
+   spazio che le serve fino al bordo del testo, una a tre resta compatta.
+   Bloccarle a 44rem come i paragrafi tagliava le colonne di destra. */
+.article table{border-collapse:collapse;width:auto;min-width:32rem;max-width:100%;font-size:.94rem}
 .article th,.article td{
   text-align:left;padding:.7rem .9rem;border-bottom:1px solid var(--line);
   vertical-align:top;

@@ -411,9 +411,11 @@ o = ['<svg viewBox="0 0 %d %d" xmlns="http://www.w3.org/2000/svg" role="img" '
      'the geophysical to the geotechnical one">' % (W, H)]
 o += bil(0, 52, 18, NAVY,
          'Il critical path si scambia', 'The critical path swaps over', font=DISP)
+# il sottotitolo diceva a parole quello che la legenda dice gia' con i
+# colori. Meglio che dica che cosa sono le quattro barre.
 o += bil(0, 76, 14, STEEL,
-         'IL COLORE DISTINGUE CIO’ CHE IL METEO PUO’ FERMARE DA CIO’ CHE E’ A TERRA',
-         'COLOUR SEPARATES WHAT THE WEATHER CAN STOP FROM WHAT SITS ONSHORE')
+         'GLI STESSI DUE PATH, PRIMA E DOPO AVER APPLICATO I LIMITI OPERATIVI',
+         'THE SAME TWO PATHS, BEFORE AND AFTER APPLYING THE OPERATING LIMITS')
 
 for gy, keys, hdr_it, hdr_en in ((150, ('A_plan','B_plan'), 'COME PIANIFICATO, WEATHER ALLOWANCE UNICO DEL 15%',
                                   'AS PLANNED, FLAT 15% WEATHER ALLOWANCE'),
