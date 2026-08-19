@@ -51,7 +51,7 @@ una build che non passa la verifica**.
 
 ```
 build.py            punto di ingresso (build + anteprima + check)
-build_static.py     generatore del sito (22 pagine)
+build_static.py     generatore del sito (24 pagine)
 build_preview.py    assembla docs/ in un file unico di anteprima
 articles.py         contenuto degli articoli Insights (IT + EN)
 check.py            verifica strutturale
@@ -64,8 +64,8 @@ tools/figures/      script che generano le figure
 docs/               OUTPUT — pubblicato da GitHub Pages
 ```
 
-Le pagine sono 22: otto voci di menu in due lingue, `/privacy/` fuori dal
-menu in due lingue, e due articoli in due lingue. `check.py` le conta e
+Le pagine sono 24: otto voci di menu in due lingue, `/privacy/` fuori dal
+menu in due lingue, e tre articoli in due lingue. `check.py` le conta e
 confronta il totale con gli URL della sitemap: se non coincidono, fallisce.
 
 **`content/site2.html` è il sorgente dei contenuti**, non una pagina servita.
@@ -142,7 +142,48 @@ riapre un problema già risolto.
   criterio di accettazione — metà dell'argomento — spesso nella specifica
   tecnica non c'è. "Specifiche tecniche" resta corretto dove nomina un
   deliverable prodotto da CLEGAR.
-- Attenzione ai calchi dall'inglese: `dispositare` non è italiano.
+- Registro uniforme in chiusura degli articoli: **"ne parliamo volentieri"**
+  in italiano, **"we are glad to talk it through"** in inglese. Non "quella
+  conversazione è gratuita": parlare di prezzo nella riga di contatto stona
+  con il resto del sito.
+
+### Termini che restano in inglese
+Il settore li usa così, e tradurli allontana il testo dai documenti che i
+committenti hanno sul tavolo: `critical path`, `path`, `planner`, `float`,
+`milestone`, `baseline`, `hindcast`, `standby`, `downtime`, `spread`,
+`processing`, `kick-off`, `scope`, `failure mode`, `near-critical`,
+`site investigation`, `ground model`, `patch test`, `CPT`, `sand wave`,
+`Factual Report`.
+
+Restano invece in italiano, perché la traduzione è corretta e corrente:
+mobilitazione, transito, prove di laboratorio, stato del mare, altezza
+d'onda significativa, limite operativo, noleggio, programma, registro dei
+rischi.
+
+Tre errori di termine da non rifare, tutti realmente commessi:
+- **`franchigia` per *weather allowance*.** In italiano la franchigia è la
+  quota che *non* viene risarcita: diceva l'opposto di un margine aggiunto.
+  Si scrive `weather allowance`, e non va confuso con il `weather standby`,
+  che è ciò che accade in mare e una voce di contratto. Un articolo può
+  contenerli entrambi.
+- **`ipotesi` per *assumption*.** In project management la parola è
+  **assunzioni**. E non sono "incognite": un'incognita è ciò che non si sa,
+  un'assunzione è una scelta di chi pianifica.
+- **`dispositare`**, calco da *disposition*, non è italiano.
+
+### Dopo una sostituzione automatica, rileggere il testo generato
+`check.py` verifica la struttura, non la lingua: una sostituzione secca su
+`articles.py` o su `content/site2.html` passa la verifica anche quando ha
+rotto qualcosa. In una sola passata ne ha rotte due:
+
+- un accordo grammaticale, perché il termine sostituito aveva un genere
+  diverso da quello vecchio;
+- **lo slug di un articolo già pubblicato**, perché `` in un'espressione
+  regolare considera il trattino un confine di parola. Ha cambiato l'URL di
+  una pagina online senza che nulla lo segnalasse.
+
+Da qui la regola: **un indirizzo già pubblicato non si cambia** per una
+preferenza terminologica. Se il titolo cambia, lo slug resta.
 
 ### Contenuto tecnico
 - **Ogni numero pubblicato va ricalcolato**, non riletto. Nella tabella
@@ -155,6 +196,16 @@ riapre un problema già risolto.
   dirlo lasciava all'articolo una presa che un contractor avrebbe usato.
 - **Le figure non anticipano conclusioni che il testo raggiunge dopo.**
   L'etichetta "il fondale si è mosso" è stata tolta proprio per questo.
+- **Anche l'aritmetica dell'esempio va rifatta, non solo i numeri delle
+  tabelle.** Nel terzo articolo la sezione di recupero sosteneva di
+  ripristinare la milestone originaria: comprimendo il path vincolante,
+  però, tornava a vincolare l'altro, e lo slittamento passava da tre giorni
+  a uno, non a zero. L'articolo era caduto nella trappola che descriveva.
+- **La domanda che scopre più difetti è "cosa vuol dire?".** Applicata al
+  proprio testo, mostra le frasi che sembrano dire qualcosa e non lo dicono:
+  un nesso causale compresso via, un calco dall'inglese, un sottotitolo che
+  ripete la legenda della figura invece di aggiungere qualcosa. Vale più di
+  una rilettura ortografica.
 
 ### Pubblicazione
 Pubblica `.github/workflows/pages.yml`, un workflow nostro: la
@@ -280,8 +331,13 @@ farlo, e la regola è che non succeda mai. Le celle numeriche prendono
 `class="num"` anche nell'intestazione: incolonnate in monospaziato si
 confrontano, in proporzionale no.
 
-I segnaposto delle figure sono `FIG_ORIGIN`, `FIG_LINES`, `FIG_TVU` e
-`FIG_MAP`, definiti in testa a `articles.py` e mappati su file e didascalie
+La larghezza delle tabelle **segue il contenuto**, non il limite di 44 rem
+dei paragrafi: una a cinque colonne si allarga fino al bordo del testo, una
+a due resta compatta. Bloccarle come i paragrafi tagliava le colonne di
+destra e lasciava una barra di scorrimento anche su desktop.
+
+I segnaposto delle figure sono `FIG_ORIGIN`, `FIG_LINES`, `FIG_TVU`,
+`FIG_MAP`, `FIG_WORK` e `FIG_SWAP`, definiti in testa a `articles.py` e mappati su file e didascalie
 in `FIG_SVG` dentro `build_static.py`. Per aggiungerne uno: costante in
 `articles.py`, generatore in `tools/figures/gen_article_figs.py`, il nome
 del file in `build.py` fra quelli spostati in `content/`, e la voce in
@@ -327,3 +383,6 @@ questo restano il loro firewall e la trappola `#f-hp` del modulo.
   tool di ascolto dei dati SEG-Y. Se diventerà un prodotto in vendita
   servirà una nona voce di menu, e a quel punto **rimisurare** le due
   media query fra 1001 e 1120 px.
+- **Prova reale del modulo contatti**: il percorso tecnico è verificato
+  (CORS, endpoint, validazione), ma che l'email arrivi in casella lo può
+  confermare solo chi legge `info@clegar.it`.
