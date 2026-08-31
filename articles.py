@@ -15,6 +15,233 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'datum-etrs89-wgs84',
+        'date': '2026-08-31',
+        'slug': {'it': 'etrs89-e-wgs84-il-problema-del-datum',
+                 'en': 'etrs89-and-wgs84-the-datum-problem'},
+        'title': {
+            'it': 'Il problema del datum: ETRS89 e WGS84 non sono la stessa coordinata',
+            'en': 'The datum problem: ETRS89 and WGS84 are not the same coordinate',
+        },
+        'meta_title': {
+            'it': 'Il problema del datum: ETRS89 e WGS84 | Insights',
+            'en': 'The datum problem: ETRS89 and WGS84 | Insights',
+        },
+        'desc': {
+            'it': ('Perché un deliverable in ETRS89 caricato in un progetto WGS84 sbaglia di quasi '
+                   'un metro, perché nessun software lo segnala, e come si verifica con un punto noto.'),
+            'en': ('Why a deliverable in ETRS89 loaded into a WGS84 project is nearly a metre out, '
+                   'why no software flags it, and how one known point detects it.'),
+        },
+        'abstract': {
+            'it': ('Due sistemi che sembrano dire la stessa cosa, e che dal 1989 si separano di '
+                   '2,5 cm all’anno. La differenza è sistematica, prevedibile e verificabile con '
+                   'una sottrazione – eppure resta uno degli errori più ricorrenti nei deliverable '
+                   'di rilievo.'),
+            'en': ('Two systems that look like the same answer, drifting apart by 2.5 cm a year '
+                   'since 1989. The difference is systematic, predictable and detectable with a '
+                   'subtraction – and still one of the most routine errors in survey deliverables.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Non lo sono. Differiscono di quasi un metro, e la differenza è sistematica – stessa entità e stessa direzione in ogni punto del blocco. È uno dei pochi errori del lavoro di rilievo offshore che sia interamente prevedibile, interamente evitabile e ciononostante ancora ricorrente.</p>
+
+<h2>Perché i due sistemi si allontanano</h2>
+
+<p>ETRS89 è stato adottato da EUREF nella riunione di Firenze del 1990, con la Risoluzione 1, che lo definisce coincidente con l'International Terrestrial Reference System (ITRS) all'epoca 1989.0 e ancorato alla parte stabile della placca eurasiatica. È quest'ultima clausola a contenere tutta la questione. ETRS89 si muove con l'Europa. Un punto sul fondale al largo della costa olandese mantiene indefinitamente la stessa coordinata ETRS89, che è esattamente ciò che serve per il catasto, la cartografia nazionale e qualunque dataset debba restare confrontabile nell'arco di decenni. È il sistema di riferimento richiesto per i dati territoriali europei conformi alla direttiva INSPIRE.</p>
+
+<p>WGS84 non funziona così. È il sistema di riferimento implicito nel GPS, mantenuto da NGA e allineato alle successive realizzazioni dell'ITRF – che è ancorato al centro di massa terrestre e non tiene ferma alcuna placca. La realizzazione attuale, WGS84 (G2296), è entrata in vigore a gennaio 2024, allineata a ITRF2020 e a IGS20, con un accordo con ITRF2020 entro circa 2 cm. È il settimo aggiornamento di questo tipo in trent'anni.</p>
+
+<p>Quindi ETRS89 tiene ferma l'Europa mentre WGS84 la lascia muovere. La placca eurasiatica deriva verso nord-est a circa 2,5 cm all'anno, e i due sistemi si separano a quella velocità dal 1989.0:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Epoca</th><th class="num">Anni dal 1989.0</th><th class="num">Separazione approssimativa</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">2000</td><td class="num">11 anni</td><td class="num">~25 cm</td></tr>
+<tr><td class="num">2010</td><td class="num">21 anni</td><td class="num">~52 cm</td></tr>
+<tr><td class="num">2020</td><td class="num">31 anni</td><td class="num">~78 cm</td></tr>
+<tr><td class="num">2026</td><td class="num">37 anni</td><td class="num">~93 cm</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Il valore relativo al 2000 è documentato; i successivi discendono dal tasso di deriva. Entità e direzione esatte variano in qualche misura con la posizione in Europa, quindi la tabella va letta come ordine di grandezza, non come trasformazione.</p>
+
+<h2>Perché nulla lo segnala</h2>
+
+<p>Tre fattori concorrono a rendere silenzioso questo errore.</p>
+
+<p><strong>Gli ellissoidi sono quasi identici.</strong> ETRS89 usa GRS80: semiasse maggiore 6378137 m, schiacciamento inverso 298,257222101. WGS84 usa un ellissoide con lo stesso semiasse maggiore, 6378137 m, e schiacciamento inverso 298,257223563. La differenza compare alla nona cifra significativa e si traduce in circa un decimo di millimetro sul semiasse minore. Qualunque controllo che confronti i parametri dell'ellissoide passerà. Il problema non è l'ellissoide: sono la realizzazione del datum e l'epoca.</p>
+
+<p><strong>Non esistono parametri di trasformazione ufficiali.</strong> Le realizzazioni recenti di WGS84 sono allineate all'ITRF in modo sufficientemente stretto da essere trattate come coincidenti, quindi tra le due non è pubblicata alcuna trasformazione. Il software non ha dunque nulla da applicare, e spesso non applica nulla – in silenzio.</p>
+
+<p><strong>"ETRS89" non è un singolo frame, è un ensemble.</strong> Nel registro EPSG, ETRS89 (EPSG:4258) è definito come un ensemble i cui membri vanno da ETRF89 a ETRF2020, con un'accuratezza dichiarata dell'ensemble pari a 0,1 m. Un deliverable etichettato semplicemente "ETRS89" è quindi specificato solo a circa 10 cm, prima ancora che si ponga qualsiasi questione riguardo a WGS84. Il Technical Working Group di EUREF raccomanda ETRF2000 come frame convenzionale; se la specifica non nomina una realizzazione, si sta accettando l'ensemble.</p>
+
+<p>I sistemi proiettati ereditano tutto questo. EPSG:25831 è ETRS89 / UTM zona 31N. EPSG:32631 è WGS 84 / UTM zona 31N. Stessa proiezione, stesso meridiano centrale, stesso fattore di scala, stesso falso est. Datum diverso. Un'intestazione di file che riporti soltanto "UTM31N" non distingue né l'uno né l'altro.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori riportati di seguito sono sintetici – costruiti per illustrare il meccanismo di errore, non tratti da progetti reali – ma il meccanismo è esatto.</p>
+
+<p>Un rilievo UXO su un corridoio di cavo di esportazione di un parco eolico consegna una lista di target: 214 anomalie magnetiche, ciascuna con posizione, massa stimata e classe di confidenza. L'intestazione del deliverable riporta ETRS89 / UTM zona 31N. Il GIS di asset del cliente e lo spread ROV incaricato di rilocalizzare e identificare i target lavorano entrambi in WGS 84 / UTM zona 31N.</p>
+
+<p>Nessuno trasforma nulla, perché entrambi sono "UTM31N".</p>
+
+<p>Ogni posizione di target risulta ora spostata di circa 0,93 m verso sud-ovest rispetto a dove il ROV andrà a cercarla. Si consideri l'effetto sulla campagna di relocation:</p>
+
+<ul>
+  <li>Un'anomalia magnetica porta già con sé la propria incertezza posizionale – comunemente da uno a pochi metri, a seconda di quota di volo, spaziatura delle linee e inversione utilizzata. Lo scostamento di datum non si media con questa incertezza. Vi si somma, nella stessa direzione, su ogni target.</li>
+  <li>Gli schemi di ricerca per la relocation sono dimensionati sull'incertezza attesa. Uno scostamento sistematico di 0,93 m consuma una quota rilevante di un raggio di ricerca previsto per il solo errore casuale.</li>
+  <li>I target che non vengono rilocalizzati vengono riclassificati, riacquisiti o portati in escalation. Ognuna di queste risposte costa tempo ROV, e nessuna affronta la causa reale.</li>
+</ul>
+
+<p>La campagna non fallisce apertamente. Procede lenta, produce una percentuale di target non rilocalizzati superiore alle attese e genera una spiegazione plausibile ma sbagliata: che il rilievo magnetometrico originale fosse di scarsa qualità.</p>
+
+<h2>La firma che lo identifica</h2>
+
+<p>Un disallineamento di datum ha una firma che nessun altro errore del lavoro di rilievo riproduce: i residui sono <strong>costanti in entità e costanti in direzione</strong> su tutto il dataset.</p>
+
+<p>Il rumore di posizionamento è casuale e tende a mediarsi a zero. Gli errori di marea o di riferimento verticale si manifestano in profondità, non in pianta. Gli errori di layback o di offset variano con la rotta, e cambiano quindi segno tra linee reciproche. Un disallineamento di giroscopio scala con la distanza dal punto di riferimento. Un disallineamento di datum non fa nulla di tutto ciò: sposta ogni cosa, ovunque, dello stesso vettore.</p>
+
+<p>Questo lo rende banalmente verificabile, a condizione che qualcuno esegua la verifica. Si prenda un punto qualsiasi la cui posizione sia nota in modo indipendente – una struttura installata, un met mast, un target precedentemente verificato, un dataset sovrapposto di un altro contractor – e si calcoli il residuo. Se un pugno di punti di questo tipo mostra tutto lo stesso spostamento, nella stessa direzione, con entità prossima al metro, la risposta è un datum, non un difetto di rilievo.</p>
+
+<h2>Cosa richiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Identificazione completa del CRS, tramite codice EPSG, per ogni deliverable.</strong><span class="t"> Non "WGS84", non "UTM31N". EPSG:25831 e EPSG:32631 sono due risposte diverse alla stessa descrizione informale.</span></span></li>
+  <li><span class="k">02</span><span><strong>Realizzazione ed epoca, indicate esplicitamente.</strong><span class="t"> ETRF2000 all'epoca 2026.5 è una specifica. "ETRS89" è un ensemble con accuratezza di 0,1 m, e su un progetto che posiziona a livello centimetrico non è sufficiente.</span></span></li>
+  <li><span class="k">03</span><span><strong>La trasformazione effettivamente applicata, con i suoi parametri, documentata nel report</strong><span class="t"> – incluso il caso in cui non ne sia stata applicata alcuna, con la relativa giustificazione.</span></span></li>
+  <li><span class="k">04</span><span><strong>Un unico CRS di progetto, definito nel contratto prima della mobilitazione,</strong><span class="t"> con qualsiasi conversione da o verso di esso eseguita una sola volta, da un soggetto individuato, e registrata.</span></span></li>
+  <li><span class="k">05</span><span><strong>Una verifica di datum in fase di mobilitazione,</strong><span class="t"> rispetto ad almeno una posizione nota in modo indipendente, con il residuo riportato come vettore e non come distanza. Uno scalare nasconde la direzione, e la direzione è ciò che identifica la causa.</span></span></li>
+  <li><span class="k">06</span><span><strong>Definizioni di CRS contenute nelle intestazioni dei file,</strong><span class="t"> non in una email di accompagnamento. Le intestazioni dei formati P IOGP esistono proprio per questo; sono utili solo se vengono compilate correttamente e lette.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Quasi ogni altra fonte di errore in un deliverable di rilievo richiede un giudizio per essere valutata. Questa no. Il tasso di deriva è pubblicato, i sistemi di riferimento sono documentati, i codici EPSG non sono ambigui, e il test che lo rileva richiede un punto noto e una sottrazione.</p>
+
+<p>Persiste perché "ETRS89" e "WGS84" sembrano entrambi la risposta alla domanda "quale datum?", e perché un metro è abbastanza piccolo da risultare invisibile in un plot d'insieme e abbastanza grande da contare ovunque il lavoro venga effettivamente svolto.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>EUREF, Risoluzione 1, Firenze 1990 – definizione di ETRS89.</li>
+  <li>EUREF Technical Working Group – raccomandazione di adottare ETRF2000 come frame convenzionale di ETRS89.</li>
+  <li>NGA, WGS 84 (G2296) – realizzazione in vigore da gennaio 2024, allineata a ITRF2020 e IGS20.</li>
+  <li>Registro dei parametri geodetici IOGP/EPSG – EPSG:4258, EPSG:4326, EPSG:25831, EPSG:32631.</li>
+  <li>Direttiva INSPIRE (2007/2/CE) – ETRS89 come sistema di riferimento per i dati territoriali europei.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR fornisce QC indipendente e technical assurance su dataset geofisici per sviluppatori, contractor e asset owner dell'offshore. Se state redigendo la specifica di un rilievo, o state valutando un deliverable che avete ricevuto, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">They are not right. They differ by very nearly a metre, and the difference is systematic – the same magnitude and the same direction at every point in the block. This is one of the few errors in offshore survey work that is entirely predictable, entirely avoidable, and still routine.</p>
+
+<h2>Why the two systems drift apart</h2>
+
+<p>ETRS89 was adopted by EUREF at its 1990 meeting in Florence, following Resolution 1, which defined it as coincident with the International Terrestrial Reference System (ITRS) at epoch 1989.0 and fixed to the stable part of the Eurasian Plate. That last clause is the whole story. ETRS89 moves with Europe. A point on the seabed off the Dutch coast keeps the same ETRS89 coordinate indefinitely, which is exactly what you want for cadastral work, national mapping, and any dataset that has to remain comparable across decades. It is the reference frame mandated for INSPIRE-compliant European spatial data.</p>
+
+<p>WGS84 does not work that way. It is the reference frame implicit in GPS, maintained by NGA, and aligned to successive realizations of the ITRF – which is anchored to the Earth's centre of mass and does not hold any single plate fixed. The current realization, WGS84 (G2296), became effective in January 2024, aligned to ITRF2020 and to IGS20, agreeing with ITRF2020 to within about 2 cm. It is the seventh such update in thirty years.</p>
+
+<p>So ETRS89 holds Europe still while WGS84 lets it move. The Eurasian Plate drifts north-east at roughly 2.5 cm per year, and the two systems have been separating at that rate since 1989.0:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Epoch</th><th class="num">Elapsed since 1989.0</th><th class="num">Approximate separation</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">2000</td><td class="num">11 years</td><td class="num">~25 cm</td></tr>
+<tr><td class="num">2010</td><td class="num">21 years</td><td class="num">~52 cm</td></tr>
+<tr><td class="num">2020</td><td class="num">31 years</td><td class="num">~78 cm</td></tr>
+<tr><td class="num">2026</td><td class="num">37 years</td><td class="num">~93 cm</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The 2000 figure is documented; the later ones follow from the rate. The exact magnitude and bearing vary somewhat with position in Europe, so treat the table as the order of magnitude, not as a transformation.</p>
+
+<h2>Why nothing warns you</h2>
+
+<p>Three things conspire to make this error silent.</p>
+
+<p><strong>The ellipsoids are nearly identical.</strong> ETRS89 uses GRS80: semi-major axis 6378137 m, inverse flattening 298.257222101. WGS84 uses an ellipsoid with the same semi-major axis, 6378137 m, and inverse flattening 298.257223563. The difference appears in the ninth significant figure and works out to roughly a tenth of a millimetre on the semi-minor axis. Any check that compares ellipsoid parameters will pass. The ellipsoid is not the problem; the datum realization and the epoch are.</p>
+
+<p><strong>There are no official transformation parameters.</strong> Recent WGS84 realizations are aligned to ITRF closely enough that the two are treated as coincident, so no transformation is published between them. Software therefore has nothing to apply, and often applies nothing – silently.</p>
+
+<p><strong>"ETRS89" is not one frame, it is an ensemble.</strong> In the EPSG registry, ETRS89 (EPSG:4258) is defined as an ensemble whose members run from ETRF89 through ETRF2020, with a stated ensemble accuracy of 0.1 m. A deliverable labelled simply "ETRS89" is therefore only specified to about 10 cm, before any question of WGS84 arises. EUREF's Technical Working Group recommends ETRF2000 as the conventional frame; if your specification does not name a realization, you have accepted the ensemble.</p>
+
+<p>The projected systems inherit all of this. EPSG:25831 is ETRS89 / UTM zone 31N. EPSG:32631 is WGS 84 / UTM zone 31N. Same projection, same central meridian, same scale factor, same false easting. Different datum. A file header that says only "UTM31N" distinguishes neither.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are synthetic – built to illustrate the failure mode, not taken from real projects – but the mechanism is exact.</p>
+
+<p>A UXO survey over a wind farm export cable corridor delivers a target list: 214 magnetic anomalies, each with a position, an estimated mass, and a confidence class. The deliverable header states ETRS89 / UTM zone 31N. The client's asset GIS, and the ROV survey spread contracted to relocate and identify the targets, both work in WGS 84 / UTM zone 31N.</p>
+
+<p>Nobody transforms anything, because both are "UTM31N".</p>
+
+<p>Every target position is now displaced approximately 0.93 m to the south-west of where the ROV will look for it. Consider what that does to the relocation campaign:</p>
+
+<ul>
+  <li>A magnetic anomaly already carries its own positional uncertainty – commonly one to a few metres, depending on altitude, line spacing, and the inversion used. The datum offset does not average out against this. It adds to it, in the same direction, on every target.</li>
+  <li>Relocation search patterns are sized against the expected uncertainty. A systematic 0.93 m consumes a substantial share of a search radius that was budgeted for random error alone.</li>
+  <li>Targets that fail to relocate get reclassified, re-surveyed, or escalated. Each of those responses costs ROV time, and none of them addresses the actual cause.</li>
+</ul>
+
+<p>The campaign does not fail outright. It runs slow, produces a higher-than-expected proportion of unrelocated targets, and generates a plausible but wrong explanation: that the original magnetometer survey was of poor quality.</p>
+
+<h2>The signature that identifies it</h2>
+
+<p>A datum mismatch has a signature that no other error in survey work reproduces: the residuals are <strong>constant in magnitude and constant in bearing</strong> across the entire dataset.</p>
+
+<p>Positioning noise is random and averages toward zero. Tidal or vertical reference errors show up in depth, not in plan. Layback or offset errors vary with heading, and therefore change sign between reciprocal lines. A gyro misalignment scales with distance from the reference point. A datum mismatch does none of these things – it shifts everything, everywhere, by the same vector.</p>
+
+<p>That makes it trivially testable, provided anyone runs the test. Take any point whose position is known independently – an installed structure, a met mast, a previously verified target, an overlapping dataset from another contractor – and compute the residual. If a handful of such points all show the same displacement, in the same direction, with a magnitude near a metre, the answer is a datum, not a survey defect.</p>
+
+<h2>What to require in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Full CRS identification, by EPSG code, for every deliverable.</strong><span class="t"> Not "WGS84", not "UTM31N". EPSG:25831 and EPSG:32631 are different answers to the same informal description.</span></span></li>
+  <li><span class="k">02</span><span><strong>The realization and the epoch, stated explicitly.</strong><span class="t"> ETRF2000 at epoch 2026.5 is a specification. "ETRS89" is an ensemble with 0.1 m accuracy, and on a project positioning to centimetre level that is not good enough.</span></span></li>
+  <li><span class="k">03</span><span><strong>The transformation actually applied, with its parameters, documented in the report</strong><span class="t"> – including the case where none was applied, and the justification for that.</span></span></li>
+  <li><span class="k">04</span><span><strong>A single project CRS, defined in the contract before mobilisation,</strong><span class="t"> with any conversion to or from it performed once, by a named party, and recorded.</span></span></li>
+  <li><span class="k">05</span><span><strong>A datum verification check at mobilisation,</strong><span class="t"> against at least one independently known position, with the residual reported as a vector rather than a distance. A scalar hides the direction, and the direction is what identifies the cause.</span></span></li>
+  <li><span class="k">06</span><span><strong>CRS definitions carried in the file headers,</strong><span class="t"> not in a covering email. The IOGP P-format headers exist for this; they are only useful if they are populated correctly and read.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>Almost every other source of error in a survey deliverable requires judgement to assess. This one does not. The rate is published, the reference frames are documented, the EPSG codes are unambiguous, and the test that detects it takes one known point and a subtraction.</p>
+
+<p>It persists because "ETRS89" and "WGS84" both look like the answer to the question "which datum?", and because a metre is small enough to be invisible in an overview plot and large enough to matter everywhere the work actually happens.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>EUREF, Resolution 1, Florence 1990 – definition of ETRS89.</li>
+  <li>EUREF Technical Working Group – recommendation to adopt ETRF2000 as the conventional frame of ETRS89.</li>
+  <li>NGA, WGS 84 (G2296) – realization effective January 2024, aligned to ITRF2020 and IGS20.</li>
+  <li>IOGP/EPSG Geodetic Parameter Registry – EPSG:4258, EPSG:4326, EPSG:25831, EPSG:32631.</li>
+  <li>INSPIRE Directive (2007/2/EC) – ETRS89 as the reference system for European spatial data.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR provides independent QC and technical assurance on geophysical datasets for offshore developers, contractors and asset owners. If you are specifying a survey, or reviewing a deliverable you have received, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'critical-path',
         'date': '2026-08-12',
         'slug': {'it': 'quando-il-percorso-critico-si-sposta', 'en': 'when-the-critical-path-moves'},

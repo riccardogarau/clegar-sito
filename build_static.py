@@ -173,6 +173,9 @@ css += """
 .article > p,.article > h2,.article > h3,.article > ul,.article > .callout{max-width:44rem}
 .article > figure{max-width:none;width:100%}
 .article h2{font-size:clamp(1.3rem,2.4vw,1.75rem);margin:2.4rem 0 .9rem}
+.article h3{margin:2.2rem 0 .8rem}
+.article ul:not(.flist){margin:0 0 1.15rem 1.1rem;max-width:44rem}
+.article ul:not(.flist) li{margin-bottom:.45rem;line-height:1.6}
 .article p{margin:0 0 1.15rem}
 .article .flist{margin-top:1.2rem}
 .article figure{margin:2.2rem 0}

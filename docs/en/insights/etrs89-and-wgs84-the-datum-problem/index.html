@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The datum problem: ETRS89 and WGS84 | Insights</title>
+<meta name="description" content="Why a deliverable in ETRS89 loaded into a WGS84 project is nearly a metre out, why no software flags it, and how one known point detects it.">
+<link rel="canonical" href="https://www.clegar.it/en/insights/etrs89-and-wgs84-the-datum-problem/">
+<link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/etrs89-e-wgs84-il-problema-del-datum/">
+<link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/etrs89-and-wgs84-the-datum-problem/">
+<link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/etrs89-e-wgs84-il-problema-del-datum/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CLEGAR">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="The datum problem: ETRS89 and WGS84 | Insights">
+<meta property="og:description" content="Why a deliverable in ETRS89 loaded into a WGS84 project is nearly a metre out, why no software flags it, and how one known point detects it.">
+<meta property="og:url" content="https://www.clegar.it/en/insights/etrs89-and-wgs84-the-datum-problem/">
+<meta property="og:image" content="https://www.clegar.it/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The datum problem: ETRS89 and WGS84 | Insights">
+<meta name="twitter:description" content="Why a deliverable in ETRS89 loaded into a WGS84 project is nearly a metre out, why no software flags it, and how one known point detects it.">
+<meta name="twitter:image" content="https://www.clegar.it/assets/og.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B2545">
+<!-- Google Search Console: sostituire con il proprio codice di verifica -->
+<!-- <meta name="google-site-verification" content="INCOLLA_QUI_IL_CODICE"> -->
+<link rel="icon" href="../../../assets/mark.png">
+<link rel="apple-touch-icon" href="../../../assets/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"The datum problem: ETRS89 and WGS84 are not the same coordinate","description":"Why a deliverable in ETRS89 loaded into a WGS84 project is nearly a metre out, why no software flags it, and how one known point detects it.","datePublished":"2026-08-31","dateModified":"2026-08-31","inLanguage":"en","author":{"@type":"Organization","name":"CLEGAR","url":"https://www.clegar.it/"},"publisher":{"@id":"https://www.clegar.it/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.clegar.it/en/insights/etrs89-and-wgs84-the-datum-problem/"},"image":"https://www.clegar.it/assets/og.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.clegar.it/en/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://www.clegar.it/en/insights/"},{"@type":"ListItem","position":3,"name":"The datum problem: ETRS89 and WGS84 are not the same coordinate","item":"https://www.clegar.it/en/insights/etrs89-and-wgs84-the-datum-problem/"}]}</script>
+
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-row">
+    <a class="brand" aria-label="CLEGAR" href="../../../">
+      <img src="../../../assets/logo.png" alt="CLEGAR — Marine Geoscience &amp; Offshore Advisory">
+    </a>
+    <div class="masthead-meta">
+      <a class="hide-sm" href="mailto:info@clegar.it">info@clegar.it</a>
+      <div class="langsw" role="group" aria-label="Language / Lingua">
+        <a href="../../../insights/" hreflang="it">IT</a><a href="../../../en/insights/" aria-current="true">EN</a></div>
+      <a class="btn-contact" href="../../../en/contact/">
+        <span class="en">Talk to us</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<nav class="tabbar" aria-label="Main navigation">
+  <div class="tabbar-inner">
+    <a class="tab" href="../../../en/">Home</a>
+    <a class="tab" href="../../../en/marine-geoscience/">Marine Geoscience</a>
+    <a class="tab" href="../../../en/project-management/">Project Management</a>
+    <a class="tab" href="../../../en/technical-advisory/">Technical Advisory</a>
+    <a class="tab" href="../../../en/owners-engineering/">Owner's Engineering</a>
+    <a class="tab" href="../../../en/operational-excellence/">Operational Excellence</a>
+    <a class="tab" href="../../../en/insights/" aria-current="page">Insights</a>
+    <a class="tab" href="../../../en/contact/">Contact</a>
+  </div>
+</nav>
+<main id="main">
+<section class="page">
+  <div class="svc-hero"><div class="wrap">
+<div class="art-meta"><time datetime="2026-08-31">31 August 2026</time><span>Insights</span></div><h1>The datum problem: ETRS89 and WGS84 are not the same coordinate</h1>
+  </div></div>
+  <div class="band band-white band-pad"><div class="wrap">
+    <div class="article">
+<p class="lede">They are not right. They differ by very nearly a metre, and the difference is systematic – the same magnitude and the same direction at every point in the block. This is one of the few errors in offshore survey work that is entirely predictable, entirely avoidable, and still routine.</p>
+
+<h2>Why the two systems drift apart</h2>
+
+<p>ETRS89 was adopted by EUREF at its 1990 meeting in Florence, following Resolution 1, which defined it as coincident with the International Terrestrial Reference System (ITRS) at epoch 1989.0 and fixed to the stable part of the Eurasian Plate. That last clause is the whole story. ETRS89 moves with Europe. A point on the seabed off the Dutch coast keeps the same ETRS89 coordinate indefinitely, which is exactly what you want for cadastral work, national mapping, and any dataset that has to remain comparable across decades. It is the reference frame mandated for INSPIRE-compliant European spatial data.</p>
+
+<p>WGS84 does not work that way. It is the reference frame implicit in GPS, maintained by NGA, and aligned to successive realizations of the ITRF – which is anchored to the Earth's centre of mass and does not hold any single plate fixed. The current realization, WGS84 (G2296), became effective in January 2024, aligned to ITRF2020 and to IGS20, agreeing with ITRF2020 to within about 2 cm. It is the seventh such update in thirty years.</p>
+
+<p>So ETRS89 holds Europe still while WGS84 lets it move. The Eurasian Plate drifts north-east at roughly 2.5 cm per year, and the two systems have been separating at that rate since 1989.0:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Epoch</th><th class="num">Elapsed since 1989.0</th><th class="num">Approximate separation</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">2000</td><td class="num">11 years</td><td class="num">~25 cm</td></tr>
+<tr><td class="num">2010</td><td class="num">21 years</td><td class="num">~52 cm</td></tr>
+<tr><td class="num">2020</td><td class="num">31 years</td><td class="num">~78 cm</td></tr>
+<tr><td class="num">2026</td><td class="num">37 years</td><td class="num">~93 cm</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The 2000 figure is documented; the later ones follow from the rate. The exact magnitude and bearing vary somewhat with position in Europe, so treat the table as the order of magnitude, not as a transformation.</p>
+
+<h2>Why nothing warns you</h2>
+
+<p>Three things conspire to make this error silent.</p>
+
+<p><strong>The ellipsoids are nearly identical.</strong> ETRS89 uses GRS80: semi-major axis 6378137 m, inverse flattening 298.257222101. WGS84 uses an ellipsoid with the same semi-major axis, 6378137 m, and inverse flattening 298.257223563. The difference appears in the ninth significant figure and works out to roughly a tenth of a millimetre on the semi-minor axis. Any check that compares ellipsoid parameters will pass. The ellipsoid is not the problem; the datum realization and the epoch are.</p>
+
+<p><strong>There are no official transformation parameters.</strong> Recent WGS84 realizations are aligned to ITRF closely enough that the two are treated as coincident, so no transformation is published between them. Software therefore has nothing to apply, and often applies nothing – silently.</p>
+
+<p><strong>"ETRS89" is not one frame, it is an ensemble.</strong> In the EPSG registry, ETRS89 (EPSG:4258) is defined as an ensemble whose members run from ETRF89 through ETRF2020, with a stated ensemble accuracy of 0.1 m. A deliverable labelled simply "ETRS89" is therefore only specified to about 10 cm, before any question of WGS84 arises. EUREF's Technical Working Group recommends ETRF2000 as the conventional frame; if your specification does not name a realization, you have accepted the ensemble.</p>
+
+<p>The projected systems inherit all of this. EPSG:25831 is ETRS89 / UTM zone 31N. EPSG:32631 is WGS 84 / UTM zone 31N. Same projection, same central meridian, same scale factor, same false easting. Different datum. A file header that says only "UTM31N" distinguishes neither.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are synthetic – built to illustrate the failure mode, not taken from real projects – but the mechanism is exact.</p>
+
+<p>A UXO survey over a wind farm export cable corridor delivers a target list: 214 magnetic anomalies, each with a position, an estimated mass, and a confidence class. The deliverable header states ETRS89 / UTM zone 31N. The client's asset GIS, and the ROV survey spread contracted to relocate and identify the targets, both work in WGS 84 / UTM zone 31N.</p>
+
+<p>Nobody transforms anything, because both are "UTM31N".</p>
+
+<p>Every target position is now displaced approximately 0.93 m to the south-west of where the ROV will look for it. Consider what that does to the relocation campaign:</p>
+
+<ul>
+  <li>A magnetic anomaly already carries its own positional uncertainty – commonly one to a few metres, depending on altitude, line spacing, and the inversion used. The datum offset does not average out against this. It adds to it, in the same direction, on every target.</li>
+  <li>Relocation search patterns are sized against the expected uncertainty. A systematic 0.93 m consumes a substantial share of a search radius that was budgeted for random error alone.</li>
+  <li>Targets that fail to relocate get reclassified, re-surveyed, or escalated. Each of those responses costs ROV time, and none of them addresses the actual cause.</li>
+</ul>
+
+<p>The campaign does not fail outright. It runs slow, produces a higher-than-expected proportion of unrelocated targets, and generates a plausible but wrong explanation: that the original magnetometer survey was of poor quality.</p>
+
+<h2>The signature that identifies it</h2>
+
+<p>A datum mismatch has a signature that no other error in survey work reproduces: the residuals are <strong>constant in magnitude and constant in bearing</strong> across the entire dataset.</p>
+
+<p>Positioning noise is random and averages toward zero. Tidal or vertical reference errors show up in depth, not in plan. Layback or offset errors vary with heading, and therefore change sign between reciprocal lines. A gyro misalignment scales with distance from the reference point. A datum mismatch does none of these things – it shifts everything, everywhere, by the same vector.</p>
+
+<p>That makes it trivially testable, provided anyone runs the test. Take any point whose position is known independently – an installed structure, a met mast, a previously verified target, an overlapping dataset from another contractor – and compute the residual. If a handful of such points all show the same displacement, in the same direction, with a magnitude near a metre, the answer is a datum, not a survey defect.</p>
+
+<h2>What to require in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Full CRS identification, by EPSG code, for every deliverable.</strong><span class="t"> Not "WGS84", not "UTM31N". EPSG:25831 and EPSG:32631 are different answers to the same informal description.</span></span></li>
+  <li><span class="k">02</span><span><strong>The realization and the epoch, stated explicitly.</strong><span class="t"> ETRF2000 at epoch 2026.5 is a specification. "ETRS89" is an ensemble with 0.1 m accuracy, and on a project positioning to centimetre level that is not good enough.</span></span></li>
+  <li><span class="k">03</span><span><strong>The transformation actually applied, with its parameters, documented in the report</strong><span class="t"> – including the case where none was applied, and the justification for that.</span></span></li>
+  <li><span class="k">04</span><span><strong>A single project CRS, defined in the contract before mobilisation,</strong><span class="t"> with any conversion to or from it performed once, by a named party, and recorded.</span></span></li>
+  <li><span class="k">05</span><span><strong>A datum verification check at mobilisation,</strong><span class="t"> against at least one independently known position, with the residual reported as a vector rather than a distance. A scalar hides the direction, and the direction is what identifies the cause.</span></span></li>
+  <li><span class="k">06</span><span><strong>CRS definitions carried in the file headers,</strong><span class="t"> not in a covering email. The IOGP P-format headers exist for this; they are only useful if they are populated correctly and read.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>Almost every other source of error in a survey deliverable requires judgement to assess. This one does not. The rate is published, the reference frames are documented, the EPSG codes are unambiguous, and the test that detects it takes one known point and a subtraction.</p>
+
+<p>It persists because "ETRS89" and "WGS84" both look like the answer to the question "which datum?", and because a metre is small enough to be invisible in an overview plot and large enough to matter everywhere the work actually happens.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>EUREF, Resolution 1, Florence 1990 – definition of ETRS89.</li>
+  <li>EUREF Technical Working Group – recommendation to adopt ETRF2000 as the conventional frame of ETRS89.</li>
+  <li>NGA, WGS 84 (G2296) – realization effective January 2024, aligned to ITRF2020 and IGS20.</li>
+  <li>IOGP/EPSG Geodetic Parameter Registry – EPSG:4258, EPSG:4326, EPSG:25831, EPSG:32631.</li>
+  <li>INSPIRE Directive (2007/2/EC) – ETRS89 as the reference system for European spatial data.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR provides independent QC and technical assurance on geophysical datasets for offshore developers, contractors and asset owners. If you are specifying a survey, or reviewing a deliverable you have received, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+</div>
+    <div class="share"><span class="share-label">Share</span><a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.clegar.it%2Fen%2Finsights%2Fetrs89-and-wgs84-the-datum-problem%2F" target="_blank" rel="noopener">LinkedIn</a><a class="share-btn" href="mailto:?subject=The%20datum%20problem%3A%20ETRS89%20and%20WGS84%20are%20not%20the%20same%20coordinate&amp;body=The%20datum%20problem%3A%20ETRS89%20and%20WGS84%20are%20not%20the%20same%20coordinate%0Ahttps%3A%2F%2Fwww.clegar.it%2Fen%2Finsights%2Fetrs89-and-wgs84-the-datum-problem%2F">Email</a><button class="share-btn" type="button" data-share-url="https://www.clegar.it/en/insights/etrs89-and-wgs84-the-datum-problem/" data-share-title="The datum problem: ETRS89 and WGS84 are not the same coordinate">Copy link</button></div>
+    <a class="art-back" href="../../../en/insights/">&larr; All articles</a>
+  </div></div>
+</section>
+</main>
+<footer class="foot">
+  <img class="foot-mark" src="../../../assets/mark.png" alt="">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <img class="foot-word" src="../../../assets/logo-white.png" alt="CLEGAR">
+        
+        <p class="en">Independent consultancy in marine geoscience, project management and technical assurance for offshore.</p>
+      </div>
+      <div>
+        <h5 class="en">Services</h5>
+        <nav class="foot-nav">
+          <a href="../../../en/marine-geoscience/">Marine Geoscience</a>
+          <a href="../../../en/project-management/">Project Management</a>
+          <a href="../../../en/technical-advisory/">Technical Advisory &amp; Assurance</a>
+          <a href="../../../en/owners-engineering/">Owner's Engineering</a>
+          <a href="../../../en/operational-excellence/">Operational Excellence</a>
+        </nav>
+      </div>
+      <div>
+        <h5 class="en">Contact</h5>
+        <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+        <p><a href="https://www.linkedin.com/company/clegar" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr">2026</span> CLEGAR S.r.l. – P.IVA/VAT 07422540828</span>
+      <span><a class="en" href="../../../en/privacy/">Privacy and cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../../../assets/site.js" defer></script>
+</body>
+</html>
