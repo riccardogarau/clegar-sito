@@ -369,6 +369,39 @@ questo restano il loro firewall e la trappola `#f-hp` del modulo.
 
 ---
 
+## SEO
+
+I fondamentali tecnici ci sono gia' su tutte le pagine: canonical, `hreflang`
+con `x-default`, JSON-LD, Open Graph, Twitter card, un solo `h1`, titoli e
+description in lunghezza utile, `robots.txt` che rimanda alla sitemap. Il sito
+pesa 1,2 MB in tutto e non carica script di terzi prima del consenso.
+**Il margine non e' li'.**
+
+- **Collegamenti fra articoli e servizi.** Ogni articolo dichiara un `topic`
+  in `articles.py`, che e' la chiave della pagina di servizio a cui
+  appartiene (`geoscience`, `pm`, …) oppure `None`. Da quel campo il
+  generatore ricava tre cose: la categoria collegata nell'intestazione
+  dell'articolo, il blocco `.artnext` in coda con linea di servizio e altri
+  articoli sullo stesso tema, e il blocco "Dagli Insights" in fondo alla
+  pagina di servizio. **Un articolo nuovo senza `topic` resta isolato**: gli
+  articoli attirano i link, le pagine di servizio devono posizionarsi sulle
+  ricerche commerciali, e senza quel campo non si passano niente.
+- **`PAGES_UPDATED` in `build_static.py`** e' la `lastmod` delle pagine fisse
+  nella sitemap; gli articoli usano la propria `date`. Va aggiornata quando si
+  modifica `content/site2.html`. Prima tutti gli URL riportavano la data di
+  build, che diceva ai motori che a ogni pubblicazione cambia tutto.
+- **`sameAs`** nello schema dell'organizzazione dichiara il profilo LinkedIn
+  come la stessa entita'. Il link nel footer da solo non lo fa.
+
+Restano aperti, in ordine di resa: una pagina su chi siete, con nomi e
+credenziali, che oggi non esiste e che per contenuti tecnici pesa piu' di
+qualsiasi meta tag; e una immagine social per articolo, perche' oggi le 26
+pagine condividono la stessa `og.png` e su LinkedIn sembrano tutte uguali.
+
+I backlink non si producono modificando il sito.
+
+---
+
 ## Da completare
 
 - **Sede legale nell'informativa**: c'è la sola città. L'articolo 13 del

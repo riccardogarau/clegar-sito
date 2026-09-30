@@ -16,6 +16,7 @@ FIG_SWAP = '__FIG_SWAP__'
 ARTICLES = [
     {
         'id': 'datum-etrs89-wgs84',
+        'topic': 'geoscience',
         'date': '2026-08-31',
         'slug': {'it': 'etrs89-e-wgs84-il-problema-del-datum',
                  'en': 'etrs89-and-wgs84-the-datum-problem'},
@@ -243,6 +244,7 @@ ARTICLES = [
     },
     {
         'id': 'critical-path',
+        'topic': 'pm',
         'date': '2026-08-12',
         'slug': {'it': 'quando-il-percorso-critico-si-sposta', 'en': 'when-the-critical-path-moves'},
         'title': {
@@ -545,6 +547,7 @@ __FIG_SWAP__
     },
     {
         'id': 'crossline-check',
+        'topic': 'geoscience',
         'date': '2026-08-12',
         'slug': {'it': 'crossline-check-come-mappa', 'en': 'crossline-check-as-a-map'},
         'title': {
@@ -794,6 +797,7 @@ __FIG_MAP__
     },
     {
         'id': 'introducing-clegar',
+        'topic': None,
         'date': '2026-08-05',
         'slug': {'it': 'presentazione-clegar', 'en': 'introducing-clegar'},
         'title': {

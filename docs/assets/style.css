@@ -438,6 +438,21 @@ p{margin:0 0 1.1rem}
 .share-btn[data-copied]{border-color:var(--teal);color:var(--teal)}
 .share .art-back{margin-top:0}
 
+/* ---------- collegamenti in coda all'articolo ---------- */
+.artnext{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);max-width:44rem}
+.artnext h2{
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--steel);margin:0 0 .7rem;
+}
+.artnext h2 ~ h2{margin-top:1.4rem}
+.artnext ul{list-style:none;margin:0;padding:0}
+.artnext li{margin-bottom:.45rem;line-height:1.55}
+.artnext a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.artnext a:hover{color:var(--teal);border-color:var(--teal)}
+.artnext + .share{margin-top:1.8rem;padding-top:0;border-top:0}
+.art-meta a{color:var(--teal);text-decoration:none;border-bottom:1px solid transparent}
+.art-meta a:hover{border-bottom-color:var(--teal)}
+
 /* ============================================================
    MOBILE
    Figures fit the screen. Dense charts would render their labels

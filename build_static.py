@@ -248,6 +248,21 @@ css += """
 .share-btn:hover,.share-btn:focus-visible{border-color:var(--teal);color:var(--teal)}
 .share-btn[data-copied]{border-color:var(--teal);color:var(--teal)}
 .share .art-back{margin-top:0}
+
+/* ---------- collegamenti in coda all'articolo ---------- */
+.artnext{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--line);max-width:44rem}
+.artnext h2{
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--steel);margin:0 0 .7rem;
+}
+.artnext h2 ~ h2{margin-top:1.4rem}
+.artnext ul{list-style:none;margin:0;padding:0}
+.artnext li{margin-bottom:.45rem;line-height:1.55}
+.artnext a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.artnext a:hover{color:var(--teal);border-color:var(--teal)}
+.artnext + .share{margin-top:1.8rem;padding-top:0;border-top:0}
+.art-meta a{color:var(--teal);text-decoration:none;border-bottom:1px solid transparent}
+.art-meta a:hover{border-bottom-color:var(--teal)}
 """ + MOBILE_CSS
 open(f'{OUT}/assets/style.css', 'w', encoding='utf-8').write(css)
 
@@ -503,6 +518,29 @@ def shell(lang, key, slug):
     return {'masthead': tostr(mast), 'nav': nav, 'footer': tostr(ft)}
 
 
+def topic_articles_block(key, lang, root):
+    """Gli articoli che appartengono a questa linea di servizio.
+
+    Il verso opposto del blocco in coda agli articoli: mostra che dietro la
+    pagina commerciale c'e' del lavoro tecnico, e rende gli articoli
+    raggiungibili da una pagina che li precede nel percorso di acquisto."""
+    arts = [a for a in ARTICLES if a.get('topic') == key]
+    if not arts:
+        return ''
+    read = 'Leggi' if lang == 'it' else 'Read'
+    items = ''.join(
+        '<li><a href="' + root + article_slug(a, lang) + '">'
+        '<time datetime="' + a['date'] + '">' + month_name(a['date'], lang) + '</time>'
+        '<h2>' + a['title'][lang] + '</h2>'
+        '<p>' + a['abstract'][lang] + '</p>'
+        '<span class="go">' + read + ' &rarr;</span></a></li>' for a in arts)
+    head = 'Dagli Insights' if lang == 'it' else 'From Insights'
+    return ('<div class="band band-white band-pad"><div class="wrap">'
+            '<h2 class="h-sm">' + head + '</h2>'
+            '<ul class="artlist">' + items + '</ul>'
+            '</div></div>')
+
+
 def build(key, lang):
     slug = SLUG[key][lang]
     root = rel_root(slug)
@@ -537,6 +575,9 @@ def build(key, lang):
                      else 'Tap the chart to enlarge it')
         chart.addnext(hint)
     body = tostr(sec)
+    extra = topic_articles_block(key, lang, root)
+    if extra:
+        body = body.rstrip()[:-len('</section>')] + extra + '</section>'
 
     _sh = shell(lang, key, slug)
     masthead, nav, footer = _sh['masthead'], _sh['nav'], _sh['footer']
@@ -550,7 +591,11 @@ def build(key, lang):
         "logo": DOMAIN + "/assets/logo.png",
         "image": DOMAIN + "/assets/og.png",
         "description": META['home'][lang][1],
-        "address": {"@type": "PostalAddress", "addressCountry": "IT"},
+        "address": {"@type": "PostalAddress", "addressLocality": "Palermo",
+                    "addressCountry": "IT"},
+        # profilo ufficiale dell'organizzazione: il link a LinkedIn e' gia' nel
+        # footer, ma solo sameAs lo dichiara ai motori come la stessa entita'
+        "sameAs": ["https://www.linkedin.com/company/clegar"],
         "areaServed": [{"@type": "Place", "name": n} for n in
                        ["Italy", "Europe", "North Sea", "Mediterranean Sea"]],
         "knowsAbout": ["Marine geophysics", "Offshore wind site investigation",
@@ -681,6 +726,31 @@ def strip_other_lang_svg(html, lang):
     return re.sub(r'<text class="' + drop + r'"[^>]*>.*?</text>', '', html, flags=re.S)
 
 
+def related_block(art, lang, root):
+    """Linea di servizio e altri articoli sullo stesso tema.
+
+    Fa circolare il valore fra gli articoli, che attirano i link, e le pagine
+    di servizio, che devono posizionarsi sulle ricerche commerciali. Prima
+    ogni articolo aveva un solo collegamento, di ritorno all'indice, e le
+    pagine di servizio non ne avevano nessuno nel corpo."""
+    topic = art.get('topic')
+    others = [a for a in ARTICLES if a is not art and topic and a.get('topic') == topic]
+    if not topic:
+        return ''
+    lab = next(it_l if lang == 'it' else en_l for k, it_l, en_l in NAV if k == topic)
+    out = ['<div class="artnext">',
+           '<h2>' + ('Linea di servizio' if lang == 'it' else 'Service line') + '</h2>',
+           '<ul><li><a href="' + root + SLUG[topic][lang] + '">' + lab + '</a></li></ul>']
+    if others:
+        out.append('<h2>' + ('Altri articoli su questo tema' if lang == 'it'
+                             else 'More on this topic') + '</h2>')
+        out.append('<ul>' + ''.join(
+            '<li><a href="' + root + article_slug(a, lang) + '">' + a['title'][lang] + '</a></li>'
+            for a in others) + '</ul>')
+    out.append('</div>')
+    return ''.join(out)
+
+
 def build_article(art, lang):
     slug = article_slug(art, lang)
     root = rel_root(slug)
@@ -691,9 +761,14 @@ def build_article(art, lang):
     body_html = strip_other_lang_svg(body_html, lang)
 
     back = ('Tutti gli articoli' if lang == 'it' else 'All articles')
+    topic = art.get('topic')
+    cat = '<span>Insights</span>'
+    if topic:
+        lab = next(it_l if lang == 'it' else en_l for k, it_l, en_l in NAV if k == topic)
+        cat = '<a href="' + root + SLUG[topic][lang] + '">' + lab + '</a>'
     head_block = (
         '<div class="art-meta"><time datetime="' + art['date'] + '">'
-        + month_name(art['date'], lang) + '</time><span>Insights</span></div>')
+        + month_name(art['date'], lang) + '</time>' + cat + '</div>')
 
     # Condivisione: link normali, nessuno script di terze parti. Il widget
     # ufficiale di LinkedIn carica un SDK che traccia il visitatore prima del
@@ -720,7 +795,7 @@ def build_article(art, lang):
             '  </div></div>\n'
             '  <div class="band band-white band-pad"><div class="wrap">\n'
             '    <div class="article">' + body_html + '</div>\n'
-            '    ' + share + '\n'
+            '    ' + related_block(art, lang, root) + share + '\n'
             '    <a class="art-back" href="' + root + SLUG['insights'][lang] + '">&larr; ' + back + '</a>\n'
             '  </div></div>\n'
             '</section>')
@@ -839,11 +914,16 @@ today = datetime.date.today().isoformat()
 x = ['<?xml version="1.0" encoding="UTF-8"?>',
      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
      '        xmlns:xhtml="http://www.w3.org/1999/xhtml">']
-SITEMAP_ENTRIES = [(k, i, e) for k, i, e in PAGES]
+# lastmod per URL. Prima tutti e 26 riportavano la data di build: diceva ai
+# motori che a ogni pubblicazione cambia tutto, che e' rumore. Le pagine fisse
+# usano PAGES_UPDATED, da aggiornare quando si tocca content/site2.html.
+PAGES_UPDATED = '2026-08-31'
+SITEMAP_ENTRIES = [(k, i, e, PAGES_UPDATED) for k, i, e in PAGES]
 for art in ARTICLES:
-    SITEMAP_ENTRIES.append(('article', article_slug(art, 'it'), article_slug(art, 'en')))
+    SITEMAP_ENTRIES.append(('article', article_slug(art, 'it'),
+                            article_slug(art, 'en'), art['date']))
 
-for key, it_s, en_s in SITEMAP_ENTRIES:
+for key, it_s, en_s, lastmod in SITEMAP_ENTRIES:
     pr = ('1.0' if key == 'home'
           else '0.7' if key == 'contatti'
           else '0.8' if key == 'article'
@@ -854,7 +934,7 @@ for key, it_s, en_s in SITEMAP_ENTRIES:
               f'    <xhtml:link rel="alternate" hreflang="it" href="{DOMAIN}/{it_s}"/>',
               f'    <xhtml:link rel="alternate" hreflang="en" href="{DOMAIN}/{en_s}"/>',
               f'    <xhtml:link rel="alternate" hreflang="x-default" href="{DOMAIN}/{it_s}"/>',
-              f'    <lastmod>{today}</lastmod>', '    <changefreq>monthly</changefreq>',
+              f'    <lastmod>{lastmod}</lastmod>', '    <changefreq>monthly</changefreq>',
               f'    <priority>{pr}</priority>', '  </url>']
 x.append('</urlset>')
 open(f'{OUT}/sitemap.xml', 'w', encoding='utf-8').write('\n'.join(x))
