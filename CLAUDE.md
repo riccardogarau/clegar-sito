@@ -210,7 +210,7 @@ preferenza terminologica. Se il titolo cambia, lo slug resta.
 ### Pubblicazione
 Pubblica `.github/workflows/pages.yml`, un workflow nostro: la
 pubblicazione automatica di GitHub non è un file del repo e quindi non si
-può configurare. Tre modi diversi di fallire, tutti verificatisi, tutti
+può configurare. Quattro modi diversi di fallire, tutti verificatisi, tutti
 diagnosticati male al primo colpo:
 
 - **Un solo `CNAME` nel repo**, quello che `build_static.py` scrive in
@@ -220,6 +220,17 @@ diagnosticati male al primo colpo:
   forzate avviano ciascuno un deploy. Con `cancel-in-progress: false` non
   si annullano più a vicenda, ma restano in coda: si pusha una volta sola
   e si aspetta.
+- **Il runner che non arriva.** Il job resta in attesa e viene annullato dopo
+  circa quindici minuti senza eseguire un solo step. La firma che lo
+  identifica: `conclusion: cancelled`, zero step e `runner_name` vuoto in
+  `gh api repos/<owner>/<repo>/actions/jobs/<id>`. Non c'è log da leggere,
+  perché il job non è mai partito. È accaduto il 5 ottobre 2026 su due run
+  consecutivi, durante un incidente GitHub su "delays in assigning
+  GitHub-hosted runners": si verifica su
+  `https://www.githubstatus.com/api/v2/summary.json`, e la cura è aspettare
+  che l'incidente si chiuda e poi rilanciare una volta. Attenzione a non
+  confonderlo con il caso del timeout qui sotto, che invece fallisce *dentro*
+  il job e lascia un log.
 - **Il timeout del passo di pubblicazione.** Il valore predefinito di
   `actions/deploy-pages` è dieci minuti; quando la coda di GitHub è lenta
   non bastano, e l'azione si arrende scrivendo "Timeout reached, aborting"
@@ -227,13 +238,15 @@ diagnosticati male al primo colpo:
   build è già riuscita e l'artefatto è pronto. Nel workflow il timeout sta
   a trenta minuti.
 
-Distinguere i tre casi conta, perché la cura è diversa: il primo si
-corregge nel repo, il secondo aspettando, il terzo rilanciando lo stesso
-workflow senza toccare niente. **Non mettere mano al codice per un guasto
-che nel codice non c'è.**
+Distinguere i quattro casi conta, perché la cura è diversa: il primo si
+corregge nel repo, il secondo e il terzo aspettando, il quarto rilanciando lo
+stesso workflow senza toccare niente. **Non mettere mano al codice per un
+guasto che nel codice non c'è.**
 
 La diagnosi non sta mai nell'API di Pages, che risponde solo "Page build
-failed", ma nei log: `gh run list` e `gh run view <id> --log-failed`.
+failed", ma nei log: `gh run list` e `gh run view <id> --log-failed`. Quando
+`--log-failed` non stampa niente, il job non è partito: allora la risposta sta
+in `runner_name` e nel numero di step, non in un log che non esiste.
 
 E soprattutto: **lo stato del workflow non è la verità**. Un run può
 chiudersi in rosso mentre il sito è aggiornato, e viceversa. Si verifica
