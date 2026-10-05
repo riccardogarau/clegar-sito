@@ -15,6 +15,301 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'readiness-review',
+        'topic': 'excellence',
+        'date': '2026-10-05',
+        'slug': {'it': 'readiness-review-prima-che-la-nave-parta',
+                 'en': 'readiness-review-before-the-vessel-sails'},
+        'title': {
+            'it': 'Readiness review: che cosa si verifica prima che la nave parta',
+            'en': 'Readiness review: what to check before the vessel sails',
+        },
+        'meta_title': {
+            'it': 'Readiness review prima della partenza | Insights',
+            'en': 'Readiness review before sailing | Insights',
+        },
+        'desc': {
+            'it': ('Perché una checklist al 94% non dice se la nave può partire, e come si conduce '
+                   'una readiness review sul margine delle voci aperte invece che sul numero di '
+                   'voci chiuse.'),
+            'en': ('Why a checklist at 94% does not tell you whether the vessel can sail, and how to '
+                   'run a readiness review on the margin of the open items rather than on the count '
+                   'of closed ones.'),
+        },
+        'abstract': {
+            'it': ('Quarantotto voci, quarantacinque chiuse: il 94%. Fra le chiuse ce n’era una '
+                   'verificata su una revisione superata del piano linee, con dieci giorni di '
+                   'margine negativo. La percentuale scendeva di due punti, e la decisione di '
+                   'partenza cambiava del tutto.'),
+            'en': ('Forty-eight items, forty-five closed: 94%. Among the closed ones was an item '
+                   'checked against a superseded revision of the line plan, ten days short of '
+                   'being closable. The percentage dropped by two points, and the sailing decision '
+                   'changed entirely.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Prima che una nave lasci la banchina per una campagna offshore, qualcuno presenta una tabella: quarantotto voci, quarantacinque chiuse, tre aperte e tutte in via di chiusura. Il 94%. La riunione dura un'ora e si chiude con la decisione di partire.</p>
+
+<p>Quella tabella risponde a una domanda – quante voci sono chiuse – che non è quella per cui la riunione è stata convocata. La domanda di una readiness review è un'altra: c'è qualcosa che non si chiuderà prima del momento in cui servirà? A questa domanda la percentuale non risponde, nemmeno per approssimazione.</p>
+
+<p>Qui si parla della readiness review in senso stretto: persone, documenti, permessi, interfacce, contingenze. La verifica della strumentazione in banchina – calibrazioni, offset, prove di sistema – è un controllo diverso, con regole proprie, e merita un articolo a sé.</p>
+
+<h2>Perché la percentuale non misura la prontezza</h2>
+
+<p>Una checklist tratta tutte le voci allo stesso modo: ciascuna vale una casella. Ma le voci non richiedono lo stesso tempo per essere chiuse. Un corso di aggiornamento si fa in un giorno; la modifica di un'autorizzazione dell'autorità marittima può richiedere settimane, e quel tempo non dipende da chi la chiede.</p>
+
+<p>La prontezza di una campagna non è quindi la media delle voci. La decide la voce peggiore, e «peggiore» non vuol dire la più importante in astratto: vuol dire quella che richiede più tempo di quanto ne resti. Per ogni voce aperta conta una sola differenza, il margine: i giorni che mancano al momento in cui la voce servirà, meno i giorni che servono a chiuderla. Se il margine è positivo, la voce è un'attività da seguire. Se è negativo, è una decisione da prendere subito.</p>
+
+<p>Una percentuale non contiene nessuno dei due numeri.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma la struttura è ricorrente.</p>
+
+<p>Una campagna geofisica con 20 giorni di acquisizione, in un'area a poche ore dal porto. La readiness review si tiene cinque giorni prima della partenza, per consuetudine. Lo stato presentato è questo:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Area</th><th class="num">Voci</th><th class="num">Chiuse</th><th class="num">Aperte</th></tr>
+</thead>
+<tbody>
+<tr><td>Persone</td><td class="num">10</td><td class="num">9</td><td class="num">1</td></tr>
+<tr><td>Nave</td><td class="num">8</td><td class="num">8</td><td class="num">0</td></tr>
+<tr><td>Documenti e procedure</td><td class="num">12</td><td class="num">11</td><td class="num">1</td></tr>
+<tr><td>Permessi</td><td class="num">6</td><td class="num">6</td><td class="num">0</td></tr>
+<tr><td>Interfacce</td><td class="num">7</td><td class="num">6</td><td class="num">1</td></tr>
+<tr><td>Contingenze</td><td class="num">5</td><td class="num">5</td><td class="num">0</td></tr>
+<tr><td><strong>Totale</strong></td><td class="num"><strong>48</strong></td><td class="num"><strong>45</strong></td><td class="num"><strong>3</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Le tre voci aperte, con il tempo necessario a chiuderle e il margine rispetto alla partenza:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Voce aperta</th><th class="num">Giorni per chiuderla</th><th class="num">Margine</th></tr>
+</thead>
+<tbody>
+<tr><td>Formazione di base alla sicurezza offshore (BOSIET) di un tecnico, in scadenza a campagna in corso: aggiornamento FOET da prenotare e frequentare</td><td class="num">2</td><td class="num">+3</td></tr>
+<tr><td>Procedura di recupero dello strumento trainato, in approvazione presso il committente</td><td class="num">3</td><td class="num">+2</td></tr>
+<tr><td>Bridging document fra i sistemi di gestione HSE di committente e contractor, da firmare</td><td class="num">2</td><td class="num">+3</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Tutti i margini sono positivi, e la decisione di partire è coerente con i numeri presentati.</p>
+
+<p>Il problema sta fra le voci chiuse. La voce «autorizzazione dell'area di lavoro» è spuntata: l'autorizzazione esiste, è valida, è archiviata. È stata però rilasciata sul poligono del piano linee in revisione B. Sette giorni prima della review – dodici prima della partenza – è stata emessa la revisione D, che aggiunge sei linee lungo una variante di tracciato di un cavo. Quattro di queste escono in parte dal poligono autorizzato.</p>
+
+<p>Nessuno ha nascosto niente: la voce era stata chiusa prima che il piano linee cambiasse, e nessuna regola la riapriva. In questo esempio la modifica dell'autorizzazione richiede quindici giorni.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Voce aperta</th><th class="num">Giorni per chiuderla</th><th class="num">Margine</th></tr>
+</thead>
+<tbody>
+<tr><td>Formazione di base alla sicurezza offshore</td><td class="num">2</td><td class="num">+3</td></tr>
+<tr><td>Procedura di recupero</td><td class="num">3</td><td class="num">+2</td></tr>
+<tr><td>Bridging document</td><td class="num">2</td><td class="num">+3</td></tr>
+<tr><td><strong>Autorizzazione dell'area di lavoro, riaperta</strong></td><td class="num"><strong>15</strong></td><td class="num"><strong>−10</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>−10</strong><span>giorni di margine, dentro una checklist al 94%</span></div>
+
+<p>Con la voce riaperta, le voci chiuse passano da 45 su 48 a 44: dal 94% al 92%. Due punti percentuali, che in una presentazione nessuno noterebbe. Il margine della voce peggiore passa invece da +2 a −10 giorni, ed è questo numero che cambia la decisione.</p>
+
+<h2>Che cosa si decide con un margine negativo</h2>
+
+<p>Un margine negativo non vuol dire automaticamente che la nave resta in porto. Vuol dire che la decisione di partenza deve stabilire che cosa succede alle linee che non si possono ancora acquisire.</p>
+
+<p>Nell'esempio le quattro linee fuori poligono richiedono in tutto due giorni di acquisizione. Se la nave parte alla data prevista, la modifica dell'autorizzazione arriva dieci giorni dopo la partenza: quindici giorni per ottenerla, meno i cinque che mancavano alla partenza. Con 20 giorni di acquisizione e due da riservare alle quattro linee, queste devono cominciare entro 18 giorni dalla partenza per non allungare la campagna. Fra l'arrivo atteso dell'autorizzazione e l'ultimo giorno utile restano otto giorni.</p>
+
+<p>La decisione corretta è quindi: si parte, con una condizione scritta. Le quattro linee vanno in coda al programma; la modifica dell'autorizzazione ha un responsabile e una data attesa; se a 18 giorni dalla partenza non è arrivata, si sceglie fra prolungare il noleggio e rinunciare alle linee – e quella scelta la fissa oggi chi ne ha l'autorità, non la improvvisa quel giorno chi è a bordo.</p>
+
+<p>È una decisione diversa da «si parte», e nessuno la prende se la tabella dice 94%.</p>
+
+<h2>Il difetto non era nella voce, ma nel modo di chiuderla</h2>
+
+<p>La voce sull'autorizzazione non era stata chiusa male. Era stata chiusa su un documento che poi è cambiato, e una checklist che registra solo lo stato – aperta o chiusa – non ha modo di accorgersene.</p>
+
+<p>Il rimedio è registrare, per ogni voce chiusa, su quale revisione di quale documento è stata verificata: «autorizzazione verificata sul piano linee rev. B», non «autorizzazione presente». Quando esce la rev. D, ogni voce che dipende dal piano linee si riapre. Nell'esempio la voce si sarebbe riaperta dodici giorni prima della partenza, con un margine di −3 giorni invece di −10: ancora negativo, ma scoperto sette giorni prima, quando c'era tempo per sollecitare l'autorità o riordinare il programma a terra, invece che in mare.</p>
+
+<h2>L'obiezione che arriverà</h2>
+
+<p>Chi organizza la campagna risponderà che anticipare la review non risolve il problema: a quindici giorni dalla partenza metà delle voci non può essere chiusa. L'equipaggio non è ancora assegnato, la nave sta finendo un altro lavoro, le procedure aspettano la versione definitiva del piano linee. Una review anticipata produrrebbe soltanto un lungo elenco di voci aperte.</p>
+
+<p>L'obiezione è corretta sui fatti, e indica come va fatta la review, non che vada rimandata. A quindici giorni dalla partenza non si verifica che le voci siano chiuse: si verifica che ognuna abbia un responsabile, un tempo di chiusura stimato e un margine positivo. Una voce aperta con dieci giorni di margine è in ordine. Una voce aperta di cui nessuno sa dire quanto tempo richieda è il risultato più utile che la review possa produrre.</p>
+
+<p>Le passate sono quindi due, con scopi diversi. La prima, tenuta prima che il tempo residuo scenda sotto il tempo di chiusura più lungo della lista, verifica i margini. La seconda, a ridosso della partenza, verifica le chiusure. Tenerne una sola, cinque giorni prima per consuetudine, vuol dire fare la seconda credendo di aver fatto anche la prima.</p>
+
+<h2>Cosa richiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Il tempo di chiusura accanto a ogni voce.</strong><span class="t"> Non soltanto aperta o chiusa: quanti giorni servono a chiuderla e chi la chiude. Senza quel numero il margine non si calcola, e senza margine la review conta caselle.</span></span></li>
+  <li><span class="k">02</span><span><strong>Il margine della voce peggiore in testa al rapporto.</strong><span class="t"> Prima della percentuale, o al suo posto. È il numero su cui si decide la partenza, e deve essere il primo che legge chi non era alla riunione.</span></span></li>
+  <li><span class="k">03</span><span><strong>Ogni chiusura legata alla revisione del documento verificato.</strong><span class="t"> Una nuova revisione di un documento riapre tutte le voci che dipendono da esso. Il piano linee, il programma e l'elenco del personale sono i documenti che cambiano più spesso nelle ultime settimane.</span></span></li>
+  <li><span class="k">04</span><span><strong>Due passate, con le date fissate dal tempo di chiusura più lungo.</strong><span class="t"> La prima sui margini, la seconda sulle chiusure. Non una sola riunione in una data scelta per consuetudine.</span></span></li>
+  <li><span class="k">05</span><span><strong>Le partenze condizionate scritte come tali.</strong><span class="t"> Se si parte con una voce a margine negativo, la decisione indica che cosa resta escluso, chi chiude la voce, entro quando, e che cosa si fa se non si chiude. Una condizione che vive solo nel verbale della riunione non arriva a bordo.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Una readiness review non serve a dimostrare che si è pronti. Serve a trovare, finché c'è tempo per agire, la voce che non si chiuderà in tempo. Una checklist al 94% dice che il lavoro è quasi finito; non dice se ciò che manca si può finire prima della partenza.</p>
+
+<p>Fra le due cose c'è un numero per voce, il margine, che quasi nessuna checklist riporta e che costa pochissimo aggiungere. Va previsto nella specifica: il giorno della review la forma della tabella è già decisa.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>IOGP Report 423, <em>HSE management – guidelines for working together in a contract environment</em>, e il supplemento 423-02, <em>Guide to preparing HSE plans and Bridging documents</em>: il bridging document serve quando il lavoro, in tutto o in parte, si svolge con il sistema di gestione del contractor, ritenuto conforme ai requisiti di quello del committente.</li>
+  <li>OPITO, standard BOSIET e FOET: il certificato BOSIET ha validità di quattro anni; l'aggiornamento è il corso FOET di un giorno, da frequentare mentre il certificato è ancora valido.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR fornisce project management e technical assurance per campagne offshore, readiness review comprese. Se state preparando una campagna, o volete una verifica indipendente della prontezza prima della partenza, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">Before a vessel leaves the quay for an offshore campaign, somebody presents a table: forty-eight items, forty-five closed, three open and all on their way to closure. 94%. The meeting lasts an hour and ends with the decision to sail.</p>
+
+<p>That table answers a question – how many items are closed – which is not the one the meeting was called for. The question of a readiness review is a different one: is there anything that will not be closed before the moment it is needed? The percentage does not answer it, not even approximately.</p>
+
+<p>This article is about the readiness review in the strict sense: people, documents, permits, interfaces, contingencies. Verifying equipment on the quay – calibrations, offsets, system trials – is a different check, with rules of its own, and deserves an article of its own.</p>
+
+<h2>Why the percentage does not measure readiness</h2>
+
+<p>A checklist treats every item the same way: each one is worth one box. But items do not take the same time to close. A refresher course takes a day; amending a permit from the maritime authority can take weeks, and that time does not depend on whoever is asking.</p>
+
+<p>The readiness of a campaign is therefore not the average of its items. It is set by the worst item, and "worst" does not mean the most important in the abstract: it means the one that needs more time than is left. For every open item a single difference matters, the margin: the days remaining until the item is needed, minus the days needed to close it. If the margin is positive, the item is an activity to follow up. If it is negative, it is a decision to be taken now.</p>
+
+<p>A percentage contains neither number.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are illustrative – built to show the mechanism, not taken from real projects – but the structure recurs.</p>
+
+<p>A geophysical campaign with 20 days of acquisition, in an area a few hours from port. The readiness review is held five days before sailing, by custom. The status presented is this:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Area</th><th class="num">Items</th><th class="num">Closed</th><th class="num">Open</th></tr>
+</thead>
+<tbody>
+<tr><td>People</td><td class="num">10</td><td class="num">9</td><td class="num">1</td></tr>
+<tr><td>Vessel</td><td class="num">8</td><td class="num">8</td><td class="num">0</td></tr>
+<tr><td>Documents and procedures</td><td class="num">12</td><td class="num">11</td><td class="num">1</td></tr>
+<tr><td>Permits</td><td class="num">6</td><td class="num">6</td><td class="num">0</td></tr>
+<tr><td>Interfaces</td><td class="num">7</td><td class="num">6</td><td class="num">1</td></tr>
+<tr><td>Contingencies</td><td class="num">5</td><td class="num">5</td><td class="num">0</td></tr>
+<tr><td><strong>Total</strong></td><td class="num"><strong>48</strong></td><td class="num"><strong>45</strong></td><td class="num"><strong>3</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The three open items, with the time needed to close them and the margin against sailing:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Open item</th><th class="num">Days to close</th><th class="num">Margin</th></tr>
+</thead>
+<tbody>
+<tr><td>Basic offshore safety training certificate (BOSIET) for one technician, expiring mid-campaign: FOET refresher to be booked and attended</td><td class="num">2</td><td class="num">+3</td></tr>
+<tr><td>Recovery procedure for the towed instrument, awaiting client approval</td><td class="num">3</td><td class="num">+2</td></tr>
+<tr><td>Bridging document between the client's and the contractor's HSE management systems, to be signed</td><td class="num">2</td><td class="num">+3</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>All margins are positive, and the decision to sail is consistent with the figures presented.</p>
+
+<p>The problem lies among the closed items. The item "work area permit" is ticked: the permit exists, is valid, is on file. It was issued, however, on the polygon of revision B of the line plan. Seven days before the review – twelve before sailing – revision D was issued, adding six lines along a cable route variation. Four of them run partly outside the permitted polygon.</p>
+
+<p>Nobody hid anything: the item had been closed before the line plan changed, and no rule reopened it. In this example, amending the permit takes fifteen days.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Open item</th><th class="num">Days to close</th><th class="num">Margin</th></tr>
+</thead>
+<tbody>
+<tr><td>Basic offshore safety training</td><td class="num">2</td><td class="num">+3</td></tr>
+<tr><td>Recovery procedure</td><td class="num">3</td><td class="num">+2</td></tr>
+<tr><td>Bridging document</td><td class="num">2</td><td class="num">+3</td></tr>
+<tr><td><strong>Work area permit, reopened</strong></td><td class="num"><strong>15</strong></td><td class="num"><strong>−10</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>−10</strong><span>days of margin, inside a checklist at 94%</span></div>
+
+<p>With the item reopened, closed items go from 45 out of 48 to 44: from 94% to 92%. Two percentage points, which nobody would notice in a presentation. The margin of the worst item, on the other hand, goes from +2 to −10 days, and that is the number that changes the decision.</p>
+
+<h2>What a negative margin decides</h2>
+
+<p>A negative margin does not automatically mean the vessel stays in port. It means the sailing decision has to state what happens to the lines that cannot yet be acquired.</p>
+
+<p>In the example the four lines outside the polygon need two days of acquisition in total. If the vessel sails on the planned date, the permit amendment arrives ten days after sailing: fifteen days to obtain it, minus the five that were left before sailing. With 20 days of acquisition and two to be reserved for the four lines, these must start within 18 days of sailing so as not to lengthen the campaign. Between the expected arrival of the permit and the last useful day there are eight days.</p>
+
+<p>The correct decision is therefore: sail, with a written condition. The four lines go to the end of the programme; the permit amendment has an owner and an expected date; if it has not arrived 18 days after sailing, the choice is between extending the charter and giving up the lines – and that choice is set today by whoever has the authority, not improvised on the day by whoever is on board.</p>
+
+<p>It is a different decision from "sail", and nobody takes it if the table says 94%.</p>
+
+<h2>The fault was not in the item, but in how it was closed</h2>
+
+<p>The permit item had not been closed badly. It had been closed against a document that later changed, and a checklist that records only the status – open or closed – has no way of noticing.</p>
+
+<p>The remedy is to record, for every closed item, against which revision of which document it was verified: "permit verified against line plan rev. B", not "permit in place". When rev. D is issued, every item that depends on the line plan reopens. In the example the item would have reopened twelve days before sailing, with a margin of −3 days instead of −10: still negative, but found seven days earlier, when there was time to chase the authority or reorder the programme on shore rather than at sea.</p>
+
+<h2>The objection that will come</h2>
+
+<p>Whoever organises the campaign will reply that bringing the review forward does not solve the problem: fifteen days before sailing, half the items cannot be closed. The crew is not yet assigned, the vessel is finishing another job, the procedures are waiting for the final version of the line plan. An early review would produce nothing but a long list of open items.</p>
+
+<p>The objection is right on the facts, and it shows how the review should be run, not that it should be postponed. Fifteen days before sailing, the check is not that items are closed: it is that each one has an owner, an estimated closure time and a positive margin. An open item with ten days of margin is in order. An open item for which nobody can say how long it will take is the most useful finding a review can produce.</p>
+
+<p>There are therefore two passes, with different purposes. The first, held before the remaining time drops below the longest closure time on the list, checks margins. The second, close to sailing, checks closures. Holding only one, five days before by custom, means running the second while believing the first has been run too.</p>
+
+<h2>What to require in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>The closure time next to every item.</strong><span class="t"> Not just open or closed: how many days it takes to close and who closes it. Without that number the margin cannot be computed, and without the margin the review is counting boxes.</span></span></li>
+  <li><span class="k">02</span><span><strong>The margin of the worst item at the top of the report.</strong><span class="t"> Before the percentage, or instead of it. It is the number the sailing decision rests on, and it must be the first one read by whoever was not at the meeting.</span></span></li>
+  <li><span class="k">03</span><span><strong>Every closure tied to the revision of the document checked.</strong><span class="t"> A new revision of a document reopens every item that depends on it. The line plan, the programme and the personnel list are the documents that change most often in the final weeks.</span></span></li>
+  <li><span class="k">04</span><span><strong>Two passes, with dates set by the longest closure time.</strong><span class="t"> The first on margins, the second on closures. Not a single meeting on a date chosen by custom.</span></span></li>
+  <li><span class="k">05</span><span><strong>Conditional sailings written down as such.</strong><span class="t"> If the vessel sails with an item at negative margin, the decision states what is excluded, who closes the item, by when, and what happens if it is not closed. A condition that lives only in the meeting minutes does not reach the vessel.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>A readiness review is not there to prove that everyone is ready. It is there to find, while there is still time to act, the item that will not close in time. A checklist at 94% says the work is almost done; it does not say whether what is missing can be finished before sailing.</p>
+
+<p>Between the two there is one number per item, the margin, which almost no checklist reports and which costs very little to add. It has to be specified in advance: by the day of the review, the shape of the table has already been decided.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>IOGP Report 423, <em>HSE management – guidelines for working together in a contract environment</em>, and supplement 423-02, <em>Guide to preparing HSE plans and Bridging documents</em>: a bridging document is needed when all or part of the scope of work is carried out under the contractor's management system, on the basis that it meets the requirements of the client's.</li>
+  <li>OPITO, BOSIET and FOET standards: the BOSIET certificate is valid for four years; the refresher is the one-day FOET course, to be attended while the certificate is still in date.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR provides project management and technical assurance for offshore campaigns, readiness reviews included. If you are preparing a campaign, or want an independent check of readiness before sailing, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'tempo-nave',
         'topic': 'excellence',
         'date': '2026-10-05',

@@ -27,14 +27,15 @@ Già online, da non riprendere:
 | Quando il critical path si sposta | Project Management | float, near-critical, weather allowance, recupero di schedule |
 | Il problema del datum | Marine Geoscience | ETRS89 / WGS84, realizzazioni, epoche, codici EPSG |
 | La classificazione del tempo nave | Operational Excellence | off-hire e on hire, weather standby contro guasto, categorie del rapporto giornaliero |
+| Readiness review prima della partenza | Operational Excellence | margine delle voci aperte contro percentuale di chiusura, riapertura su revisione del documento, partenza condizionata |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
 ## Arretrato
 
-### Operational Excellence — 1 articolo pubblicato
+### Operational Excellence — 2 articoli pubblicati
 - [x] La classificazione del tempo nave: chi paga la giornata in cui non si è lavorato — 2026-10-05
-- [ ] Readiness review: che cosa si verifica prima che la nave parta
+- [x] Readiness review: che cosa si verifica prima che la nave parta — 2026-10-05
   *(bozza del 5 ottobre, in attesa di via libera. Tratta solo persone,
   documenti, permessi, interfacce e contingenze: la verifica della
   strumentazione in banchina resta all'articolo sull'accettazione della
