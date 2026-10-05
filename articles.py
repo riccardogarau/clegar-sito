@@ -15,6 +15,251 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'tempo-nave',
+        'topic': 'excellence',
+        'date': '2026-10-05',
+        'slug': {'it': 'la-classificazione-del-tempo-nave',
+                 'en': 'classifying-vessel-time'},
+        'title': {
+            'it': 'La classificazione del tempo nave: chi paga la giornata in cui non si è lavorato',
+            'en': 'Classifying vessel time: who pays for the day nothing was done',
+        },
+        'meta_title': {
+            'it': 'La classificazione del tempo nave | Insights',
+            'en': 'Classifying vessel time | Insights',
+        },
+        'desc': {
+            'it': ('Perché l’etichetta scritta nel rapporto giornaliero decide chi paga una '
+                   'giornata di fermo, e come si verifica incrociando ogni voce di standby con '
+                   'lo stato del mare registrato.'),
+            'en': ('Why the label written in the daily report decides who pays for an idle day, '
+                   'and how to check it by cross-referencing every standby entry against the '
+                   'recorded sea state.'),
+        },
+        'abstract': {
+            'it': ('Weather standby o guasto: la stessa giornata di fermo cade sul committente o '
+                   'sul contractor secondo una parola scritta a bordo da chi ha interesse a '
+                   'scriverne una piuttosto che un’altra. Su una campagna di 28 giorni sono due '
+                   'giornate, cioè l’8% del tempo nave fatturato.'),
+            'en': ('Weather standby or breakdown: the same idle day falls on the client or on the '
+                   'contractor according to a word written on board by the party with an interest '
+                   'in writing one rather than another. On a 28-day campaign that is two days, or '
+                   '8% of invoiced vessel time.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Una campagna offshore si fattura a giornate, e ogni giornata porta un'etichetta: acquisizione, transito, weather standby, guasto. L'etichetta non descrive soltanto che cosa è successo. Decide chi paga.</p>
+
+<p>Viene assegnata a bordo, di solito la sera, da chi compila il rapporto giornaliero (il daily progress report): spesso alla fine di un turno, quasi sempre dal contractor. È una delle poche decisioni di una campagna che valgono decine di migliaia di euro e che nessuno tratta come una decisione.</p>
+
+<h2>Perché la parola conta più del fatto</h2>
+
+<p>Nei contratti di noleggio offshore della famiglia SUPPLYTIME, la clausola di <em>off-hire</em> elenca le cause che sospendono il nolo: carenza di equipaggio, sciopero, guasto di macchinari o strumentazione, danni allo scafo o altri incidenti alla nave. Per il tempo perso il nolo non è dovuto, e il costo resta al contractor.</p>
+
+<p>Il meteo non è in quell'elenco. Una nave ferma perché il mare supera i limiti operativi resta <em>on hire</em>: il committente paga la giornata per intero.</p>
+
+<p>L'elenco ha però un confine che conta: la stessa clausola esclude dal caso del guasto la strumentazione installata a bordo dal noleggiatore. Se lo strumento che si ferma è stato portato dal committente, il suo guasto non sospende il nolo. Chi fornisce lo spread decide quindi anche chi paga quando lo spread non funziona, e questa è una verifica da fare sul contratto prima che sul rapporto giornaliero.</p>
+
+<p>Da qui l'asimmetria che governa tutto il resto. La stessa nave, lo stesso mare, le stesse ventiquattro ore in cui non si è acquisito un metro di dato: costano al contractor se la causa è un guasto, al committente se la causa è il meteo. Fra le due possibilità non c'è una misura. C'è una parola scritta in un rapporto.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma la struttura è ricorrente.</p>
+
+<p>Una campagna geofisica di 28 giorni. A fine lavori il riepilogo dei rapporti giornalieri si presenta così:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Categoria di tempo</th><th class="num">Giorni</th><th>A carico di</th></tr>
+</thead>
+<tbody>
+<tr><td>Acquisizione</td><td class="num">16</td><td>committente</td></tr>
+<tr><td>Transito</td><td class="num">2</td><td>committente</td></tr>
+<tr><td>Weather standby</td><td class="num">7</td><td>committente</td></tr>
+<tr><td>Off-hire per guasto</td><td class="num">3</td><td>contractor</td></tr>
+<tr><td><strong>Totale</strong></td><td class="num"><strong>28</strong></td><td><strong>25 al committente</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Venticinque giornate fatturabili su ventotto. Il totale torna, e nessuno contesta i tre giorni di guasto: li ha dichiarati il contractor stesso.</p>
+
+<p>Chi rivede i rapporti giornalieri, però, incrocia ogni voce di weather standby con lo stato del mare registrato. Due delle sette giornate riportano altezze d'onda significative di 1,4 m e 1,6 m, contro un limite operativo contrattuale di Hs ≤ 2,5 m per l'acquisizione. In quelle due giornate la nave non ha lavorato perché il sensore di moto (MRU), parte dello spread fornito dal contractor, dava un'uscita degradata: con quel mare – dentro i limiti, ma non calmo – il dato risultava fuori specifica.</p>
+
+<p>Non è weather standby. È strumentazione che non funziona, e un mare che si limita a mettere in luce il difetto.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Categoria di tempo</th><th class="num">Come riportato</th><th class="num">Dopo la revisione</th></tr>
+</thead>
+<tbody>
+<tr><td>Weather standby</td><td class="num">7</td><td class="num">5</td></tr>
+<tr><td>Off-hire per guasto</td><td class="num">3</td><td class="num">5</td></tr>
+<tr><td><strong>Giornate a carico del committente</strong></td><td class="num"><strong>25</strong></td><td class="num"><strong>23</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>8%</strong><span>del tempo nave fatturato</span></div>
+
+<p>Due giornate: l'8% delle venticinque che erano state fatturate al committente. La durata della campagna non cambia di un'ora: cambia da quale parte del contratto cade.</p>
+
+<h2>La verifica che lo rileva</h2>
+
+<p>È un controllo che si fa con un confronto, a condizione che qualcuno lo faccia: si prende ogni voce di weather standby e si confronta lo stato del mare registrato in quell'intervallo con il limite operativo scritto nel contratto.</p>
+
+<p>Una giornata di standby dichiarata con il mare ben dentro i limiti operativi non dimostra nulla da sola, ma è una domanda che merita una risposta scritta. Se le risposte non arrivano, o arrivano identiche per giornate diverse, la classificazione non regge.</p>
+
+<p>Il controllo funziona solo se lo stato del mare è registrato accanto alla voce di standby, dalla fonte che il contratto ha nominato. Se il dato meteo e il rapporto giornaliero vivono in due documenti che nessuno incrocia, la verifica è impossibile – ed è esattamente così che quasi tutte le campagne sono organizzate.</p>
+
+<h2>L'obiezione che arriverà</h2>
+
+<p>Un contractor risponderà, correttamente, che l'altezza d'onda significativa da sola non definisce l'operabilità. Un mare di 1,4 m al traverso con periodo corto può essere peggiore, per un trasduttore multibeam montato sullo scafo, di 2,2 m con mare di prua. Direzione relativa e periodo contano quanto l'altezza, e un limite scritto come numero singolo non li contiene.</p>
+
+<p>L'obiezione è fondata, e non smonta la verifica: la sposta. Il criterio non è «Hs sotto il limite, quindi la classificazione è sbagliata». Il criterio è che il limite operativo vada scritto come inviluppo – altezza, periodo, direzione relativa – e che ogni voce di standby dichiari <em>quale</em> condizione sia stata superata.</p>
+
+<p>Un limite espresso con un numero solo non previene la controversia: la prepara, perché lascia a ciascuna parte la possibilità di avere ragione.</p>
+
+<h2>Cosa richiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Categorie di tempo esaustive, senza voce residua.</strong><span class="t"> Ogni ora della campagna deve ricadere in una categoria definita nel contratto. Una voce «altro» è il posto dove finiscono le giornate che nessuno vuole discutere.</span></span></li>
+  <li><span class="k">02</span><span><strong>Lo stato del mare accanto a ogni voce di standby.</strong><span class="t"> Altezza d'onda significativa, periodo e direzione relativa, dalla fonte nominata nel contratto – sensore di bordo o hindcast – e non da due documenti diversi a seconda di chi scrive.</span></span></li>
+  <li><span class="k">03</span><span><strong>Il limite operativo come inviluppo, non come numero.</strong><span class="t"> Con l'indicazione dell'attività a cui si applica: acquisizione, messa a mare, recupero e transito non si fermano allo stesso mare.</span></span></li>
+  <li><span class="k">04</span><span><strong>La zona grigia definita in anticipo.</strong><span class="t"> Strumentazione degradata ma non guasta: è off-hire, è standby, o è lavoro pagato a tariffa ridotta? È lì che finisce la maggior parte delle controversie, ed è il punto che quasi nessun contratto affronta.</span></span></li>
+  <li><span class="k">05</span><span><strong>Il rapporto giornaliero controfirmato ogni giorno.</strong><span class="t"> Dal rappresentante del committente a bordo, entro ventiquattro ore. Un rapporto approvato a fine campagna non è una verifica: è una ricostruzione fatta quando nessuno ricorda più il mare di quel martedì.</span></span></li>
+  <li><span class="k">06</span><span><strong>Le categorie del rapporto riconciliate con quelle della fattura.</strong><span class="t"> Sono quasi sempre due tassonomie diverse, compilate da uffici diversi. Finché nessuno le mette in colonna, la classificazione può cambiare fra il mare e l'amministrazione senza che si veda.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Il tempo nave è la voce di costo più grande di una campagna offshore, e si assegna con una parola scritta a bordo da chi ha interesse a scriverne una piuttosto che un'altra. Non è malafede: è un conflitto di interessi strutturale, lasciato senza un controllo.</p>
+
+<p>Il controllo costa poco – incrociare due colonne che il contratto può obbligare a esistere – e va previsto prima che la nave parta. Dopo la consegna si può ancora fare, ma a quel punto non è più una verifica: è una contestazione, e si discute con chi ha già emesso la fattura.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>BIMCO SUPPLYTIME 2017, clausola 13(a) – off-hire: carenza di equipaggio o di dotazioni dell'armatore, sciopero dell'equipaggio, guasto di macchinari e/o strumentazione, danni allo scafo o altri incidenti alla nave. La stessa clausola esclude la strumentazione installata a bordo dal noleggiatore ai sensi della clausola 4.</li>
+  <li>The Shipowners' Club, confronto fra WINDTIME e SUPPLYTIME – nei noleggi per l'eolico offshore il rischio meteo è spesso diviso rispetto alla capacità garantita della nave: un'allocazione diversa, utile come termine di paragone.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR fornisce project management e technical assurance per campagne offshore. Se state impostando la specifica di una campagna, o state rivedendo un consuntivo di tempo nave che vi è stato consegnato, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">An offshore campaign is invoiced by the day, and every day carries a label: acquisition, transit, weather standby, breakdown. The label does not merely describe what happened. It decides who pays.</p>
+
+<p>It is assigned on board, usually in the evening, by whoever fills in the daily progress report – often at the end of a shift, and almost always by the contractor. It is one of the few decisions on a campaign that are worth tens of thousands of euros and that nobody treats as a decision.</p>
+
+<h2>Why the word matters more than the fact</h2>
+
+<p>In offshore charters of the SUPPLYTIME family, the <em>off-hire</em> clause lists the causes that suspend hire: deficiency of crew, strike, breakdown of machinery or equipment, damage to the hull or other accidents to the vessel. No hire is payable for the time lost, and the cost stays with the contractor.</p>
+
+<p>Weather is not on that list. A vessel on standby because the sea exceeds its operating limits remains <em>on hire</em>: the client pays the day in full.</p>
+
+<p>The list has a boundary that matters, though: the same clause excludes from breakdown any equipment installed on board by the charterers. If the instrument that stops was brought by the client, its failure does not suspend hire. Who supplies the spread therefore also decides who pays when the spread does not work, and that is a check to run against the contract before running it against the daily report.</p>
+
+<p>Hence the asymmetry that governs everything else. The same vessel, the same sea, the same twenty-four hours in which not a metre of data was acquired: they cost the contractor if the cause was a breakdown, and the client if the cause was weather. Between those two outcomes there is no measurement. There is a word written in a report.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are illustrative – built to show the mechanism, not taken from real projects – but the structure recurs.</p>
+
+<p>A 28-day geophysical campaign. At the end of the works, the summary of the daily progress reports looks like this:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Time category</th><th class="num">Days</th><th>Borne by</th></tr>
+</thead>
+<tbody>
+<tr><td>Acquisition</td><td class="num">16</td><td>client</td></tr>
+<tr><td>Transit</td><td class="num">2</td><td>client</td></tr>
+<tr><td>Weather standby</td><td class="num">7</td><td>client</td></tr>
+<tr><td>Off-hire for breakdown</td><td class="num">3</td><td>contractor</td></tr>
+<tr><td><strong>Total</strong></td><td class="num"><strong>28</strong></td><td><strong>25 to the client</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Twenty-five billable days out of twenty-eight. The total adds up, and nobody disputes the three days of breakdown: the contractor declared them itself.</p>
+
+<p>Reviewing the daily reports, however, means cross-checking every weather standby entry against the recorded sea state. Two of the seven days report significant wave heights of 1.4 m and 1.6 m, against a contractual operating limit of Hs ≤ 2.5 m for acquisition. On those two days the vessel did not work because the motion reference unit (MRU), part of the contractor-supplied spread, was producing a degraded output: in that sea – inside the limit, but not calm – the data fell out of specification.</p>
+
+<p>That is not weather standby. It is equipment that does not work, and a sea that merely exposes the fault.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Time category</th><th class="num">As reported</th><th class="num">After review</th></tr>
+</thead>
+<tbody>
+<tr><td>Weather standby</td><td class="num">7</td><td class="num">5</td></tr>
+<tr><td>Off-hire for breakdown</td><td class="num">3</td><td class="num">5</td></tr>
+<tr><td><strong>Days borne by the client</strong></td><td class="num"><strong>25</strong></td><td class="num"><strong>23</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>8%</strong><span>of invoiced vessel time</span></div>
+
+<p>Two days: 8% of the twenty-five that had been invoiced to the client. The duration of the campaign does not change by an hour: what changes is which side of the contract it falls on.</p>
+
+<h2>The check that finds it</h2>
+
+<p>The check itself is one comparison, provided somebody makes it: take every weather standby entry and compare the sea state recorded over that interval with the operating limit written into the contract.</p>
+
+<p>A standby day declared with the sea well inside the operating limits proves nothing on its own, but it is a question that deserves an answer in writing. If the answers do not come, or come back identical for different days, the classification does not hold.</p>
+
+<p>The check only works if the sea state is recorded alongside the standby entry, from the source the contract named. If the weather data and the daily report live in two documents that nobody cross-checks, the verification is impossible – and that is exactly how almost every campaign is organised.</p>
+
+<h2>The objection that will come</h2>
+
+<p>A contractor will reply, correctly, that significant wave height alone does not define workability. A 1.4 m sea on the beam with a short period can be worse, for a hull-mounted multibeam transducer, than 2.2 m in a head sea. Relative heading and period matter as much as height, and a limit written as a single number contains neither.</p>
+
+<p>The objection is sound, and it does not dismantle the check: it relocates it. The criterion is not "Hs below the limit, therefore the classification is wrong". The criterion is that the operating limit should be written as an envelope – height, period, relative heading – and that every standby entry should state <em>which</em> condition was exceeded.</p>
+
+<p>A limit expressed as one number does not prevent the dispute: it prepares it, because it leaves each party room to be right.</p>
+
+<h2>What to require in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Exhaustive time categories, with no residual entry.</strong><span class="t"> Every hour of the campaign must fall into a category defined in the contract. An "other" line is where the days nobody wants to discuss end up.</span></span></li>
+  <li><span class="k">02</span><span><strong>The sea state alongside every standby entry.</strong><span class="t"> Significant wave height, period and relative heading, from the source named in the contract – onboard sensor or hindcast – and not from two different documents depending on who is writing.</span></span></li>
+  <li><span class="k">03</span><span><strong>The operating limit as an envelope, not as a number.</strong><span class="t"> Stating which activity it applies to: acquisition, deployment, recovery and transit do not stop in the same sea.</span></span></li>
+  <li><span class="k">04</span><span><strong>The grey area defined in advance.</strong><span class="t"> Equipment degraded but not broken: is that off-hire, standby, or work paid at a reduced rate? That is where most disputes end up, and it is the point almost no contract addresses.</span></span></li>
+  <li><span class="k">05</span><span><strong>The daily report countersigned every day.</strong><span class="t"> By the client representative on board, within twenty-four hours. A report approved at the end of the campaign is not a verification: it is a reconstruction made when nobody remembers the sea on that particular Tuesday.</span></span></li>
+  <li><span class="k">06</span><span><strong>The report categories reconciled with the invoice categories.</strong><span class="t"> They are almost always two different taxonomies, filled in by different offices. Until somebody lines them up, the classification can change between the sea and the accounts department without anyone seeing it.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>Vessel time is the largest single cost item on an offshore campaign, and it is assigned by a word written on board by the party with an interest in writing one rather than another. This is not bad faith: it is a structural conflict of interest, left without a check.</p>
+
+<p>The check costs little – cross-referencing two columns the contract can oblige to exist – and it has to be specified before the vessel sails. After delivery it can still be done, but by then it is no longer a verification: it is a claim, argued with a party that has already issued the invoice.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>BIMCO SUPPLYTIME 2017, clause 13(a) – off-hire: deficiency of crew or of the owners' stores, strike of crew, breakdown of machinery and/or equipment, damage to hull or other accidents to the vessel. The same clause excludes equipment installed on board by the charterers under clause 4.</li>
+  <li>The Shipowners' Club, comparative review of WINDTIME and SUPPLYTIME – in offshore wind charters the weather risk is often split against the vessel's warranted capability: a different allocation, useful as a point of comparison.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR provides project management and technical assurance for offshore campaigns. If you are setting up a campaign specification, or reviewing a vessel-time account that has been handed to you, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'datum-etrs89-wgs84',
         'topic': 'geoscience',
         'date': '2026-08-31',

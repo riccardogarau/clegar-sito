@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/la-classificazione-del-tempo-nave/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/la-classificazione-del-tempo-nave/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/classifying-vessel-time/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/la-classificazione-del-tempo-nave/"/>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/classifying-vessel-time/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/la-classificazione-del-tempo-nave/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/classifying-vessel-time/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/la-classificazione-del-tempo-nave/"/>
+    <lastmod>2026-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/etrs89-e-wgs84-il-problema-del-datum/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/etrs89-e-wgs84-il-problema-del-datum/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/etrs89-and-wgs84-the-datum-problem/"/>
