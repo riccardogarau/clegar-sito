@@ -59,6 +59,14 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 ### Project Management — 1 articolo pubblicato
 - [ ] Le interfacce fra contractor: dove si rompono e chi le tiene
 
+## Che cosa si consegna per ogni articolo
+
+Tre cose, non una: il testo italiano, il testo inglese, e il **post LinkedIn
+nelle due lingue** in `post-linkedin.md`. Un articolo senza post resta senza
+lettori, perche' il profilo LinkedIn e' l'unico canale di distribuzione del
+sito. Su LinkedIn pubblica l'utente, non il generatore: il post va solo
+preparato e lasciato pronto da copiare.
+
 ## Regole di contenuto
 
 Valgono quelle di `CLAUDE.md`, in particolare: ogni numero va **ricalcolato**,

@@ -55,6 +55,8 @@ build_static.py     generatore del sito (24 pagine)
 build_preview.py    assembla docs/ in un file unico di anteprima
 articles.py         contenuto degli articoli Insights (IT + EN)
 check.py            verifica strutturale
+piano-editoriale.md arretrato degli argomenti, uno per articolo
+post-linkedin.md    i post LinkedIn, uno per articolo, nelle due lingue
 content/
   site2.html        SORGENTE dei contenuti delle pagine fisse
   fig_art_*.svg     figure degli articoli
@@ -322,6 +324,11 @@ sovrascrivono a vicenda.
 3. Aprire `ANTEPRIMA-locale.html` e controllare a occhio.
 4. Commit e push: GitHub Pages ripubblica in un paio di minuti.
 5. Reinviare la sitemap in Google Search Console.
+6. Scrivere il **post LinkedIn** in `post-linkedin.md`, nelle due lingue, e
+   lasciarlo pronto da copiare: l'articolo da solo non porta lettori, e il
+   profilo `linkedin.com/company/clegar` e' l'unico canale di distribuzione
+   che il sito ha. Le regole di stesura stanno in testa a quel file.
+   La pubblicazione su LinkedIn la fa l'utente: serve il suo account.
 
 Se il corpo arriva in Markdown, la conversione è un incarico da agente:
 è meccanica e verificabile. Ma va verificata contando gli elementi nelle
