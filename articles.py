@@ -15,6 +15,233 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'witnessing-calibrazione',
+        'topic': 'owners',
+        'date': '2026-10-08',
+        'slug': {'it': 'witnessing-di-una-calibrazione',
+                 'en': 'witnessing-a-calibration'},
+        'title': {
+            'it': 'Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda',
+            'en': 'Witnessing a calibration: what you sign and what you look at',
+        },
+        'meta_title': {
+            'it': 'Il witnessing di una calibrazione | Insights',
+            'en': 'Witnessing a calibration | Insights',
+        },
+        'desc': {
+            'it': ('Perché il valore sul certificato di un patch test non dice se la calibrazione '
+                   'ha funzionato, e qual è l’unico dato che lo direbbe: il residuo di una passata '
+                   'di conferma sui fasci esterni.'),
+            'en': ('Why the value on a patch test certificate does not say whether the calibration '
+                   'worked, and what the one figure that would is: the residual of a confirmation '
+                   'pass on the outer beams.'),
+        },
+        'abstract': {
+            'it': ('Correzione giusta o segno rovesciato, il certificato scrive la stessa riga. '
+                   'In mezzo ci sono 0,02 m di residuo contro 0,40 m, cioè il 63% del TVU ammesso '
+                   'dall’Ordine 1a consumato da un errore di segno – e a distinguerli serve una passata '
+                   'che quasi nessuna specifica richiede.'),
+            'en': ('Right correction or reversed sign, the certificate records the same line. '
+                   'Between them lie 0.02 m of residual and 0.40 m, or 63% of the TVU allowed by '
+                   'Order 1a spent on a sign error – and telling them apart takes a pass that '
+                   'almost no specification asks for.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Al termine di una calibrazione il rappresentante del committente firma un certificato. La firma attesta che la prova è stata eseguita in sua presenza. Non attesta che la calibrazione abbia funzionato, e quasi mai il certificato contiene il dato che lo direbbe.</p>
+
+<p>Il certificato riporta il valore determinato: un disallineamento di roll di tot gradi, applicato. Quel numero da solo non distingue una calibrazione che ha corretto l'errore da una che lo ha raddoppiato. Sono esiti opposti, e sul foglio si scrivono nello stesso modo.</p>
+
+<h2>Che cosa determina un patch test</h2>
+
+<p>Per il roll la prova è una linea percorsa due volte in direzioni opposte sopra un fondale piano, e si guardano i fasci esterni. Un disallineamento di roll inclina lo swath: a una distanza trasversale dal nadir produce un errore di profondità proporzionale a quella distanza, positivo da un lato e negativo dall'altro. Invertendo la rotta, lo stesso punto del fondo viene misurato dal lato opposto, e l'errore cambia segno.</p>
+
+<p>Da qui il metodo: la differenza fra le due passate a una data distanza dal nadir vale il doppio dell'errore, e il disallineamento si ricava dividendo per due volte quella distanza. È una grandezza che non si misura, si deduce da una differenza – ed è per questo che il modo in cui la differenza viene letta conta quanto lo strumento.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma le proporzioni sono quelle di una campagna vera.</p>
+
+<p>Fondale piano a 30 m, swath utile fino a 100 m per lato: a quella distanza il fascio esterno guarda a 73 gradi dal nadir. Le due passate reciproche differiscono di 0,20 m sui fasci esterni, che corrisponde a un disallineamento di roll di 0,057 gradi. Il valore viene determinato e applicato, e il certificato viene firmato.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Esito della correzione</th><th class="num">Differenza fra le passate</th><th class="num">Quota del TVU Ordine 1a a 30 m</th></tr>
+</thead>
+<tbody>
+<tr><td>Nessuna correzione</td><td class="num">0,20 m</td><td class="num">32%</td></tr>
+<tr><td>Correzione applicata col segno giusto</td><td class="num">0,02 m</td><td class="num">3%</td></tr>
+<tr><td>Correzione applicata col segno sbagliato</td><td class="num">0,40 m</td><td class="num">63%</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>63%</strong><span>del TVU consumato da un errore di segno</span></div>
+
+<p>Il TVU ammesso dall'Ordine 1a della IHO S-44 a 30 m di profondità è 0,634 m. Applicare la correzione col segno rovesciato non lascia l'errore dov'era: lo raddoppia, perché al disallineamento reale si somma una correzione che punta nella stessa direzione. E il certificato, in tutti e tre i casi della tabella, riporta la stessa riga: disallineamento di roll 0,057 gradi, applicato.</p>
+
+<h2>Che cosa si guarda, allora</h2>
+
+<p>Una sola cosa, e non è il valore: la <strong>passata di conferma</strong> eseguita dopo aver applicato la correzione, con il residuo misurato sugli stessi fasci esterni. Se il residuo è sceso, la calibrazione ha funzionato. Se è salito, il segno è rovesciato. Senza quella passata non esiste alcuna prova che la correzione abbia migliorato qualcosa, e la firma attesta soltanto che qualcuno era presente.</p>
+
+<p>Conta anche dove si guarda. L'errore da roll è nullo al nadir e massimo ai bordi dello swath: un controllo sulla profondità media, o sui fasci centrali, non vede né il caso corretto né quello rovesciato. È il motivo per cui il patch test si legge sui fasci esterni, e per cui un residuo dichiarato senza dire a quale distanza dal nadir è stato misurato non è un residuo.</p>
+
+<h2>L'obiezione che arriverà</h2>
+
+<p>Il contractor risponderà che del segno si occupa il software, e che un segno rovesciato sarebbe evidente. La prima parte è vera e la seconda no: è evidente solo a chi guarda una passata di conferma sui fasci esterni, che è esattamente la cosa che manca.</p>
+
+<p>E il punto non è il software, sono i due software. La convenzione di segno del roll – positivo con il lato sinistro in alto, oppure con il destro – non è universale, e il valore viaggia dal programma che lo determina al progetto di processing attraverso un foglio firmato, dove compare come numero senza la convenzione che lo definisce. Ogni passaggio in cui un numero cambia programma è un passaggio in cui può cambiare segno.</p>
+
+<h2>Quello che una sola passata non distingue</h2>
+
+<p>C'è una seconda ragione per cui le due passate devono essere reciproche e non una ripetizione nella stessa direzione, e riguarda una grandezza diversa. Anche un errore di velocità del suono inclina i bordi dello swath, incurvandoli verso l'alto o verso il basso. Su una sola passata l'effetto somiglia a quello del roll.</p>
+
+<p>Le due si separano dal comportamento al cambio di rotta. L'errore da roll è antisimmetrico: cresce da un lato e cala dall'altro, quindi invertendo la rotta si rovescia. L'errore da velocità del suono dipende dall'inclinazione del fascio e non dal lato: è simmetrico, e invertendo la rotta resta com'era.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Grandezza</th><th>Al cambio di rotta</th><th>Si isola con</th></tr>
+</thead>
+<tbody>
+<tr><td>Disallineamento di roll</td><td>si rovescia</td><td>la differenza fra le due passate</td></tr>
+<tr><td>Errore di velocità del suono</td><td>resta com'è</td><td>la somma delle due passate</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Due passate reciproche danno quindi due informazioni, non una: la differenza misura il roll, la somma misura quanto profilo di velocità del suono sbagliato c'è ancora dentro il dato. Chiedere entrambe costa la stessa nave e la stessa ora.</p>
+
+<h2>Cosa richiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>La passata di conferma come parte della prova, non come extra.</strong><span class="t"> La calibrazione non è conclusa quando il valore è determinato, ma quando una passata successiva mostra il residuo con la correzione attiva.</span></span></li>
+  <li><span class="k">02</span><span><strong>Il residuo dichiarato con la distanza dal nadir a cui è misurato.</strong><span class="t"> Un residuo senza quella distanza non è confrontabile con niente, perché l'errore che deve rilevare vale zero al centro dello swath.</span></span></li>
+  <li><span class="k">03</span><span><strong>La convenzione di segno scritta accanto al valore.</strong><span class="t"> Nel certificato e nel progetto di processing, non nella memoria di chi ha fatto la prova. È l'unico modo di rendere verificabile il passaggio del numero da un programma all'altro.</span></span></li>
+  <li><span class="k">04</span><span><strong>Due passate reciproche, e la somma oltre alla differenza.</strong><span class="t"> La differenza dà il roll, la somma dà il residuo di velocità del suono. Una ripetizione nella stessa direzione non separa le due cause.</span></span></li>
+  <li><span class="k">05</span><span><strong>Il profilo di velocità del suono della prova, allegato con ora e posizione.</strong><span class="t"> Un patch test su un profilo scaduto attribuisce al montaggio un errore che è di propagazione, e lo congela in una costante.</span></span></li>
+  <li><span class="k">06</span><span><strong>I valori applicati verificati nel progetto, non nel certificato.</strong><span class="t"> Il certificato dice che cosa è stato determinato; solo il progetto di processing dice che cosa agisce davvero sul dato consegnato.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Il witnessing costa una giornata di un tecnico e produce, nella forma consueta, una firma su un numero. Nella forma utile produce un residuo: una misura di quanto l'errore sia diminuito dopo la correzione, letta dove quell'errore è grande.</p>
+
+<p>La differenza fra le due forme non sta nella diligenza di chi assiste, ma in che cosa la specifica gli ha chiesto di guardare. Se la prova prevede una sola passata, il rappresentante più scrupoloso del mondo può firmare in buona fede una calibrazione che ha peggiorato il dato del doppio.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>IHO C-13, <em>Manual on Hydrography</em> (1ª edizione, 2005) – verifica e calibrazione dei sistemi di rilievo, patch test per gli angoli di assetto.</li>
+  <li>IHO S-44, <em>Standards for Hydrographic Surveys</em> – Ordine 1a: TVU con a = 0,50 m e b = 0,013, da cui 0,634 m a 30 m di profondità.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR rappresenta il committente a bordo e in banchina, e verifica in modo indipendente le prove di sistema e i dati che ne derivano. Se state scrivendo la specifica di una calibrazione, o state valutando un certificato che vi è stato consegnato, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">At the end of a calibration the client representative signs a certificate. The signature attests that the test was carried out in their presence. It does not attest that the calibration worked, and the certificate almost never carries the figure that would say so.</p>
+
+<p>The certificate records the value determined: a roll misalignment of so many degrees, applied. That number on its own does not distinguish a calibration that removed the error from one that doubled it. Those are opposite outcomes, and on the sheet they are written the same way.</p>
+
+<h2>What a patch test determines</h2>
+
+<p>For roll, the test is one line run twice in opposite directions over a flat seabed, read on the outer beams. A roll misalignment tilts the swath: at a given across-track distance from nadir it produces a depth error proportional to that distance, positive on one side and negative on the other. Reverse the heading, and the same patch of seabed is measured from the opposite side, so the error changes sign.</p>
+
+<p>Hence the method: the difference between the two passes at a given distance from nadir is twice the error, and the misalignment follows from dividing by twice that distance. It is a quantity that is not measured but inferred from a difference – which is why how the difference is read matters as much as the instrument.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are illustrative – built to show the mechanism, not taken from real projects – but the proportions are those of a real campaign.</p>
+
+<p>A flat seabed at 30 m, with usable swath out to 100 m each side: at that distance the outer beam looks 73 degrees off nadir. The two reciprocal passes differ by 0.20 m on the outer beams, which corresponds to a roll misalignment of 0.057 degrees. The value is determined and applied, and the certificate is signed.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Outcome of the correction</th><th class="num">Difference between passes</th><th class="num">Share of Order 1a TVU at 30 m</th></tr>
+</thead>
+<tbody>
+<tr><td>No correction</td><td class="num">0.20 m</td><td class="num">32%</td></tr>
+<tr><td>Correction applied with the right sign</td><td class="num">0.02 m</td><td class="num">3%</td></tr>
+<tr><td>Correction applied with the wrong sign</td><td class="num">0.40 m</td><td class="num">63%</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>63%</strong><span>of the TVU spent on a sign error</span></div>
+
+<p>The TVU allowed by IHO S-44 Order 1a at 30 m depth is 0.634 m. Applying the correction with the sign reversed does not leave the error where it was: it doubles it, because a correction pointing the same way as the real misalignment adds to it. And in all three rows of the table the certificate records the same line: roll misalignment 0.057 degrees, applied.</p>
+
+<h2>What to look at instead</h2>
+
+<p>One thing, and it is not the value: the <strong>confirmation pass</strong> run after the correction has been applied, with the residual measured on the same outer beams. If the residual has fallen, the calibration worked. If it has risen, the sign is reversed. Without that pass there is no evidence at all that the correction improved anything, and the signature attests only that somebody was present.</p>
+
+<p>Where you look matters too. Roll error is zero at nadir and largest at the edges of the swath: a check on mean depth, or on the central beams, sees neither the corrected case nor the reversed one. That is why a patch test is read on the outer beams, and why a residual quoted without saying at what distance from nadir it was measured is not a residual.</p>
+
+<h2>The objection that will come</h2>
+
+<p>The contractor will reply that the software handles the sign, and that a reversed sign would be obvious. The first part is true and the second is not: it is obvious only to someone looking at a confirmation pass on the outer beams, which is exactly what is missing.</p>
+
+<p>And the issue is not the software, it is the two pieces of software. The roll sign convention – positive with the port side up, or with the starboard side up – is not universal, and the value travels from the program that determines it to the processing project by way of a signed sheet, where it appears as a number without the convention that defines it. Every step in which a number changes program is a step in which it can change sign.</p>
+
+<h2>What a single pass cannot separate</h2>
+
+<p>There is a second reason the two passes must be reciprocal rather than a repeat in the same direction, and it concerns a different quantity. A sound velocity error also tilts the edges of the swath, curving them up or down. On a single pass the effect resembles roll.</p>
+
+<p>The two separate by how they behave when the heading reverses. Roll error is antisymmetric: it grows on one side and falls on the other, so reversing the heading flips it. Sound velocity error depends on the beam angle and not on the side: it is symmetric, and reversing the heading leaves it as it was.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Quantity</th><th>On reversing the heading</th><th>Isolated by</th></tr>
+</thead>
+<tbody>
+<tr><td>Roll misalignment</td><td>flips</td><td>the difference between the two passes</td></tr>
+<tr><td>Sound velocity error</td><td>stays as it is</td><td>the sum of the two passes</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Two reciprocal passes therefore give two pieces of information, not one: the difference measures roll, and the sum measures how much wrong sound velocity profile is still inside the data. Asking for both costs the same vessel and the same hour.</p>
+
+<h2>What to require in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>The confirmation pass as part of the test, not as an extra.</strong><span class="t"> A calibration is not finished when the value has been determined, but when a subsequent pass shows the residual with the correction active.</span></span></li>
+  <li><span class="k">02</span><span><strong>The residual quoted with the distance from nadir at which it was measured.</strong><span class="t"> A residual without that distance is comparable to nothing, because the error it has to detect is zero at the centre of the swath.</span></span></li>
+  <li><span class="k">03</span><span><strong>The sign convention written next to the value.</strong><span class="t"> On the certificate and in the processing project, not in the memory of whoever ran the test. It is the only way to make the number's passage between programs verifiable.</span></span></li>
+  <li><span class="k">04</span><span><strong>Two reciprocal passes, and the sum as well as the difference.</strong><span class="t"> The difference gives roll, the sum gives the residual sound velocity error. A repeat in the same direction does not separate the two causes.</span></span></li>
+  <li><span class="k">05</span><span><strong>The sound velocity profile used for the test, attached with its time and position.</strong><span class="t"> A patch test run on an expired profile attributes a propagation error to the mounting, and freezes it into a constant.</span></span></li>
+  <li><span class="k">06</span><span><strong>The applied values verified in the project, not on the certificate.</strong><span class="t"> The certificate says what was determined; only the processing project says what is actually acting on the delivered data.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>Witnessing costs one technician one day and produces, in its customary form, a signature on a number. In its useful form it produces a residual: a measure of how much the error fell after the correction, read where that error is large.</p>
+
+<p>The difference between the two forms lies not in the diligence of whoever attends, but in what the specification asked them to look at. If the test calls for a single pass, the most scrupulous representative in the world can sign in good faith a calibration that made the data twice as bad.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>IHO C-13, <em>Manual on Hydrography</em> (1st edition, 2005) – survey system verification and calibration, patch test for the attitude angles.</li>
+  <li>IHO S-44, <em>Standards for Hydrographic Surveys</em> – Order 1a: TVU with a = 0.50 m and b = 0.013, giving 0.634 m at 30 m depth.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR represents the client on board and on the quayside, and independently verifies system trials and the data that comes from them. If you are writing the specification for a calibration, or assessing a certificate you have been given, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'readiness-review',
         'topic': 'excellence',
         'date': '2026-10-05',

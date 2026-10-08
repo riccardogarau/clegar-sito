@@ -7,10 +7,17 @@ via libera**, e si pubblica appena il via libera arriva.
 
 ## Come si sceglie il prossimo
 
-Si prende il primo argomento non ancora pubblicato, in ordine. L'ordine non è
-casuale: le prime voci coprono le linee di servizio che oggi non hanno
-articoli, perché una pagina di servizio senza articoli resta fuori dalla rete
-di collegamenti interni e non riceve niente dagli Insights.
+Si prende il primo argomento non pubblicato della linea di servizio che ha
+**meno articoli**, non la prima voce dell'elenco. Il motivo è che una pagina di
+servizio senza articoli resta fuori dalla rete di collegamenti interni e non
+riceve niente dagli Insights: finché una linea è a zero, un secondo articolo
+su una linea già coperta rende meno.
+
+A parità di articoli pubblicati vince l'ordine in cui le linee sono elencate
+qui sotto. L'8 ottobre 2026 la regola scritta prima diceva "il primo
+argomento in ordine" e avrebbe dato un terzo articolo a Operational
+Excellence mentre due linee erano ancora a zero: la lettera contraddiceva il
+motivo, e ha vinto il motivo.
 
 **Ogni articolo è nuovo.** Prima di scrivere si rileggono i titoli e i corpi
 di quelli già in `articles.py`: non basta un titolo diverso, perché un
@@ -28,6 +35,7 @@ Già online, da non riprendere:
 | Il problema del datum | Marine Geoscience | ETRS89 / WGS84, realizzazioni, epoche, codici EPSG |
 | La classificazione del tempo nave | Operational Excellence | off-hire e on hire, weather standby contro guasto, categorie del rapporto giornaliero |
 | Readiness review prima della partenza | Operational Excellence | margine delle voci aperte contro percentuale di chiusura, riapertura su revisione del documento, partenza condizionata |
+| Il witnessing di una calibrazione | Owner's Engineering | patch test di roll, passata di conferma e residuo, convenzione di segno, roll contro velocità del suono |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -36,14 +44,16 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 ### Operational Excellence — 2 articoli pubblicati
 - [x] La classificazione del tempo nave: chi paga la giornata in cui non si è lavorato — 2026-10-05
 - [x] Readiness review: che cosa si verifica prima che la nave parta — 2026-10-05
-  *(bozza del 5 ottobre, in attesa di via libera. Tratta solo persone,
-  documenti, permessi, interfacce e contingenze: la verifica della
-  strumentazione in banchina resta all'articolo sull'accettazione della
+  *(tratta persone, documenti, permessi, interfacce e contingenze. La verifica
+  della strumentazione in banchina resta all'articolo sull'accettazione della
   mobilitazione, che quindi non si sovrappone.)*
 - [ ] Le lessons learned che nessuno rilegge, e come si scrive una nota che verrà usata
 
-### Owner's Engineering — 0 articoli pubblicati
-- [ ] Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda
+### Owner's Engineering — 1 articolo pubblicato
+- [x] Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda — 2026-10-08
+  *(tratta il patch test di roll e il residuo della passata di conferma: la
+  verifica a tappeto della mobilitazione resta alla voce successiva, che
+  quindi non si sovrappone.)*
 - [ ] L'accettazione della mobilitazione, voce per voce
 - [ ] Che cosa decide in giornata un rappresentante a bordo
 

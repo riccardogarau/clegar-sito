@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Il witnessing di una calibrazione | Insights</title>
+<meta name="description" content="Perché il valore sul certificato di un patch test non dice se la calibrazione ha funzionato, e qual è l’unico dato che lo direbbe: il residuo di una passata di conferma sui fasci esterni.">
+<link rel="canonical" href="https://www.clegar.it/insights/witnessing-di-una-calibrazione/">
+<link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/witnessing-di-una-calibrazione/">
+<link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/witnessing-a-calibration/">
+<link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/witnessing-di-una-calibrazione/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CLEGAR">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Il witnessing di una calibrazione | Insights">
+<meta property="og:description" content="Perché il valore sul certificato di un patch test non dice se la calibrazione ha funzionato, e qual è l’unico dato che lo direbbe: il residuo di una passata di conferma sui fasci esterni.">
+<meta property="og:url" content="https://www.clegar.it/insights/witnessing-di-una-calibrazione/">
+<meta property="og:image" content="https://www.clegar.it/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Il witnessing di una calibrazione | Insights">
+<meta name="twitter:description" content="Perché il valore sul certificato di un patch test non dice se la calibrazione ha funzionato, e qual è l’unico dato che lo direbbe: il residuo di una passata di conferma sui fasci esterni.">
+<meta name="twitter:image" content="https://www.clegar.it/assets/og.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B2545">
+<!-- Google Search Console: sostituire con il proprio codice di verifica -->
+<!-- <meta name="google-site-verification" content="INCOLLA_QUI_IL_CODICE"> -->
+<link rel="icon" href="../../assets/mark.png">
+<link rel="apple-touch-icon" href="../../assets/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda","description":"Perché il valore sul certificato di un patch test non dice se la calibrazione ha funzionato, e qual è l’unico dato che lo direbbe: il residuo di una passata di conferma sui fasci esterni.","datePublished":"2026-10-08","dateModified":"2026-10-08","inLanguage":"it","author":{"@type":"Organization","name":"CLEGAR","url":"https://www.clegar.it/"},"publisher":{"@id":"https://www.clegar.it/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.clegar.it/insights/witnessing-di-una-calibrazione/"},"image":"https://www.clegar.it/assets/og.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.clegar.it/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://www.clegar.it/insights/"},{"@type":"ListItem","position":3,"name":"Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda","item":"https://www.clegar.it/insights/witnessing-di-una-calibrazione/"}]}</script>
+
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-row">
+    <a class="brand" aria-label="CLEGAR" href="../../">
+      <img src="../../assets/logo.png" alt="CLEGAR — Marine Geoscience &amp; Offshore Advisory">
+    </a>
+    <div class="masthead-meta">
+      <a class="hide-sm" href="mailto:info@clegar.it">info@clegar.it</a>
+      <div class="langsw" role="group" aria-label="Language / Lingua">
+        <a href="../../insights/" aria-current="true">IT</a><a href="../../en/insights/" hreflang="en">EN</a></div>
+      <a class="btn-contact" href="../../contatti/">
+        <span class="it">Parliamone</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<nav class="tabbar" aria-label="Navigazione principale">
+  <div class="tabbar-inner">
+    <a class="tab" href="../../">Home</a>
+    <a class="tab" href="../../geoscienze-marine/">Marine Geoscience</a>
+    <a class="tab" href="../../project-management/">Project Management</a>
+    <a class="tab" href="../../technical-advisory/">Technical Advisory</a>
+    <a class="tab" href="../../owners-engineering/">Owner's Engineering</a>
+    <a class="tab" href="../../operational-excellence/">Operational Excellence</a>
+    <a class="tab" href="../../insights/" aria-current="page">Insights</a>
+    <a class="tab" href="../../contatti/">Contatti</a>
+  </div>
+</nav>
+<main id="main">
+<section class="page">
+  <div class="svc-hero"><div class="wrap">
+<div class="art-meta"><time datetime="2026-10-08">8 ottobre 2026</time><a href="../../owners-engineering/">Owner's Engineering</a></div><h1>Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda</h1>
+  </div></div>
+  <div class="band band-white band-pad"><div class="wrap">
+    <div class="article">
+<p class="lede">Al termine di una calibrazione il rappresentante del committente firma un certificato. La firma attesta che la prova è stata eseguita in sua presenza. Non attesta che la calibrazione abbia funzionato, e quasi mai il certificato contiene il dato che lo direbbe.</p>
+
+<p>Il certificato riporta il valore determinato: un disallineamento di roll di tot gradi, applicato. Quel numero da solo non distingue una calibrazione che ha corretto l'errore da una che lo ha raddoppiato. Sono esiti opposti, e sul foglio si scrivono nello stesso modo.</p>
+
+<h2>Che cosa determina un patch test</h2>
+
+<p>Per il roll la prova è una linea percorsa due volte in direzioni opposte sopra un fondale piano, e si guardano i fasci esterni. Un disallineamento di roll inclina lo swath: a una distanza trasversale dal nadir produce un errore di profondità proporzionale a quella distanza, positivo da un lato e negativo dall'altro. Invertendo la rotta, lo stesso punto del fondo viene misurato dal lato opposto, e l'errore cambia segno.</p>
+
+<p>Da qui il metodo: la differenza fra le due passate a una data distanza dal nadir vale il doppio dell'errore, e il disallineamento si ricava dividendo per due volte quella distanza. È una grandezza che non si misura, si deduce da una differenza – ed è per questo che il modo in cui la differenza viene letta conta quanto lo strumento.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma le proporzioni sono quelle di una campagna vera.</p>
+
+<p>Fondale piano a 30 m, swath utile fino a 100 m per lato: a quella distanza il fascio esterno guarda a 73 gradi dal nadir. Le due passate reciproche differiscono di 0,20 m sui fasci esterni, che corrisponde a un disallineamento di roll di 0,057 gradi. Il valore viene determinato e applicato, e il certificato viene firmato.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Esito della correzione</th><th class="num">Differenza fra le passate</th><th class="num">Quota del TVU Ordine 1a a 30 m</th></tr>
+</thead>
+<tbody>
+<tr><td>Nessuna correzione</td><td class="num">0,20 m</td><td class="num">32%</td></tr>
+<tr><td>Correzione applicata col segno giusto</td><td class="num">0,02 m</td><td class="num">3%</td></tr>
+<tr><td>Correzione applicata col segno sbagliato</td><td class="num">0,40 m</td><td class="num">63%</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>63%</strong><span>del TVU consumato da un errore di segno</span></div>
+
+<p>Il TVU ammesso dall'Ordine 1a della IHO S-44 a 30 m di profondità è 0,634 m. Applicare la correzione col segno rovesciato non lascia l'errore dov'era: lo raddoppia, perché al disallineamento reale si somma una correzione che punta nella stessa direzione. E il certificato, in tutti e tre i casi della tabella, riporta la stessa riga: disallineamento di roll 0,057 gradi, applicato.</p>
+
+<h2>Che cosa si guarda, allora</h2>
+
+<p>Una sola cosa, e non è il valore: la <strong>passata di conferma</strong> eseguita dopo aver applicato la correzione, con il residuo misurato sugli stessi fasci esterni. Se il residuo è sceso, la calibrazione ha funzionato. Se è salito, il segno è rovesciato. Senza quella passata non esiste alcuna prova che la correzione abbia migliorato qualcosa, e la firma attesta soltanto che qualcuno era presente.</p>
+
+<p>Conta anche dove si guarda. L'errore da roll è nullo al nadir e massimo ai bordi dello swath: un controllo sulla profondità media, o sui fasci centrali, non vede né il caso corretto né quello rovesciato. È il motivo per cui il patch test si legge sui fasci esterni, e per cui un residuo dichiarato senza dire a quale distanza dal nadir è stato misurato non è un residuo.</p>
+
+<h2>L'obiezione che arriverà</h2>
+
+<p>Il contractor risponderà che del segno si occupa il software, e che un segno rovesciato sarebbe evidente. La prima parte è vera e la seconda no: è evidente solo a chi guarda una passata di conferma sui fasci esterni, che è esattamente la cosa che manca.</p>
+
+<p>E il punto non è il software, sono i due software. La convenzione di segno del roll – positivo con il lato sinistro in alto, oppure con il destro – non è universale, e il valore viaggia dal programma che lo determina al progetto di processing attraverso un foglio firmato, dove compare come numero senza la convenzione che lo definisce. Ogni passaggio in cui un numero cambia programma è un passaggio in cui può cambiare segno.</p>
+
+<h2>Quello che una sola passata non distingue</h2>
+
+<p>C'è una seconda ragione per cui le due passate devono essere reciproche e non una ripetizione nella stessa direzione, e riguarda una grandezza diversa. Anche un errore di velocità del suono inclina i bordi dello swath, incurvandoli verso l'alto o verso il basso. Su una sola passata l'effetto somiglia a quello del roll.</p>
+
+<p>Le due si separano dal comportamento al cambio di rotta. L'errore da roll è antisimmetrico: cresce da un lato e cala dall'altro, quindi invertendo la rotta si rovescia. L'errore da velocità del suono dipende dall'inclinazione del fascio e non dal lato: è simmetrico, e invertendo la rotta resta com'era.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Grandezza</th><th>Al cambio di rotta</th><th>Si isola con</th></tr>
+</thead>
+<tbody>
+<tr><td>Disallineamento di roll</td><td>si rovescia</td><td>la differenza fra le due passate</td></tr>
+<tr><td>Errore di velocità del suono</td><td>resta com'è</td><td>la somma delle due passate</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Due passate reciproche danno quindi due informazioni, non una: la differenza misura il roll, la somma misura quanto profilo di velocità del suono sbagliato c'è ancora dentro il dato. Chiedere entrambe costa la stessa nave e la stessa ora.</p>
+
+<h2>Cosa richiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>La passata di conferma come parte della prova, non come extra.</strong><span class="t"> La calibrazione non è conclusa quando il valore è determinato, ma quando una passata successiva mostra il residuo con la correzione attiva.</span></span></li>
+  <li><span class="k">02</span><span><strong>Il residuo dichiarato con la distanza dal nadir a cui è misurato.</strong><span class="t"> Un residuo senza quella distanza non è confrontabile con niente, perché l'errore che deve rilevare vale zero al centro dello swath.</span></span></li>
+  <li><span class="k">03</span><span><strong>La convenzione di segno scritta accanto al valore.</strong><span class="t"> Nel certificato e nel progetto di processing, non nella memoria di chi ha fatto la prova. È l'unico modo di rendere verificabile il passaggio del numero da un programma all'altro.</span></span></li>
+  <li><span class="k">04</span><span><strong>Due passate reciproche, e la somma oltre alla differenza.</strong><span class="t"> La differenza dà il roll, la somma dà il residuo di velocità del suono. Una ripetizione nella stessa direzione non separa le due cause.</span></span></li>
+  <li><span class="k">05</span><span><strong>Il profilo di velocità del suono della prova, allegato con ora e posizione.</strong><span class="t"> Un patch test su un profilo scaduto attribuisce al montaggio un errore che è di propagazione, e lo congela in una costante.</span></span></li>
+  <li><span class="k">06</span><span><strong>I valori applicati verificati nel progetto, non nel certificato.</strong><span class="t"> Il certificato dice che cosa è stato determinato; solo il progetto di processing dice che cosa agisce davvero sul dato consegnato.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Il witnessing costa una giornata di un tecnico e produce, nella forma consueta, una firma su un numero. Nella forma utile produce un residuo: una misura di quanto l'errore sia diminuito dopo la correzione, letta dove quell'errore è grande.</p>
+
+<p>La differenza fra le due forme non sta nella diligenza di chi assiste, ma in che cosa la specifica gli ha chiesto di guardare. Se la prova prevede una sola passata, il rappresentante più scrupoloso del mondo può firmare in buona fede una calibrazione che ha peggiorato il dato del doppio.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>IHO C-13, <em>Manual on Hydrography</em> (1ª edizione, 2005) – verifica e calibrazione dei sistemi di rilievo, patch test per gli angoli di assetto.</li>
+  <li>IHO S-44, <em>Standards for Hydrographic Surveys</em> – Ordine 1a: TVU con a = 0,50 m e b = 0,013, da cui 0,634 m a 30 m di profondità.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR rappresenta il committente a bordo e in banchina, e verifica in modo indipendente le prove di sistema e i dati che ne derivano. Se state scrivendo la specifica di una calibrazione, o state valutando un certificato che vi è stato consegnato, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+</div>
+    <div class="artnext"><h2>Linea di servizio</h2><ul><li><a href="../../owners-engineering/">Owner's Engineering</a></li></ul></div><div class="share"><span class="share-label">Condividi</span><a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.clegar.it%2Finsights%2Fwitnessing-di-una-calibrazione%2F" target="_blank" rel="noopener">LinkedIn</a><a class="share-btn" href="mailto:?subject=Il%20witnessing%20di%20una%20calibrazione%3A%20che%20cosa%20si%20firma%20e%20che%20cosa%20si%20guarda&amp;body=Il%20witnessing%20di%20una%20calibrazione%3A%20che%20cosa%20si%20firma%20e%20che%20cosa%20si%20guarda%0Ahttps%3A%2F%2Fwww.clegar.it%2Finsights%2Fwitnessing-di-una-calibrazione%2F">Email</a><button class="share-btn" type="button" data-share-url="https://www.clegar.it/insights/witnessing-di-una-calibrazione/" data-share-title="Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda">Copia link</button></div>
+    <a class="art-back" href="../../insights/">&larr; Tutti gli articoli</a>
+  </div></div>
+</section>
+</main>
+<footer class="foot">
+  <img class="foot-mark" src="../../assets/mark.png" alt="">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <img class="foot-word" src="../../assets/logo-white.png" alt="CLEGAR">
+        <p class="it">Consulenza indipendente in geoscienze marine, gestione progetti e assurance tecnica per l'offshore.</p>
+        
+      </div>
+      <div>
+        <h5 class="it">Servizi</h5>
+        <nav class="foot-nav">
+          <a href="../../geoscienze-marine/">Marine Geoscience</a>
+          <a href="../../project-management/">Project Management</a>
+          <a href="../../technical-advisory/">Technical Advisory &amp; Assurance</a>
+          <a href="../../owners-engineering/">Owner's Engineering</a>
+          <a href="../../operational-excellence/">Operational Excellence</a>
+        </nav>
+      </div>
+      <div>
+        <h5 class="it">Contatti</h5>
+        <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+        <p><a href="https://www.linkedin.com/company/clegar" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr">2026</span> CLEGAR S.r.l. – P.IVA/VAT 07422540828</span>
+      <span><a class="it" href="../../privacy/">Privacy e cookie</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

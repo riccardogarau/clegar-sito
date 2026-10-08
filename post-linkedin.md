@@ -163,3 +163,73 @@ depend on it reopen by themselves.
 https://www.clegar.it/en/insights/readiness-review-before-the-vessel-sails/
 
 #offshore #marinesurvey #projectmanagement #offshorewind #operationalreadiness
+
+---
+
+## Il witnessing di una calibrazione – 8 ottobre 2026
+
+### Italiano
+
+Al termine di una calibrazione il rappresentante del committente firma un
+certificato. La firma attesta che la prova si è svolta in sua presenza.
+
+Non attesta che la calibrazione abbia funzionato – e il dato che lo direbbe
+sul certificato non c'è.
+
+Un patch test per il roll si fa percorrendo due volte la stessa linea in
+direzioni opposte sopra un fondale piano, e leggendo i fasci esterni. Il
+disallineamento non si misura: si deduce dalla differenza fra le due passate.
+Il certificato riporta il valore così ottenuto, e lo applica.
+
+Il problema è che quel valore, da solo, non distingue una correzione che ha
+rimosso l'errore da una che lo ha raddoppiato. Applicata col segno rovesciato,
+la correzione si somma al disallineamento invece di annullarlo. Sono esiti
+opposti, e sul foglio si scrivono nello stesso modo.
+
+In un esempio sintetico su fondale piano a 30 m, con i fasci esterni a 100 m
+dal nadir: differenza grezza 0,20 m, cioè un disallineamento di 0,057 gradi.
+Correzione col segno giusto, residuo 0,02 m. Col segno sbagliato, 0,40 m – il
+63% dell'intero TVU ammesso dall'Ordine 1a della IHO S-44 a quella profondità,
+consumato da un errore di segno.
+
+A distinguere i tre casi serve una cosa sola, che quasi nessuna specifica
+richiede: una passata di conferma dopo aver applicato la correzione, con il
+residuo letto sugli stessi fasci esterni. Senza quella, il rappresentante più
+scrupoloso del mondo firma in buona fede.
+
+https://www.clegar.it/insights/witnessing-di-una-calibrazione/
+
+#hydrography #marinesurvey #multibeam #offshorewind #ownersengineering
+
+### English
+
+At the end of a calibration the client representative signs a certificate.
+The signature attests that the test took place in their presence.
+
+It does not attest that the calibration worked – and the figure that would
+say so is not on the certificate.
+
+A roll patch test is run by sailing the same line twice in opposite
+directions over a flat seabed, and reading the outer beams. The misalignment
+is not measured: it is inferred from the difference between the two passes.
+The certificate records the value so obtained, and applies it.
+
+The trouble is that the value alone does not distinguish a correction that
+removed the error from one that doubled it. Applied with the sign reversed,
+the correction adds to the misalignment instead of cancelling it. Those are
+opposite outcomes, and on the sheet they are written the same way.
+
+In an illustrative example over a flat seabed at 30 m, with the outer beams
+100 m off nadir: raw difference 0.20 m, which is a misalignment of 0.057
+degrees. Correction with the right sign, residual 0.02 m. With the wrong
+sign, 0.40 m – 63% of the entire TVU allowed by IHO S-44 Order 1a at that
+depth, spent on a sign error.
+
+Telling the three apart takes one thing, which almost no specification asks
+for: a confirmation pass after the correction has been applied, with the
+residual read on the same outer beams. Without it, the most scrupulous
+representative in the world signs in good faith.
+
+https://www.clegar.it/en/insights/witnessing-a-calibration/
+
+#hydrography #marinesurvey #multibeam #offshorewind #ownersengineering

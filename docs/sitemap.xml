@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/witnessing-di-una-calibrazione/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/witnessing-di-una-calibrazione/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/witnessing-a-calibration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/witnessing-di-una-calibrazione/"/>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/witnessing-a-calibration/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/witnessing-di-una-calibrazione/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/witnessing-a-calibration/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/witnessing-di-una-calibrazione/"/>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/readiness-review-prima-che-la-nave-parta/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/readiness-review-prima-che-la-nave-parta/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/readiness-review-before-the-vessel-sails/"/>
