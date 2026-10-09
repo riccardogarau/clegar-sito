@@ -15,6 +15,255 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'seconda-opinione',
+        'topic': 'advisory',
+        'date': '2026-10-09',
+        'slug': {'it': 'seconda-opinione-prima-dell-accettazione',
+                 'en': 'second-opinion-before-acceptance'},
+        'title': {
+            'it': 'La seconda opinione prima di firmare un’accettazione: che cosa il QC del contractor non controlla',
+            'en': 'A second opinion before signing an acceptance: what the contractor’s QC does not check',
+        },
+        'meta_title': {
+            'it': 'La seconda opinione prima dell’accettazione | Insights',
+            'en': 'A second opinion before acceptance | Insights',
+        },
+        'desc': {
+            'it': ('Perché una seconda opinione che rilegge il QC del contractor arriva alle sue stesse '
+                   'conclusioni, e che cosa va controllato prima di firmare un’accettazione: le '
+                   'assunzioni del deliverable, confrontate con dati indipendenti.'),
+            'en': ('Why a second opinion that re-reads the contractor’s QC reaches the same conclusions, '
+                   'and what to check before signing an acceptance: the assumptions behind the '
+                   'deliverable, set against independent data.'),
+        },
+        'abstract': {
+            'it': ('Una mappa di spessori consegnata in metri, convertita da tempi con una velocità che '
+                   'sulla mappa non compare. Cinque CPT già pagati dicevano che quella velocità era '
+                   'troppo alta, e l’errore spostava 7,5 km di tracciato – un quarto di quello adatto '
+                   'al jetting – nella classe sbagliata.'),
+            'en': ('A thickness map delivered in metres, converted from time with a velocity that does '
+                   'not appear on the map. Five CPTs already paid for showed that velocity was too '
+                   'high, and the error moved 7.5 km of route – a quarter of the length suited to '
+                   'jetting – into the wrong class.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Prima di firmare l'accettazione di un deliverable di interpretazione, il committente riceve il rapporto di QC del contractor: le verifiche previste dalla specifica, tutte superate. Una seconda opinione che rilegge quel rapporto arriva quasi sempre alla stessa conclusione, perché controlla le stesse cose.</p>
+
+<p>Il QC del contractor verifica che il lavoro sia coerente con sé stesso: che gli orizzonti siano tracciati con continuità, che agli incroci delle linee lo stesso riflettore cada alla stessa profondità, che i file siano nel formato richiesto. Non verifica, perché non è il suo compito, le scelte su cui l'interpretazione si regge. Una seconda opinione utile comincia da lì: dalle assunzioni che il deliverable dà per scontate, messe a confronto con dati che il contractor non ha usato per produrlo.</p>
+
+<h2>Il numero che non compare sulla mappa</h2>
+
+<p>Un profilatore sub-bottom non misura profondità sotto il fondale: misura tempi. Il riflettore che segna la base dei sedimenti soffici arriva qualche millesimo di secondo dopo l'eco del fondale, e per trasformare quel ritardo in metri serve la velocità di propagazione nei sedimenti. Lo spessore è quella velocità moltiplicata per il tempo di andata e ritorno, diviso due.</p>
+
+<p>Lungo un tracciato quella velocità raramente si misura. Si assume: un valore unico per tutta l'unità, scritto in un'appendice del rapporto. La mappa consegnata al committente riporta metri, e la velocità che li ha prodotti non vi compare. Non è la velocità del suono in acqua, che si misura con un profilo a ogni campagna: è quella nei sedimenti, che nessun profilo misura.</p>
+
+<p>I sedimenti fini superficiali, ricchi d'acqua, propagano il suono a velocità vicine a quella dell'acqua di mare. Un valore assunto più alto produce spessori più grandi in proporzione: una velocità più alta del 10% dà spessori più grandi del 10%, su tutta la mappa.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma le proporzioni sono quelle di un tracciato vero.</p>
+
+<p>Un tracciato di cavo lungo 42 km. Il deliverable è la mappa dello spessore dei sedimenti soffici sopra uno strato di argilla consistente, convertita da tempi a metri con una velocità di 1650 m/s. Chi progetta l'interramento ha fissato un criterio: dove i sedimenti soffici superano 1,8 m il cavo si interra con un mezzo a getti d'acqua, il jetting; dove sono meno, serve un mezzo diverso. La mappa diventa così una classificazione del tracciato, tratto per tratto.</p>
+
+<p>Lungo il tracciato ci sono cinque CPT della campagna geotecnica, ciascuno entro 10 m dalla linea sismica più vicina. In ogni CPT il passaggio all'argilla consistente si legge come un aumento netto della resistenza di punta: è una profondità misurata, indipendente dalla velocità assunta, e il contractor geofisico non l'ha usata per la conversione.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Punto</th><th class="num">Ritardo del riflettore (ms)</th><th class="num">Spessore dalla mappa (m)</th><th class="num">Profondità al CPT (m)</th><th class="num">Differenza (m)</th><th class="num">Velocità implicita (m/s)</th></tr>
+</thead>
+<tbody>
+<tr><td>CPT-01</td><td class="num">3,20</td><td class="num">2,64</td><td class="num">2,43</td><td class="num">0,21</td><td class="num">1519</td></tr>
+<tr><td>CPT-02</td><td class="num">2,30</td><td class="num">1,90</td><td class="num">1,74</td><td class="num">0,16</td><td class="num">1513</td></tr>
+<tr><td>CPT-03</td><td class="num">4,00</td><td class="num">3,30</td><td class="num">3,05</td><td class="num">0,25</td><td class="num">1525</td></tr>
+<tr><td>CPT-04</td><td class="num">1,90</td><td class="num">1,57</td><td class="num">1,44</td><td class="num">0,13</td><td class="num">1516</td></tr>
+<tr><td>CPT-05</td><td class="num">2,80</td><td class="num">2,31</td><td class="num">2,14</td><td class="num">0,17</td><td class="num">1529</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>In tutti e cinque i punti la mappa dà uno spessore maggiore di quello trovato dal CPT. La velocità che riconcilia tempi e profondità – il doppio della profondità al CPT diviso il ritardo – sta fra 1513 e 1529 m/s, con una media di 1520 m/s. Con la velocità assunta, ogni spessore della mappa risulta più grande dell'8,6% di quello che si ottiene con la velocità dei CPT.</p>
+
+<h2>Perché l'8,6% diventa un quarto del tracciato</h2>
+
+<p>Un errore dell'8,6% sullo spessore, preso da solo, sembra tollerabile. Ma la mappa non viene letta per i suoi spessori: viene usata per classificare il tracciato rispetto a una soglia. E vicino alla soglia un errore proporzionale non sposta un numero, sposta interi tratti da una classe all'altra.</p>
+
+<p>La soglia di 1,8 m corrisponde, a 1650 m/s, a un ritardo di 2,18 ms; a 1520 m/s, a un ritardo di 2,37 ms. Ogni tratto in cui il riflettore arriva fra 2,18 e 2,37 ms dopo il fondale è adatto al jetting secondo la mappa consegnata, e non lo è secondo i CPT.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Ritardo del riflettore</th><th class="num">Tracciato (km)</th><th>Secondo la mappa (1650 m/s)</th><th>Secondo i CPT (1520 m/s)</th></tr>
+</thead>
+<tbody>
+<tr><td>meno di 2,18 ms</td><td class="num">11,0</td><td>meno di 1,8 m</td><td>meno di 1,8 m</td></tr>
+<tr><td>da 2,18 a 2,37 ms</td><td class="num">7,5</td><td>jetting</td><td>meno di 1,8 m</td></tr>
+<tr><td>2,37 ms e oltre</td><td class="num">23,5</td><td>jetting</td><td>jetting</td></tr>
+<tr><td><strong>Totale</strong></td><td class="num"><strong>42,0</strong></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>7,5 km</strong><span>di tracciato adatto al jetting sulla mappa, e non nei CPT</span></div>
+
+<p>La mappa consegnata dà 31,0 km adatti al jetting, il 74% del tracciato. Con la velocità dei CPT sono 23,5 km, il 56%. I 7,5 km che cambiano classe sono il 24% della lunghezza che il progettista considerava risolta: quasi un quarto. Il CPT-02 cade proprio in quella fascia: la mappa vi indica 1,90 m, il CPT trova l'argilla consistente a 1,74 m.</p>
+
+<p>Finché la mappa resta una mappa, un errore di spessore resta un errore di spessore, e nessuno lo nota. Diventa un costo quando la mappa diventa la base su cui un altro contractor sceglie i mezzi e quota l'interramento.</p>
+
+<h2>Le obiezioni che arriveranno</h2>
+
+<p>La prima: la velocità di conversione è un'assunzione dichiarata, e il rapporto attribuisce agli spessori un'incertezza del 10%. È vero, ed è il motivo per cui la seconda opinione deve guardarci. Un'assunzione che si può confrontare con dati già in mano al committente non è un'incertezza: è una verifica non fatta. E un'incertezza scritta nel testo non cambia la mappa, perché la classificazione è disegnata sul valore centrale, ed è quella che arriva al progettista.</p>
+
+<p>La seconda è più seria: il riflettore sismico e il passaggio di resistenza nel CPT non sono la stessa superficie. Il contrasto acustico può cadere un po' sopra o un po' sotto il punto in cui la resistenza di punta aumenta, e il CPT non sta esattamente sulla linea. Anche questo è vero, ma produce un errore di forma diversa. Uno scarto fra le due superfici sposterebbe tutte le profondità della stessa quantità in metri; un errore di velocità le sposta in proporzione allo spessore. Nell'esempio le differenze crescono con lo spessore – 0,13 m dove la mappa dà 1,57 m, 0,25 m dove ne dà 3,30 – e restano tutte fra il 7% e il 9% dello spessore della mappa. È la firma di una velocità, non di uno scarto.</p>
+
+<p>Resta il caso. Se gli errori fossero casuali, con la stessa probabilità di cadere da una parte o dall'altra, cinque differenze dello stesso segno capiterebbero una volta su trentadue. Non basta a escluderlo, ma basta a non firmare senza una spiegazione.</p>
+
+<h2>Che cosa non fa una seconda opinione</h2>
+
+<p>Non rifà l'interpretazione. Nell'esempio non serve ritracciare un solo orizzonte: serve una tabella di cinque righe, costruita con dati che il committente ha già pagato. Il lavoro della seconda opinione è sapere dove guardare – le assunzioni che il deliverable non mostra, e l'uso che ne verrà fatto – e farlo prima della firma.</p>
+
+<p>Il momento conta. Prima dell'accettazione, una nuova conversione con una velocità tarata sui CPT è una correzione dentro il contratto di survey. Dopo, il dato è passato a chi progetta e a chi installa, e la stessa correzione diventa un lavoro nuovo, oppure una contestazione.</p>
+
+<h2>Cosa richiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>La velocità di conversione scritta sulla mappa, non solo nel rapporto.</strong><span class="t"> Per ogni unità, con la sua origine: misurata, tarata su dati geotecnici, oppure assunta dalla letteratura.</span></span></li>
+  <li><span class="k">02</span><span><strong>Una tabella di taratura su ogni CPT o carotaggio disponibile.</strong><span class="t"> Ritardo, spessore convertito, profondità geotecnica, differenza e velocità implicita: la tabella dell'esempio, che costa poche ore a chi ha già i dati.</span></span></li>
+  <li><span class="k">03</span><span><strong>La taratura prima dell'accettazione, non dopo.</strong><span class="t"> Se i dati geotecnici arrivano più tardi, la specifica prevede che la conversione venga rivista al loro arrivo, e l'accettazione la aspetta.</span></span></li>
+  <li><span class="k">04</span><span><strong>Le soglie d'uso dichiarate al contractor.</strong><span class="t"> Se la mappa servirà a classificare il tracciato rispetto a uno spessore, il contractor deve saperlo, e indicare la fascia di ritardi in cui la classe dipende dalla velocità scelta.</span></span></li>
+  <li><span class="k">05</span><span><strong>I ritardi consegnati insieme agli spessori.</strong><span class="t"> Con i tempi in mano, una conversione diversa si rifà in un giorno; senza, si rifà l'interpretazione.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Un rapporto di QC dice se il lavoro è stato fatto come la specifica chiedeva. Non dice se le scelte che la specifica lasciava al contractor reggono il confronto con il resto dei dati del progetto. È lì che una seconda opinione serve, ed è lì che di solito nessuno guarda, perché ogni verifica prevista risulta superata.</p>
+
+<p>Nell'esempio la mappa era corretta per la velocità con cui era stata costruita; era la velocità a non essere controllata. Il controllo esisteva già, in cinque CPT, e mancava soltanto qualcuno che li mettesse accanto alla mappa prima della firma.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>ISO 19901-10:2021, <em>Petroleum and natural gas industries – Specific requirements for offshore structures – Part 10: Marine geophysical investigations</em> – requisiti per le indagini geofisiche marine, compresi la mappatura del sottofondo e il reporting.</li>
+  <li>E. L. Hamilton, «Geoacoustic modeling of the sea floor», <em>Journal of the Acoustical Society of America</em>, 68(5), 1980, pp. 1313–1340 – proprietà acustiche dei sedimenti marini, velocità di propagazione comprese.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR fornisce pareri tecnici indipendenti su deliverable geofisici e ground model, prima di un'accettazione o nel corso di una due diligence. Se state per firmare un'accettazione, o volete sapere su quali assunzioni si regge un dataset che vi è stato consegnato, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">Before signing the acceptance of an interpretation deliverable, the client receives the contractor's QC report: the checks the specification called for, all passed. A second opinion that re-reads that report almost always reaches the same conclusion, because it checks the same things.</p>
+
+<p>The contractor's QC verifies that the work is consistent with itself: that horizons are picked continuously, that at line crossings the same reflector falls at the same depth, that the files are in the required format. It does not verify, because that is not its job, the choices the interpretation rests on. A useful second opinion starts there: with the assumptions the deliverable takes for granted, set against data the contractor did not use to produce it.</p>
+
+<h2>The number that is not on the map</h2>
+
+<p>A sub-bottom profiler does not measure depth below the seabed: it measures time. The reflector marking the base of the soft sediments arrives a few milliseconds after the seabed echo, and turning that delay into metres takes the propagation velocity in the sediments. The thickness is that velocity multiplied by the two-way time, divided by two.</p>
+
+<p>Along a route that velocity is rarely measured. It is assumed: a single value for the whole unit, written in an appendix of the report. The map delivered to the client shows metres, and the velocity that produced them does not appear on it. This is not the sound velocity in water, which is measured with a profile on every campaign: it is the velocity in the sediments, which no profile measures.</p>
+
+<p>Fine-grained surface sediments, rich in water, carry sound at velocities close to that of seawater. An assumed value that is too high produces thicknesses that are too large in proportion: a velocity 10% higher gives thicknesses 10% larger, across the whole map.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are illustrative – built to show the mechanism, not taken from real projects – but the proportions are those of a real route.</p>
+
+<p>A cable route 42 km long. The deliverable is a map of the thickness of soft sediments above a layer of stiff clay, converted from time to metres with a velocity of 1650 m/s. The burial designer has set a criterion: where the soft sediments exceed 1.8 m the cable is buried with a water-jetting tool; where they are thinner, a different tool is needed. The map thus becomes a classification of the route, section by section.</p>
+
+<p>Along the route there are five CPTs from the geotechnical campaign, each within 10 m of the nearest seismic line. In each CPT the transition to stiff clay shows as a sharp increase in cone resistance: a measured depth, independent of the assumed velocity, and the geophysical contractor did not use it for the conversion.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Location</th><th class="num">Reflector delay (ms)</th><th class="num">Thickness from map (m)</th><th class="num">Depth at CPT (m)</th><th class="num">Difference (m)</th><th class="num">Implied velocity (m/s)</th></tr>
+</thead>
+<tbody>
+<tr><td>CPT-01</td><td class="num">3.20</td><td class="num">2.64</td><td class="num">2.43</td><td class="num">0.21</td><td class="num">1519</td></tr>
+<tr><td>CPT-02</td><td class="num">2.30</td><td class="num">1.90</td><td class="num">1.74</td><td class="num">0.16</td><td class="num">1513</td></tr>
+<tr><td>CPT-03</td><td class="num">4.00</td><td class="num">3.30</td><td class="num">3.05</td><td class="num">0.25</td><td class="num">1525</td></tr>
+<tr><td>CPT-04</td><td class="num">1.90</td><td class="num">1.57</td><td class="num">1.44</td><td class="num">0.13</td><td class="num">1516</td></tr>
+<tr><td>CPT-05</td><td class="num">2.80</td><td class="num">2.31</td><td class="num">2.14</td><td class="num">0.17</td><td class="num">1529</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>At all five locations the map gives a greater thickness than the CPT found. The velocity that reconciles times and depths – twice the depth at the CPT divided by the delay – lies between 1513 and 1529 m/s, with a mean of 1520 m/s. With the assumed velocity, every thickness on the map is 8.6% larger than the one obtained with the CPT velocity.</p>
+
+<h2>Why 8.6% becomes a quarter of the route</h2>
+
+<p>An 8.6% error in thickness, taken on its own, looks tolerable. But the map is not read for its thicknesses: it is used to classify the route against a threshold. And near the threshold a proportional error does not shift a number, it shifts whole sections from one class to the other.</p>
+
+<p>The 1.8 m threshold corresponds, at 1650 m/s, to a delay of 2.18 ms; at 1520 m/s, to a delay of 2.37 ms. Every section where the reflector arrives between 2.18 and 2.37 ms after the seabed is suited to jetting according to the delivered map, and is not according to the CPTs.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Reflector delay</th><th class="num">Route (km)</th><th>According to the map (1650 m/s)</th><th>According to the CPTs (1520 m/s)</th></tr>
+</thead>
+<tbody>
+<tr><td>under 2.18 ms</td><td class="num">11.0</td><td>under 1.8 m</td><td>under 1.8 m</td></tr>
+<tr><td>2.18 to 2.37 ms</td><td class="num">7.5</td><td>jetting</td><td>under 1.8 m</td></tr>
+<tr><td>2.37 ms and over</td><td class="num">23.5</td><td>jetting</td><td>jetting</td></tr>
+<tr><td><strong>Total</strong></td><td class="num"><strong>42.0</strong></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>7.5 km</strong><span>of route suited to jetting on the map, and not in the CPTs</span></div>
+
+<p>The delivered map gives 31.0 km suited to jetting, 74% of the route. With the CPT velocity it is 23.5 km, 56%. The 7.5 km that change class are 24% of the length the designer considered settled: nearly a quarter. CPT-02 falls right in that band: the map shows 1.90 m there, and the CPT finds the stiff clay at 1.74 m.</p>
+
+<p>As long as the map stays a map, a thickness error stays a thickness error, and nobody notices it. It becomes a cost when the map becomes the basis on which another contractor chooses its tools and prices the burial.</p>
+
+<h2>The objections that will come</h2>
+
+<p>The first: the conversion velocity is a declared assumption, and the report gives the thicknesses an uncertainty of 10%. True, and that is why the second opinion has to look at it. An assumption that can be checked against data the client already holds is not an uncertainty: it is a check not made. And an uncertainty written in the text does not change the map, because the classification is drawn on the central value, and that is what reaches the designer.</p>
+
+<p>The second is more serious: the seismic reflector and the resistance transition in the CPT are not the same surface. The acoustic contrast may fall slightly above or below the point where cone resistance rises, and the CPT is not exactly on the line. That is also true, but it produces an error of a different shape. An offset between the two surfaces would shift every depth by the same amount in metres; a velocity error shifts them in proportion to the thickness. In the example the differences grow with the thickness – 0.13 m where the map shows 1.57 m, 0.25 m where it shows 3.30 – and all stay between 7% and 9% of the map thickness. That is the signature of a velocity, not of an offset.</p>
+
+<p>That leaves chance. If the errors were random, equally likely to fall either way, five differences of the same sign would occur once in thirty-two. That is not enough to rule it out, but it is enough not to sign without an explanation.</p>
+
+<h2>What a second opinion does not do</h2>
+
+<p>It does not redo the interpretation. In the example not a single horizon needs re-picking: what is needed is a five-row table, built from data the client has already paid for. The work of a second opinion is knowing where to look – the assumptions the deliverable does not show, and the use it will be put to – and doing so before the signature.</p>
+
+<p>Timing matters. Before acceptance, a new conversion with a velocity calibrated on the CPTs is a correction within the survey contract. Afterwards, the data has passed to those who design and those who install, and the same correction becomes new work, or a claim.</p>
+
+<h2>What to require in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>The conversion velocity written on the map, not only in the report.</strong><span class="t"> For each unit, with its origin: measured, calibrated on geotechnical data, or assumed from the literature.</span></span></li>
+  <li><span class="k">02</span><span><strong>A calibration table on every available CPT or core.</strong><span class="t"> Delay, converted thickness, geotechnical depth, difference and implied velocity: the table in the example, which costs a few hours to whoever already has the data.</span></span></li>
+  <li><span class="k">03</span><span><strong>Calibration before acceptance, not after.</strong><span class="t"> If the geotechnical data arrives later, the specification provides for the conversion to be revised when it arrives, and acceptance waits for it.</span></span></li>
+  <li><span class="k">04</span><span><strong>The thresholds of use declared to the contractor.</strong><span class="t"> If the map will be used to classify the route against a thickness, the contractor must know it, and show the band of delays in which the class depends on the chosen velocity.</span></span></li>
+  <li><span class="k">05</span><span><strong>The delays delivered together with the thicknesses.</strong><span class="t"> With the times in hand, a different conversion is redone in a day; without them, the interpretation is redone.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>A QC report says whether the work was done as the specification asked. It does not say whether the choices the specification left to the contractor stand up against the rest of the project's data. That is where a second opinion is useful, and that is where nobody usually looks, because every check called for has been passed.</p>
+
+<p>In the example the map was correct for the velocity it was built with; it was the velocity that went unchecked. The check already existed, in five CPTs, and all that was missing was someone to set them beside the map before the signature.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>ISO 19901-10:2021, <em>Petroleum and natural gas industries – Specific requirements for offshore structures – Part 10: Marine geophysical investigations</em> – requirements for marine geophysical investigations, including sub-seafloor mapping and reporting.</li>
+  <li>E. L. Hamilton, "Geoacoustic modeling of the sea floor", <em>Journal of the Acoustical Society of America</em>, 68(5), 1980, pp. 1313–1340 – acoustic properties of marine sediments, including propagation velocity.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR provides independent technical opinions on geophysical deliverables and ground models, before an acceptance or in the course of a due diligence. If you are about to sign an acceptance, or want to know which assumptions a dataset you have been given rests on, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'witnessing-calibrazione',
         'topic': 'owners',
         'date': '2026-10-08',

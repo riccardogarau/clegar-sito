@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/seconda-opinione-prima-dell-accettazione/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/seconda-opinione-prima-dell-accettazione/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/second-opinion-before-acceptance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/seconda-opinione-prima-dell-accettazione/"/>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/second-opinion-before-acceptance/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/seconda-opinione-prima-dell-accettazione/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/second-opinion-before-acceptance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/seconda-opinione-prima-dell-accettazione/"/>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/witnessing-di-una-calibrazione/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/witnessing-di-una-calibrazione/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/witnessing-a-calibration/"/>

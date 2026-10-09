@@ -233,3 +233,62 @@ representative in the world signs in good faith.
 https://www.clegar.it/en/insights/witnessing-a-calibration/
 
 #hydrography #marinesurvey #multibeam #offshorewind #ownersengineering
+
+---
+
+## La seconda opinione prima dell'accettazione – 9 ottobre 2026
+
+### Italiano
+
+Prima di firmare un'accettazione, il committente riceve il rapporto di QC del
+contractor: tutte le verifiche previste, superate.
+
+Una seconda opinione che rilegge quel rapporto arriva alla stessa conclusione,
+perché controlla le stesse cose.
+
+Il QC verifica che il lavoro sia coerente con sé stesso. Non verifica le
+scelte su cui si regge. Una mappa dello spessore dei sedimenti, per esempio,
+non nasce in metri: nasce in tempi, convertiti con una velocità che sulla
+mappa non compare.
+
+In un esempio sintetico su un tracciato di cavo, la velocità assunta era
+troppo alta di meno di un decimo, e così ogni spessore. Sembra poco. Ma
+la mappa serviva a dire dove i sedimenti superano lo spessore minimo per
+interrare il cavo con il jetting, e vicino a una soglia un errore
+proporzionale sposta interi tratti di classe: 7,5 km di tracciato adatti al
+jetting sulla mappa, e non nei dati geotecnici.
+
+Per accorgersene non serviva rifare l'interpretazione. Bastava una tabella di
+cinque righe: i CPT già eseguiti lungo il tracciato, messi accanto alla mappa
+prima della firma.
+
+https://www.clegar.it/insights/seconda-opinione-prima-dell-accettazione/
+
+#offshore #marinesurvey #geophysics #offshorewind #technicalassurance
+
+### English
+
+Before signing an acceptance, the client receives the contractor's QC report:
+every check called for, passed.
+
+A second opinion that re-reads that report reaches the same conclusion,
+because it checks the same things.
+
+QC verifies that the work is consistent with itself. It does not verify the
+choices the work rests on. A sediment thickness map, for instance, is not
+born in metres: it is born in time, converted with a velocity that does not
+appear on the map.
+
+In an illustrative example on a cable route, the assumed velocity was less
+than a tenth too high, and so was every thickness. That sounds small. But the map
+was used to decide where the sediments exceed the minimum thickness for
+burying the cable by jetting, and near a threshold a proportional error moves
+whole sections from one class to the other: 7.5 km of route suited to jetting
+on the map, and not in the geotechnical data.
+
+Finding it did not take a new interpretation. It took a five-row table: the
+CPTs already run along the route, set beside the map before the signature.
+
+https://www.clegar.it/en/insights/second-opinion-before-acceptance/
+
+#offshore #marinesurvey #geophysics #offshorewind #technicalassurance
