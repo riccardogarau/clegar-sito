@@ -36,6 +36,7 @@ Già online, da non riprendere:
 | La classificazione del tempo nave | Operational Excellence | off-hire e on hire, weather standby contro guasto, categorie del rapporto giornaliero |
 | Readiness review prima della partenza | Operational Excellence | margine delle voci aperte contro percentuale di chiusura, riapertura su revisione del documento, partenza condizionata |
 | Il witnessing di una calibrazione | Owner's Engineering | patch test di roll, passata di conferma e residuo, convenzione di segno, roll contro velocità del suono |
+| La seconda opinione prima dell'accettazione | Technical Advisory | QC del contractor contro assunzioni, velocità di conversione tempo-profondità nei sedimenti, taratura sui CPT, classificazione del tracciato rispetto a una soglia |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -57,8 +58,11 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 - [ ] L'accettazione della mobilitazione, voce per voce
 - [ ] Che cosa decide in giornata un rappresentante a bordo
 
-### Technical Advisory & Assurance — 0 articoli pubblicati
-- [ ] La seconda opinione prima di firmare un'accettazione
+### Technical Advisory & Assurance — 1 articolo pubblicato
+- [x] La seconda opinione prima di firmare un'accettazione — 2026-10-09
+  *(tratta la velocità di conversione di una mappa di spessori, tarata sui CPT.
+  La due diligence su un dataset ereditato resta alla voce successiva, che
+  quindi non si sovrappone, purché non riprenda la taratura sui dati geotecnici.)*
 - [ ] Due diligence su un dataset che arriva insieme all'asset
 - [ ] Il parere tecnico in una controversia: che cosa lo rende utilizzabile
 
