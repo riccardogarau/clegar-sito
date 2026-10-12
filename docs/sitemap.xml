@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/accettazione-della-mobilitazione/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/accettazione-della-mobilitazione/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/mobilisation-acceptance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/accettazione-della-mobilitazione/"/>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/mobilisation-acceptance/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/accettazione-della-mobilitazione/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/mobilisation-acceptance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/accettazione-della-mobilitazione/"/>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/seconda-opinione-prima-dell-accettazione/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/seconda-opinione-prima-dell-accettazione/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/second-opinion-before-acceptance/"/>

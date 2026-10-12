@@ -15,6 +15,253 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'accettazione-mobilitazione',
+        'topic': 'owners',
+        'date': '2026-10-12',
+        'slug': {'it': 'accettazione-della-mobilitazione',
+                 'en': 'mobilisation-acceptance'},
+        'title': {
+            'it': 'L’accettazione della mobilitazione, voce per voce: le verifiche che non possono fallire',
+            'en': 'Mobilisation acceptance, item by item: the checks that cannot fail',
+        },
+        'meta_title': {
+            'it': 'L’accettazione della mobilitazione | Insights',
+            'en': 'Mobilisation acceptance | Insights',
+        },
+        'desc': {
+            'it': ('Perché una voce del foglio di accettazione può risultare superata senza aver '
+                   'verificato niente, e le due domande da porre a ogni voce: il riferimento è '
+                   'indipendente dall’errore cercato, ed è più preciso della tolleranza?'),
+            'en': ('Why an item on the acceptance sheet can pass without having verified anything, '
+                   'and the two questions to put to every item: is the reference independent of the '
+                   'error being sought, and is it more precise than the tolerance?'),
+        },
+        'abstract': {
+            'it': ('Multibeam e single-beam concordano entro 0,03 m, e sbagliano entrambi di 0,10 m: '
+                   'l’immersione di tutti e due viene dalla stessa lettura del bordo libero. Su un '
+                   'canale da dragare di 300.000 m² sono 30.000 m³ che esistono soltanto nel rilievo.'),
+            'en': ('Multibeam and single-beam agree within 0.03 m, and both are 0.10 m wrong: the '
+                   'draft of each comes from the same freeboard reading. On a 300,000 m² channel '
+                   'to be dredged, that is 30,000 m³ that exist only in the survey.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Alla fine della mobilitazione il rappresentante del committente firma un foglio di accettazione: una riga per voce, una differenza, una tolleranza, un esito. Quando tutte le righe dicono OK, la nave parte. Nessuna riga dice se quella verifica avrebbe potuto dare un esito diverso.</p>
+
+<p>Ogni voce confronta il sistema con un riferimento. Perché il confronto dica qualcosa servono due condizioni, e il foglio non registra né l'una né l'altra: il riferimento deve essere indipendente dall'errore che si cerca, e deve essere più preciso della tolleranza. Se manca la prima, la voce passa qualunque sia l'errore. Se manca la seconda, l'esito dipende più dalla lettura che dal sistema.</p>
+
+<h2>Perché si gioca tutto in banchina</h2>
+
+<p>Dopo la partenza, il controllo di qualità confronta il dato con sé stesso: le linee trasversali con le principali, una passata con la sua reciproca. Questi confronti trovano gli errori che cambiano da una linea all'altra. Un errore costante – uguale su ogni linea, per tutta la campagna – compare identico nei due termini di ogni differenza e si cancella. Il controllo agli incroci non lo vede, per costruzione.</p>
+
+<p>L'accettazione della mobilitazione è il momento in cui un errore costante si trova al costo minore, e spesso l'unico, perché è il solo in cui il sistema viene confrontato con qualcosa di esterno. Se lì la verifica non è in grado di fallire, l'errore parte con la nave e arriva nel deliverable.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma le proporzioni sono quelle di una campagna vera.</p>
+
+<p>Un rilievo multibeam prima del dragaggio di un canale di accesso portuale: 2000 m di lunghezza per 150 m di larghezza, 300.000 m² in tutto. Le profondità sono ridotte alla marea misurata da un mareografo in porto, quindi nel calcolo entra l'immersione dei trasduttori: la distanza fra la superficie dell'acqua e la faccia di ciascun trasduttore. Il foglio di accettazione, alla partenza, riporta:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Voce</th><th>Confronto</th><th class="num">Differenza</th><th class="num">Tolleranza</th><th>Esito</th></tr>
+</thead>
+<tbody>
+<tr><td>Heading</td><td>gyro contro azimut misurato da banchina con stazione totale</td><td class="num">0,15°</td><td class="num">0,50°</td><td>OK</td></tr>
+<tr><td>Velocità del suono al trasduttore</td><td>sonda di scafo contro profilo SVP alla stessa profondità</td><td class="num">0,6 m/s</td><td class="num">2,0 m/s</td><td>OK</td></tr>
+<tr><td>Profondità</td><td>multibeam contro single-beam, al nadir, in banchina</td><td class="num">0,03 m</td><td class="num">0,05 m</td><td>OK</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Tre voci, tre esiti positivi. La terza è quella da cui dipende il volume da dragare, e va riletta chiedendosi che cosa il single-beam ha in comune con il multibeam.</p>
+
+<h2>Il riferimento che condivide l'errore</h2>
+
+<p>L'immersione di un trasduttore non si misura direttamente. Il rilievo dimensionale dà la quota di ogni trasduttore rispetto a un punto di riferimento sullo scafo; in banchina si misura poi il bordo libero – la distanza fra quel punto e la superficie dell'acqua – e da quella sola lettura si ricavano le immersioni di tutti i trasduttori.</p>
+
+<p>Nell'esempio la nave è larga 11,5 m e il bordo libero viene letto con una rotella su un fianco solo. Con le attrezzature di mobilitazione caricate dall'altra parte, la nave è inclinata di 1,0° verso il lato opposto a quello della lettura. Il fianco su cui si legge sta a 5,75 m dal piano diametrale, e a quella distanza un'inclinazione di 1,0° lo alza di 5,75 × tan 1° = 0,10 m. Il bordo libero letto è più grande di 0,10 m di quello al centro della nave, dove stanno i trasduttori: le immersioni risultano più piccole di 0,10 m, e ogni profondità più bassa di 0,10 m.</p>
+
+<p>Il single-beam riceve la propria immersione dalla stessa lettura. I due ecoscandagli sbagliano quindi della stessa quantità, nello stesso verso, e la loro differenza – 0,03 m, dentro la tolleranza – contiene i rispettivi errori di montaggio e di misura, ma non l'errore comune. La voce è stata eseguita correttamente, e non poteva fallire per l'errore che conta.</p>
+
+<h2>Che cosa costa 0,10 m</h2>
+
+<p>Su tutto il canale il fondale sta sopra la quota di progetto, quindi uno spostamento verticale uniforme cambia il volume da dragare esattamente di area per spostamento: 300.000 m² × 0,10 m = 30.000 m³. Il rilievo mostra il fondale in media 0,80 m sopra la quota di progetto, cioè 240.000 m³; il fondale reale sta 0,70 m sopra, cioè 210.000 m³. Il volume del rilievo supera quello reale del 14%.</p>
+
+<div class="pull"><strong>30.000 m³</strong><span>di dragaggio che esistono soltanto nel rilievo</span></div>
+
+<p>Se il rilievo prima del dragaggio è la base delle quantità di contratto, quei 30.000 m³ entrano nell'offerta e nel programma, e qualcuno li paga senza che esistano. Il foglio di accettazione che avrebbe dovuto fermarli dice OK.</p>
+
+<h2>Il riferimento meno preciso della tolleranza</h2>
+
+<p>Il rimedio ovvio è un riferimento che non passi dal bordo libero: una misura diretta della profondità sotto i trasduttori. Ce ne sono due comuni, ed è qui che entra la seconda condizione. Lo scandaglio a mano – un peso su una sagola graduata – è indipendente, ma in banchina, con un po' di corrente e la lettura fatta alla superficie dell'acqua, la sua incertezza nell'esempio è di 0,05 m: quanto la tolleranza. Una barra calata sotto i trasduttori a una profondità segnata sul cavo, con l'eco letta dagli stessi ecoscandagli, ha nell'esempio un'incertezza di 0,02 m.</p>
+
+<p>Con un errore reale di 0,10 m e una tolleranza di 0,05 m, la probabilità che la voce risulti OK dipende tutta dal riferimento. Nella tabella le incertezze sono scarti tipo, e gli errori di lettura seguono una distribuzione normale:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Riferimento</th><th class="num">Incertezza del confronto (m)</th><th class="num">OK con l'errore di 0,10 m</th><th class="num">OK senza errore</th></tr>
+</thead>
+<tbody>
+<tr><td>Single-beam, stessa lettura del bordo libero</td><td class="num">0,02</td><td class="num">99%</td><td class="num">99%</td></tr>
+<tr><td>Scandaglio a mano</td><td class="num">0,05</td><td class="num">16%</td><td class="num">68%</td></tr>
+<tr><td>Barra a profondità nota</td><td class="num">0,02</td><td class="num">meno dell'1%</td><td class="num">99%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Il single-beam dà la stessa risposta con l'errore e senza: non lo vede. Lo scandaglio a mano lo vede, ma male: lascia passare il trasduttore sbagliato circa una volta su sei e boccia quello corretto quasi una volta su tre. Solo la barra separa i due casi.</p>
+
+<p>E c'è un effetto che la tabella non mostra. Una voce che fallisce non si chiude con un rifiuto: si rimisura. Se ogni misura è indipendente dalla precedente, con lo scandaglio a mano il trasduttore sbagliato di 0,10 m passa entro il terzo tentativo quattro volte su dieci. Il foglio riporta l'ultimo tentativo, non quanti ce ne sono stati.</p>
+
+<h2>Le obiezioni che arriveranno</h2>
+
+<p>La prima: il confronto fra multibeam e single-beam non serve a verificare l'immersione, ma a verificare che il multibeam misuri come un ecoscandaglio più semplice. È vero, ed è proprio il punto. Quella voce verifica i trasduttori, non la loro immersione; ma nel foglio è l'unica voce verticale, si intitola «profondità», e chi la legge la prende per la verifica della profondità.</p>
+
+<p>La seconda: si riduce con le altezze GNSS, quindi l'immersione non entra nel calcolo. In quel caso la lettura del bordo libero esce davvero dal calcolo, e con essa l'errore dell'esempio; al suo posto entra la distanza verticale fra antenna e trasduttori, presa dal rilievo dimensionale. La domanda però resta la stessa, e va posta alla voce che la sostituisce: con che cosa si confronta, e che cosa ha in comune con ciò che verifica.</p>
+
+<p>La terza: il volume pagato è la differenza fra il rilievo prima e quello dopo il dragaggio, e un errore costante si cancella nella differenza. Si cancella se i due rilievi hanno lo stesso errore: stessa nave, stessa lettura del bordo libero, stessa inclinazione. Una nuova mobilitazione è una nuova lettura, e i due rilievi non di rado li eseguono soggetti diversi. E prima che esista un rilievo dopo il dragaggio, il volume del primo ha già fissato l'offerta.</p>
+
+<h2>Cosa richiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Per ogni voce, che cosa ha in comune il riferimento con il sistema.</strong><span class="t"> Una colonna in più nel foglio di accettazione. Dove la risposta non è «niente», la voce non verifica l'errore comune, e il foglio deve dirlo.</span></span></li>
+  <li><span class="k">02</span><span><strong>L'incertezza del riferimento accanto alla tolleranza.</strong><span class="t"> Un riferimento incerto quanto la tolleranza produce un esito che dipende più dalla lettura che dal sistema. Il rapporto fra le due si fissa prima della mobilitazione, non davanti al risultato.</span></span></li>
+  <li><span class="k">03</span><span><strong>Tutti i tentativi registrati, non solo l'ultimo.</strong><span class="t"> Una voce superata al terzo tentativo è un'informazione diversa da una superata al primo.</span></span></li>
+  <li><span class="k">04</span><span><strong>Una verifica verticale che non passi dal bordo libero.</strong><span class="t"> Una barra calata sotto i trasduttori, o un confronto con un livello noto; e il bordo libero letto sui due fianchi, con l'inclinazione registrata.</span></span></li>
+  <li><span class="k">05</span><span><strong>Tolleranze derivate dall'uso del dato.</strong><span class="t"> Sul canale dell'esempio una tolleranza di 0,05 m sulla profondità vale 15.000 m³. Se quel volume è troppo, la tolleranza è troppo larga, qualunque cosa dica la procedura generica.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Un foglio di accettazione elenca voci superate. Per ognuna andrebbe chiesto se avrebbe potuto non esserlo: se il riferimento era indipendente dall'errore cercato, e abbastanza preciso da vederlo. Una voce che non poteva fallire non è una verifica trascurata da chi era in banchina; è una verifica progettata male, e lo è dal giorno in cui la procedura è stata approvata.</p>
+
+<p>Gli errori costanti sono proprio quelli che il controllo di qualità successivo non trova. Si trovano in banchina, con un riferimento esterno, oppure li trova qualcun altro, più tardi e a un costo diverso.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>JCGM 106:2012, <em>Evaluation of measurement data – The role of measurement uncertainty in conformity assessment</em>, pubblicato anche come ISO/IEC Guide 98-4 – il rischio di accettare un elemento non conforme e quello di rifiutarne uno conforme, in funzione dell'incertezza di misura.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR rappresenta il committente in banchina e a bordo, e verifica in modo indipendente l'accettazione della mobilitazione. Se state preparando la specifica di una mobilitazione, o volete sapere che cosa dice davvero un foglio di accettazione già firmato, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">At the end of mobilisation the client representative signs an acceptance sheet: one row per item, a difference, a tolerance, an outcome. When every row says OK, the vessel sails. No row says whether that check could have produced a different outcome.</p>
+
+<p>Each item compares the system with a reference. For the comparison to say anything, two conditions are needed, and the sheet records neither: the reference must be independent of the error being sought, and it must be more precise than the tolerance. Without the first, the item passes whatever the error. Without the second, the outcome depends more on the reading than on the system.</p>
+
+<h2>Why it is all decided on the quayside</h2>
+
+<p>Once the vessel has sailed, quality control compares the data with itself: cross lines with main lines, one pass with its reciprocal. These comparisons find the errors that change from one line to the next. A constant error – the same on every line, for the whole campaign – appears identically in both terms of every difference and cancels. The crossline check does not see it, by construction.</p>
+
+<p>Mobilisation acceptance is the moment when a constant error is cheapest to find, and often the only one, because it is the only time the system is compared with something external. If the check there cannot fail, the error sails with the vessel and ends up in the deliverable.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are illustrative – built to show the mechanism, not taken from real projects – but the proportions are those of a real campaign.</p>
+
+<p>A multibeam survey ahead of dredging a port approach channel: 2000 m long by 150 m wide, 300,000 m² in all. Depths are reduced to the tide measured by a gauge in the port, so the transducer draft enters the calculation: the distance between the water surface and the face of each transducer. At sailing, the acceptance sheet reads:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Item</th><th>Comparison</th><th class="num">Difference</th><th class="num">Tolerance</th><th>Outcome</th></tr>
+</thead>
+<tbody>
+<tr><td>Heading</td><td>gyro against azimuth measured from the quay by total station</td><td class="num">0.15°</td><td class="num">0.50°</td><td>OK</td></tr>
+<tr><td>Sound velocity at the transducer</td><td>hull probe against SVP profile at the same depth</td><td class="num">0.6 m/s</td><td class="num">2.0 m/s</td><td>OK</td></tr>
+<tr><td>Depth</td><td>multibeam against single-beam, at nadir, alongside</td><td class="num">0.03 m</td><td class="num">0.05 m</td><td>OK</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Three items, three passes. The third is the one the dredging volume depends on, and it is worth re-reading with one question: what does the single-beam have in common with the multibeam?</p>
+
+<h2>The reference that shares the error</h2>
+
+<p>A transducer's draft is not measured directly. The dimensional control survey gives the height of each transducer relative to a reference point on the hull; alongside, the freeboard – the distance between that point and the water surface – is then measured, and from that single reading the drafts of all the transducers are derived.</p>
+
+<p>In the example the vessel has a beam of 11.5 m and the freeboard is read with a tape on one side only. With the mobilisation equipment loaded on the other side, the vessel lists 1.0° away from the side where the reading is taken. The side being read is 5.75 m from the centreline, and at that distance a list of 1.0° raises it by 5.75 × tan 1° = 0.10 m. The freeboard read is 0.10 m greater than at the centre of the vessel, where the transducers are: the drafts come out 0.10 m too small, and every depth 0.10 m too shallow.</p>
+
+<p>The single-beam takes its draft from the same reading. The two echo sounders are therefore wrong by the same amount, in the same direction, and their difference – 0.03 m, within tolerance – contains their individual mounting and measurement errors, but not the common one. The item was carried out correctly, and it could not fail for the error that matters.</p>
+
+<h2>What 0.10 m costs</h2>
+
+<p>Across the whole channel the seabed lies above the design level, so a uniform vertical shift changes the dredging volume by exactly area times shift: 300,000 m² × 0.10 m = 30,000 m³. The survey shows the seabed on average 0.80 m above the design level, or 240,000 m³; the real seabed is 0.70 m above it, or 210,000 m³. The survey volume exceeds the real one by 14%.</p>
+
+<div class="pull"><strong>30,000 m³</strong><span>of dredging that exist only in the survey</span></div>
+
+<p>If the pre-dredge survey is the basis of the contract quantities, those 30,000 m³ go into the tender and the schedule, and someone pays for them without their existing. The acceptance sheet that should have stopped them says OK.</p>
+
+<h2>The reference less precise than the tolerance</h2>
+
+<p>The obvious remedy is a reference that does not go through the freeboard: a direct measurement of the depth below the transducers. There are two common ones, and this is where the second condition comes in. The lead line – a weight on a graduated line – is independent, but alongside, with some current and the reading taken at the water surface, its uncertainty in the example is 0.05 m: as large as the tolerance. A bar lowered beneath the transducers to a depth marked on its cable, with the echo read by the echo sounders themselves, has an uncertainty of 0.02 m in the example.</p>
+
+<p>With a real error of 0.10 m and a tolerance of 0.05 m, the probability that the item comes out OK depends entirely on the reference. In the table the uncertainties are standard deviations, and reading errors follow a normal distribution:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Reference</th><th class="num">Uncertainty of the comparison (m)</th><th class="num">OK with the 0.10 m error</th><th class="num">OK with no error</th></tr>
+</thead>
+<tbody>
+<tr><td>Single-beam, same freeboard reading</td><td class="num">0.02</td><td class="num">99%</td><td class="num">99%</td></tr>
+<tr><td>Lead line</td><td class="num">0.05</td><td class="num">16%</td><td class="num">68%</td></tr>
+<tr><td>Bar at a known depth</td><td class="num">0.02</td><td class="num">under 1%</td><td class="num">99%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The single-beam gives the same answer with the error and without it: it does not see it. The lead line sees it, but poorly: it lets the wrong transducer through about one time in six and fails the correct one nearly one time in three. Only the bar separates the two cases.</p>
+
+<p>And there is an effect the table does not show. An item that fails is not closed with a rejection: it is measured again. If each measurement is independent of the previous one, with the lead line the transducer that is 0.10 m out passes by the third attempt four times in ten. The sheet records the last attempt, not how many there were.</p>
+
+<h2>The objections that will come</h2>
+
+<p>The first: the comparison between multibeam and single-beam is not meant to verify the draft, but to verify that the multibeam measures like a simpler echo sounder. True, and that is exactly the point. That item verifies the transducers, not their draft; but on the sheet it is the only vertical item, it is headed "depth", and whoever reads it takes it for the depth check.</p>
+
+<p>The second: depths are reduced with GNSS heights, so the draft does not enter the calculation. In that case the freeboard reading really does leave the calculation, and with it the error in the example; in its place comes the vertical distance between antenna and transducers, taken from the dimensional control survey. The question stays the same, though, and must be put to the item that replaces it: what is it compared with, and what does that have in common with what it verifies.</p>
+
+<p>The third: the volume paid for is the difference between the pre-dredge and post-dredge surveys, and a constant error cancels in the difference. It cancels if the two surveys have the same error: same vessel, same freeboard reading, same list. A new mobilisation is a new reading, and the two surveys are not infrequently carried out by different parties. And before any post-dredge survey exists, the volume of the first has already set the tender.</p>
+
+<h2>What to require in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>For each item, what the reference has in common with the system.</strong><span class="t"> One more column on the acceptance sheet. Where the answer is not "nothing", the item does not verify the common error, and the sheet must say so.</span></span></li>
+  <li><span class="k">02</span><span><strong>The uncertainty of the reference next to the tolerance.</strong><span class="t"> A reference as uncertain as the tolerance produces an outcome that depends more on the reading than on the system. The ratio between the two is set before mobilisation, not in front of the result.</span></span></li>
+  <li><span class="k">03</span><span><strong>Every attempt recorded, not just the last.</strong><span class="t"> An item passed at the third attempt is different information from one passed at the first.</span></span></li>
+  <li><span class="k">04</span><span><strong>A vertical check that does not go through the freeboard.</strong><span class="t"> A bar lowered beneath the transducers, or a comparison with a known level; and the freeboard read on both sides, with the list recorded.</span></span></li>
+  <li><span class="k">05</span><span><strong>Tolerances derived from the use of the data.</strong><span class="t"> On the channel in the example, a depth tolerance of 0.05 m is worth 15,000 m³. If that volume is too much, the tolerance is too loose, whatever the generic procedure says.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>An acceptance sheet lists items passed. Of each one it is worth asking whether it could have failed: whether the reference was independent of the error sought, and precise enough to see it. An item that could not fail is not a check neglected by whoever was on the quay; it is a badly designed check, and has been since the day the procedure was approved.</p>
+
+<p>Constant errors are precisely the ones that later quality control does not find. They are found on the quayside, against an external reference, or someone else finds them, later and at a different cost.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>JCGM 106:2012, <em>Evaluation of measurement data – The role of measurement uncertainty in conformity assessment</em>, also published as ISO/IEC Guide 98-4 – the risk of accepting a non-conforming item and of rejecting a conforming one, as a function of measurement uncertainty.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR represents the client on the quayside and on board, and independently verifies mobilisation acceptance. If you are preparing the specification for a mobilisation, or want to know what an acceptance sheet already signed actually says, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'seconda-opinione',
         'topic': 'advisory',
         'date': '2026-10-09',

@@ -292,3 +292,56 @@ CPTs already run along the route, set beside the map before the signature.
 https://www.clegar.it/en/insights/second-opinion-before-acceptance/
 
 #offshore #marinesurvey #geophysics #offshorewind #technicalassurance
+
+---
+
+## L'accettazione della mobilitazione – 12 ottobre 2026
+
+### Italiano
+
+Ogni voce di un foglio di accettazione confronta il sistema con un
+riferimento. Nessuna riga dice se quel confronto avrebbe potuto fallire.
+
+Prima che la nave parta, multibeam e single-beam vengono confrontati in
+banchina: concordano, la differenza sta nella tolleranza, OK.
+
+Ma l'immersione dei due trasduttori viene dalla stessa lettura del bordo
+libero. Se quella lettura è sbagliata – in un esempio sintetico, presa su un
+fianco solo di una nave inclinata di un grado – sbagliano entrambi della
+stessa quantità, e la loro differenza non lo mostra. Dopo la partenza non lo
+mostra più niente: un errore costante si cancella in ogni controllo agli
+incroci.
+
+Sul canale da dragare dell'esempio, quell'errore vale 30.000 m³ che
+esistono soltanto nel rilievo.
+
+Per ogni voce le domande sono due: il riferimento è indipendente dall'errore
+che si cerca? Ed è più preciso della tolleranza?
+
+https://www.clegar.it/insights/accettazione-della-mobilitazione/
+
+#hydrography #marinesurvey #dredging #mobilisation #ownersengineering
+
+### English
+
+Every item on an acceptance sheet compares the system with a reference. No
+row says whether that comparison could have failed.
+
+Before the vessel sails, multibeam and single-beam are compared alongside:
+they agree, the difference is within tolerance, OK.
+
+But the draft of both transducers comes from the same freeboard reading. If
+that reading is wrong – in an illustrative example, taken on one side only of
+a vessel listing by one degree – both are wrong by the same amount, and their
+difference does not show it. After sailing nothing shows it: a constant error
+cancels in every crossline check.
+
+On the channel to be dredged in the example, that error is worth 30,000 m³
+that exist only in the survey.
+
+For every item there are two questions: is the reference independent of the
+error being sought? And is it more precise than the tolerance?
+
+https://www.clegar.it/en/insights/mobilisation-acceptance/
+
+#hydrography #marinesurvey #dredging #mobilisation #ownersengineering
