@@ -37,6 +37,7 @@ Già online, da non riprendere:
 | Readiness review prima della partenza | Operational Excellence | margine delle voci aperte contro percentuale di chiusura, riapertura su revisione del documento, partenza condizionata |
 | Il witnessing di una calibrazione | Owner's Engineering | patch test di roll, passata di conferma e residuo, convenzione di segno, roll contro velocità del suono |
 | La seconda opinione prima dell'accettazione | Technical Advisory | QC del contractor contro assunzioni, velocità di conversione tempo-profondità nei sedimenti, taratura sui CPT, classificazione del tracciato rispetto a una soglia |
+| L'accettazione della mobilitazione, voce per voce | Owner's Engineering | riferimento indipendente e più preciso della tolleranza, errore costante invisibile agli incroci, bordo libero comune a multibeam e single-beam, volume di dragaggio, rimisurare finché passa |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -50,12 +51,14 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   mobilitazione, che quindi non si sovrappone.)*
 - [ ] Le lessons learned che nessuno rilegge, e come si scrive una nota che verrà usata
 
-### Owner's Engineering — 1 articolo pubblicato
+### Owner's Engineering — 2 articoli pubblicati
 - [x] Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda — 2026-10-08
   *(tratta il patch test di roll e il residuo della passata di conferma: la
   verifica a tappeto della mobilitazione resta alla voce successiva, che
   quindi non si sovrappone.)*
-- [ ] L'accettazione della mobilitazione, voce per voce
+- [x] L'accettazione della mobilitazione, voce per voce — 2026-10-12
+  *(l'esempio è verticale – immersione dei trasduttori – perché la verifica di
+  posizione su un punto noto in mobilitazione era già nell'articolo sul datum.)*
 - [ ] Che cosa decide in giornata un rappresentante a bordo
 
 ### Technical Advisory & Assurance — 1 articolo pubblicato
