@@ -345,3 +345,58 @@ error being sought? And is it more precise than the tolerance?
 https://www.clegar.it/en/insights/mobilisation-acceptance/
 
 #hydrography #marinesurvey #dredging #mobilisation #ownersengineering
+
+---
+
+## Due diligence su un dataset ereditato – 14 ottobre 2026
+
+### Italiano
+
+In una due diligence il data room dice: cavo di esportazione interrato sopra
+la copertura minima in ogni punto. È vero. Ma è vero alla data del rilievo.
+
+La copertura di un cavo è la differenza fra due superfici. Il cavo, una volta
+interrato, resta dov'è; il fondale no. In un campo di sand wave gli
+avvallamenti migrano, e dove arrivano sopra il cavo la copertura si riduce
+senza che niente si sia rotto.
+
+In un esempio sintetico, cinque anni dopo l'as-built, un rilievo batimetrico
+del corridoio trova 850 m di cavo sotto il minimo di progetto, su un
+tracciato che il data room dava conforme ovunque.
+
+Saperlo è stato possibile per un solo motivo: nel data room c'erano le quote
+assolute del cavo, non solo la copertura. Senza quelle, il rilievo nuovo
+avrebbe mostrato che il fondale si è mosso, e non di quanto si è ridotta la
+copertura.
+
+La prima domanda di una due diligence non riguarda i rilievi da fare, ma i
+dati che il venditore ha già, e in che forma.
+
+https://www.clegar.it/insights/due-diligence-su-un-dataset-ereditato/
+
+#duediligence #subseacables #offshorewind #marinesurvey #technicalassurance
+
+### English
+
+In a due diligence the data room says: export cable buried above minimum
+cover everywhere. True. But true on the date of the survey.
+
+The cover over a cable is the difference between two surfaces. Once buried,
+the cable stays where it is; the seabed does not. In a sand wave field the
+troughs migrate, and where they arrive over the cable the cover falls without
+anything having broken.
+
+In an illustrative example, five years after the as-built, a bathymetric
+survey of the corridor finds 850 m of cable below the design minimum, on a
+route the data room showed as compliant everywhere.
+
+That could be known for one reason only: the data room held the absolute
+levels of the cable, not just the cover. Without them, the new survey would
+have shown that the seabed had moved, and not how much the cover had fallen.
+
+The first question of a due diligence is not about the surveys to be done,
+but about the data the seller already has, and in what form.
+
+https://www.clegar.it/en/insights/due-diligence-on-an-inherited-dataset/
+
+#duediligence #subseacables #offshorewind #marinesurvey #technicalassurance

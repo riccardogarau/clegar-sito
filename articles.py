@@ -15,6 +15,219 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'due-diligence-dataset',
+        'topic': 'advisory',
+        'date': '2026-10-14',
+        'slug': {'it': 'due-diligence-su-un-dataset-ereditato',
+                 'en': 'due-diligence-on-an-inherited-dataset'},
+        'title': {
+            'it': 'Due diligence su un dataset ereditato: la copertura di un cavo ha una data',
+            'en': 'Due diligence on an inherited dataset: a cable’s burial cover has a date',
+        },
+        'meta_title': {
+            'it': 'Due diligence su un dataset ereditato | Insights',
+            'en': 'Due diligence on an inherited dataset | Insights',
+        },
+        'desc': {
+            'it': ('Perché il rapporto as-built di un cavo descrive l’asset alla data del rilievo e '
+                   'non a quella dell’acquisto, e quale forma del dato permette di aggiornarlo con '
+                   'un solo rilievo batimetrico invece di ritracciare il cavo.'),
+            'en': ('Why a cable as-built report describes the asset on the date of the survey and '
+                   'not on the date of the acquisition, and which form of the data allows it to be '
+                   'updated with a single bathymetric survey instead of re-tracking the cable.'),
+        },
+        'abstract': {
+            'it': ('Il data room dice copertura minima 1,10 m, sopra il minimo di progetto in ogni '
+                   'punto. Era vero nel 2021. Cinque anni di sand wave dopo, un rilievo batimetrico '
+                   'e le quote del cavo trovano 850 m sotto il minimo – ed è possibile saperlo solo '
+                   'perché quelle quote erano nel data room.'),
+            'en': ('The data room says minimum cover 1.10 m, above the design minimum everywhere. '
+                   'That was true in 2021. Five years of sand waves later, a bathymetric survey and '
+                   'the cable levels find 850 m below the minimum – and that can be known only '
+                   'because those levels were in the data room.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">In una due diligence tecnica su un parco eolico in esercizio, il data room contiene il rapporto as-built del cavo di esportazione: copertura minima 1,10 m, sopra il minimo di progetto di 1,0 m in ogni punto. La frase è vera. Descrive però il 2021, e l'acquisto si firma nel 2026.</p>
+
+<p>Un dataset che arriva insieme all'asset non descrive l'asset: descrive l'asset alla data in cui è stato acquisito. Per molte grandezze la differenza non conta, perché in cinque anni non cambiano. La copertura di un cavo interrato è diversa: è la differenza fra due superfici, e una delle due si muove.</p>
+
+<h2>Una differenza fra due superfici</h2>
+
+<p>La copertura è la distanza verticale fra il fondale e la sommità del cavo. Una volta interrato, il cavo resta dov'è. Il fondale no: in un campo di sand wave creste e avvallamenti migrano, e dove un avvallamento arriva sopra il cavo la copertura si riduce senza che il cavo si sia mosso.</p>
+
+<p>Da qui una possibilità e un vincolo. La possibilità: se si conosce la quota assoluta della sommità del cavo, basta un rilievo batimetrico nuovo per aggiornare la copertura, senza ritrovare il cavo. Il vincolo: serve proprio la quota assoluta, riferita a un datum verticale dichiarato. Un rapporto che riporta soltanto la copertura – un numero per tratto, misurato rispetto al fondale di allora – non si aggiorna con nessun rilievo successivo. Per sapere quanta copertura resta bisogna allora ritrovare il cavo, con un sistema di tracciamento e una campagna molto più lunga di un rilievo batimetrico.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma le proporzioni sono quelle di un sito vero.</p>
+
+<p>Il cavo di esportazione attraversa un campo di sand wave fra il KP 12 e il KP 20. Il criterio di progetto è una copertura minima di 1,0 m rispetto al fondale al momento dell'installazione. Il data room contiene il rapporto as-built del 2021 e anche il file delle quote della sommità del cavo, riferite al LAT. Il compratore fa eseguire un rilievo multibeam del corridoio.</p>
+
+<p>Prima di sottrarre le due superfici serve un controllo. Due rilievi di anni e contractor diversi possono differire per una costante verticale – riduzione di marea, riferimento, immersione – che con il fondale non ha niente a che fare. Si confrontano quindi su un tratto che non si muove: fra il KP 8 e il KP 12 il fondale è grossolano, fuori dal campo di sand wave. Lì il rilievo nuovo risulta in media più profondo di 0,12 m, con una dispersione di 0,04 m: una costante, non un movimento del fondale. Si corregge prima di qualunque altro calcolo.</p>
+
+<p>Per ogni chilometro la tabella riporta il punto di copertura minima nel 2026, con i valori del 2021 nello stesso punto:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>KP</th><th class="num">Copertura 2021 (m)</th><th class="num">Variazione del fondale, grezza (m)</th><th class="num">Variazione corretta (m)</th><th class="num">Copertura 2026 (m)</th><th class="num">Lunghezza sotto 1,0 m (m)</th></tr>
+</thead>
+<tbody>
+<tr><td>12–13</td><td class="num">1,60</td><td class="num">−0,20</td><td class="num">−0,08</td><td class="num">1,52</td><td class="num">0</td></tr>
+<tr><td>13–14</td><td class="num">1,35</td><td class="num">−0,75</td><td class="num">−0,63</td><td class="num">0,72</td><td class="num">320</td></tr>
+<tr><td>14–15</td><td class="num">1,80</td><td class="num">+0,30</td><td class="num">+0,42</td><td class="num">2,22</td><td class="num">0</td></tr>
+<tr><td>15–16</td><td class="num">1,25</td><td class="num">−0,62</td><td class="num">−0,50</td><td class="num">0,75</td><td class="num">260</td></tr>
+<tr><td>16–17</td><td class="num">1,50</td><td class="num">−0,40</td><td class="num">−0,28</td><td class="num">1,22</td><td class="num">0</td></tr>
+<tr><td>17–18</td><td class="num">1,10</td><td class="num">−0,35</td><td class="num">−0,23</td><td class="num">0,87</td><td class="num">90</td></tr>
+<tr><td>18–19</td><td class="num">1,70</td><td class="num">−0,10</td><td class="num">+0,02</td><td class="num">1,72</td><td class="num">0</td></tr>
+<tr><td>19–20</td><td class="num">1,45</td><td class="num">−0,70</td><td class="num">−0,58</td><td class="num">0,87</td><td class="num">180</td></tr>
+<tr><td><strong>Totale</strong></td><td></td><td></td><td></td><td></td><td class="num"><strong>850</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>850 m</strong><span>di cavo sotto la copertura minima, in un data room che lo dà conforme ovunque</span></div>
+
+<p>In quattro chilometri su otto la copertura scende sotto il minimo in almeno un tratto, fino a 0,72 m fra il KP 13 e il KP 14. Il minimo del 2021, 1,10 m, stava fra il KP 17 e il KP 18, che oggi non è il tratto peggiore: il fondale non si abbassa dove la copertura era già bassa, ma dove arrivano gli avvallamenti.</p>
+
+<p>La correzione della costante non è un dettaglio. Senza, gli stessi quattro chilometri darebbero 1180 m sotto il minimo invece di 850, il 39% in più: un errore del rilievo nuovo attribuito al fondale, nello stesso verso su tutto il tracciato.</p>
+
+<h2>Le obiezioni che arriveranno</h2>
+
+<p>La prima: il cavo è stato installato conforme, e il rapporto lo dimostra. È vero, e non è la domanda. Il rapporto dimostra come è stato eseguito il lavoro; la due diligence deve stabilire lo stato di ciò che si compra. Un cavo posato a regola d'arte può avere oggi 0,72 m di copertura: le due cose non si contraddicono, e l'acquisto riguarda la seconda.</p>
+
+<p>La seconda: il progetto ha già tenuto conto della mobilità, fissando l'interramento rispetto a un livello di riferimento che il fondale non dovrebbe superare. In quel caso cambia l'oggetto del controllo, non il metodo: si confronta il fondale del 2026 con quel livello invece che con il fondale dell'installazione, e serve ancora una quota assoluta per farlo. Nell'esempio il criterio era riferito al fondale dell'installazione, e il rapporto lo dichiarava.</p>
+
+<p>La terza: due rilievi diversi non si sottraggono così, e la differenza sta dentro le loro incertezze. La costante verticale è già stata tolta sul tratto stabile, con una dispersione residua di 0,04 m. Resta la posizione del cavo, nota dall'as-built con un'incertezza di 0,5 m: sul fianco di una sand wave inclinato di 8°, mezzo metro di errore in pianta vale 0,5 × tan 8° = 0,07 m in quota. Insieme fanno 0,08 m. Anche nei due punti meno netti, a 0,87 m, lo scarto dal minimo è di 0,13 m, più grande di quell'incertezza; nel punto peggiore è di 0,28 m.</p>
+
+<h2>Che cosa produce la due diligence</h2>
+
+<p>Non un giudizio sul cavo, ma un elenco: quattro tratti, la loro lunghezza, la copertura minima in ciascuno. È la forma in cui il dato serve a chi deve decidere se prevedere una protezione aggiuntiva, infittire i rilievi di monitoraggio o tenerne conto nella trattativa. Un rapporto che dice «conforme» non serve a nessuna delle tre cose, anche quando è vero.</p>
+
+<p>E l'esempio è il caso fortunato. Se il data room avesse contenuto soltanto il rapporto di copertura, senza le quote del cavo, il rilievo multibeam avrebbe mostrato che il fondale si è mosso, ma non di quanto si è ridotta la copertura, perché manca uno dei due termini della sottrazione.</p>
+
+<h2>Cosa richiedere nel data room</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>La quota assoluta della sommità del cavo, non solo la copertura.</strong><span class="t"> Punto per punto, con il datum verticale dichiarato. È il dato che permette di aggiornare la copertura con un rilievo batimetrico invece che con un nuovo tracciamento.</span></span></li>
+  <li><span class="k">02</span><span><strong>La superficie del fondale dell'as-built, in griglia.</strong><span class="t"> Nello stesso riferimento verticale delle quote del cavo. Senza, la copertura dichiarata non si ricostruisce e non si controlla.</span></span></li>
+  <li><span class="k">03</span><span><strong>La data di ogni dataset, e tutti i rilievi successivi.</strong><span class="t"> I rilievi di monitoraggio intermedi dicono dove e quanto in fretta il fondale si muove, e permettono di distinguere un trend da un evento.</span></span></li>
+  <li><span class="k">04</span><span><strong>L'incertezza di posizione del cavo, con il sistema usato per tracciarlo.</strong><span class="t"> Sui fianchi delle sand wave un errore in pianta diventa un errore in quota, e va messo accanto allo scarto dal minimo.</span></span></li>
+  <li><span class="k">05</span><span><strong>Il criterio di progetto dell'interramento.</strong><span class="t"> Copertura rispetto al fondale dell'installazione, oppure rispetto a un livello di riferimento: decide con che cosa va confrontato il fondale di oggi.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Un dataset ereditato si legge con due date: quella in cui è stato acquisito e quella in cui serve. Fra le due, ciò che si muove va rimisurato, e ciò che non si muove va chiesto in una forma che permetta di farlo.</p>
+
+<p>Nell'esempio la seconda condizione decide tutto. Il rilievo nuovo costa lo stesso con o senza le quote del cavo, ma solo con le quote produce una risposta. Per questo la prima richiesta di una due diligence non riguarda i rilievi da fare, ma i dati che il venditore ha già.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>DNV-RP-0360, <em>Subsea power cables in shallow water</em> – raccomandazioni per tutte le fasi del ciclo di vita dei cavi sottomarini in acque basse.</li>
+  <li>Carbon Trust, Offshore Wind Accelerator, <em>Cable Burial Risk Assessment</em> (CTC835, 2015) – metodo basato sul rischio per specificare la profondità di interramento.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR fornisce pareri tecnici indipendenti su dataset e deliverable marini, anche nel corso di una due diligence. Se state valutando un asset e quello che il suo data room dice davvero, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">In a technical due diligence on an operating wind farm, the data room contains the export cable as-built report: minimum cover 1.10 m, above the design minimum of 1.0 m everywhere. The statement is true. But it describes 2021, and the acquisition is signed in 2026.</p>
+
+<p>A dataset that comes with the asset does not describe the asset: it describes the asset on the date it was acquired. For many quantities the difference does not matter, because they do not change in five years. The cover over a buried cable is different: it is the difference between two surfaces, and one of the two moves.</p>
+
+<h2>A difference between two surfaces</h2>
+
+<p>Cover is the vertical distance between the seabed and the top of the cable. Once buried, the cable stays where it is. The seabed does not: in a sand wave field crests and troughs migrate, and where a trough arrives over the cable the cover falls without the cable having moved.</p>
+
+<p>Hence one opportunity and one constraint. The opportunity: if the absolute level of the top of the cable is known, a new bathymetric survey is enough to update the cover, without finding the cable again. The constraint: it has to be the absolute level, referred to a stated vertical datum. A report that gives only the cover – one number per section, measured against the seabed of the day – cannot be updated by any later survey. To know how much cover remains, the cable then has to be found again, with a tracking system and a campaign much longer than a bathymetric survey.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are illustrative – built to show the mechanism, not taken from real projects – but the proportions are those of a real site.</p>
+
+<p>The export cable crosses a sand wave field between KP 12 and KP 20. The design criterion is a minimum cover of 1.0 m relative to the seabed at the time of installation. The data room contains the 2021 as-built report and also the file of cable top levels, referred to LAT. The buyer has a multibeam survey of the corridor carried out.</p>
+
+<p>Before subtracting the two surfaces, one check is needed. Two surveys from different years and contractors can differ by a vertical constant – tidal reduction, reference, draft – that has nothing to do with the seabed. They are therefore compared over a section that does not move: between KP 8 and KP 12 the seabed is coarse, outside the sand wave field. There the new survey comes out 0.12 m deeper on average, with a scatter of 0.04 m: a constant, not a movement of the seabed. It is corrected before any other calculation.</p>
+
+<p>For each kilometre the table gives the point of minimum cover in 2026, with the 2021 values at the same point:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>KP</th><th class="num">Cover 2021 (m)</th><th class="num">Seabed change, raw (m)</th><th class="num">Corrected change (m)</th><th class="num">Cover 2026 (m)</th><th class="num">Length below 1.0 m (m)</th></tr>
+</thead>
+<tbody>
+<tr><td>12–13</td><td class="num">1.60</td><td class="num">−0.20</td><td class="num">−0.08</td><td class="num">1.52</td><td class="num">0</td></tr>
+<tr><td>13–14</td><td class="num">1.35</td><td class="num">−0.75</td><td class="num">−0.63</td><td class="num">0.72</td><td class="num">320</td></tr>
+<tr><td>14–15</td><td class="num">1.80</td><td class="num">+0.30</td><td class="num">+0.42</td><td class="num">2.22</td><td class="num">0</td></tr>
+<tr><td>15–16</td><td class="num">1.25</td><td class="num">−0.62</td><td class="num">−0.50</td><td class="num">0.75</td><td class="num">260</td></tr>
+<tr><td>16–17</td><td class="num">1.50</td><td class="num">−0.40</td><td class="num">−0.28</td><td class="num">1.22</td><td class="num">0</td></tr>
+<tr><td>17–18</td><td class="num">1.10</td><td class="num">−0.35</td><td class="num">−0.23</td><td class="num">0.87</td><td class="num">90</td></tr>
+<tr><td>18–19</td><td class="num">1.70</td><td class="num">−0.10</td><td class="num">+0.02</td><td class="num">1.72</td><td class="num">0</td></tr>
+<tr><td>19–20</td><td class="num">1.45</td><td class="num">−0.70</td><td class="num">−0.58</td><td class="num">0.87</td><td class="num">180</td></tr>
+<tr><td><strong>Total</strong></td><td></td><td></td><td></td><td></td><td class="num"><strong>850</strong></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>850 m</strong><span>of cable below minimum cover, in a data room that shows it compliant everywhere</span></div>
+
+<p>In four kilometres out of eight the cover falls below the minimum over at least one stretch, down to 0.72 m between KP 13 and KP 14. The 2021 minimum, 1.10 m, lay between KP 17 and KP 18, which today is not the worst section: the seabed does not drop where the cover was already low, but where the troughs arrive.</p>
+
+<p>Correcting the constant is not a detail. Without it, the same four kilometres would give 1180 m below the minimum instead of 850, 39% more: an error in the new survey attributed to the seabed, in the same direction along the whole route.</p>
+
+<h2>The objections that will come</h2>
+
+<p>The first: the cable was installed compliant, and the report proves it. True, and not the question. The report proves how the work was done; the due diligence has to establish the condition of what is being bought. A cable laid to the highest standard can have 0.72 m of cover today: the two do not contradict each other, and the acquisition concerns the second.</p>
+
+<p>The second: the design already allowed for mobility, setting the burial relative to a reference level the seabed is not expected to go below. In that case the object of the check changes, not the method: the 2026 seabed is compared with that level instead of with the installation seabed, and an absolute level is still needed to do it. In the example the criterion referred to the installation seabed, and the report said so.</p>
+
+<p>The third: two different surveys cannot simply be subtracted, and the difference lies within their uncertainties. The vertical constant has already been removed on the stable section, with a residual scatter of 0.04 m. That leaves the cable position, known from the as-built with an uncertainty of 0.5 m: on a sand wave flank sloping at 8°, half a metre of error in plan is worth 0.5 × tan 8° = 0.07 m in level. Together they come to 0.08 m. Even at the two least clear-cut points, at 0.87 m, the shortfall from the minimum is 0.13 m, larger than that uncertainty; at the worst point it is 0.28 m.</p>
+
+<h2>What the due diligence produces</h2>
+
+<p>Not a verdict on the cable, but a list: four sections, their length, the minimum cover in each. That is the form in which the data serves whoever has to decide whether to plan additional protection, survey more often or take it into account in the negotiation. A report that says "compliant" serves none of the three, even when it is true.</p>
+
+<p>And the example is the lucky case. Had the data room contained only the cover report, without the cable levels, the multibeam survey would have shown that the seabed has moved, but not how much the cover has fallen, because one of the two terms of the subtraction is missing.</p>
+
+<h2>What to require in the data room</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>The absolute level of the top of the cable, not only the cover.</strong><span class="t"> Point by point, with the vertical datum stated. It is the data that allows the cover to be updated with a bathymetric survey instead of a new tracking campaign.</span></span></li>
+  <li><span class="k">02</span><span><strong>The as-built seabed surface, as a grid.</strong><span class="t"> In the same vertical reference as the cable levels. Without it, the stated cover can be neither rebuilt nor checked.</span></span></li>
+  <li><span class="k">03</span><span><strong>The date of every dataset, and every later survey.</strong><span class="t"> Intermediate monitoring surveys show where and how fast the seabed moves, and make it possible to tell a trend from an event.</span></span></li>
+  <li><span class="k">04</span><span><strong>The position uncertainty of the cable, with the system used to track it.</strong><span class="t"> On sand wave flanks an error in plan becomes an error in level, and has to be set beside the shortfall from the minimum.</span></span></li>
+  <li><span class="k">05</span><span><strong>The burial design criterion.</strong><span class="t"> Cover relative to the installation seabed, or relative to a reference level: it decides what today's seabed must be compared with.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>An inherited dataset is read with two dates: the one on which it was acquired and the one on which it is needed. Between them, what moves has to be measured again, and what does not move has to be requested in a form that allows it.</p>
+
+<p>In the example the second condition decides everything. The new survey costs the same with or without the cable levels, but only with the levels does it produce an answer. That is why the first request of a due diligence is not about the surveys to be done, but about the data the seller already has.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>DNV-RP-0360, <em>Subsea power cables in shallow water</em> – recommendations for all phases of the life cycle of subsea power cables in shallow water.</li>
+  <li>Carbon Trust, Offshore Wind Accelerator, <em>Cable Burial Risk Assessment</em> (CTC835, 2015) – a risk-based method for specifying burial depth.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR provides independent technical opinions on marine datasets and deliverables, including in the course of a due diligence. If you are assessing an asset and what its data room really says, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'accettazione-mobilitazione',
         'topic': 'owners',
         'date': '2026-10-12',
