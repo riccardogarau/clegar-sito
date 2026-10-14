@@ -38,6 +38,7 @@ Già online, da non riprendere:
 | Il witnessing di una calibrazione | Owner's Engineering | patch test di roll, passata di conferma e residuo, convenzione di segno, roll contro velocità del suono |
 | La seconda opinione prima dell'accettazione | Technical Advisory | QC del contractor contro assunzioni, velocità di conversione tempo-profondità nei sedimenti, taratura sui CPT, classificazione del tracciato rispetto a una soglia |
 | L'accettazione della mobilitazione, voce per voce | Owner's Engineering | riferimento indipendente e più preciso della tolleranza, errore costante invisibile agli incroci, bordo libero comune a multibeam e single-beam, volume di dragaggio, rimisurare finché passa |
+| Due diligence su un dataset ereditato | Technical Advisory | copertura del cavo come differenza fra quota del cavo e fondale mobile, sand wave, quote assolute nel data room, costante verticale fra due rilievi, incertezza in pianta sui fianchi |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -61,12 +62,12 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   posizione su un punto noto in mobilitazione era già nell'articolo sul datum.)*
 - [ ] Che cosa decide in giornata un rappresentante a bordo
 
-### Technical Advisory & Assurance — 1 articolo pubblicato
+### Technical Advisory & Assurance — 2 articoli pubblicati
 - [x] La seconda opinione prima di firmare un'accettazione — 2026-10-09
   *(tratta la velocità di conversione di una mappa di spessori, tarata sui CPT.
   La due diligence su un dataset ereditato resta alla voce successiva, che
   quindi non si sovrappone, purché non riprenda la taratura sui dati geotecnici.)*
-- [ ] Due diligence su un dataset che arriva insieme all'asset
+- [x] Due diligence su un dataset che arriva insieme all'asset — 2026-10-14
 - [ ] Il parere tecnico in una controversia: che cosa lo rende utilizzabile
 
 ### Marine Geoscience — 2 articoli pubblicati
