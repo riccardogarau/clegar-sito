@@ -39,6 +39,7 @@ Già online, da non riprendere:
 | La seconda opinione prima dell'accettazione | Technical Advisory | QC del contractor contro assunzioni, velocità di conversione tempo-profondità nei sedimenti, taratura sui CPT, classificazione del tracciato rispetto a una soglia |
 | L'accettazione della mobilitazione, voce per voce | Owner's Engineering | riferimento indipendente e più preciso della tolleranza, errore costante invisibile agli incroci, bordo libero comune a multibeam e single-beam, volume di dragaggio, rimisurare finché passa |
 | Due diligence su un dataset ereditato | Technical Advisory | copertura del cavo come differenza fra quota del cavo e fondale mobile, sand wave, quote assolute nel data room, costante verticale fra due rilievi, incertezza in pianta sui fianchi |
+| Le interfacce fra contractor | Project Management | contratti separati, Rev A contro dati definitivi, ciclo di revisione come durata, date contrattuali contro date dei programmi, registro delle interfacce tenuto dal committente |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -74,8 +75,11 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 - [ ] Spaziatura delle linee: che cosa non si vede fra una linea e l'altra
 - [ ] Un profilo di velocità del suono scaduto, e come si riconosce dai dati
 
-### Project Management — 1 articolo pubblicato
-- [ ] Le interfacce fra contractor: dove si rompono e chi le tiene
+### Project Management — 2 articoli pubblicati
+- [x] Le interfacce fra contractor: dove si rompono e chi le tiene — 2026-10-16
+  *(tratta la stessa parola con due significati in due contratti separati. Non
+  si sovrappone alla readiness review, che riapre una voce chiusa su una
+  revisione di documento, né al critical path, che riguarda il meteo.)*
 
 ## Che cosa si consegna per ogni articolo
 
