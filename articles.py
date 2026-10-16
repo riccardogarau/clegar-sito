@@ -15,6 +15,229 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'interfacce-contractor',
+        'topic': 'pm',
+        'date': '2026-10-16',
+        'slug': {'it': 'interfacce-fra-contractor',
+                 'en': 'interfaces-between-contractors'},
+        'title': {
+            'it': 'Le interfacce fra contractor: dove si rompono e chi le tiene',
+            'en': 'Interfaces between contractors: where they break and who holds them',
+        },
+        'meta_title': {
+            'it': 'Le interfacce fra contractor | Insights',
+            'en': 'Interfaces between contractors | Insights',
+        },
+        'desc': {
+            'it': ('Perché due contratti separati possono fissare la stessa data per una consegna '
+                   'e intendere due cose diverse, e perché l’interfaccia fra due contractor la può '
+                   'tenere soltanto il committente.'),
+            'en': ('Why two separate contracts can set the same date for a handover and mean two '
+                   'different things by it, and why only the client can hold the interface between '
+                   'two contractors.'),
+        },
+        'abstract': {
+            'it': ('Il rapporto di rilievo è dovuto al giorno 120, e i dati vanno all’installatore '
+                   'entro il giorno 120: le date coincidono. Ma un contratto intende la bozza e '
+                   'l’altro i dati definitivi, e fra le due ci sono venti giorni che nessun programma '
+                   'mostra – e di cui risponde soltanto il committente.'),
+            'en': ('The survey report is due on day 120, and the data are due to the installer by '
+                   'day 120: the dates coincide. But one contract means the draft and the other the '
+                   'final data, and between the two lie twenty days that no schedule shows – and for '
+                   'which only the client answers.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Nel contratto del contractor di rilievo, la consegna del rapporto sul tracciato è fissata al giorno 120. Nel contratto dell'installatore del cavo, i dati del rilievo gli vanno forniti entro il giorno 120. Le due date coincidono, e nessuno dei due programmi segnala un problema. Il problema c'è, e vale venti giorni.</p>
+
+<p>Quando un committente acquista per lotti separati – il rilievo da un contractor, l'installazione da un altro – i due contractor non hanno un contratto fra loro. Ciascuno ha un contratto con il committente, scritto in un momento diverso e da chi seguiva quel lotto. L'interfaccia fra i due esiste solo nella sovrapposizione di due testi, e nessuno dei due la descrive per intero.</p>
+
+<h2>La stessa parola in due contratti</h2>
+
+<p>Un'interfaccia si rompe raramente perché qualcuno è in ritardo. Si rompe più spesso perché la stessa parola – «consegna», «dati del rilievo», «contatti» – indica una cosa in un contratto e un'altra nell'altro. Ciascun contractor rispetta il proprio testo, ciascun programma è coerente con il proprio contratto, e la differenza compare soltanto il giorno in cui l'uno passa qualcosa all'altro.</p>
+
+<p>Per questo confrontare le date dei due programmi non basta. Una data dice quando qualcosa viene consegnato; non dice se ciò che viene consegnato è ciò che serve a chi lo riceve. La domanda da porre a ogni interfaccia è un'altra: in quale giorno la cosa esiste nella forma che il contratto di chi la riceve richiede?</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma la struttura contrattuale è ricorrente.</p>
+
+<p>Un cavo di esportazione per un parco eolico. Il contratto A, con il contractor di rilievo, viene aggiudicato al giorno 0. Il contratto B, con l'installatore, al giorno 40. I giorni sono contati da un'origine comune.</p>
+
+<p>Il contratto A prevede che il rapporto sul tracciato sia consegnato in Rev A entro il giorno 120. Il committente ha dieci giorni per i commenti, il contractor altri dieci per emettere la Rev 0: 120 + 10 + 10 = 140. Il rapporto comprende l'elenco dei massi (boulder) di almeno 1,0 m entro 100 m dal tracciato. Il programma del contractor di rilievo mostra la Rev A al giorno 112, otto giorni prima della data contrattuale.</p>
+
+<p>Il contratto B, scritto più tardi, elenca fra le informazioni a carico del committente «i dati definitivi del rilievo del tracciato», da fornire entro il giorno 120, e il piano di rimozione dei massi, che l'installatore avvia al giorno 150. Il suo mezzo di interro richiede di liberare dai massi di almeno 0,5 m un corridoio largo 20 m.</p>
+
+<p>Il terzo passaggio va nell'altro verso. L'installatore termina la posa al giorno 260 e consegna le posizioni as-laid entro 14 giorni, cioè al giorno 274. Il contractor di rilievo esegue il rilievo post-posa, mobilita al giorno 285 e gli servono quelle posizioni tre giorni prima, al giorno 282, per pianificare le linee.</p>
+
+<p>Messe in un registro, le tre interfacce danno questo:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Interfaccia</th><th>Da → a</th><th class="num">Consegna da contratto (giorno)</th><th class="num">Serve entro (giorno)</th><th class="num">Scarto apparente (giorni)</th><th class="num">Disponibile come serve (giorno)</th><th class="num">Scarto reale (giorni)</th></tr>
+</thead>
+<tbody>
+<tr><td>Rapporto sul tracciato</td><td>A → B</td><td class="num">120</td><td class="num">120</td><td class="num">0</td><td class="num">140</td><td class="num">−20</td></tr>
+<tr><td>Massi da 0,5 m</td><td>A → B</td><td class="num">120</td><td class="num">150</td><td class="num">+30</td><td class="num">165</td><td class="num">−15</td></tr>
+<tr><td>Posizioni as-laid</td><td>B → A</td><td class="num">274</td><td class="num">282</td><td class="num">+8</td><td class="num">274</td><td class="num">+8</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Lo scarto apparente confronta le date scritte nei due contratti; quello reale confronta la data di cui ha bisogno chi riceve con il giorno in cui la cosa esiste nella forma che il suo contratto chiede.</p>
+
+<div class="pull"><strong>−20 giorni</strong><span>su un'interfaccia che nei due programmi cade lo stesso giorno</span></div>
+
+<p>Nella prima riga il contratto B chiede i dati definitivi, e i dati definitivi sono la Rev 0: esistono al giorno 140, non al 120. Nella seconda il contratto A non produce affatto ciò che il contratto B richiede, perché si ferma ai massi da 1,0 m. Se ne accorge chi legge la Rev 0, al giorno 140; ripetere la selezione dei contatti sui dati esistenti con il limite di 0,5 m richiede una variante di 25 giorni, e l'elenco arriva al giorno 165, quindici giorni dopo l'avvio del piano di rimozione. La seconda riga è la più insidiosa: sulla carta mostra trenta giorni di margine. Solo la terza è come sembra.</p>
+
+<h2>Chi è in ritardo</h2>
+
+<p>Al giorno 120 il contractor di rilievo consegna la Rev A, come prevede il suo contratto: non è inadempiente. L'installatore non riceve i dati definitivi che il suo contratto gli promette entro quella data, e può chiedere una proroga per il ritardo che ne subisce. Nel contratto B l'unica parte in ritardo è il committente.</p>
+
+<p>È il meccanismo comune dei contratti che elencano informazioni da fornire al contractor: nel Red Book FIDIC del 2017, per esempio, i disegni e le istruzioni in ritardo sono trattati alla Sub-Clause 1.9, e la proroga dei tempi alla 8.5. Che cosa si possa chiedere, e con quali preavvisi, lo dice il testo di ogni contratto; ma il committente non ha nessuno verso cui girare il ritardo, perché il contractor che lo ha generato ha rispettato il proprio.</p>
+
+<p>Da qui la risposta alla seconda domanda del titolo. Un'interfaccia fra due lotti la tiene il committente, perché è l'unica parte che firma entrambi i contratti. Non è una scelta organizzativa: nessun altro ha lo strumento per farlo.</p>
+
+<h2>Le obiezioni che arriveranno</h2>
+
+<p>La prima: l'installatore può cominciare sulla Rev A, che al giorno 120 esiste. Tecnicamente sì, e spesso conviene. Ma il contratto B non lo obbliga, e se fra Rev A e Rev 0 cambia qualcosa, il lavoro rifatto è a carico del committente. Se si vuole che l'installatore parta sulla Rev A, va scritto nel contratto B, insieme alla regola per le modifiche fra le due revisioni.</p>
+
+<p>La seconda: il programma del contractor di rilievo mostra la Rev A al giorno 112, quindi otto giorni di margine ci sono. Sono otto giorni del programma, non del contratto: il contractor può consegnare al giorno 120 senza alcuna inadempienza. Un registro delle interfacce costruito sulle date dei programmi conta margini che nessuno ha l'obbligo di rispettare.</p>
+
+<p>La terza: ripetere la selezione dei contatti a 0,5 m sui dati esistenti è un lavoro d'ufficio, e 25 giorni sono prudenti. Dipende da come sono stati acquisiti i dati. Se frequenza e portata del sonar a scansione laterale, fissate nel contratto A per massi da 1,0 m, non risolvono un oggetto da 0,5 m, la selezione non si ripete: serve un rilievo nuovo, con una nave da rimobilitare. L'esempio assume il caso favorevole, in cui i dati bastano.</p>
+
+<h2>Lo stesso registro, al giorno 40</h2>
+
+<p>Il giorno utile per costruire il registro è quello dell'aggiudicazione del secondo contratto: è il primo in cui entrambi i testi esistono, e l'ultimo in cui correggere l'uno o l'altro non costa una variante a lavoro avviato.</p>
+
+<p>Al giorno 40 il contractor di rilievo non ha ancora acquisito un metro di dato. Aggiungere il limite di 0,5 m al suo scope, e verificare che la configurazione del sonar lo consenta, significa ricevere i massi da 0,5 m con la Rev 0 al giorno 140: dieci giorni prima che servano, invece che quindici dopo. Per la prima riga la scelta è fra due definizioni – la Rev A al giorno 120 con una regola per le modifiche, oppure la Rev 0 al giorno 140 – e si verifica sul programma dell'installatore quale delle due regge. In entrambi i casi la data scritta nel contratto B è quella in cui la cosa esiste davvero.</p>
+
+<h2>Cosa richiedere nella gestione delle interfacce</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Un registro delle interfacce tenuto dal committente.</strong><span class="t"> Aperto all'aggiudicazione del secondo contratto e aggiornato a ogni variante. Nessun contractor può tenerlo al suo posto, perché nessuno vede l'altro contratto.</span></span></li>
+  <li><span class="k">02</span><span><strong>La definizione di ciò che passa, citata da entrambi i contratti.</strong><span class="t"> Parola per parola: revisione, contenuto, soglie, formato. È nel confronto fra le due citazioni che si trova lo scarto, non nel confronto fra le date.</span></span></li>
+  <li><span class="k">03</span><span><strong>Le date contrattuali, non quelle dei programmi.</strong><span class="t"> Il margine che un contractor si tiene nel proprio programma non è un obbligo, e non va contato come margine dell'interfaccia.</span></span></li>
+  <li><span class="k">04</span><span><strong>Il ciclo di revisione contato come durata.</strong><span class="t"> Commenti del committente e riemissione sono giorni di calendario: nell'esempio separano la consegna dai dati definitivi di venti giorni.</span></span></li>
+  <li><span class="k">05</span><span><strong>Un responsabile per ogni interfaccia, dalla parte del committente.</strong><span class="t"> Una persona che conosce entrambi i contratti e che ha il compito di confrontarli, non di inoltrare documenti.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Due programmi coerenti con i rispettivi contratti possono essere incompatibili fra loro, e nessuno dei due lo mostra. L'incompatibilità sta nelle parole, non nelle date: per trovarla bisogna leggere i due testi uno accanto all'altro.</p>
+
+<p>Nell'esempio, due interfacce su tre erano in ritardo senza che nessun contractor fosse inadempiente. Il ritardo era già scritto al giorno 40, ed era il committente l'unico in grado di leggerlo.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>FIDIC, <em>Conditions of Contract for Construction</em> (Red Book), edizione 2017 – Sub-Clause 1.9 sui disegni e le istruzioni in ritardo, Sub-Clause 8.5 sulla proroga dei tempi di completamento.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR segue la pianificazione e il controllo di campagne marine per conto del committente, comprese le interfacce fra contractor diversi. Se state preparando contratti separati per lo stesso progetto, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">In the survey contractor's contract, delivery of the route survey report is set for day 120. In the cable installer's contract, the survey data are to be furnished by day 120. The two dates coincide, and neither schedule flags a problem. There is one, and it is worth twenty days.</p>
+
+<p>When a client procures in separate packages – the survey from one contractor, the installation from another – the two contractors have no contract with each other. Each has a contract with the client, written at a different time and by whoever was handling that package. The interface between them exists only where two texts overlap, and neither describes it in full.</p>
+
+<h2>The same word in two contracts</h2>
+
+<p>An interface rarely breaks because someone is late. It breaks more often because the same word – "delivery", "survey data", "contacts" – means one thing in one contract and another in the other. Each contractor complies with its own text, each schedule is consistent with its own contract, and the difference appears only on the day one passes something to the other.</p>
+
+<p>That is why comparing the dates of the two schedules is not enough. A date says when something is delivered; it does not say whether what is delivered is what the recipient needs. The question to ask of every interface is a different one: on what day does the thing exist in the form the recipient's contract requires?</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are illustrative – built to show the mechanism, not taken from real projects – but the contractual structure is a recurring one.</p>
+
+<p>An export cable for a wind farm. Contract A, with the survey contractor, is awarded on day 0. Contract B, with the installer, on day 40. Days are counted from a common origin.</p>
+
+<p>Contract A requires the route survey report to be delivered at Rev A by day 120. The client has ten days for comments, the contractor another ten to issue Rev 0: 120 + 10 + 10 = 140. The report includes the list of boulders of 1.0 m and above within 100 m of the route. The survey contractor's schedule shows Rev A on day 112, eight days before the contractual date.</p>
+
+<p>Contract B, written later, lists among the client-furnished information "the final route survey data", to be provided by day 120, and the boulder clearance plan, which the installer starts on day 150. Its burial tool requires a 20 m wide corridor cleared of boulders of 0.5 m and above.</p>
+
+<p>The third handover runs the other way. The installer completes the lay on day 260 and delivers the as-laid positions within 14 days, that is on day 274. The survey contractor carries out the post-lay survey, mobilises on day 285 and needs those positions three days earlier, on day 282, to plan the lines.</p>
+
+<p>Set out in a register, the three interfaces give this:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Interface</th><th>From → to</th><th class="num">Contractual delivery (day)</th><th class="num">Needed by (day)</th><th class="num">Apparent margin (days)</th><th class="num">Available as needed (day)</th><th class="num">Real margin (days)</th></tr>
+</thead>
+<tbody>
+<tr><td>Route survey report</td><td>A → B</td><td class="num">120</td><td class="num">120</td><td class="num">0</td><td class="num">140</td><td class="num">−20</td></tr>
+<tr><td>Boulders from 0.5 m</td><td>A → B</td><td class="num">120</td><td class="num">150</td><td class="num">+30</td><td class="num">165</td><td class="num">−15</td></tr>
+<tr><td>As-laid positions</td><td>B → A</td><td class="num">274</td><td class="num">282</td><td class="num">+8</td><td class="num">274</td><td class="num">+8</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The apparent margin compares the dates written in the two contracts; the real one compares the date the recipient needs with the day the thing exists in the form its contract asks for.</p>
+
+<div class="pull"><strong>−20 days</strong><span>on an interface that falls on the same day in both schedules</span></div>
+
+<p>In the first row contract B asks for the final data, and the final data are Rev 0: they exist on day 140, not on day 120. In the second, contract A does not produce what contract B requires at all, because it stops at boulders of 1.0 m. Whoever reads Rev 0 notices on day 140; repeating the contact picking on the existing data with a 0.5 m threshold takes a 25-day variation, and the list arrives on day 165, fifteen days after the clearance plan starts. The second row is the most insidious: on paper it shows thirty days of margin. Only the third is what it seems.</p>
+
+<h2>Who is late</h2>
+
+<p>On day 120 the survey contractor delivers Rev A, as its contract requires: it is not in default. The installer does not receive the final data its contract promises by that date, and can claim an extension for the delay it suffers as a result. Under contract B the only party that is late is the client.</p>
+
+<p>This is the common mechanism of contracts that list information to be furnished to the contractor: in the 2017 FIDIC Red Book, for instance, delayed drawings and instructions are dealt with under Sub-Clause 1.9, and extension of time under 8.5. What can be claimed, and with what notice, is set by the text of each contract; but the client has no one to pass the delay on to, because the contractor that caused it complied with its own.</p>
+
+<p>Hence the answer to the second question in the title. An interface between two packages is held by the client, because it is the only party that signs both contracts. It is not an organisational choice: nobody else has the means to do it.</p>
+
+<h2>The objections that will come</h2>
+
+<p>The first: the installer can start on Rev A, which exists on day 120. Technically yes, and it is often worth doing. But contract B does not oblige it to, and if something changes between Rev A and Rev 0, the rework is for the client's account. If the installer is to start on Rev A, that has to be written into contract B, together with the rule for changes between the two revisions.</p>
+
+<p>The second: the survey contractor's schedule shows Rev A on day 112, so there are eight days of margin. They are eight days of the schedule, not of the contract: the contractor can deliver on day 120 without any default. An interface register built on schedule dates counts margins nobody is obliged to keep.</p>
+
+<p>The third: repeating the contact picking at 0.5 m on the existing data is office work, and 25 days is cautious. It depends on how the data were acquired. If the side scan sonar frequency and range, set in contract A for 1.0 m boulders, do not resolve a 0.5 m object, the picking cannot be repeated: a new survey is needed, with a vessel to remobilise. The example assumes the favourable case, in which the data are enough.</p>
+
+<h2>The same register, on day 40</h2>
+
+<p>The day to build the register is the award of the second contract: it is the first day on which both texts exist, and the last on which correcting one or the other does not cost a variation on work already under way.</p>
+
+<p>On day 40 the survey contractor has not yet acquired a metre of data. Adding the 0.5 m threshold to its scope, and checking that the sonar configuration allows it, means receiving the 0.5 m boulders with Rev 0 on day 140: ten days before they are needed, instead of fifteen after. For the first row the choice is between two definitions – Rev A on day 120 with a rule for changes, or Rev 0 on day 140 – and the installer's schedule shows which of the two holds. Either way, the date written into contract B is the one on which the thing actually exists.</p>
+
+<h2>What to require in interface management</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>An interface register held by the client.</strong><span class="t"> Opened at the award of the second contract and updated with every variation. No contractor can hold it in the client's place, because none of them sees the other contract.</span></span></li>
+  <li><span class="k">02</span><span><strong>The definition of what is handed over, quoted from both contracts.</strong><span class="t"> Word for word: revision, content, thresholds, format. The gap is found by comparing the two quotations, not by comparing the dates.</span></span></li>
+  <li><span class="k">03</span><span><strong>Contractual dates, not schedule dates.</strong><span class="t"> The margin a contractor keeps in its own schedule is not an obligation, and must not be counted as margin on the interface.</span></span></li>
+  <li><span class="k">04</span><span><strong>The review cycle counted as a duration.</strong><span class="t"> Client comments and reissue are calendar days: in the example they put twenty days between delivery and the final data.</span></span></li>
+  <li><span class="k">05</span><span><strong>An owner for every interface, on the client's side.</strong><span class="t"> A person who knows both contracts and whose job is to compare them, not to forward documents.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>Two schedules each consistent with its own contract can be incompatible with each other, and neither shows it. The incompatibility lies in the words, not in the dates: finding it means reading the two texts side by side.</p>
+
+<p>In the example, two interfaces out of three were late without any contractor being in default. The delay was already written on day 40, and the client was the only party able to read it.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>FIDIC, <em>Conditions of Contract for Construction</em> (Red Book), 2017 edition – Sub-Clause 1.9 on delayed drawings or instructions, Sub-Clause 8.5 on extension of time for completion.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR handles the planning and control of marine campaigns on the client's behalf, including the interfaces between different contractors. If you are preparing separate contracts for the same project, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'due-diligence-dataset',
         'topic': 'advisory',
         'date': '2026-10-14',

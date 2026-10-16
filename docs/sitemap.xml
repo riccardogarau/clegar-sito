@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/interfacce-fra-contractor/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/interfacce-fra-contractor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/interfaces-between-contractors/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/interfacce-fra-contractor/"/>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/interfaces-between-contractors/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/interfacce-fra-contractor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/interfaces-between-contractors/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/interfacce-fra-contractor/"/>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/due-diligence-su-un-dataset-ereditato/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/due-diligence-su-un-dataset-ereditato/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/due-diligence-on-an-inherited-dataset/"/>

@@ -400,3 +400,61 @@ but about the data the seller already has, and in what form.
 https://www.clegar.it/en/insights/due-diligence-on-an-inherited-dataset/
 
 #duediligence #subseacables #offshorewind #marinesurvey #technicalassurance
+
+---
+
+## Le interfacce fra contractor – 16 ottobre 2026
+
+### Italiano
+
+Nel contratto del contractor di rilievo, il rapporto sul tracciato è dovuto
+al giorno 120. Nel contratto dell'installatore, i dati del rilievo gli vanno
+forniti entro il giorno 120.
+
+Le date coincidono, e nessuno dei due programmi segnala un problema.
+
+Ma un contratto intende la Rev A, la bozza. L'altro intende "i dati
+definitivi", cioè la Rev 0, che arriva dopo dieci giorni di commenti e dieci
+di riemissione. In un esempio sintetico, quella differenza vale 20 giorni.
+
+Il contractor di rilievo consegna in tempo: non è inadempiente.
+L'installatore non riceve ciò che il suo contratto gli promette, e può
+chiedere una proroga. Nel contratto dell'installatore l'unico in ritardo è il
+committente, e non ha nessuno a cui girare il ritardo.
+
+I due contractor non hanno un contratto fra loro. L'interfaccia esiste solo
+nella sovrapposizione di due testi, e la può tenere soltanto chi li firma
+entrambi. Lo strumento è un registro che cita, parola per parola, che cosa
+ciascun contratto intende per "consegna" – aperto il giorno in cui si
+aggiudica il secondo contratto, quando correggere costa ancora poco.
+
+https://www.clegar.it/insights/interfacce-fra-contractor/
+
+#offshore #projectmanagement #offshorewind #contractmanagement #interfacemanagement
+
+### English
+
+In the survey contractor's contract, the route survey report is due on day
+120. In the installer's contract, the survey data are to be furnished by day
+120.
+
+The dates coincide, and neither schedule flags a problem.
+
+But one contract means Rev A, the draft. The other means "the final data",
+that is Rev 0, which comes after ten days of comments and ten of reissue. In
+an illustrative example, that difference is worth 20 days.
+
+The survey contractor delivers on time: it is not in default. The installer
+does not receive what its contract promises, and can claim an extension.
+Under the installer's contract the only party that is late is the client,
+and it has no one to pass the delay on to.
+
+The two contractors have no contract with each other. The interface exists
+only where two texts overlap, and it can be held only by whoever signs both.
+The tool is a register that quotes, word for word, what each contract means
+by "delivery" – opened on the day the second contract is awarded, while
+correcting still costs little.
+
+https://www.clegar.it/en/insights/interfaces-between-contractors/
+
+#offshore #projectmanagement #offshorewind #contractmanagement #interfacemanagement
