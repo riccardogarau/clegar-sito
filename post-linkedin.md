@@ -458,3 +458,65 @@ correcting still costs little.
 https://www.clegar.it/en/insights/interfaces-between-contractors/
 
 #offshore #projectmanagement #offshorewind #contractmanagement #interfacemanagement
+
+---
+
+## Le lessons learned che si usano – 19 ottobre 2026
+
+### Italiano
+
+A chiusura di una campagna, il lessons learned register riporta: l'acquisizione
+ha richiesto il 31% in più del previsto.
+
+Il dato è corretto. Applicato al progetto successivo, porta a un errore di tre
+giorni.
+
+In un esempio sintetico, un rilievo con sistema trainato: 60 linee da 10 km.
+Il programma prevedeva line turn da 15 minuti; in mare, tra virata e run-in
+del towfish, ne sono serviti 45. Da qui il 31%.
+
+Un anno dopo, stessi chilometri e stesso sistema, ma 240 linee da 2,5 km. Il
+planner maggiora la durata del 31%, come indica il registro. Ma con linee
+lunghe un quarto i line turn quadruplicano, e lo scostamento reale è quasi il
+triplo di quello della nota.
+
+La percentuale non era sbagliata. Divideva un errore che dipende dal numero di
+linee per una durata che dipende dalla geometria di quel progetto, e così se
+ne portava dietro la geometria.
+
+Scritta come parametro – trenta minuti in più per ogni line turn, con il cable
+out e il line plan in cui sono stati misurati – la stessa lezione dà la durata
+corretta. E viene letta se sta nel modello di stima delle durate, non
+nell'archivio del close-out.
+
+https://www.clegar.it/insights/lessons-learned-che-si-usano/
+
+#offshore #marinesurvey #projectmanagement #lessonslearned #operationalexcellence
+
+### English
+
+At the end of a campaign the lessons learned register says: acquisition took
+31% longer than planned.
+
+It is an exact figure. Applied to the next project, it is three days out.
+
+In an illustrative example, a survey with a towed system: 60 lines of 10 km.
+The schedule assumed 15-minute line turns; at sea each took 45. Hence the 31%.
+
+A year later, same kilometres and same system, but 240 lines of 2.5 km. The
+planner increases the duration by 31%, as the register says. But with lines a
+quarter as long there are four times as many turns, and the real overrun is
+almost three times the one in the note.
+
+The percentage was not wrong. It divided an error that depends on the number
+of lines by a duration that depends on the geometry of that project, and so
+carried that geometry with it.
+
+Written as a parameter – thirty extra minutes per turn, with the cable out and
+line pattern under which they were measured – the same lesson gives the right
+duration. And it gets read if it sits in the duration model, not in the
+close-out archive.
+
+https://www.clegar.it/en/insights/lessons-learned-that-get-used/
+
+#offshore #marinesurvey #projectmanagement #lessonslearned #operationalexcellence

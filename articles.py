@@ -15,6 +15,227 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'lessons-learned',
+        'topic': 'excellence',
+        'date': '2026-10-19',
+        'slug': {'it': 'lessons-learned-che-si-usano',
+                 'en': 'lessons-learned-that-get-used'},
+        'title': {
+            'it': 'Le lessons learned che nessuno rilegge, e come si scrive una nota che verrà usata',
+            'en': 'The lessons learned nobody rereads, and how to write a note that will be used',
+        },
+        'meta_title': {
+            'it': 'Lessons learned che si usano | Insights',
+            'en': 'Lessons learned that get used | Insights',
+        },
+        'desc': {
+            'it': ('Perché una lezione registrata come percentuale di ritardo sbaglia quando la si '
+                   'applica al progetto successivo, e come si scrive una nota che arriva nel '
+                   'documento in cui si prende la decisione.'),
+            'en': ('Why a lesson recorded as a percentage overrun goes wrong when it is applied to the '
+                   'next project, and how to write a note that reaches the document in which the '
+                   'decision is taken.'),
+        },
+        'abstract': {
+            'it': ('A fine campagna il registro dice: l’acquisizione ha richiesto il 31% in più del '
+                   'previsto. È un dato esatto. Applicato al progetto successivo, con linee più '
+                   'corte, sottostima la durata di 76 ore – mentre lo stesso errore, scritto come '
+                   'trenta minuti in più per ogni line turn, dà la durata corretta.'),
+            'en': ('At the end of a campaign the register says: acquisition took 31% longer than '
+                   'planned. It is an exact figure. Applied to the next project, with shorter lines, '
+                   'it underestimates the duration by 76 hours – while the same error, written as '
+                   'thirty extra minutes per line turn, gives the right duration.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">A chiusura di una campagna, nel lessons learned register compare una riga come questa: «L'acquisizione ha richiesto il 31% in più del previsto: nei prossimi progetti maggiorare del 31% le durate di acquisizione». Il dato è corretto e misurato. Applicato al progetto successivo, però, porta a un errore di tre giorni.</p>
+
+<p>Delle lessons learned si dice di solito che nessuno le rilegge. È vero, ma c'è un secondo problema, più costoso perché ha l'aspetto di un uso corretto: una nota che registra un risultato – una percentuale, un ritardo, un costo – viene applicata a un progetto diverso da quello in cui è nata, e ne trascina con sé la geometria.</p>
+
+<h2>Perché il registro non viene riletto</h2>
+
+<p>Il registro si compila al close-out, quando chi ha seguito la campagna ricorda ancora che cosa è successo. La decisione che la nota dovrebbe influenzare – la durata a programma, la production rate in una valutazione di gara – si prende invece mesi dopo, spesso da persone diverse e in un altro documento. Chi prepara la gara successiva non va a cercare nell'archivio: lavora sul proprio modello di stima delle durate.</p>
+
+<p>È lo schema descritto anche dalla sesta edizione del PMBOK Guide del PMI: il lessons learned register è un output del processo Manage Project Knowledge e, alla chiusura del progetto, il suo contenuto viene trasferito nel repository dell'organizzazione. Quello che nessun registro garantisce è il percorso inverso, dal repository al documento in cui si prende la decisione successiva.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma il meccanismo si ripresenta ogni volta che una nota registra una percentuale.</p>
+
+<p>Progetto 1: rilievo geofisico di un'area con un sistema trainato, side scan sonar e sub-bottom profiler. Sessanta linee da 10 km, per un totale di 600 km, acquisite a 4 nodi, ossia 7,408 km/h: 600 / 7,408 = 81,0 ore in linea. Il programma prevedeva un line turn per linea, da 15 minuti. In mare ne sono serviti 45: con il towfish in acqua la nave deve virare con un raggio ampio, e dopo la virata serve un run-in, il tratto di avvicinamento in cui il towfish si stabilizza in quota e in rotta prima dello start of line.</p>
+
+<p>Le durate sono al netto di meteo e guasti, che il daily report registra in voci separate. La durata pianificata era 81,0 + 60 × 0,25 = 96,0 ore; quella effettiva 81,0 + 60 × 0,75 = 126,0 ore. Trenta ore in più, il 31%: è questa la riga che finisce nel registro.</p>
+
+<p>Progetto 2, un anno dopo: stesso sistema, stessa profondità, stessa lunghezza di cavo filato (cable out), ma un'area di forma diversa. Le linee sono 240 da 2,5 km: sempre 600 km, sempre 81,0 ore in linea. Il modello di stima usa ancora 15 minuti per line turn, e il planner applica la nota del progetto 1.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Voce</th><th class="num">Progetto 1</th><th class="num">Progetto 2</th></tr>
+</thead>
+<tbody>
+<tr><td>Linee (n.)</td><td class="num">60</td><td class="num">240</td></tr>
+<tr><td>Lunghezza di linea (km)</td><td class="num">10,0</td><td class="num">2,5</td></tr>
+<tr><td>Chilometri di linea</td><td class="num">600</td><td class="num">600</td></tr>
+<tr><td>Tempo in linea (h)</td><td class="num">81,0</td><td class="num">81,0</td></tr>
+<tr><td>Line turn pianificati, 15 min (h)</td><td class="num">15,0</td><td class="num">60,0</td></tr>
+<tr><td>Durata pianificata (h)</td><td class="num">96,0</td><td class="num">141,0</td></tr>
+<tr><td>Quota dei line turn sulla durata pianificata (%)</td><td class="num">16</td><td class="num">43</td></tr>
+<tr><td>Line turn effettivi, 45 min (h)</td><td class="num">45,0</td><td class="num">180,0</td></tr>
+<tr><td>Durata effettiva (h)</td><td class="num">126,0</td><td class="num">261,0</td></tr>
+<tr><td>Scostamento (%)</td><td class="num">+31</td><td class="num">+85</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>+31%</strong><span>lo scostamento registrato nella nota, che sul progetto successivo diventa +85%</span></div>
+
+<p>Con la nota in percentuale, la durata prevista per il progetto 2 è 141,0 × 1,31 = 184,7 ore. Quella effettiva è 261,0: mancano 76,3 ore, cioè 3,2 giorni di nave in operazioni continue. La stessa lezione formulata diversamente – «trenta minuti in più per ogni line turn» – dà 141,0 + 240 × 0,5 = 261,0 ore: esattamente la durata reale.</p>
+
+<h2>Perché la percentuale non è trasferibile</h2>
+
+<p>La durata di acquisizione è la somma di due termini: il tempo in linea, che dipende dai chilometri, e il tempo dei line turn, che dipende dal numero di linee. Nel progetto 1 l'errore stava interamente nel secondo termine. La percentuale lo divide per la durata totale e in questo modo lo lega alla geometria di quel progetto: il 31% vale solo dove i line turn pesano quanto pesavano lì.</p>
+
+<p>Nel progetto 1 i line turn erano il 16% della durata pianificata, nel progetto 2 il 43%. A parità di chilometri, linee lunghe un quarto quadruplicano i line turn, e con loro le ore perse. La nota in percentuale non era sbagliata: misurava un rapporto in cui solo uno dei due termini si trasferisce da un progetto all'altro.</p>
+
+<h2>Le obiezioni prevedibili</h2>
+
+<p>La prima: 45 minuti valgono per quella nave e quel sistema, non per il contractor successivo. È vero, ed è proprio per questo che la nota deve registrare le condizioni in cui il valore è stato misurato. Non va copiata nell'offerta di un altro contractor: serve a porgli una domanda – quale durata di line turn assumete, e con quanto cable out? – e a riconoscere un valore di 15 minuti quando compare. Se nel progetto successivo la profondità è minore e il cable out più corto, si accorcia anche il run-in: una nota espressa per line turn si può correggere, una percentuale no.</p>
+
+<p>La seconda: la durata dei line turn la conosce il contractor, ed è un rischio suo. Dipende dal contratto. In un contratto a day rate le ore in più le paga il committente. In un lump sum le ha prezzate il contractor, ma in gara il committente confronta anche le durate: un'offerta che assume line turn da 15 minuti appare più breve di una che ne assume 45, e rischia di vincere per la ragione sbagliata.</p>
+
+<p>La terza: le linee si possono acquisire in skip-line, saltandone una a ogni virata, così che la nave viri con il raggio ampio richiesto dal sistema trainato senza dover compiere un giro completo. È vero, e cambia la durata del line turn. Per questo la nota registra anche il line plan con cui le linee sono state acquisite: un valore misurato con uno schema non è confrontabile con un piano che ne usa un altro.</p>
+
+<h2>Come si scrive una nota che verrà usata</h2>
+
+<p>Il primo problema – nessuno la rilegge – non si risolve con un registro più ordinato, ma scegliendo dove la nota va a finire. Una nota viene letta se sta nel documento in cui si prende la decisione successiva: la tabella dei parametri del modello di stima, la checklist di valutazione delle offerte, la specifica tecnica. Il secondo si risolve con la forma: un parametro, non un risultato.</p>
+
+<p>Riscritta così, la riga del progetto 1 diventa: durata del line turn con sistema trainato, run-in compreso; pianificata 15 minuti, misurata 45, come media dei 60 line turn ricavata dagli orari di end of line e start of line; valida per il cable out, la velocità e il line plan del progetto, riportati nella nota; da inserire nella tabella dei parametri del modello di stima, sotto la responsabilità di una persona indicata per nome.</p>
+
+<h2>Cosa richiedere</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Ogni nota espressa come parametro, non come risultato.</strong><span class="t"> Il valore pianificato, quello misurato e l'unità a cui si riferisce: per line turn, per linea, per campione, per giornata. Un risultato in percentuale si porta dietro la geometria del progetto che l'ha prodotto.</span></span></li>
+  <li><span class="k">02</span><span><strong>Le condizioni da cui il valore dipende.</strong><span class="t"> Sistema, cable out, profondità, line plan: tutto ciò che, se cambia, rende il valore non più confrontabile.</span></span></li>
+  <li><span class="k">03</span><span><strong>Il documento in cui la nota confluisce.</strong><span class="t"> Il modello di stima delle durate, la checklist di gara, la specifica tecnica. Una nota che non ha un posto nel documento della decisione successiva resta in archivio.</span></span></li>
+  <li><span class="k">04</span><span><strong>Nella richiesta d'offerta, la production rate scomposta.</strong><span class="t"> Velocità di acquisizione, durata del line turn run-in compreso, numero di linee. Una production rate espressa in chilometri al giorno nasconde la seconda voce.</span></span></li>
+  <li><span class="k">05</span><span><strong>Nel daily report, gli orari di start of line e end of line.</strong><span class="t"> Senza questi la durata dei line turn non si può misurare, e la nota per il progetto successivo torna a essere un'impressione.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Una lezione è utile se cambia una decisione futura, e una decisione futura si prende su un progetto diverso. Il 31% era un dato esatto per il progetto 1; trasferito, sbagliava di 76 ore. Lo stesso errore, scritto come trenta minuti in più per ogni line turn, dava la durata corretta del progetto 2.</p>
+
+<p>Prima di chiudere il registro, a ogni riga va quindi posta una domanda: su un progetto con una geometria diversa, chi la legge saprebbe che cosa cambiare, e in quale documento?</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>PMI, <em>A Guide to the Project Management Body of Knowledge</em> (PMBOK Guide), sesta edizione, 2017 – processo 4.4 Manage Project Knowledge e lessons learned register.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR aiuta i committenti a misurare le proprie campagne e a riportare quanto hanno insegnato nelle specifiche e nei modelli di stima del progetto successivo. Se state chiudendo una campagna, o preparando la gara per la prossima, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">At the end of a campaign the lessons learned register carries one line: "Acquisition took 31% longer than planned: on future projects increase acquisition durations by 31%." It is true, it is measured, and applied to the next project it is three days out.</p>
+
+<p>Lessons learned have two faults, and usually only the first is discussed: nobody rereads them. The second costs more, because it looks like correct use. A note that records an outcome – a percentage, a delay, a cost – is, when reread, applied to a project other than the one it came from, and it carries the geometry of the first one with it.</p>
+
+<h2>Why the register is not reread</h2>
+
+<p>The register is filled in at close-out, while whoever ran the campaign still knows what happened. The decision the note ought to change – the duration in the schedule, the production rate in a tender evaluation – is taken months later, often by other people, in another document. Whoever prepares the next tender does not open the archive: they open their own duration model.</p>
+
+<p>The pattern is the one also described by PMI's PMBOK Guide, in its sixth edition: the lessons learned register is an output of the Manage Project Knowledge process, and at project closure its content is transferred to the organisation's repository. The step no register guarantees is the return trip: from the repository to the document in which the next decision is taken.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are illustrative – built to show the mechanism, not taken from real projects – but the mechanism appears every time a note records a percentage.</p>
+
+<p>Project 1: a geophysical survey of an area with a towed system, side scan sonar and sub-bottom profiler. Sixty lines of 10 km, 600 line km in all, acquired at 4 knots, that is 7.408 km/h: 600 / 7.408 = 81.0 hours on line. The schedule assumed one line turn per line, of 15 minutes. At sea each took 45: with the system in the water the vessel turns wide, and after the turn a run-in is needed for the towfish to settle in height and heading before start of line.</p>
+
+<p>The durations exclude weather and breakdowns, which the daily report records under their own headings. The planned duration was 81.0 + 60 × 0.25 = 96.0 hours; the actual one 81.0 + 60 × 0.75 = 126.0 hours. Thirty hours more, 31%: that is the line that goes into the register.</p>
+
+<p>Project 2, a year later: same system, same water depth, same length of cable out, but an area of a different shape. There are 240 lines of 2.5 km: still 600 km, still 81.0 hours on line. The duration model still uses 15 minutes per turn, and the planner applies the note from project 1.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Item</th><th class="num">Project 1</th><th class="num">Project 2</th></tr>
+</thead>
+<tbody>
+<tr><td>Lines (no.)</td><td class="num">60</td><td class="num">240</td></tr>
+<tr><td>Line length (km)</td><td class="num">10.0</td><td class="num">2.5</td></tr>
+<tr><td>Line kilometres</td><td class="num">600</td><td class="num">600</td></tr>
+<tr><td>Time on line (h)</td><td class="num">81.0</td><td class="num">81.0</td></tr>
+<tr><td>Planned turns, 15 min (h)</td><td class="num">15.0</td><td class="num">60.0</td></tr>
+<tr><td>Planned duration (h)</td><td class="num">96.0</td><td class="num">141.0</td></tr>
+<tr><td>Share of turns in planned duration (%)</td><td class="num">16</td><td class="num">43</td></tr>
+<tr><td>Actual turns, 45 min (h)</td><td class="num">45.0</td><td class="num">180.0</td></tr>
+<tr><td>Actual duration (h)</td><td class="num">126.0</td><td class="num">261.0</td></tr>
+<tr><td>Overrun (%)</td><td class="num">+31</td><td class="num">+85</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>+31%</strong><span>the overrun the note recorded, which on the next project becomes +85%</span></div>
+
+<p>With the percentage note, the forecast duration of project 2 is 141.0 × 1.31 = 184.7 hours. The actual one is 261.0: 76.3 hours short, 3.2 days of vessel time at continuous operations. The same lesson written another way – "thirty extra minutes per turn" – gives 141.0 + 240 × 0.5 = 261.0 hours: the exact duration.</p>
+
+<h2>Why the percentage does not transfer</h2>
+
+<p>Acquisition duration is the sum of two terms: time on line, which depends on the kilometres, and turn time, which depends on the number of lines. The error on project 1 lay entirely in the second term. The percentage divides it by the total duration, and so ties it to the geometry of that project: 31% holds only where turns weigh as much as they did there.</p>
+
+<p>On project 1 the turns were 16% of the planned duration, on project 2 43%. For the same kilometres, lines a quarter as long multiply the turns by four, and with them the hours lost. The percentage note was not wrong: it measured a ratio in which only one of the two terms carries over from one project to the next.</p>
+
+<h2>The objections that will come</h2>
+
+<p>The first: 45 minutes holds for that vessel and that system, not for the next contractor. True, and that is why the note records the conditions under which the value was measured. It is not copied into another contractor's bid: it is used to ask them a question – what turn time do you assume, and with how much cable out? – and to recognise a 15-minute value when it appears. If on the next project the water is shallower and the cable out shorter, the run-in shortens too: with a per-turn note it can be corrected, with a percentage it cannot.</p>
+
+<p>The second: the contractor knows its turn times, and they are its risk. That depends on the contract. On a day rate, the extra hours are paid by the client. On a lump sum the contractor has priced them, but at tender the client also compares durations: a bid assuming 15-minute turns looks shorter than one assuming 45, and may win for the wrong reason.</p>
+
+<p>The third: lines can be run skipping one at each turn, so that the vessel turns with the wide radius the towed system needs without having to sail a loop. True, and it changes the turn time. That is why the note also records the pattern in which the lines were run: a value measured with one pattern cannot be compared with a plan that uses another.</p>
+
+<h2>How to write a note that will be used</h2>
+
+<p>The first fault – nobody rereads – is corrected by where the note ends up, not by a tidier register. A note is read if it sits in the document in which the next decision is taken: the parameter table of the duration model, the tender evaluation checklist, the specification. The second fault is corrected by its form: a parameter, not an outcome.</p>
+
+<p>Rewritten that way, the line from project 1 becomes: turn time with a towed system, including run-in; planned 15 minutes, measured 45, mean of the 60 turns taken from the end-of-line and start-of-line times; valid for the cable out, speed and line pattern of the project, which the note records; to be entered in the parameter table of the duration model, by a person named in the note.</p>
+
+<h2>What to require</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Every note written as a parameter, not as an outcome.</strong><span class="t"> The planned value, the measured one and the unit it refers to: per turn, per line, per sample, per day. An outcome expressed as a percentage carries the geometry of the project that produced it.</span></span></li>
+  <li><span class="k">02</span><span><strong>The conditions the value depends on.</strong><span class="t"> System, cable out, water depth, line pattern: everything that, if it changes, makes the value no longer comparable.</span></span></li>
+  <li><span class="k">03</span><span><strong>The document the note goes into.</strong><span class="t"> The duration model, the tender checklist, the specification. A note with no place in the document of the next decision stays in the archive.</span></span></li>
+  <li><span class="k">04</span><span><strong>In the request for tender, the production rate broken down.</strong><span class="t"> Acquisition speed, turn time including run-in, number of lines. A production rate given in kilometres per day hides the second item.</span></span></li>
+  <li><span class="k">05</span><span><strong>In the daily report, the start-of-line and end-of-line times.</strong><span class="t"> Without them turn time cannot be measured, and the note for the next project goes back to being an impression.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>A lesson is useful if it changes a future decision, and a future decision is taken on a different project. The 31% was an exact figure for project 1; carried over, it was 76 hours out. The same error, written as thirty extra minutes per turn, gave the right duration for project 2.</p>
+
+<p>The question to ask of every line in the register, before closing it, is therefore this: on a project with a different geometry, would whoever reads it know what to change, and in which document?</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>PMI, <em>A Guide to the Project Management Body of Knowledge</em> (PMBOK Guide), sixth edition, 2017 – process 4.4 Manage Project Knowledge and the lessons learned register.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR helps clients measure their own campaigns and carry what they taught into the specifications and duration models of the next project. If you are closing out a campaign, or preparing the tender for the next one, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'interfacce-contractor',
         'topic': 'pm',
         'date': '2026-10-16',
