@@ -40,18 +40,22 @@ Già online, da non riprendere:
 | L'accettazione della mobilitazione, voce per voce | Owner's Engineering | riferimento indipendente e più preciso della tolleranza, errore costante invisibile agli incroci, bordo libero comune a multibeam e single-beam, volume di dragaggio, rimisurare finché passa |
 | Due diligence su un dataset ereditato | Technical Advisory | copertura del cavo come differenza fra quota del cavo e fondale mobile, sand wave, quote assolute nel data room, costante verticale fra due rilievi, incertezza in pianta sui fianchi |
 | Le interfacce fra contractor | Project Management | contratti separati, Rev A contro dati definitivi, ciclo di revisione come durata, date contrattuali contro date dei programmi, registro delle interfacce tenuto dal committente |
+| Le lessons learned che si usano | Operational Excellence | lezione come percentuale contro parametro, tempo in linea più line turn, run-in del towfish, production rate scomposta in gara, posto della nota nel modello di stima |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
 ## Arretrato
 
-### Operational Excellence — 2 articoli pubblicati
+### Operational Excellence — 3 articoli pubblicati
 - [x] La classificazione del tempo nave: chi paga la giornata in cui non si è lavorato — 2026-10-05
 - [x] Readiness review: che cosa si verifica prima che la nave parta — 2026-10-05
   *(tratta persone, documenti, permessi, interfacce e contingenze. La verifica
   della strumentazione in banchina resta all'articolo sull'accettazione della
   mobilitazione, che quindi non si sovrappone.)*
-- [ ] Le lessons learned che nessuno rilegge, e come si scrive una nota che verrà usata
+- [x] Le lessons learned che nessuno rilegge, e come si scrive una nota che verrà usata — 2026-10-19
+  *(l'esempio sono le durate di acquisizione e i line turn di un sistema
+  trainato: non riprende la classificazione del tempo nave, che riguarda chi
+  paga una giornata, né la readiness review.)*
 
 ### Owner's Engineering — 2 articoli pubblicati
 - [x] Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda — 2026-10-08
