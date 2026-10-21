@@ -520,3 +520,69 @@ close-out archive.
 https://www.clegar.it/en/insights/lessons-learned-that-get-used/
 
 #offshore #marinesurvey #projectmanagement #lessonslearned #operationalexcellence
+
+---
+
+## Che cosa decide in giornata un rappresentante a bordo – 21 ottobre 2026
+
+### Italiano
+
+Per diciotto minuti il posizionamento perde le correzioni. Il contractor
+assicura: lo recuperiamo in post-processing.
+
+Il rappresentante del committente a bordo ha una decisione da prendere, e
+nessuno a terra la prenderà al suo posto: quando a terra se ne parlerà, la
+nave sarà altrove.
+
+Rifare un tratto di linea costa il tempo per acquisirlo più il tempo per
+tornarci, e il secondo cresce man mano che la nave si allontana. Il risultato
+del post-processing, invece, arriva tardi per costruzione: le orbite e gli
+orologi precisi su cui si basa sono disponibili ore dopo la fine della linea.
+
+In un esempio sintetico, aspettare il risultato e scoprire che il recupero
+non è riuscito costa più del triplo del tempo nave che si sarebbe speso
+rifacendo il tratto subito.
+
+La scelta non si prende a intuito. Il post-processing lavora sulle
+osservazioni grezze del ricevitore: se mancano per quei diciotto minuti, non
+c'è niente da recuperare. È una verifica di pochi minuti, e si fa prima che la
+nave lasci la linea.
+
+Il resto va scritto nella specifica: il dato fuori criterio si rifà prima di
+lasciare l'area, salvo che il recupero sia dimostrato entro una scadenza
+legata alla posizione della nave.
+
+https://www.clegar.it/insights/che-cosa-decide-il-rappresentante-a-bordo/
+
+#offshore #marinesurvey #hydrography #clientrepresentative #ownersengineering
+
+### English
+
+For eighteen minutes the positioning loses its corrections. The contractor
+says: we will recover it in post-processing.
+
+The client representative on board has a decision to take, and nobody ashore
+will take it for them: by the time it is discussed ashore, the vessel will be
+elsewhere.
+
+Rerunning a segment of line costs the time to acquire it plus the time to get
+back to it, and the second grows as the vessel moves away. The post-processing
+result, on the other hand, comes late by construction: the precise orbits and
+clocks it relies on are available hours after the end of the line.
+
+In an illustrative example, waiting for the result and finding that the
+recovery failed costs more than three times the vessel time that rerunning the
+segment at once would have taken.
+
+The choice is not a hunch. Post-processing works on the receiver's raw
+observations: if they are missing for those eighteen minutes, there is nothing
+to recover. It is a check of a few minutes, made before the vessel leaves the
+line.
+
+The rest belongs in the specification: out-of-criterion data are rerun before
+leaving the area, unless recovery is demonstrated by a deadline tied to the
+vessel's position.
+
+https://www.clegar.it/en/insights/what-the-client-representative-decides-on-board/
+
+#offshore #marinesurvey #hydrography #clientrepresentative #ownersengineering

@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/che-cosa-decide-il-rappresentante-a-bordo/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/che-cosa-decide-il-rappresentante-a-bordo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/what-the-client-representative-decides-on-board/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/che-cosa-decide-il-rappresentante-a-bordo/"/>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/what-the-client-representative-decides-on-board/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/che-cosa-decide-il-rappresentante-a-bordo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/what-the-client-representative-decides-on-board/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/che-cosa-decide-il-rappresentante-a-bordo/"/>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/lessons-learned-che-si-usano/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/lessons-learned-che-si-usano/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/lessons-learned-that-get-used/"/>

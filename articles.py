@@ -15,6 +15,211 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'rappresentante-a-bordo',
+        'topic': 'owners',
+        'date': '2026-10-21',
+        'slug': {'it': 'che-cosa-decide-il-rappresentante-a-bordo',
+                 'en': 'what-the-client-representative-decides-on-board'},
+        'title': {
+            'it': 'Che cosa decide in giornata un rappresentante a bordo: il tratto da rifare prima di lasciare l’area',
+            'en': 'What a client representative decides on board within the day: the segment to rerun before leaving the area',
+        },
+        'meta_title': {
+            'it': 'Che cosa decide il rappresentante a bordo | Insights',
+            'en': 'What the client representative decides on board | Insights',
+        },
+        'desc': {
+            'it': ('Perché la decisione su un tratto di dato fuori specifica costa meno se si prende '
+                   'in giornata, che cosa si verifica a bordo prima di accettare una promessa di '
+                   'post-processing, e che cosa scrivere nella specifica.'),
+            'en': ('Why a decision on a segment of out-of-specification data costs less when it is '
+                   'taken within the day, what is checked on board before accepting a promise of '
+                   'post-processing, and what to write in the specification.'),
+        },
+        'abstract': {
+            'it': ('Per diciotto minuti il posizionamento perde le correzioni, e il contractor assicura '
+                   'che il post-processing recupererà il tratto. Rifarlo subito costa 1,3 ore di nave; '
+                   'rifarlo dopo aver atteso il risultato ne costa 4,5. A bordo la scelta non si prende '
+                   'a intuito: dipende da un dato che si controlla in pochi minuti.'),
+            'en': ('For eighteen minutes the positioning loses its corrections, and the contractor '
+                   'assures that post-processing will recover the segment. Rerunning it at once costs '
+                   '1.3 vessel hours; rerunning it after waiting for the result costs 4.5. On board the '
+                   'choice is not a hunch: it turns on a fact that can be checked in minutes.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Alle 14:10 il sistema di posizionamento perde le correzioni in tempo reale, e le riacquista alle 14:28. Il contractor comunica che il tratto verrà recuperato in post-processing e propone di proseguire. Il rappresentante del committente a bordo ha davanti una decisione che nessuno a terra prenderà al suo posto, perché quando a terra se ne parlerà la nave sarà altrove.</p>
+
+<p>Di un rappresentante a bordo si descrivono di solito i compiti: controfirmare il rapporto giornaliero, assistere alle calibrazioni, seguire il QC dei dati. Si dice meno che cosa può decidere, e quanto costa una decisione rinviata. Questo articolo prende un caso solo e lo segue fino in fondo: un tratto di linea fuori specifica, e la scelta fra rifarlo subito e aspettare che il post-processing lo recuperi.</p>
+
+<h2>Perché la decisione ha una scadenza</h2>
+
+<p>Il costo di rifare un tratto di linea non è fisso. È il tempo per acquisirlo più il tempo per tornarci, e il secondo termine cresce man mano che la nave si allontana. Alla fine della linea il tratto è a pochi chilometri; un giorno dopo la nave lavora su un altro blocco del corridoio; dopo la smobilitazione rifarlo richiede una nave in mare apposta, e di solito non si rifà.</p>
+
+<p>Il risultato del post-processing, invece, arriva tardi per costruzione. Un post-processing PPP si basa su orbite e orologi precisi dei satelliti: i prodotti rapid dell'International GNSS Service (IGS) sono disponibili circa 17 ore dopo la fine del giorno UTC, i final circa 13 giorni dopo la fine della settimana. Esistono prodotti più rapidi, anche commerciali, e metodi che non ne dipendono, ma il risultato arriva comunque ore dopo la fine della linea, non prima. Chi aspetta di sapere se il recupero è riuscito decide quando rifare il tratto costa già di più.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma la situazione si ripresenta in ogni campagna che lavora con correzioni in tempo reale.</p>
+
+<p>Rilievo di un corridoio di cavo con multibeam a scafo, acquisito a 4 nodi, cioè 7,408 km/h. La specifica chiede un'incertezza orizzontale di posizionamento non superiore a 1,0 m al 95%. Dalle 14:10 alle 14:28 il sistema perde le correzioni e l'incertezza stimata dal sistema stesso sale a 2,5 m: diciotto minuti di linea, 18 / 60 × 7,408 = 2,2 km di dato fuori specifica.</p>
+
+<p>Per rifarlo si acquisisce il tratto con 0,5 km di sovrapposizione a ciascun capo, 3,2 km in tutto, che a 4 nodi richiedono 0,43 ore. A questo si aggiungono un line turn con run-in, 0,25 ore, e il transito di andata e ritorno a 10 nodi, cioè 18,52 km/h. Alla fine della linea la nave è a 6 km dal tratto. Trenta ore dopo, quando nell'esempio il contractor consegna il tratto rielaborato, la nave lavora su un blocco a 35 km.</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Voce</th><th class="num">Subito, a fine linea</th><th class="num">Dopo 30 ore</th></tr>
+</thead>
+<tbody>
+<tr><td>Distanza dal tratto (km)</td><td class="num">6</td><td class="num">35</td></tr>
+<tr><td>Transito andata e ritorno a 10 nodi (h)</td><td class="num">0,65</td><td class="num">3,78</td></tr>
+<tr><td>Line turn e run-in (h)</td><td class="num">0,25</td><td class="num">0,25</td></tr>
+<tr><td>Tratto di 3,2 km a 4 nodi (h)</td><td class="num">0,43</td><td class="num">0,43</td></tr>
+<tr><td>Tempo nave per rifare il tratto (h)</td><td class="num">1,33</td><td class="num">4,46</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>4,5 ore</strong><span>di nave per rifare il tratto dopo aver atteso il post-processing, contro 1,3 decidendo a fine linea</span></div>
+
+<p>Aspettare non costa sempre 4,5 ore: le costa solo se il recupero non riesce. Se riesce, il tratto è buono e non si rifà niente. Il confronto corretto è quindi fra 1,33 ore certe e 4,46 ore moltiplicate per la probabilità che il recupero fallisca. Le due quantità si equivalgono quando quella probabilità vale 1,33 / 4,46, circa il 30%. Sopra il 30% conviene rifare subito, sotto conviene aspettare.</p>
+
+<h2>Che cosa si controlla in pochi minuti</h2>
+
+<p>Nessuno a bordo sa stimare una probabilità di recupero con quella precisione, e non serve. La probabilità dipende in larga parte da un fatto che si verifica subito: se il ricevitore ha registrato le osservazioni grezze per tutto l'intervallo, con un margine prima e dopo. Il post-processing lavora su quelle. Se mancano, o hanno buchi proprio nei diciotto minuti, non c'è niente da rielaborare e la probabilità di fallimento è uno: il tratto va rifatto adesso.</p>
+
+<p>Se le osservazioni ci sono e sono continue, la probabilità scende molto, e aspettare diventa ragionevole – a una condizione: che il risultato arrivi mentre la nave è ancora vicina. È lì che una decisione presa in giornata diventa una scadenza, e non un atto di fiducia.</p>
+
+<p>La verifica richiede al contractor pochi minuti: l'elenco dei file grezzi del ricevitore con orario di inizio e di fine. È una domanda che il rappresentante può fare prima che la nave lasci la linea, e la risposta decide la questione meglio di qualunque stima.</p>
+
+<h2>Le obiezioni che arriveranno</h2>
+
+<p>La prima: il post-processing recupera sempre questi tratti. Spesso è vero, e l'esempio non lo nega: con le osservazioni grezze registrate, aspettare è la scelta più economica. L'obiezione però risponde a un'altra domanda. La questione a bordo non è se il recupero di solito riesca, ma se in questo intervallo esistono i dati che lo rendono possibile – e la risposta si può avere prima di decidere.</p>
+
+<p>La seconda: con prodotti più rapidi il risultato arriva in poche ore. In quel caso la nave è più vicina, il costo dell'attesa scende, e aspettare conviene più spesso. È un motivo in più per scrivere la scadenza nella specifica: a decidere quanto costa aspettare non è il metodo di elaborazione, ma il momento in cui il risultato arriva rispetto alla posizione della nave.</p>
+
+<p>La terza: il rappresentante non ha l'autorità per ordinare lavoro aggiuntivo, che è una variazione e si decide a terra. È corretto, ed è la ragione per cui la decisione va preparata nel contratto. Se la specifica stabilisce che il dato fuori criterio si rifà prima di lasciare l'area, il rappresentante non ordina niente: applica una regola già firmata. Chi paga le ore del reline è una questione di contratto, come per ogni altra categoria di tempo nave – l'articolo sulla classificazione del tempo nave tratta proprio quella. Qui conta un'altra cosa: se il recupero fallisce, le 3,1 ore di differenza si perdono, a carico di chiunque siano.</p>
+
+<h2>Che cosa resta a terra</h2>
+
+<p>L'esempio mostra la distinzione che vale anche per il resto del lavoro di un rappresentante. A bordo si decide ciò che si confronta con un criterio scritto e si verifica sul posto: un dato rispetto a una soglia, la presenza dei file da cui dipende una promessa, una scadenza rispetto alla posizione della nave. A terra si decide ciò che cambia lo scope, il costo o il programma oltre quanto il contratto ha previsto. Una specifica che non traccia questo confine lascia il rappresentante a scegliere fra due errori: decidere ciò che non gli compete, o rinviare a terra ciò che a terra arriva troppo tardi.</p>
+
+<h2>Cosa richiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Il criterio di accettazione misurabile a bordo.</strong><span class="t"> Una soglia sull'incertezza di posizionamento che il sistema registra in continuo, non un giudizio da formulare a fine campagna. Se il criterio si verifica solo in ufficio, a bordo non c'è niente da decidere.</span></span></li>
+  <li><span class="k">02</span><span><strong>La regola sul dato fuori criterio.</strong><span class="t"> Si rifà prima di lasciare l'area, salvo che il contractor dimostri il recupero entro una scadenza fissata. Con la regola scritta, il reline non è una variazione ma l'applicazione del contratto.</span></span></li>
+  <li><span class="k">03</span><span><strong>La scadenza legata alla posizione della nave.</strong><span class="t"> Il risultato del post-processing va consegnato prima che la nave si sposti oltre una distanza, o un numero di ore, indicati nella specifica. Una scadenza fissata alla consegna finale equivale a non averne una.</span></span></li>
+  <li><span class="k">04</span><span><strong>La registrazione continua delle osservazioni grezze.</strong><span class="t"> Per tutta l'acquisizione, con l'elenco dei file e dei loro orari disponibile al rappresentante su richiesta. È la condizione da cui dipende ogni promessa di recupero.</span></span></li>
+  <li><span class="k">05</span><span><strong>Il confine fra ciò che si decide a bordo e ciò che va a terra.</strong><span class="t"> Scritto, con il nome di chi a terra risponde e il tempo entro cui risponde. Una decisione rinviata senza un tempo di risposta diventa una decisione presa dal programma della nave.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Il valore di un rappresentante a bordo non sta nelle firme, ma nelle decisioni che si possono prendere solo mentre la nave è ancora lì. Nell'esempio la stessa decisione costa 1,3 ore a fine linea e 4,5 trenta ore dopo, e il dato che la risolve – le osservazioni grezze registrate o no – è disponibile in pochi minuti.</p>
+
+<p>Per ogni promessa di recupero che arriva a bordo la domanda da porre è quindi questa: da quali dati dipende, esistono già, e quando sapremo se ha funzionato rispetto a dove sarà la nave?</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>International GNSS Service (IGS), pagina dei prodotti: orbite e orologi rapid disponibili circa 17 ore dopo la fine del giorno UTC precedente; final generati settimanalmente, circa 13 giorni dopo la fine della settimana di soluzione.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR fornisce rappresentanti del committente a bordo e prepara le specifiche che danno loro un criterio da applicare in giornata. Se state impostando una campagna, o definendo che cosa il vostro rappresentante potrà decidere in mare, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">At 14:10 the positioning system loses its real-time corrections, and regains them at 14:28. The contractor reports that the segment will be recovered in post-processing and proposes to carry on. The client representative on board faces a decision nobody ashore will take for them, because by the time it is discussed ashore the vessel will be elsewhere.</p>
+
+<p>The duties of a representative on board are usually listed: countersigning the daily report, witnessing calibrations, following data QC. Less is said about what they can decide, and what a deferred decision costs. This article takes a single case and follows it through: a segment of line out of specification, and the choice between rerunning it at once and waiting for post-processing to recover it.</p>
+
+<h2>Why the decision has a deadline</h2>
+
+<p>The cost of rerunning a segment of line is not fixed. It is the time to acquire it plus the time to get back to it, and the second term grows as the vessel moves away. At the end of the line the segment is a few kilometres off; a day later the vessel is working another block of the corridor; after demobilisation, rerunning it takes a vessel sent out for the purpose, and usually it is not rerun.</p>
+
+<p>The post-processing result, on the other hand, comes late by construction. PPP post-processing relies on precise satellite orbits and clocks: the rapid products of the International GNSS Service (IGS) are available about 17 hours after the end of the UTC day, the final ones about 13 days after the end of the week. Faster products exist, commercial ones included, and methods that do not depend on them, but the result still comes hours after the end of the line, not before. Whoever waits to learn whether the recovery worked decides when rerunning the segment already costs more.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are illustrative – built to show the mechanism, not taken from real projects – but the situation recurs in every campaign working with real-time corrections.</p>
+
+<p>A cable corridor survey with hull-mounted multibeam, acquired at 4 knots, that is 7.408 km/h. The specification requires a horizontal positioning uncertainty no greater than 1.0 m at 95%. From 14:10 to 14:28 the system loses its corrections and the uncertainty it estimates rises to 2.5 m: eighteen minutes of line, 18 / 60 × 7.408 = 2.2 km of data out of specification.</p>
+
+<p>To rerun it, the segment is acquired with 0.5 km of overlap at each end, 3.2 km in all, which at 4 knots takes 0.43 hours. To that are added a line turn with run-in, 0.25 hours, and the transit there and back at 10 knots, that is 18.52 km/h. At the end of the line the vessel is 6 km from the segment. Thirty hours later, when in the example the contractor delivers the reprocessed segment, the vessel is working a block 35 km away.</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Item</th><th class="num">At once, end of line</th><th class="num">After 30 hours</th></tr>
+</thead>
+<tbody>
+<tr><td>Distance from the segment (km)</td><td class="num">6</td><td class="num">35</td></tr>
+<tr><td>Transit there and back at 10 knots (h)</td><td class="num">0.65</td><td class="num">3.78</td></tr>
+<tr><td>Line turn and run-in (h)</td><td class="num">0.25</td><td class="num">0.25</td></tr>
+<tr><td>Segment of 3.2 km at 4 knots (h)</td><td class="num">0.43</td><td class="num">0.43</td></tr>
+<tr><td>Vessel time to rerun the segment (h)</td><td class="num">1.33</td><td class="num">4.46</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>4.5 hours</strong><span>of vessel time to rerun the segment after waiting for post-processing, against 1.3 when decided at the end of the line</span></div>
+
+<p>Waiting does not always cost 4.5 hours: it costs them only if the recovery fails. If it succeeds, the segment is good and nothing is rerun. The right comparison is therefore between 1.33 certain hours and 4.46 hours multiplied by the probability that the recovery fails. The two are equal when that probability is 1.33 / 4.46, about 30%. Above 30% rerunning at once pays, below it waiting does.</p>
+
+<h2>What can be checked in minutes</h2>
+
+<p>Nobody on board can estimate a recovery probability that precisely, and there is no need to. The probability depends largely on a fact that can be checked at once: whether the receiver logged raw observations for the whole interval, with a margin before and after. Post-processing works on those. If they are missing, or have gaps in exactly those eighteen minutes, there is nothing to reprocess and the probability of failure is one: the segment is rerun now.</p>
+
+<p>If the observations are there and continuous, the probability drops sharply, and waiting becomes reasonable – on one condition: that the result arrives while the vessel is still close. That is where a decision taken within the day becomes a deadline, and not an act of trust.</p>
+
+<p>The check takes the contractor a few minutes: the list of the receiver's raw files with their start and end times. It is a question the representative can ask before the vessel leaves the line, and the answer settles the matter better than any estimate.</p>
+
+<h2>The objections that will come</h2>
+
+<p>The first: post-processing always recovers these segments. Often true, and the example does not deny it: with raw observations logged, waiting is the cheaper choice. But the objection answers another question. The question on board is not whether recovery usually works, but whether, for this interval, the data that make it possible exist – and that can be answered before deciding.</p>
+
+<p>The second: with faster products the result comes in a few hours. In that case the vessel is closer, the cost of waiting falls, and waiting pays more often. All the more reason to write the deadline into the specification: what sets the cost of waiting is not the processing method, but when the result arrives relative to where the vessel is.</p>
+
+<p>The third: the representative has no authority to order additional work, which is a variation and is decided ashore. Correct, and it is why the decision has to be prepared in the contract. If the specification states that out-of-criterion data are rerun before leaving the area, the representative orders nothing: they apply a rule already signed. Who pays for the reline hours is a matter of contract, as for any other category of vessel time – the article on classifying vessel time deals with exactly that. What matters here is something else: if the recovery fails, the 3.1 hours of difference are lost, whoever bears them.</p>
+
+<h2>What stays ashore</h2>
+
+<p>The example shows the line that holds for the rest of a representative's work too. On board, what is decided is what can be compared with a written criterion and checked on the spot: a figure against a threshold, the presence of the files a promise depends on, a deadline against the vessel's position. Ashore, what is decided is what changes scope, cost or schedule beyond what the contract foresaw. A specification that does not draw this line leaves the representative choosing between two mistakes: deciding what is not theirs to decide, or deferring ashore what reaches the shore too late.</p>
+
+<h2>What to require in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>An acceptance criterion measurable on board.</strong><span class="t"> A threshold on the positioning uncertainty that the system records continuously, not a judgement to be formed at the end of the campaign. If the criterion can only be checked in the office, there is nothing to decide on board.</span></span></li>
+  <li><span class="k">02</span><span><strong>The rule for out-of-criterion data.</strong><span class="t"> It is rerun before leaving the area, unless the contractor demonstrates recovery by a set deadline. With the rule written, the reline is not a variation but the application of the contract.</span></span></li>
+  <li><span class="k">03</span><span><strong>A deadline tied to the vessel's position.</strong><span class="t"> The post-processing result is delivered before the vessel moves beyond a distance, or a number of hours, stated in the specification. A deadline set at final delivery is the same as none.</span></span></li>
+  <li><span class="k">04</span><span><strong>Continuous logging of raw observations.</strong><span class="t"> Throughout acquisition, with the list of files and their times available to the representative on request. It is the condition every promise of recovery depends on.</span></span></li>
+  <li><span class="k">05</span><span><strong>The line between what is decided on board and what goes ashore.</strong><span class="t"> Written down, with the name of who answers ashore and the time within which they answer. A decision deferred without a response time becomes a decision taken by the vessel's schedule.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>The value of a representative on board lies not in the signatures but in the decisions that can only be taken while the vessel is still there. In the example the same decision costs 1.3 hours at the end of the line and 4.5 thirty hours later, and the fact that settles it – raw observations logged or not – is available in minutes.</p>
+
+<p>For every promise of recovery made on board, the question to ask is therefore this: which data does it depend on, do they already exist, and when will we know whether it worked, relative to where the vessel will be?</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>International GNSS Service (IGS), products page: rapid orbits and clocks available about 17 hours after the end of the previous UTC day; final products generated weekly, about 13 days after the end of the solution week.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR provides client representatives on board and prepares the specifications that give them a criterion to apply within the day. If you are setting up a campaign, or defining what your representative will be able to decide at sea, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'lessons-learned',
         'topic': 'excellence',
         'date': '2026-10-19',
