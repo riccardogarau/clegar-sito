@@ -41,6 +41,7 @@ Già online, da non riprendere:
 | Due diligence su un dataset ereditato | Technical Advisory | copertura del cavo come differenza fra quota del cavo e fondale mobile, sand wave, quote assolute nel data room, costante verticale fra due rilievi, incertezza in pianta sui fianchi |
 | Le interfacce fra contractor | Project Management | contratti separati, Rev A contro dati definitivi, ciclo di revisione come durata, date contrattuali contro date dei programmi, registro delle interfacce tenuto dal committente |
 | Le lessons learned che si usano | Operational Excellence | lezione come percentuale contro parametro, tempo in linea più line turn, run-in del towfish, production rate scomposta in gara, posto della nota nel modello di stima |
+| Che cosa decide in giornata il rappresentante a bordo | Owner's Engineering | perdita delle correzioni di posizionamento, rifare subito contro attendere il post-processing, costo del ritorno che cresce con la distanza, osservazioni grezze come condizione del recupero, scadenza legata alla posizione della nave, confine fra decisioni di bordo e di terra |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -57,7 +58,7 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   trainato: non riprende la classificazione del tempo nave, che riguarda chi
   paga una giornata, né la readiness review.)*
 
-### Owner's Engineering — 2 articoli pubblicati
+### Owner's Engineering — 3 articoli pubblicati
 - [x] Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda — 2026-10-08
   *(tratta il patch test di roll e il residuo della passata di conferma: la
   verifica a tappeto della mobilitazione resta alla voce successiva, che
@@ -65,7 +66,11 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 - [x] L'accettazione della mobilitazione, voce per voce — 2026-10-12
   *(l'esempio è verticale – immersione dei trasduttori – perché la verifica di
   posizione su un punto noto in mobilitazione era già nell'articolo sul datum.)*
-- [ ] Che cosa decide in giornata un rappresentante a bordo
+- [x] Che cosa decide in giornata un rappresentante a bordo — 2026-10-21
+  *(l'esempio è un tratto di linea senza correzioni di posizionamento e la
+  scelta fra rifarlo e attendere il post-processing. Non riprende la
+  classificazione del tempo nave, che riguarda chi paga le ore, né il
+  witnessing o l'accettazione della mobilitazione, che si fanno in banchina.)*
 
 ### Technical Advisory & Assurance — 2 articoli pubblicati
 - [x] La seconda opinione prima di firmare un'accettazione — 2026-10-09
