@@ -15,6 +15,241 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'parere-tecnico-controversia',
+        'topic': 'advisory',
+        'date': '2026-10-23',
+        'slug': {'it': 'parere-tecnico-in-una-controversia',
+                 'en': 'technical-opinion-in-a-dispute'},
+        'title': {
+            'it': 'Il parere tecnico in una controversia: che cosa lo rende utilizzabile',
+            'en': 'A technical opinion in a dispute: what makes it usable',
+        },
+        'meta_title': {
+            'it': 'Il parere tecnico in una controversia | Insights',
+            'en': 'A technical opinion in a dispute | Insights',
+        },
+        'desc': {
+            'it': ('Perché due periti che applicano lo stesso metodo agli stessi registri arrivano a '
+                   'numeri diversi, dove sta la scelta che decide il risultato, e che cosa deve '
+                   'contenere un parere perché il tribunale possa usarlo.'),
+            'en': ('Why two experts applying the same method to the same records reach different '
+                   'figures, where the choice that decides the result lies, and what an opinion must '
+                   'contain for the tribunal to be able to use it.'),
+        },
+        'abstract': {
+            'it': ('Il contractor chiede 50 ore per la minore resa dell’aratro in un tratto con massi; '
+                   'il consulente del committente risponde 20. Stesso metodo, stessi registri: cambia '
+                   'il tratto preso come riferimento. Metà della richiesta misura la differenza fra '
+                   'sabbia e argilla, non i massi, e un parere utilizzabile lo mostra.'),
+            'en': ('The contractor claims 50 hours for the plough’s lower progress through a section '
+                   'with boulders; the client’s expert answers 20. Same method, same records: what '
+                   'changes is the section taken as the reference. Half the claim measures the difference '
+                   'between sand and clay, not the boulders, and a usable opinion shows it.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Il contractor chiede 50 ore di spread per la minore resa dell'aratro in un tratto di tracciato con massi. Il consulente del committente risponde che le ore sono 20. Davanti al tribunale arbitrale ci sono due numeri ricavati dagli stessi registri, con lo stesso metodo, e nessuno dei due rapporti dice perché differiscono.</p>
+
+<p>Un parere tecnico in una controversia non serve a chi lo commissiona: serve a chi deve decidere, e chi decide di solito non è un tecnico. Un parere che arriva a un numero senza mostrare la scelta da cui il numero dipende lascia il tribunale con due cifre e nessun criterio per preferirne una. Questo articolo prende un caso di perdita di produttività e mostra dove sta quella scelta, quanto pesa, e come si scrive un parere che la mette sul tavolo invece di nasconderla.</p>
+
+<h2>Il metodo è lo stesso, il riferimento no</h2>
+
+<p>Per quantificare una perdita di produttività uno dei metodi più diffusi è il measured mile: si misura la resa in un periodo o in un tratto non disturbato dall'evento contestato, la si confronta con la resa nel tratto disturbato, e la differenza, convertita in ore, è la perdita. La raccomandazione AACE 25R-03 lo descrive come confronto fra periodi disturbati e periodi non disturbati di lavoro simile. Le ultime due parole fanno tutto il lavoro.</p>
+
+<p>Il metodo, infatti, non dice quale tratto è il riferimento. Lo sceglie chi fa il calcolo, e se il tratto scelto differisce da quello disturbato per qualcosa oltre all'evento contestato, la differenza finisce dentro la perdita e viene attribuita all'evento. Due periti che applicano correttamente lo stesso metodo agli stessi registri arrivano a numeri diversi perché hanno scelto riferimenti diversi. Se i rapporti non lo dicono, la controversia sembra una disputa sul metodo, ed è invece una disputa su un tratto di cavo.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma lo schema si ripresenta in ogni richiesta di compenso per perdita di produttività.</p>
+
+<p>Interramento con aratro di un cavo di export lungo un tracciato da KP 0 a KP 44. Fra KP 18 e KP 30 l'aratro incontra massi che il contractor sostiene non prevedibili, e chiede il compenso per la minore resa. Le ore di aratura sono contate allo stesso modo in tutti i tratti: dall'ingresso all'uscita, fermi per la rimozione dei massi compresi, fermi per meteo esclusi.</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Tratto</th><th>Terreno</th><th>Massi</th><th class="num">Lunghezza (m)</th><th class="num">Ore di aratura</th><th class="num">Resa (m/h)</th></tr>
+</thead>
+<tbody>
+<tr><td>KP 2–8</td><td>sabbia</td><td>no</td><td class="num">6.000</td><td class="num">15</td><td class="num">400</td></tr>
+<tr><td>KP 18–30</td><td>argilla consistente</td><td>sì</td><td class="num">12.000</td><td class="num">80</td><td class="num">150</td></tr>
+<tr><td>KP 32–38</td><td>argilla consistente</td><td>no</td><td class="num">6.000</td><td class="num">30</td><td class="num">200</td></tr>
+<tr><td>KP 38–44</td><td>argilla consistente</td><td>no</td><td class="num">6.000</td><td class="num">25</td><td class="num">240</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>La richiesta del contractor prende come riferimento KP 2–8, il tratto più veloce del tracciato. A 400 m/h i 12.000 m del tratto con massi avrebbero richiesto 30 ore; ne sono servite 80; la perdita richiesta è 50 ore. Il tratto di riferimento però non differisce da quello con massi solo per i massi: è in sabbia, mentre KP 18–30 è in argilla consistente, la stessa unità del ground model che si ritrova fra KP 32 e KP 44 senza massi.</p>
+
+<p>Rifacendo il calcolo con gli stessi registri, e cambiando soltanto il tratto di riferimento, si ottiene questo.</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Tratto di riferimento</th><th class="num">Resa (m/h)</th><th class="num">Ore attese per 12.000 m</th><th class="num">Ore perse</th></tr>
+</thead>
+<tbody>
+<tr><td>KP 2–8, sabbia (richiesta del contractor)</td><td class="num">400</td><td class="num">30</td><td class="num">50</td></tr>
+<tr><td>KP 32–38, argilla</td><td class="num">200</td><td class="num">60</td><td class="num">20</td></tr>
+<tr><td>KP 38–44, argilla</td><td class="num">240</td><td class="num">50</td><td class="num">30</td></tr>
+<tr><td>KP 32–44, argilla, i due tratti insieme</td><td class="num">218</td><td class="num">55</td><td class="num">25</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>25 ore</strong><span>delle 50 richieste misurano la differenza fra sabbia e argilla, non i massi</span></div>
+
+<p>Con i due tratti in argilla presi insieme, 12.000 m in 55 ore, la perdita attribuibile ai massi è 25 ore: la metà della richiesta. L'altra metà è la differenza di resa fra sabbia e argilla, che con i massi non ha niente a che fare. Presi uno per uno, i tratti in argilla danno 20 e 30 ore. È questo intervallo, non un numero solo, il risultato che un parere utilizzabile consegna, insieme alla ragione per cui il riferimento in sabbia ne sta fuori.</p>
+
+<h2>Il controllo incrociato</h2>
+
+<p>Un risultato ricavato da un confronto fra tratti si può controllare con un dato che non dipende dal confronto. I rapporti giornalieri registrano 17 ore di fermo dell'aratro per la rimozione di massi fra KP 18 e KP 30. Sono un minimo, non il totale: i massi rallentano l'aratro anche fra un fermo e l'altro. L'intervallo da 20 a 30 ore sta sopra quel minimo, come deve. Le 50 ore richieste vorrebbero dire che, oltre alle 17 ore di fermo, i massi hanno rallentato l'avanzamento per altre 33 ore – mentre la differenza di terreno spiega quella parte senza bisogno dei massi.</p>
+
+<h2>Le obiezioni che arriveranno</h2>
+
+<p>La prima, del contractor: l'argilla fra KP 18 e KP 30 è più dura di quella fra KP 32 e KP 44, quindi il riferimento in argilla è troppo favorevole. È una questione di fatto, e il parere la tratta come tale: confronta i dati del site investigation nei tre tratti e dice se li distinguono. Se non li distinguono, l'obiezione resta un'affermazione. Se li distinguono, l'intervallo si allarga – ma qualunque riferimento in argilla dà una resa lontana dai 400 m/h della sabbia, e la conclusione resta: una parte consistente della richiesta non dipende dai massi.</p>
+
+<p>La seconda arriva dall'altra parte, ed è un limite del riferimento in argilla: i tratti fra KP 32 e KP 44 sono stati arati dopo quello con i massi, con una squadra che aveva più pratica del terreno. Se l'effetto di apprendimento c'è, rende il riferimento più veloce e la perdita calcolata più alta, quindi gioca a favore di chi chiede il compenso. Il parere lo dichiara, con il verso dell'errore: un'incertezza dichiarata con la sua direzione si può pesare, una taciuta si scopre in udienza.</p>
+
+<p>La terza: il measured mile è un metodo riconosciuto, quindi il risultato del contractor è corretto. Il metodo è riconosciuto, ed è proprio per questo che la discussione non deve vertere sul metodo. Il risultato dipende dalla somiglianza fra i tratti confrontati, che non è una proprietà del metodo ma una scelta di chi lo applica, e va motivata come ogni altro dato del calcolo.</p>
+
+<h2>Che cosa il parere non decide</h2>
+
+<p>Il parere non stabilisce se i massi fossero prevedibili, né a chi spetti il rischio del terreno: quelle sono questioni di contratto, e le decide il tribunale. Il parere fornisce i numeri per ciascuna risposta possibile. Se il rischio dei massi è del committente, la perdita è da 20 a 30 ore. Se il contractor sostiene che anche l'argilla era imprevedibile, quella è un'altra richiesta, con un altro fondamento contrattuale, e va dimostrata a parte – non si può farla entrare per la porta del measured mile.</p>
+
+<p>Le IBA Rules sull'assunzione delle prove nell'arbitrato internazionale chiedono al rapporto del perito di parte, fra l'altro, la descrizione delle istruzioni ricevute, i fatti su cui si basa, e i metodi, le prove e le informazioni usati per arrivare alle conclusioni, con i documenti su cui si fonda. Un parere può contenere tutte quelle voci e tacere comunque quale tratto ha usato come riferimento e perché: la lista è rispettata, e il tribunale resta senza un criterio.</p>
+
+<h2>Che cosa rende un parere utilizzabile</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>La domanda, scritta.</strong><span class="t"> Quante ore di aratura sono attribuibili ai massi fra KP 18 e KP 30, e non «quanto vale la richiesta». Un parere che risponde a una domanda più larga di quella posta finisce per decidere questioni di contratto che non gli competono.</span></span></li>
+  <li><span class="k">02</span><span><strong>I dati e la loro definizione.</strong><span class="t"> Quali registri, quali tratti, e come sono contate le ore – fermi compresi o esclusi – in modo identico per tutti i tratti confrontati. Senza la definizione, due rese non si confrontano.</span></span></li>
+  <li><span class="k">03</span><span><strong>La scelta che decide il risultato, con le alternative.</strong><span class="t"> Il tratto di riferimento, la ragione della scelta, e il risultato che darebbero gli altri tratti candidati. È la tabella che permette al tribunale di vedere dove stanno i due periti e perché.</span></span></li>
+  <li><span class="k">04</span><span><strong>Un controllo indipendente dal confronto.</strong><span class="t"> Le ore di fermo registrate, o un altro dato che non dipende dalla scelta del riferimento. Se il risultato sta fuori dai limiti che quel dato impone, il riferimento è sbagliato.</span></span></li>
+  <li><span class="k">05</span><span><strong>Le incertezze con il loro verso.</strong><span class="t"> L'effetto di apprendimento, le differenze di terreno non risolte dai dati: per ciascuna, se fa crescere o calare la perdita calcolata. Un intervallo con le sue ragioni regge in udienza meglio di un numero solo.</span></span></li>
+</ul>
+
+<p>C'è infine una condizione che si pone prima, nella specifica, e non a controversia aperta: il rapporto giornaliero deve registrare per ogni turno il KP di inizio e di fine e le ore di aratura, con i fermi classificati per causa. Senza quei registri non c'è measured mile possibile, né per chi chiede né per chi risponde.</p>
+
+<h2>Il punto di fondo</h2>
+
+<p>Nell'esempio la richiesta e la risposta usano lo stesso metodo e gli stessi registri, e differiscono di un fattore due e mezzo per una sola scelta: quale tratto rappresenta il lavoro non disturbato. Un parere che mostra quella scelta, le alternative e il loro effetto dà al tribunale un criterio. Uno che la nasconde gli dà soltanto un altro numero.</p>
+
+<p>Davanti a qualunque parere tecnico, il proprio o quello di controparte, la domanda da porre è quindi: quale scelta, se fosse fatta diversamente, cambierebbe il risultato – e il parere lo dice?</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>AACE International, Recommended Practice 25R-03, <em>Estimating Lost Labor Productivity in Construction Claims</em> (2004): classifica i metodi di stima della perdita di produttività per affidabilità; il measured mile confronta periodi disturbati e non disturbati di lavoro simile.</li>
+  <li>International Bar Association, <em>IBA Rules on the Taking of Evidence in International Arbitration</em>, adottate il 17 dicembre 2020, articolo 5.2: contenuto del rapporto del perito di parte.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR redige pareri tecnici indipendenti su progetti marini e offshore, e rilegge quelli di controparte cercando la scelta da cui dipende il risultato. Se avete davanti una richiesta di compenso, o dovete impostare i registri che la renderanno discutibile sui fatti, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">The contractor claims 50 hours of spread time for the plough's lower progress through a section of route with boulders. The client's expert answers that the hours are 20. Before the arbitral tribunal there are two figures drawn from the same records, with the same method, and neither report says why they differ.</p>
+
+<p>A technical opinion in a dispute does not serve whoever commissions it: it serves whoever has to decide, and whoever decides is usually not a technician. An opinion that reaches a figure without showing the choice the figure depends on leaves the tribunal with two numbers and no criterion for preferring one. This article takes a lost productivity case and shows where that choice lies, how much it weighs, and how to write an opinion that puts it on the table instead of hiding it.</p>
+
+<h2>The method is the same, the reference is not</h2>
+
+<p>To quantify lost productivity, one of the most widely used methods is the measured mile: progress is measured over a period or section not disturbed by the disputed event, it is compared with progress in the disturbed section, and the difference, converted into hours, is the loss. AACE Recommended Practice 25R-03 describes it as a comparison between impacted and unimpacted periods of similar work. The last two words do all the work.</p>
+
+<p>The method does not say which section is the reference. Whoever does the calculation chooses it, and if the chosen section differs from the disturbed one in anything besides the disputed event, that difference ends up inside the loss and is attributed to the event. Two experts correctly applying the same method to the same records reach different figures because they chose different references. If the reports do not say so, the dispute looks like an argument about method, when it is in fact an argument about a stretch of cable.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are illustrative – built to show the mechanism, not taken from real projects – but the pattern recurs in every claim for lost productivity.</p>
+
+<p>Plough burial of an export cable along a route from KP 0 to KP 44. Between KP 18 and KP 30 the plough meets boulders which the contractor maintains were unforeseeable, and it claims compensation for the lower progress. Ploughing hours are counted the same way in every section: from entry to exit, stops for boulder removal included, weather stops excluded.</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Section</th><th>Soil</th><th>Boulders</th><th class="num">Length (m)</th><th class="num">Ploughing hours</th><th class="num">Progress (m/h)</th></tr>
+</thead>
+<tbody>
+<tr><td>KP 2–8</td><td>sand</td><td>no</td><td class="num">6,000</td><td class="num">15</td><td class="num">400</td></tr>
+<tr><td>KP 18–30</td><td>stiff clay</td><td>yes</td><td class="num">12,000</td><td class="num">80</td><td class="num">150</td></tr>
+<tr><td>KP 32–38</td><td>stiff clay</td><td>no</td><td class="num">6,000</td><td class="num">30</td><td class="num">200</td></tr>
+<tr><td>KP 38–44</td><td>stiff clay</td><td>no</td><td class="num">6,000</td><td class="num">25</td><td class="num">240</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The contractor's claim takes KP 2–8, the fastest section of the route, as its reference. At 400 m/h the 12,000 m of the boulder section would have taken 30 hours; they took 80; the claimed loss is 50 hours. But the reference section does not differ from the boulder section only in the boulders: it is in sand, while KP 18–30 is in stiff clay, the same ground model unit found between KP 32 and KP 44 without boulders.</p>
+
+<p>Redoing the calculation with the same records, and changing only the reference section, gives this.</p>
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Reference section</th><th class="num">Progress (m/h)</th><th class="num">Expected hours for 12,000 m</th><th class="num">Hours lost</th></tr>
+</thead>
+<tbody>
+<tr><td>KP 2–8, sand (contractor's claim)</td><td class="num">400</td><td class="num">30</td><td class="num">50</td></tr>
+<tr><td>KP 32–38, clay</td><td class="num">200</td><td class="num">60</td><td class="num">20</td></tr>
+<tr><td>KP 38–44, clay</td><td class="num">240</td><td class="num">50</td><td class="num">30</td></tr>
+<tr><td>KP 32–44, clay, both sections together</td><td class="num">218</td><td class="num">55</td><td class="num">25</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="pull"><strong>25 hours</strong><span>of the 50 claimed measure the difference between sand and clay, not the boulders</span></div>
+
+<p>With the two clay sections taken together, 12,000 m in 55 hours, the loss attributable to the boulders is 25 hours: half the claim. The other half is the difference in progress between sand and clay, which has nothing to do with the boulders. Taken one at a time, the clay sections give 20 and 30 hours. That range, not a single figure, is the result a usable opinion delivers, together with the reason the sand reference falls outside it.</p>
+
+<h2>The cross-check</h2>
+
+<p>A result drawn from a comparison between sections can be checked against a fact that does not depend on the comparison. The daily reports record 17 hours of plough stops for boulder removal between KP 18 and KP 30. They are a floor, not the total: boulders slow the plough between one stop and the next as well. The range of 20 to 30 hours sits above that floor, as it should. The 50 hours claimed would mean that, on top of the 17 hours of stops, the boulders slowed progress by another 33 hours – while the difference in soil explains that part without any need for the boulders.</p>
+
+<h2>The objections that will come</h2>
+
+<p>The first, from the contractor: the clay between KP 18 and KP 30 is stiffer than between KP 32 and KP 44, so the clay reference is too favourable. It is a question of fact, and the opinion treats it as one: it compares the site investigation data in the three sections and says whether they tell them apart. If they do not, the objection remains an assertion. If they do, the range widens – but any clay reference gives progress far from the 400 m/h of the sand, and the conclusion stands: a substantial part of the claim does not depend on the boulders.</p>
+
+<p>The second comes from the other side, and is a limit of the clay reference: the sections between KP 32 and KP 44 were ploughed after the boulder section, by a crew with more practice in that ground. If the learning effect is there, it makes the reference faster and the calculated loss higher, so it works in favour of the claimant. The opinion states it, with the direction of the error: an uncertainty stated with its direction can be weighed; one left unsaid is discovered at the hearing.</p>
+
+<p>The third: the measured mile is a recognised method, so the contractor's result is correct. The method is recognised, and that is exactly why the argument should not be about the method. The result depends on how similar the compared sections are, which is not a property of the method but a choice of whoever applies it, and it has to be justified like any other input to the calculation.</p>
+
+<h2>What the opinion does not decide</h2>
+
+<p>The opinion does not establish whether the boulders were foreseeable, nor who bears the ground risk: those are contractual questions, and the tribunal decides them. The opinion provides the figures for each possible answer. If the boulder risk lies with the client, the loss is 20 to 30 hours. If the contractor maintains that the clay too was unforeseeable, that is a different claim, on a different contractual basis, and has to be proven separately – it cannot be brought in through the door of the measured mile.</p>
+
+<p>The IBA Rules on the Taking of Evidence in International Arbitration require a party-appointed expert's report to contain, among other things, a description of the instructions received, the facts on which it is based, and the methods, evidence and information used in arriving at the conclusions, with the documents it relies on. An opinion can contain every one of those items and still not say which section it used as the reference and why: the list is satisfied, and the tribunal is left without a criterion.</p>
+
+<h2>What makes an opinion usable</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>The question, in writing.</strong><span class="t"> How many ploughing hours are attributable to the boulders between KP 18 and KP 30, not "what is the claim worth". An opinion that answers a wider question than the one asked ends up deciding contractual matters that are not its to decide.</span></span></li>
+  <li><span class="k">02</span><span><strong>The data and their definition.</strong><span class="t"> Which records, which sections, and how the hours are counted – stops included or excluded – identically for every section compared. Without the definition, two progress rates cannot be compared.</span></span></li>
+  <li><span class="k">03</span><span><strong>The choice that decides the result, with the alternatives.</strong><span class="t"> The reference section, the reason for choosing it, and the result the other candidate sections would give. It is the table that lets the tribunal see where the two experts stand and why.</span></span></li>
+  <li><span class="k">04</span><span><strong>A check independent of the comparison.</strong><span class="t"> The recorded stop hours, or another fact that does not depend on the choice of reference. If the result falls outside the limits that fact sets, the reference is wrong.</span></span></li>
+  <li><span class="k">05</span><span><strong>The uncertainties with their direction.</strong><span class="t"> The learning effect, the ground differences the data do not resolve: for each, whether it raises or lowers the calculated loss. A range with its reasons holds up at a hearing better than a single figure.</span></span></li>
+</ul>
+
+<p>Finally, there is a condition that is set earlier, in the specification, and not once the dispute is open: the daily report must record for every shift the start and end KP and the ploughing hours, with stops classified by cause. Without those records no measured mile is possible, either for the claimant or for the respondent.</p>
+
+<h2>The underlying point</h2>
+
+<p>In the example the claim and the response use the same method and the same records, and differ by a factor of two and a half because of a single choice: which section represents undisturbed work. An opinion that shows that choice, the alternatives and their effect gives the tribunal a criterion. One that hides it gives it only another number.</p>
+
+<p>Faced with any technical opinion, one's own or the other side's, the question to ask is therefore: which choice, if made differently, would change the result – and does the opinion say so?</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>AACE International, Recommended Practice 25R-03, <em>Estimating Lost Labor Productivity in Construction Claims</em> (2004): ranks the methods for estimating lost productivity by reliability; the measured mile compares impacted and unimpacted periods of similar work.</li>
+  <li>International Bar Association, <em>IBA Rules on the Taking of Evidence in International Arbitration</em>, adopted on 17 December 2020, Article 5.2: contents of the party-appointed expert's report.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR prepares independent technical opinions on marine and offshore projects, and reviews those of the other side looking for the choice the result depends on. If you are facing a claim, or need to set up the records that will let it be argued on the facts, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'rappresentante-a-bordo',
         'topic': 'owners',
         'date': '2026-10-21',

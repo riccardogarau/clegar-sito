@@ -586,3 +586,59 @@ vessel's position.
 https://www.clegar.it/en/insights/what-the-client-representative-decides-on-board/
 
 #offshore #marinesurvey #hydrography #clientrepresentative #ownersengineering
+
+---
+
+## Il parere tecnico in una controversia – 23 ottobre 2026
+
+### Italiano
+
+Due periti applicano lo stesso metodo agli stessi registri, e arrivano a
+numeri diversi. Nessuno dei due ha sbagliato un conto.
+
+La perdita di produttività si quantifica spesso con il measured mile: si
+confronta la resa nel tratto disturbato con quella in un tratto che non lo è.
+Il metodo però non dice quale tratto fa da riferimento. Lo sceglie chi fa il
+calcolo, e tutto ciò che distingue i due tratti oltre all'evento contestato
+finisce dentro la perdita.
+
+In un esempio sintetico, un aratro rallenta in un tratto con massi e il
+contractor prende come riferimento il tratto più veloce del tracciato, in
+sabbia. Il tratto con i massi è in argilla. Rifacendo il calcolo su tratti in
+argilla senza massi, metà della richiesta misura la differenza fra sabbia e
+argilla, non i massi.
+
+Un parere utilizzabile non consegna un numero solo: mostra la scelta da cui il
+numero dipende, le alternative, il loro effetto, e un controllo che non
+dipende da quella scelta. Così il tribunale ha un criterio, e non soltanto
+un'altra cifra.
+
+https://www.clegar.it/insights/parere-tecnico-in-una-controversia/
+
+#offshore #arbitration #expertwitness #constructionclaims #offshorewind
+
+### English
+
+Two experts apply the same method to the same records, and reach different
+figures. Neither of them got a sum wrong.
+
+Lost productivity is often quantified with the measured mile: progress in the
+disturbed section is compared with progress in one that is not. But the method
+does not say which section is the reference. Whoever does the calculation
+chooses it, and everything that sets the two sections apart besides the
+disputed event ends up inside the loss.
+
+In an illustrative example, a plough slows down in a section with boulders and
+the contractor takes as its reference the fastest section of the route, in
+sand. The boulder section is in clay. Redoing the calculation on clay sections
+without boulders, half the claim measures the difference between sand and
+clay, not the boulders.
+
+A usable opinion does not deliver a single figure: it shows the choice the
+figure depends on, the alternatives, their effect, and a check that does not
+depend on that choice. That way the tribunal has a criterion, and not just
+another number.
+
+https://www.clegar.it/en/insights/technical-opinion-in-a-dispute/
+
+#offshore #arbitration #expertwitness #constructionclaims #offshorewind
