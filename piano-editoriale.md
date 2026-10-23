@@ -42,6 +42,7 @@ Già online, da non riprendere:
 | Le interfacce fra contractor | Project Management | contratti separati, Rev A contro dati definitivi, ciclo di revisione come durata, date contrattuali contro date dei programmi, registro delle interfacce tenuto dal committente |
 | Le lessons learned che si usano | Operational Excellence | lezione come percentuale contro parametro, tempo in linea più line turn, run-in del towfish, production rate scomposta in gara, posto della nota nel modello di stima |
 | Che cosa decide in giornata il rappresentante a bordo | Owner's Engineering | perdita delle correzioni di posizionamento, rifare subito contro attendere il post-processing, costo del ritorno che cresce con la distanza, osservazioni grezze come condizione del recupero, scadenza legata alla posizione della nave, confine fra decisioni di bordo e di terra |
+| Il parere tecnico in una controversia | Technical Advisory | measured mile, perdita di produttività di un aratro, scelta del tratto di riferimento, differenza di terreno contro evento contestato, controllo incrociato sulle ore di fermo, incertezze con il loro verso, IBA Rules art. 5.2, confine fra fatto tecnico e responsabilità |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -72,13 +73,17 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   classificazione del tempo nave, che riguarda chi paga le ore, né il
   witnessing o l'accettazione della mobilitazione, che si fanno in banchina.)*
 
-### Technical Advisory & Assurance — 2 articoli pubblicati
+### Technical Advisory & Assurance — 3 articoli pubblicati
 - [x] La seconda opinione prima di firmare un'accettazione — 2026-10-09
   *(tratta la velocità di conversione di una mappa di spessori, tarata sui CPT.
   La due diligence su un dataset ereditato resta alla voce successiva, che
   quindi non si sovrappone, purché non riprenda la taratura sui dati geotecnici.)*
 - [x] Due diligence su un dataset che arriva insieme all'asset — 2026-10-14
-- [ ] Il parere tecnico in una controversia: che cosa lo rende utilizzabile
+- [x] Il parere tecnico in una controversia: che cosa lo rende utilizzabile — 2026-10-23
+  *(l'esempio è una richiesta per perdita di produttività di un aratro, con il
+  measured mile e la scelta del tratto di riferimento. Non riprende la seconda
+  opinione, che riguarda le assunzioni di un'interpretazione, né la
+  classificazione del tempo nave, che riguarda chi paga una giornata.)*
 
 ### Marine Geoscience — 2 articoli pubblicati
 - [ ] Spaziatura delle linee: che cosa non si vede fra una linea e l'altra
