@@ -43,6 +43,7 @@ Già online, da non riprendere:
 | Le lessons learned che si usano | Operational Excellence | lezione come percentuale contro parametro, tempo in linea più line turn, run-in del towfish, production rate scomposta in gara, posto della nota nel modello di stima |
 | Che cosa decide in giornata il rappresentante a bordo | Owner's Engineering | perdita delle correzioni di posizionamento, rifare subito contro attendere il post-processing, costo del ritorno che cresce con la distanza, osservazioni grezze come condizione del recupero, scadenza legata alla posizione della nave, confine fra decisioni di bordo e di terra |
 | Il parere tecnico in una controversia | Technical Advisory | measured mile, perdita di produttività di un aratro, scelta del tratto di riferimento, differenza di terreno contro evento contestato, controllo incrociato sulle ore di fermo, incertezze con il loro verso, IBA Rules art. 5.2, confine fra fatto tecnico e responsabilità |
+| La spaziatura delle linee | Marine Geoscience | ombra del side scan e distanza dalla linea, striscia sotto la linea con copertura al 100%, spaziatura sopra e sotto la portata, multibeam come copertura della striscia, criterio di riconoscimento in gara, feature detection contro feature search in S-44 |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -85,9 +86,16 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   opinione, che riguarda le assunzioni di un'interpretazione, né la
   classificazione del tempo nave, che riguarda chi paga una giornata.)*
 
-### Marine Geoscience — 2 articoli pubblicati
-- [ ] Spaziatura delle linee: che cosa non si vede fra una linea e l'altra
+### Marine Geoscience — 3 articoli pubblicati
+- [x] Spaziatura delle linee: che cosa non si vede fra una linea e l'altra — 2026-10-26
+  *(pubblicato come "la striscia in cui un masso non si vede": l'esempio è
+  l'ombra del side scan che si accorcia vicino alla linea. Non riprende il
+  crossline check, che riguarda l'accordo verticale agli incroci, né il
+  witnessing, che riguarda il roll sui fasci esterni.)*
 - [ ] Un profilo di velocità del suono scaduto, e come si riconosce dai dati
+  *(attenzione: il witnessing spiega già che un errore di velocità del suono
+  incurva i bordi dello swath e si distingue dal roll con passate reciproche.
+  Va impostato su un altro meccanismo o un altro esempio, non rifatto.)*
 
 ### Project Management — 2 articoli pubblicati
 - [x] Le interfacce fra contractor: dove si rompono e chi le tiene — 2026-10-16
