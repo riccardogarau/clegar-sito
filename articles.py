@@ -15,6 +15,249 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'spaziatura-linee',
+        'topic': 'geoscience',
+        'date': '2026-10-26',
+        'slug': {'it': 'spaziatura-delle-linee',
+                 'en': 'survey-line-spacing'},
+        'title': {
+            'it': 'La spaziatura delle linee: la striscia in cui un masso non si vede, con la copertura al 100%',
+            'en': 'Line spacing: the strip where a boulder goes unseen at 100% coverage',
+        },
+        'meta_title': {
+            'it': 'La spaziatura delle linee | Insights',
+            'en': 'Survey line spacing | Insights',
+        },
+        'desc': {
+            'it': ('Perché un rilievo side scan al 100% di copertura può lasciare un quinto del blocco '
+                   'visto solo da troppo vicino, perché stringere le linee non basta, e che cosa scrivere '
+                   'nella specifica perché qualcuno copra la striscia sotto ogni linea.'),
+            'en': ('Why a side scan survey at 100% coverage can leave a fifth of the block seen only from '
+                   'too close, why tightening the lines is not enough, and what to write in the '
+                   'specification so that someone covers the strip beneath every line.'),
+        },
+        'abstract': {
+            'it': ('Un masso basso si riconosce dall’ombra, e l’ombra si accorcia avvicinandosi alla '
+                   'linea. Con linee a 140 m e la copertura completa, il 20% del blocco è visto solo da '
+                   'una distanza a cui un masso di 0,5 m fa un’ombra più corta di 1 m. Non sta fra le '
+                   'linee, ma sotto.'),
+            'en': ('A low boulder is recognised by its shadow, and the shadow shortens closer to the line. '
+                   'With lines 140 m apart and full coverage, 20% of the block is seen only from a distance '
+                   'at which a 0.5 m boulder casts a shadow shorter than 1 m. It is not between the lines, '
+                   'but beneath them.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">La specifica chiede di individuare tutti i massi alti almeno 0,5 m in un blocco destinato alle fondazioni di un parco eolico, con il side scan sonar al 100% di copertura. Il rapporto finale dichiara la copertura raggiunta, e la mappa lo conferma: nessun buco fra una linea e l'altra. Eppure un quinto del blocco è stato visto soltanto in condizioni in cui un masso di quell'altezza difficilmente si riconosce. Quella parte non sta fra le linee, ma sotto.</p>
+
+<p>La percentuale di copertura dice quanta parte del fondale è entrata almeno una volta nella portata del sonar. Non dice a quale distanza dalla linea, ed è la distanza a decidere se un oggetto di una data altezza si vede. Questo articolo mostra dove sta la striscia che la copertura conta come vista, quanto è larga, perché stringere le linee non basta a eliminarla, e che cosa scrivere nella specifica perché qualcuno la copra.</p>
+
+<h2>Un masso basso si riconosce dall'ombra</h2>
+
+<p>Il side scan sonar è trainato a pochi metri dal fondo e guarda di lato. Un masso restituisce un'eco forte, ma un'eco forte la restituisce anche un fondale grossolano: ciò che lo distingue è l'ombra che proietta dalla parte opposta al sonar, dalla cui lunghezza si ricava anche l'altezza. Con il towfish a quota H sul fondo e un oggetto alto h a distanza orizzontale x dalla verticale del towfish, su un fondale piano, l'ombra è lunga:</p>
+
+<p><strong>L = x × h / (H − h)</strong></p>
+
+<p>L'ombra cresce in proporzione alla distanza dalla linea. Lontano dal sonar il suono arriva radente e l'ombra è lunga; vicino alla verticale scende ripido e l'ombra si accorcia fino quasi a sparire. Con il towfish a 7,5 m dal fondo, un masso di 0,5 m proietta:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Distanza dalla linea (m)</th><th class="num">Lunghezza dell'ombra (m)</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">5</td><td class="num">0,36</td></tr>
+<tr><td class="num">10</td><td class="num">0,71</td></tr>
+<tr><td class="num">14</td><td class="num">1,00</td></tr>
+<tr><td class="num">25</td><td class="num">1,79</td></tr>
+<tr><td class="num">50</td><td class="num">3,57</td></tr>
+<tr><td class="num">75</td><td class="num">5,36</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>A 5 m dalla linea l'ombra di un masso di mezzo metro è lunga 36 cm; sul bordo della portata supera i 5 m. Lo stesso masso, nello stesso rilievo, è evidente o quasi invisibile secondo la linea da cui lo si guarda.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori che seguono sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali – ma la geometria è quella di qualsiasi rilievo side scan.</p>
+
+<p>Blocco di 2,8 × 4 km, profondità fra 25 e 45 m. Side scan con portata di 75 m per lato, towfish a 7,5 m dal fondo, velocità di 4 nodi. In gara il contractor ha dichiarato che il proprio interprete riconosce con affidabilità un masso di 0,5 m quando l'ombra è lunga almeno 1 m. Per la formula, l'ombra arriva a 1 m a 14 m dalla linea: entro 14 m per lato, cioè in una striscia larga 28 m centrata su ogni linea, la linea stessa non soddisfa il criterio.</p>
+
+<p>Il contractor pianifica linee distanti 140 m. Le fasce di due linee vicine, larghe 150 m ciascuna, si sovrappongono per 10 m, e la copertura è completa. Ma la striscia sotto ogni linea dista 140 m dalle linee vicine, quasi il doppio della loro portata: nessun'altra linea la vede.</p>
+
+<div class="pull"><strong>20%</strong><span>del blocco visto solo da una distanza a cui un masso di 0,5 m fa un'ombra più corta di 1 m, con la copertura al 100%</span></div>
+
+<p>Sono 28 m ogni 140, cioè 2,24 km² su 11,2.</p>
+
+<h2>Stringere le linee non basta</h2>
+
+<p>La reazione istintiva è ridurre la spaziatura. La tabella mostra che cosa succede:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Spaziatura (m)</th><th class="num">Linee</th><th class="num">Km di linea</th><th class="num">Fascia / spaziatura</th><th class="num">Blocco visto solo da vicino</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">140</td><td class="num">21</td><td class="num">84</td><td class="num">107%</td><td class="num">20%</td></tr>
+<tr><td class="num">100</td><td class="num">29</td><td class="num">116</td><td class="num">150%</td><td class="num">28%</td></tr>
+<tr><td class="num">70</td><td class="num">41</td><td class="num">164</td><td class="num">214%</td><td class="num">0%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>A 100 m la parte del blocco vista solo da vicino aumenta invece di diminuire. Il motivo è geometrico: la striscia sotto una linea viene vista da un'altra linea soltanto se quella è entro la sua portata, cioè a non più di 75 m. Finché la spaziatura resta sopra la portata, avvicinare le linee non fa vedere la striscia da lontano: aggiunge strisce, una per linea, sempre larghe 28 m, su intervalli più corti.</p>
+
+<p>Sotto i 75 m il problema sparisce di colpo. Con linee a 70 m ogni punto del blocco si trova a più di 14 m da almeno una linea che lo ha entro la portata: anche il punto sulla verticale di una linea è a 70 m dalle due vicine, dove l'ombra di un masso di 0,5 m è lunga 5 m. I 5 m di margine fra spaziatura e portata assorbono lo scostamento laterale del towfish rispetto alla rotta. È, nei fatti, una copertura al 200%, e costa 164 km di linea invece di 84: il 95% in più.</p>
+
+<h2>Le obiezioni del contractor</h2>
+
+<p>La prima: il bordo della portata è la parte peggiore del sonar, e a 70 m un masso piccolo si perde. Va verificato, non supposto. Con 75 m di portata il sonar può emettere al massimo 10 impulsi al secondo, perché prima di emettere il successivo deve attendere l'eco dal bordo; a 4 nodi la nave avanza di 0,21 m fra un impulso e l'altro. Con un fascio orizzontale di 0,3 gradi, il valore del sonar dell'esempio, l'impronta a 70 m è larga 0,37 m, e un masso di 0,5 m viene colpito da 4 impulsi consecutivi. In questa configurazione il bordo regge; a velocità maggiori o con portate più lunghe il conto va rifatto.</p>
+
+<p>La seconda: il criterio di 1 m è prudente, e un interprete esperto riconosce ombre più corte. Può darsi, e allora la striscia si restringe ma non sparisce: con un'ombra minima di 0,5 m il limite scende a 7 m dalla linea, la striscia a 14 m e, con linee a 140 m, la parte del blocco vista solo da vicino al 10%. Il criterio decide la larghezza della striscia, non la sua esistenza, e per questo va scritto: un contractor che lo dichiara in gara si impegna su una spaziatura, uno che non lo dichiara no.</p>
+
+<p>La terza è la più seria: sulla stessa linea passa anche la nave, e il multibeam vede proprio la striscia sotto la rotta. È vero, ed è una soluzione legittima, a due condizioni. La prima è che la specifica lo dica: se è il multibeam a individuare i massi nella striscia, il suo dato va esaminato a quello scopo e con un criterio, non soltanto grigliato per la batimetria. La seconda è che il multibeam ci riesca alla profondità del blocco. Alla verticale, l'impronta sul fondale di un fascio di 1 grado è larga 0,44 m a 25 m di profondità e 0,79 m a 45 m: nella parte profonda del blocco il masso è più piccolo dell'impronta che dovrebbe rivelarlo. Non vuol dire che non si veda; vuol dire che va dimostrato, per esempio su un oggetto noto alla profondità massima, invece di essere dato per scontato.</p>
+
+<h2>Che cosa dice lo standard</h2>
+
+<p>Molte specifiche di rilievi offshore riprendono il lessico di IHO S-44, che è scritto per la sicurezza della navigazione. Lo standard tiene distinte tre grandezze: la feature detection, cioè la capacità di un sistema di rilevare oggetti di una data dimensione; la feature search, cioè la parte dell'area esplorata con un metodo sistematico per individuare oggetti; e la copertura batimetrica. Della copertura al 100% precisa che non garantisce misure di profondità continue. Della capacità di rilevamento dice che va valutato l'intero sistema – strumenti, metodi, procedure e persone – e non lo strumento da solo. E per l'Exclusive Order, il più severo, prevede una feature search al 200%, che si può ottenere sovrapponendo adeguatamente le linee.</p>
+
+<p>Una percentuale di copertura misura quanta area è stata percorsa, non che cosa vi si sarebbe visto. Lo standard tiene separate le due cose; una specifica che scrive soltanto «100% di copertura» le fonde in una.</p>
+
+<h2>Che cosa chiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>L'oggetto da individuare, con il criterio di riconoscimento.</strong><span class="t"> La dimensione del bersaglio e, per il side scan, la lunghezza minima dell'ombra o il numero di impulsi sull'oggetto che l'interprete considera affidabili. Senza un criterio la spaziatura non si può controllare.</span></span></li>
+  <li><span class="k">02</span><span><strong>La spaziatura ricavata dal criterio, non dalla portata.</strong><span class="t"> Il contractor indica a quale distanza dalla linea il criterio smette di essere soddisfatto, e come viene coperta la striscia che resta: da un'altra linea che la abbia entro la portata, o da un altro strumento.</span></span></li>
+  <li><span class="k">03</span><span><strong>Se la striscia la copre il multibeam, dichiararlo e dimostrarlo.</strong><span class="t"> Con un criterio di individuazione per il multibeam e una prova sul bersaglio alla profondità massima del blocco, non con la sola batimetria grigliata.</span></span></li>
+  <li><span class="k">04</span><span><strong>Quota del towfish e velocità fra i parametri controllati.</strong><span class="t"> La quota decide la larghezza della striscia, la velocità il numero di impulsi sull'oggetto al bordo della portata. Fuori dai valori dichiarati il conto va rifatto.</span></span></li>
+  <li><span class="k">05</span><span><strong>Una mappa di rilevabilità oltre a quella di copertura.</strong><span class="t"> Per ogni cella, la distanza maggiore da cui è stata vista entro la portata. Le celle viste solo da vicino sono la striscia di questo articolo, e su una mappa si riconoscono a colpo d'occhio.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>La copertura risponde alla domanda «il sonar è passato di qui?». La specifica ha bisogno della risposta a un'altra: «da qui, un masso di 0,5 m si sarebbe visto?». Nell'esempio le due risposte coincidono sull'80% del blocco e divergono nel 20% che sta esattamente sotto le linee, dove a intuito i dati dovrebbero essere migliori.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>IHO, S-44 <em>Standards for Hydrographic Surveys</em>, edizione 6.2.0, ottobre 2024: glossario (feature detection, feature search, copertura batimetrica), sezione 3.3 sulla valutazione dell'intero sistema, sezioni 3.4 e 3.5 sulla feature search al 200% per sovrapposizione e sulla copertura al 100%, tabella 1.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR fornisce QC indipendente e technical assurance su dataset geofisici per sviluppatori, contractor e asset owner dell'offshore. Se state redigendo la specifica di un rilievo, o valutando la proposta tecnica di un contractor, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">The specification asks for every boulder at least 0.5 m high to be identified across a block intended for wind farm foundations, with side scan sonar at 100% coverage. The final report states the coverage was achieved, and the map confirms it: no gaps between one line and the next. Yet a fifth of the block was seen only under conditions in which a boulder of that height is hard to recognise. That part is not between the lines, but beneath them.</p>
+
+<p>The coverage percentage says how much of the seabed came within the sonar's range at least once. It does not say at what distance from the line, and distance is what decides whether an object of a given height can be seen. This article shows where the strip that coverage counts as seen lies, how wide it is, why tightening the lines does not remove it, and what to write in the specification so that someone covers it.</p>
+
+<h2>A low boulder is recognised by its shadow</h2>
+
+<p>Side scan sonar is towed a few metres above the seabed and looks sideways. A boulder returns a strong echo, but so does coarse seabed: what sets it apart is the shadow it casts on the side away from the sonar, and the length of that shadow also gives its height. With the towfish at altitude H above the seabed and an object of height h at horizontal distance x from the point beneath the towfish, on a flat seabed, the shadow is:</p>
+
+<p><strong>L = x × h / (H − h)</strong></p>
+
+<p>The shadow grows in proportion to the distance from the line. Far from the sonar the sound arrives at a grazing angle and the shadow is long; close to the vertical it comes down steeply and the shadow shortens until it almost disappears. With the towfish 7.5 m above the seabed, a 0.5 m boulder casts:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Distance from the line (m)</th><th class="num">Shadow length (m)</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">5</td><td class="num">0.36</td></tr>
+<tr><td class="num">10</td><td class="num">0.71</td></tr>
+<tr><td class="num">14</td><td class="num">1.00</td></tr>
+<tr><td class="num">25</td><td class="num">1.79</td></tr>
+<tr><td class="num">50</td><td class="num">3.57</td></tr>
+<tr><td class="num">75</td><td class="num">5.36</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Five metres from the line, the shadow of a half-metre boulder is 36 cm long; at the edge of the range it exceeds 5 m. The same boulder, in the same survey, is obvious or nearly invisible depending on the line it is seen from.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures below are synthetic – built to illustrate the mechanism, not taken from real projects – but the geometry is that of any side scan survey.</p>
+
+<p>A block of 2.8 × 4 km, water depths between 25 and 45 m. Side scan with a range of 75 m per side, towfish 7.5 m above the seabed, speed 4 knots. In the tender the contractor stated that its interpreter reliably recognises a 0.5 m boulder when the shadow is at least 1 m long. By the formula, the shadow reaches 1 m at 14 m from the line: within 14 m on each side, that is in a strip 28 m wide centred on every line, the line itself does not meet the criterion.</p>
+
+<p>The contractor plans lines 140 m apart. The swaths of two adjacent lines, 150 m wide each, overlap by 10 m, and coverage is complete. But the strip beneath each line is 140 m from the neighbouring lines, almost twice their range: no other line sees it.</p>
+
+<div class="pull"><strong>20%</strong><span>of the block seen only from a distance at which a 0.5 m boulder casts a shadow shorter than 1 m, at 100% coverage</span></div>
+
+<p>That is 28 m in every 140, or 2.24 km² out of 11.2.</p>
+
+<h2>Tightening the lines is not enough</h2>
+
+<p>The instinctive reaction is to reduce the spacing. The table shows what happens:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Spacing (m)</th><th class="num">Lines</th><th class="num">Line km</th><th class="num">Swath / spacing</th><th class="num">Block seen only from close</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">140</td><td class="num">21</td><td class="num">84</td><td class="num">107%</td><td class="num">20%</td></tr>
+<tr><td class="num">100</td><td class="num">29</td><td class="num">116</td><td class="num">150%</td><td class="num">28%</td></tr>
+<tr><td class="num">70</td><td class="num">41</td><td class="num">164</td><td class="num">214%</td><td class="num">0%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>At 100 m the share of the block seen only from close goes up instead of down. The reason is geometric: the strip beneath one line is seen by another line only if that line is within its range, that is no more than 75 m away. As long as the spacing stays above the range, bringing the lines closer does not let anyone see the strip from further away: it adds strips, one per line, still 28 m wide, over shorter intervals.</p>
+
+<p>Below 75 m the problem disappears at once. With lines 70 m apart, every point in the block lies more than 14 m from at least one line that has it within range: even the point directly beneath a line is 70 m from both neighbours, where the shadow of a 0.5 m boulder is 5 m long. The 5 m margin between spacing and range absorbs the towfish's lateral offset from the planned track. In practice it is 200% coverage, and it costs 164 line km instead of 84: 95% more.</p>
+
+<h2>The contractor's objections</h2>
+
+<p>The first: the edge of the range is the worst part of the sonar, and at 70 m a small boulder gets lost. That has to be checked, not assumed. With a 75 m range the sonar can transmit at most 10 pulses per second, because before transmitting the next it has to wait for the echo from the edge; at 4 knots the vessel moves 0.21 m between one pulse and the next. With a horizontal beam of 0.3 degrees, the value of the sonar in the example, the footprint at 70 m is 0.37 m wide, and a 0.5 m boulder is hit by 4 consecutive pulses. In this configuration the edge holds; at higher speeds or with longer ranges the calculation has to be redone.</p>
+
+<p>The second: the 1 m criterion is conservative, and an experienced interpreter recognises shorter shadows. Perhaps, and then the strip narrows but does not disappear: with a minimum shadow of 0.5 m the limit falls to 7 m from the line, the strip to 14 m and, with lines 140 m apart, the share of the block seen only from close to 10%. The criterion decides how wide the strip is, not whether it exists, and that is why it has to be written down: a contractor who states it in the tender commits to a spacing, one who does not, does not.</p>
+
+<p>The third is the most serious: the vessel runs along the same line, and the multibeam sees exactly the strip beneath the track. That is true, and it is a legitimate solution, on two conditions. The first is that the specification says so: if the multibeam is what identifies boulders in the strip, its data has to be examined for that purpose and against a criterion, not just gridded for bathymetry. The second is that the multibeam can do it at the depth of the block. Directly beneath the vessel, the seabed footprint of a 1 degree beam is 0.44 m wide at 25 m depth and 0.79 m at 45 m: in the deeper part of the block the boulder is smaller than the footprint that is supposed to reveal it. That does not mean it cannot be seen; it means it has to be demonstrated, for example on a known object at the maximum depth, rather than taken for granted.</p>
+
+<h2>What the standard says</h2>
+
+<p>Many offshore survey specifications borrow the vocabulary of IHO S-44, which is written for safety of navigation. The standard keeps three quantities apart: feature detection, the ability of a system to detect objects of a defined size; feature search, the extent of the area surveyed with a systematic method of identifying objects; and bathymetric coverage. Of 100% coverage it states that it does not guarantee continuous depth measurements. Of detection ability it says that the entire system has to be assessed – equipment, methods, procedures and personnel – not the instrument alone. And for Exclusive Order, the most demanding, it requires a 200% feature search, which can be achieved by adequately overlapping the lines.</p>
+
+<p>A coverage percentage measures how much area has been run over, not what would have been seen there. The standard keeps the two apart; a specification that says only “100% coverage” merges them into one.</p>
+
+<h2>What to ask for in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>The object to be identified, with the recognition criterion.</strong><span class="t"> The target size and, for side scan, the minimum shadow length or the number of pulses on the object that the interpreter considers reliable. Without a criterion the spacing cannot be checked.</span></span></li>
+  <li><span class="k">02</span><span><strong>Spacing derived from the criterion, not from the range.</strong><span class="t"> The contractor states at what distance from the line the criterion stops being met, and how the remaining strip is covered: by another line that has it within range, or by another instrument.</span></span></li>
+  <li><span class="k">03</span><span><strong>If the multibeam covers the strip, state it and demonstrate it.</strong><span class="t"> With a detection criterion for the multibeam and a test on the target at the maximum depth of the block, not with gridded bathymetry alone.</span></span></li>
+  <li><span class="k">04</span><span><strong>Towfish altitude and speed among the controlled parameters.</strong><span class="t"> Altitude decides the width of the strip, speed the number of pulses on the object at the edge of the range. Outside the declared values the calculation has to be redone.</span></span></li>
+  <li><span class="k">05</span><span><strong>A detectability map as well as a coverage map.</strong><span class="t"> For each cell, the greatest distance within range from which it was seen. Cells seen only from close are the strip in this article, and on a map they stand out at a glance.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>Coverage answers the question “did the sonar pass over here?”. The specification needs the answer to a different one: “from here, would a 0.5 m boulder have been seen?”. In the example the two answers agree over 80% of the block and diverge over the 20% that lies exactly beneath the lines, where intuition says the data should be best.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>IHO, S-44 <em>Standards for Hydrographic Surveys</em>, Edition 6.2.0, October 2024: glossary (feature detection, feature search, bathymetric coverage), section 3.3 on assessing the entire system, sections 3.4 and 3.5 on 200% feature search by overlap and on 100% coverage, Table 1.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR provides independent QC and technical assurance on geophysical datasets for offshore developers, contractors and asset owners. If you are drafting a survey specification, or assessing a contractor's technical proposal, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'parere-tecnico-controversia',
         'topic': 'advisory',
         'date': '2026-10-23',

@@ -642,3 +642,60 @@ another number.
 https://www.clegar.it/en/insights/technical-opinion-in-a-dispute/
 
 #offshore #arbitration #expertwitness #constructionclaims #offshorewind
+
+---
+
+## La spaziatura delle linee – 26 ottobre 2026
+
+### Italiano
+
+Un rilievo side scan al 100% di copertura, senza un buco fra una linea e
+l'altra, può lasciare un quinto del blocco visto male. Non fra le linee: sotto.
+
+Un masso basso si riconosce dall'ombra che proietta, e l'ombra si accorcia
+avvicinandosi alla linea. Lontano dal sonar il suono arriva radente e l'ombra
+è lunga; vicino alla verticale del towfish scende ripido e l'ombra quasi
+sparisce. La copertura conta come visto tutto ciò che è entrato nella portata,
+a qualunque distanza.
+
+In un esempio sintetico, con linee a 140 m e il criterio di riconoscimento
+dichiarato in gara, il 20% del blocco è visto soltanto da troppo vicino, e
+nessun'altra linea lo raggiunge. Stringere le linee non basta: finché la
+spaziatura resta sopra la portata del sonar, ogni linea in più aggiunge una
+striscia invece di toglierne una.
+
+La striscia si copre in due modi: con linee abbastanza vicine da coprirsi a
+vicenda le strisce, o con il multibeam, se la specifica lo dice e la capacità di
+rilevamento è dimostrata alla profondità del blocco. La scelta va fatta prima
+della gara, non scoperta dopo la consegna.
+
+https://www.clegar.it/insights/spaziatura-delle-linee/
+
+#offshore #sidescansonar #hydrography #offshorewind #marinesurvey
+
+### English
+
+A side scan survey at 100% coverage, with no gap between one line and the
+next, can leave a fifth of the block poorly seen. Not between the lines:
+beneath them.
+
+A low boulder is recognised by the shadow it casts, and the shadow shortens
+closer to the line. Far from the sonar the sound arrives at a grazing angle and
+the shadow is long; close to the vertical beneath the towfish it comes down
+steeply and the shadow almost disappears. Coverage counts as seen everything
+that came within range, at any distance.
+
+In an illustrative example, with lines 140 m apart and the recognition
+criterion stated in the tender, 20% of the block is seen only from too close,
+and no other line reaches it. Tightening the lines is not enough: as long as
+the spacing stays above the sonar's range, each extra line adds a strip rather
+than removing one.
+
+The strip can be covered in two ways: with lines close enough to see each
+other's strips, or with the multibeam, if the specification says so and detection is
+demonstrated at the depth of the block. The choice has to be made before the
+tender, not discovered after delivery.
+
+https://www.clegar.it/en/insights/survey-line-spacing/
+
+#offshore #sidescansonar #hydrography #offshorewind #marinesurvey

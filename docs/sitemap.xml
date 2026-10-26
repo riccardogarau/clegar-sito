@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/spaziatura-delle-linee/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/spaziatura-delle-linee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/survey-line-spacing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/spaziatura-delle-linee/"/>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/survey-line-spacing/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/spaziatura-delle-linee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/survey-line-spacing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/spaziatura-delle-linee/"/>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/parere-tecnico-in-una-controversia/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/parere-tecnico-in-una-controversia/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/technical-opinion-in-a-dispute/"/>
