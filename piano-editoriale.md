@@ -44,6 +44,7 @@ Già online, da non riprendere:
 | Che cosa decide in giornata il rappresentante a bordo | Owner's Engineering | perdita delle correzioni di posizionamento, rifare subito contro attendere il post-processing, costo del ritorno che cresce con la distanza, osservazioni grezze come condizione del recupero, scadenza legata alla posizione della nave, confine fra decisioni di bordo e di terra |
 | Il parere tecnico in una controversia | Technical Advisory | measured mile, perdita di produttività di un aratro, scelta del tratto di riferimento, differenza di terreno contro evento contestato, controllo incrociato sulle ore di fermo, incertezze con il loro verso, IBA Rules art. 5.2, confine fra fatto tecnico e responsabilità |
 | La spaziatura delle linee | Marine Geoscience | ombra del side scan e distanza dalla linea, striscia sotto la linea con copertura al 100%, spaziatura sopra e sotto la portata, multibeam come copertura della striscia, criterio di riconoscimento in gara, feature detection contro feature search in S-44 |
+| Dove i path paralleli si incontrano | Project Management | merge bias, probabilità della milestone come prodotto delle probabilità dei path, float che non misura la coda della durata, dipendenza fra path per il meteo, predecessori ridotti al blocco che serve, GAO-16-89G |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -97,11 +98,17 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   incurva i bordi dello swath e si distingue dal roll con passate reciproche.
   Va impostato su un altro meccanismo o un altro esempio, non rifatto.)*
 
-### Project Management — 2 articoli pubblicati
+### Project Management — 3 articoli pubblicati
 - [x] Le interfacce fra contractor: dove si rompono e chi le tiene — 2026-10-16
   *(tratta la stessa parola con due significati in due contratti separati. Non
   si sovrappone alla readiness review, che riapre una voce chiusa su una
   revisione di documento, né al critical path, che riguarda il meteo.)*
+- [x] Dove i path paralleli si incontrano: la probabilità di una milestone — 2026-10-28
+  *(aggiunto il 2026-10-28: Project Management era la linea con meno articoli
+  e non aveva voci in arretrato. L'esempio è il merge bias – tre path
+  all'80% che danno una milestone al 56% – e il float che non misura la coda
+  della durata. Non riprende il critical path, che è deterministico e
+  riguarda quale path vincola quando cambia l'assunzione sul meteo.)*
 
 ## Che cosa si consegna per ogni articolo
 
