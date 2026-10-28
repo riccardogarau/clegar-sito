@@ -699,3 +699,58 @@ tender, not discovered after delivery.
 https://www.clegar.it/en/insights/survey-line-spacing/
 
 #offshore #sidescansonar #hydrography #offshorewind #marinesurvey
+
+---
+
+## Dove i path paralleli si incontrano – 28 ottobre 2026
+
+### Italiano
+
+Tre path paralleli, ciascuno con almeno l'80% di probabilità di finire in
+tempo. La milestone in cui confluiscono è in tempo poco più di una volta su due.
+
+Nessuno dei tre contiene un errore. Il difetto sta nel punto in cui si
+incontrano: la nave geotecnica può cominciare solo quando sono pronti tutti e
+tre – le carte del rilievo geofisico, la clearance UXO, l'autorizzazione – e
+alla milestone basta che ne ritardi uno. Le probabilità non si sommano e non si
+mediano: si moltiplicano.
+
+In un esempio sintetico il prodotto fa 56%. E il path che lo abbassa di più è
+l'autorizzazione, quello con più float: un'istruttoria che di solito si chiude
+in fretta ma, quando si inceppa, si allunga più di qualunque rilievo. Il
+margine in giorni misura la distanza dal valore più probabile, non la coda.
+
+Spostare la nave di cinque giorni risolve, ma a scatola chiusa. L'alternativa è
+chiedersi che cosa le serva davvero il primo giorno: le carte delle prime
+posizioni, non il rilievo intero; una domanda presentata su un'area, non
+sull'elenco definitivo. La probabilità va chiesta sulla milestone, non sui
+path.
+
+https://www.clegar.it/insights/dove-i-path-paralleli-si-incontrano/
+
+#offshore #projectmanagement #scheduling #riskmanagement #offshorewind
+
+### English
+
+Three parallel paths, each with at least an 80% chance of finishing on time.
+The milestone they feed is on time little more than one time in two.
+
+None of the three contains an error. The defect lies where they meet: the
+geotechnical vessel can start only when all three are ready – the geophysical
+charts, the UXO clearance, the permit – and one late path is enough to make the
+milestone late. The probabilities are neither added nor averaged: they
+multiply.
+
+In an illustrative example the product is 56%. And the path that pulls it down
+most is the permit, the one with the most float: a review that usually closes
+quickly but, when it stalls, stretches further than any survey. Margin in days
+measures the distance from the most likely value, not the tail.
+
+Moving the vessel five days later fixes it, but blindly. The alternative is to
+ask what it actually needs on the first day: the charts for the first
+locations, not the whole survey; an application filed for an area, not for the
+final list. The probability has to be asked of the milestone, not of the paths.
+
+https://www.clegar.it/en/insights/where-parallel-paths-meet/
+
+#offshore #projectmanagement #scheduling #riskmanagement #offshorewind

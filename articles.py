@@ -15,6 +15,272 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'merge-bias',
+        'topic': 'pm',
+        'date': '2026-10-28',
+        'slug': {'it': 'dove-i-path-paralleli-si-incontrano',
+                 'en': 'where-parallel-paths-meet'},
+        'title': {
+            'it': 'Dove i path paralleli si incontrano: tre path almeno all’80%, una milestone al 56%',
+            'en': 'Where parallel paths meet: three paths at 80% or better, one milestone at 56%',
+        },
+        'meta_title': {
+            'it': 'Dove i path paralleli si incontrano | Insights',
+            'en': 'Where parallel paths meet | Insights',
+        },
+        'desc': {
+            'it': ('Perché tre path che finiscono in tempo quattro volte su cinque danno una milestone '
+                   'in tempo poco più di una volta su due, perché il float non lo mostra, e che cosa '
+                   'chiedere perché il numero compaia prima del noleggio della nave.'),
+            'en': ('Why three paths that each finish on time four times out of five give a milestone '
+                   'that is on time little more than one time in two, why float does not show it, and '
+                   'what to ask for so that the number appears before the vessel is chartered.'),
+        },
+        'abstract': {
+            'it': ('Tre path paralleli, ciascuno con almeno l’80% di probabilità di finire in tempo, '
+                   'confluiscono nell’inizio di una campagna geotecnica. La probabilità che siano '
+                   'pronti tutti e tre è il prodotto: 56%. Il path che la abbassa di più è quello con '
+                   'più float.'),
+            'en': ('Three parallel paths, each with at least an 80% chance of finishing on time, feed the '
+                   'start of a geotechnical campaign. The probability that all three are ready is the '
+                   'product: 56%. The path that pulls it down most is the one with the most float.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">La nave geotecnica è noleggiata dal giorno 70. Per cominciare le servono tre cose: le carte del rilievo geofisico con le posizioni dei CPT, la clearance UXO delle stesse posizioni e l'autorizzazione dell'autorità marittima. Il programma le mostra tutte pronte in tempo, con almeno dieci giorni di margine, e l'analisi di rischio di ciascun path dà una probabilità fra l'80 e l'86% di finire entro il giorno 70. La probabilità che siano pronte tutte e tre è del 56%.</p>
+
+<p>Nessuno dei tre path contiene un errore. Il difetto sta nel punto in cui si incontrano, e non compare in un programma letto path per path. Questo articolo mostra da dove viene quel 56%, perché il margine in giorni non lo rivela, che cosa serve per riportarlo sopra l'80%, e che cosa chiedere perché il numero compaia prima del noleggio e non il giorno in cui la nave resta in standby.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori sono sintetici – costruiti per illustrare il metodo, non tratti da progetti reali.</p>
+
+<p>Un parco eolico in fase di site investigation. Tre path paralleli, affidati a soggetti diversi, confluiscono in una sola milestone: l'inizio della campagna geotecnica, con la nave noleggiata dal giorno 70 dal kick-off. Per ogni path la durata è stimata con un minimo, un valore più probabile e un massimo; per i due rilievi l'intervallo tiene conto del meteo, per l'autorizzazione dei tempi di istruttoria.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Path</th><th class="num">Minimo</th><th class="num">Più probabile</th><th class="num">Massimo</th><th class="num">Margine al giorno 70</th><th class="num">Probabilità entro il giorno 70</th></tr>
+</thead>
+<tbody>
+<tr><td>A – Rilievo geofisico, fino alle carte delle posizioni CPT</td><td class="num">52</td><td class="num">60</td><td class="num">80</td><td class="num">10</td><td class="num">82%</td></tr>
+<tr><td>B – Rilievo UXO e clearance delle posizioni</td><td class="num">48</td><td class="num">58</td><td class="num">80</td><td class="num">12</td><td class="num">86%</td></tr>
+<tr><td>C – Autorizzazione alle indagini geotecniche</td><td class="num">45</td><td class="num">55</td><td class="num">86</td><td class="num">15</td><td class="num">80%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Durate in giorni dal kick-off. Le probabilità vengono da una distribuzione triangolare costruita sui tre valori, e sono arrotondate al punto percentuale; i calcoli che seguono partono dai valori arrotondati.</p>
+
+<h2>Il conto si fa nel punto di incontro</h2>
+
+<p>La nave può cominciare solo se tutti e tre i path sono finiti. Se i loro ritardi sono indipendenti, la probabilità che non ritardi nessuno è il prodotto delle tre probabilità:</p>
+
+<p><strong>0,82 × 0,86 × 0,80 = 0,56</strong></p>
+
+<div class="pull"><strong>56%</strong><span>la probabilità che il giorno 70 la nave geotecnica trovi pronte tutte e tre le cose che le servono per cominciare</span></div>
+
+<p>Preso da solo, nessun path è a rischio: il meno sicuro finisce in tempo quattro volte su cinque. Ma alla milestone basta che ne ritardi uno, e i path che possono ritardare sono tre. Il GAO Schedule Assessment Guide chiama questo effetto merge bias: nel punto in cui i path paralleli si incontrano il rischio si moltiplica, la probabilità di essere in tempo diminuisce con ogni path che vi confluisce, ed è una delle ragioni per cui anche un programma ben costruito tende a finire più tardi della data che mostra.</p>
+
+<h2>Perché il margine non lo mostra</h2>
+
+<p>Il programma integrato mostra il path A come critical path, con dieci giorni di margine prima della nave, e il path C come il più tranquillo, con quindici giorni di float. Letto così, l'autorizzazione è il path di cui preoccuparsi meno. È invece quello con la probabilità più bassa.</p>
+
+<p>Il margine misura la distanza fra il valore più probabile e la data. Non dice quanto si allunga la durata quando le cose vanno storte. Di solito un'istruttoria si chiude in 55 giorni, ma una richiesta di integrazioni o il parere di un altro ente possono portarla a 86: trentuno giorni oltre il valore più probabile, contro i venti del rilievo geofisico. Quindici giorni di margine coprono meno della metà di quei trentuno; i dieci del rilievo geofisico coprono la metà esatta dei suoi venti. Per questo il path con più float è quello che arriva in tempo meno spesso.</p>
+
+<h2>Le obiezioni</h2>
+
+<p>La prima: i path non sono indipendenti. I due rilievi lavorano nello stesso mare e nella stessa stagione, e una settimana di mare grosso li ferma entrambi. È vero, e la dipendenza va nel verso favorevole: se i ritardi di A e B tendono a coincidere, la probabilità che arrivino in tempo entrambi è più alta del prodotto. Il caso limite è che coincidano del tutto: allora A e B sono pronti insieme con la probabilità del meno sicuro dei due, l'82%, e il conto diventa 0,82 × 0,80 = 0,66. L'autorizzazione non dipende dal meteo e resta indipendente comunque. La probabilità vera sta quindi fra il 56 e il 66%: in ogni caso lontana dall'80% che ciascun path, da solo, lascia intendere.</p>
+
+<p>La seconda: le probabilità dei path sono stime, e stime diverse danno un numero diverso. Anche questo è vero, ed è un motivo per farle, non per lasciarle fuori. Un programma deterministico non evita la stima: la fa senza dichiararla, mostrando una data senza dire con quale probabilità verrà rispettata. Cambiare le stime di qualche punto cambia il risultato di qualche punto; non cambia il fatto che tre probabilità intorno all'80%, moltiplicate fra loro, diano poco più della metà.</p>
+
+<p>La terza: la nave può cominciare dalle posizioni già pronte. Questa non è un'obiezione, ma la prima delle soluzioni, e conviene vederla con i numeri.</p>
+
+<h2>Spostare la data, o cambiare che cosa la nave aspetta</h2>
+
+<p>La soluzione più ovvia è ritardare l'inizio della nave. Rifacendo il prodotto con le probabilità dei tre path a ciascuna data:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Inizio della nave (giorno)</th><th class="num">A</th><th class="num">B</th><th class="num">C</th><th class="num">Milestone in tempo</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">70</td><td class="num">82%</td><td class="num">86%</td><td class="num">80%</td><td class="num">56%</td></tr>
+<tr><td class="num">72</td><td class="num">89%</td><td class="num">91%</td><td class="num">85%</td><td class="num">69%</td></tr>
+<tr><td class="num">74</td><td class="num">94%</td><td class="num">95%</td><td class="num">89%</td><td class="num">79%</td></tr>
+<tr><td class="num">75</td><td class="num">96%</td><td class="num">96%</td><td class="num">90%</td><td class="num">83%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Per superare l'80% la nave deve cominciare il giorno 75: cinque giorni di ritardo su tutto ciò che viene dopo la campagna geotecnica, decisi prima ancora di sapere se servivano.</p>
+
+<p>L'alternativa è chiedersi che cosa serva davvero alla nave il giorno 70. Non le serve il rilievo geofisico completo: le servono le carte delle prime posizioni che andrà a indagare. Se il processing consegna per primo il blocco che le contiene, il path A finisce sei giorni prima per quella parte, e la sua probabilità di essere pronto entro il giorno 70 sale dall'82 al 97%. Allo stesso modo, la domanda di autorizzazione si può presentare dieci giorni prima, su un'area che contiene tutte le posizioni possibili invece che sull'elenco definitivo: la probabilità del path C sale dall'80 al 97%.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Intervento</th><th class="num">A</th><th class="num">B</th><th class="num">C</th><th class="num">Milestone al giorno 70</th></tr>
+</thead>
+<tbody>
+<tr><td>Nessuno</td><td class="num">82%</td><td class="num">86%</td><td class="num">80%</td><td class="num">56%</td></tr>
+<tr><td>Solo le carte del primo blocco</td><td class="num">97%</td><td class="num">86%</td><td class="num">80%</td><td class="num">67%</td></tr>
+<tr><td>Solo la domanda anticipata</td><td class="num">82%</td><td class="num">86%</td><td class="num">97%</td><td class="num">68%</td></tr>
+<tr><td>Entrambi</td><td class="num">97%</td><td class="num">86%</td><td class="num">97%</td><td class="num">81%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Nessuno dei due interventi, da solo, porta la milestone oltre il 70%: migliorare un path lascia com'è il più debole degli altri due, e nel prodotto quello pesa quanto prima. Insieme la portano all'81% senza spostare la nave. Il primo agisce sul critical path; il secondo sul path con più float, che un programma letto per margini non avrebbe indicato.</p>
+
+<p>Il resto del rilievo geofisico non smette di essere un predecessore: lo diventa di posizioni che la nave raggiungerà settimane dopo. Il punto di incontro non sparisce, si sposta dove c'è il tempo per assorbire un ritardo. È ciò che suggerisce anche il GAO: esaminare le attività che hanno molti predecessori, per verificare se servono tutti e se una logica diversa può collegarne qualcuno ad altre attività.</p>
+
+<h2>Che cosa chiedere nella pianificazione</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Un'analisi di rischio del programma, non solo un programma.</strong><span class="t"> Per ogni path che confluisce in una milestone con conseguenze contrattuali – un noleggio, una finestra meteo, una consegna – la durata minima, più probabile e massima, e da che cosa dipende ciascuna.</span></span></li>
+  <li><span class="k">02</span><span><strong>La probabilità dichiarata sulla milestone, non sui path.</strong><span class="t"> La domanda è con quale probabilità la nave trova tutto pronto il giorno in cui comincia il noleggio, non se ogni path ha margine. Con il metodo dichiarato: il prodotto per pochi path indipendenti, una simulazione Monte Carlo sul programma quando i path sono molti o collegati.</span></span></li>
+  <li><span class="k">03</span><span><strong>Le dipendenze fra i path dichiarate.</strong><span class="t"> Quali path condividono una causa di ritardo – il meteo, la stessa nave, la stessa squadra di processing – e come sono state trattate. Trattare come indipendenti due path che ritardano insieme abbassa la probabilità calcolata; trattarli come legati quando non lo sono la alza.</span></span></li>
+  <li><span class="k">04</span><span><strong>I predecessori della milestone verificati uno per uno.</strong><span class="t"> Per ciascuno: serve tutto, o ne basta una parte? Una milestone legata a un deliverable intero, quando ne basta un blocco, aggiunge un path al punto di incontro senza motivo.</span></span></li>
+  <li><span class="k">05</span><span><strong>Il calcolo rifatto quando un path cambia.</strong><span class="t"> Un ritardo su un path che aveva margine non sposta nessuna data nel programma, ma abbassa la probabilità nel punto di incontro. È lì che va letto.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Un programma letto path per path risponde, per ciascuno, alla domanda "è in tempo?". Nel punto in cui i path si incontrano la domanda cambia: non se ciascuno è in tempo, ma se lo sono tutti insieme. Tre risposte rassicuranti alla prima domanda possono dare, alla seconda, poco più di un lancio di moneta.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>U.S. Government Accountability Office, GAO-16-89G, <em>Schedule Assessment Guide: Best Practices for Project Schedules</em>, dicembre 2015: Best Practice 2, paragrafo "Path Convergence"; Best Practice 8, paragrafo "Merge Bias and Schedule Underestimation".</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR fornisce project management e technical assurance per campagne offshore. Se state costruendo il programma di una campagna con più contractor, o state rivedendo quello che vi è stato consegnato, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">The geotechnical vessel is chartered from day 70. To start work it needs three things: the geophysical survey charts with the CPT locations, UXO clearance of the same locations, and the permit from the maritime authority. The schedule shows all three ready in time, each with at least ten days of margin, and the risk analysis of each path gives a probability between 80 and 86% of finishing by day 70. The probability that all three are ready is 56%.</p>
+
+<p>None of the three paths contains an error. The defect lies at the point where they meet, and it does not appear in a schedule read one path at a time. This article shows where that 56% comes from, why margin in days does not reveal it, what it takes to bring it back above 80%, and what to ask for so that the number appears before the charter is signed and not on the day the vessel goes on standby.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures are synthetic – built to illustrate the method, not taken from real projects.</p>
+
+<p>An offshore wind farm at site investigation stage. Three parallel paths, awarded to different parties, feed a single milestone: the start of the geotechnical campaign, with the vessel chartered from day 70 after kick-off. For each path the duration is estimated as a minimum, a most likely value and a maximum; for the two surveys the range accounts for weather, for the permit for the authority's review time.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Path</th><th class="num">Minimum</th><th class="num">Most likely</th><th class="num">Maximum</th><th class="num">Margin to day 70</th><th class="num">Probability by day 70</th></tr>
+</thead>
+<tbody>
+<tr><td>A – Geophysical survey, up to the CPT location charts</td><td class="num">52</td><td class="num">60</td><td class="num">80</td><td class="num">10</td><td class="num">82%</td></tr>
+<tr><td>B – UXO survey and clearance of the locations</td><td class="num">48</td><td class="num">58</td><td class="num">80</td><td class="num">12</td><td class="num">86%</td></tr>
+<tr><td>C – Permit for the geotechnical investigation</td><td class="num">45</td><td class="num">55</td><td class="num">86</td><td class="num">15</td><td class="num">80%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Durations in days from kick-off. The probabilities come from a triangular distribution built on the three values, rounded to the nearest percentage point; the calculations that follow start from the rounded values.</p>
+
+<h2>The calculation belongs where the paths meet</h2>
+
+<p>The vessel can start only if all three paths are complete. If their delays are independent, the probability that none of them is late is the product of the three probabilities:</p>
+
+<p><strong>0.82 × 0.86 × 0.80 = 0.56</strong></p>
+
+<div class="pull"><strong>56%</strong><span>the probability that on day 70 the geotechnical vessel finds all three things it needs to start work ready</span></div>
+
+<p>Taken on its own, no path is at risk: the least certain finishes on time four times out of five. But one late path is enough to make the milestone late, and there are three paths that can be late. The GAO Schedule Assessment Guide calls this effect merge bias: at the point where parallel paths meet, risk multiplies, the probability of being on time falls with every path that converges there, and it is one of the reasons why even a well-built schedule tends to finish later than the date it shows.</p>
+
+<h2>Why the margin does not show it</h2>
+
+<p>The integrated schedule shows path A as the critical path, with ten days of margin before the vessel, and path C as the most comfortable, with fifteen days of float. Read that way, the permit is the path to worry about least. It is in fact the one with the lowest probability.</p>
+
+<p>Margin measures the distance between the most likely value and the date. It does not say how far the duration stretches when things go wrong. A permit review usually closes in 55 days, but a request for further information or an opinion from another body can take it to 86: thirty-one days beyond the most likely value, against twenty for the geophysical survey. Fifteen days of margin cover less than half of those thirty-one; the ten days of the geophysical survey cover exactly half of its twenty. That is why the path with the most float is the one that arrives on time least often.</p>
+
+<h2>The objections</h2>
+
+<p>The first: the paths are not independent. The two surveys work in the same sea and the same season, and a week of heavy weather stops both. That is true, and the dependence works in the favourable direction: if the delays of A and B tend to coincide, the probability that both arrive on time is higher than the product. The limiting case is that they coincide entirely: then A and B are ready together with the probability of the less certain of the two, 82%, and the calculation becomes 0.82 × 0.80 = 0.66. The permit does not depend on weather and remains independent regardless. The true probability therefore lies between 56 and 66%: in any case far from the 80% that each path, on its own, suggests.</p>
+
+<p>The second: the path probabilities are estimates, and different estimates give a different number. That is also true, and it is a reason to make them, not to leave them out. A deterministic schedule does not avoid the estimate: it makes it without declaring it, showing a date without saying with what probability it will be met. Changing the estimates by a few points changes the result by a few points; it does not change the fact that three probabilities around 80%, multiplied together, give little more than half.</p>
+
+<p>The third: the vessel can start on the locations that are already ready. That is not an objection but the first of the solutions, and it is worth looking at with numbers.</p>
+
+<h2>Move the date, or change what the vessel waits for</h2>
+
+<p>The obvious solution is to start the vessel later. Redoing the product with the probabilities of the three paths at each date:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Vessel start (day)</th><th class="num">A</th><th class="num">B</th><th class="num">C</th><th class="num">Milestone on time</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">70</td><td class="num">82%</td><td class="num">86%</td><td class="num">80%</td><td class="num">56%</td></tr>
+<tr><td class="num">72</td><td class="num">89%</td><td class="num">91%</td><td class="num">85%</td><td class="num">69%</td></tr>
+<tr><td class="num">74</td><td class="num">94%</td><td class="num">95%</td><td class="num">89%</td><td class="num">79%</td></tr>
+<tr><td class="num">75</td><td class="num">96%</td><td class="num">96%</td><td class="num">90%</td><td class="num">83%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>To get above 80% the vessel has to start on day 75: five days of delay on everything that follows the geotechnical campaign, decided before anyone knows whether they were needed.</p>
+
+<p>The alternative is to ask what the vessel actually needs on day 70. It does not need the complete geophysical survey: it needs the charts for the first locations it will investigate. If processing delivers the block containing them first, path A finishes six days earlier for that part, and its probability of being ready by day 70 rises from 82 to 97%. In the same way, the permit application can be filed ten days earlier, for an area that contains every possible location rather than for the final list: the probability of path C rises from 80 to 97%.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Action</th><th class="num">A</th><th class="num">B</th><th class="num">C</th><th class="num">Milestone at day 70</th></tr>
+</thead>
+<tbody>
+<tr><td>None</td><td class="num">82%</td><td class="num">86%</td><td class="num">80%</td><td class="num">56%</td></tr>
+<tr><td>First-block charts only</td><td class="num">97%</td><td class="num">86%</td><td class="num">80%</td><td class="num">67%</td></tr>
+<tr><td>Early application only</td><td class="num">82%</td><td class="num">86%</td><td class="num">97%</td><td class="num">68%</td></tr>
+<tr><td>Both</td><td class="num">97%</td><td class="num">86%</td><td class="num">97%</td><td class="num">81%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Neither action on its own takes the milestone above 70%: improving one path leaves the weaker of the other two as it was, and in the product it weighs as much as before. Together they bring it to 81% without moving the vessel. The first acts on the critical path; the second on the path with the most float, which a schedule read by margins would not have pointed to.</p>
+
+<p>The rest of the geophysical survey does not stop being a predecessor: it becomes one for locations the vessel will reach weeks later. The merge point does not disappear; it moves to where there is time to absorb a delay. This is also what the GAO recommends: examining activities with many predecessors, to check whether all of them are needed and whether different logic can link some of them to other activities.</p>
+
+<h2>What to ask for in planning</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>A schedule risk analysis, not just a schedule.</strong><span class="t"> For every path feeding a milestone with contractual consequences – a charter, a weather window, a delivery – the minimum, most likely and maximum duration, and what each one depends on.</span></span></li>
+  <li><span class="k">02</span><span><strong>The probability stated for the milestone, not for the paths.</strong><span class="t"> The question is with what probability the vessel finds everything ready on the day the charter starts, not whether each path has margin. With the method stated: the product for a few independent paths, a Monte Carlo simulation of the schedule when the paths are many or linked.</span></span></li>
+  <li><span class="k">03</span><span><strong>Dependencies between paths declared.</strong><span class="t"> Which paths share a cause of delay – weather, the same vessel, the same processing team – and how they were treated. Treating as independent two paths that are late together lowers the calculated probability; treating them as linked when they are not raises it.</span></span></li>
+  <li><span class="k">04</span><span><strong>The milestone's predecessors checked one by one.</strong><span class="t"> For each: is all of it needed, or is part of it enough? A milestone tied to a whole deliverable, when one block of it is enough, adds a path to the merge point for no reason.</span></span></li>
+  <li><span class="k">05</span><span><strong>The calculation redone when a path changes.</strong><span class="t"> A delay on a path that had margin moves no date in the schedule, but it lowers the probability at the merge point. That is where it has to be read.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>A schedule read one path at a time answers, for each path, the question "is it on time?". At the point where the paths meet, the question changes: not whether each one is on time, but whether all of them are together. Three reassuring answers to the first question can give, to the second, little better than a coin toss.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>U.S. Government Accountability Office, GAO-16-89G, <em>Schedule Assessment Guide: Best Practices for Project Schedules</em>, December 2015: Best Practice 2, section "Path Convergence"; Best Practice 8, section "Merge Bias and Schedule Underestimation".</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR provides project management and technical assurance for offshore campaigns. If you are building the schedule for a campaign with several contractors, or reviewing one you have been given, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'spaziatura-linee',
         'topic': 'geoscience',
         'date': '2026-10-26',

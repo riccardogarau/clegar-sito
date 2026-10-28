@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/dove-i-path-paralleli-si-incontrano/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/dove-i-path-paralleli-si-incontrano/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/where-parallel-paths-meet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/dove-i-path-paralleli-si-incontrano/"/>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/where-parallel-paths-meet/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/dove-i-path-paralleli-si-incontrano/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/where-parallel-paths-meet/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/dove-i-path-paralleli-si-incontrano/"/>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/spaziatura-delle-linee/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/spaziatura-delle-linee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/survey-line-spacing/"/>
