@@ -754,3 +754,62 @@ final list. The probability has to be asked of the milestone, not of the paths.
 https://www.clegar.it/en/insights/where-parallel-paths-meet/
 
 #offshore #projectmanagement #scheduling #riskmanagement #offshorewind
+
+---
+
+## Un profilo di velocità del suono scaduto – 16 novembre 2026
+
+### Italiano
+
+Il profilo di velocità del suono è in regola con la specifica, e la sonda al
+trasduttore non segnala niente per tutto il giorno. Il fondale esce lo stesso
+incurvato.
+
+La sonda misura la velocità del suono in un punto solo: alla profondità dei
+trasduttori. Se l'acqua cambia in superficie se ne accorge. Se a cambiare è la
+quota del termoclino, più sotto, legge lo stesso valore dalla mattina alla sera.
+
+In un esempio sintetico, a 40 m di profondità, il vento abbassa il termoclino
+di un metro all'ora e il profilo resta quello delle sei. Dopo dieci ore, su un
+fondale piano, il bordo dello swath e il centro sono a 0,38 m di distanza. Lo
+hanno tutte le linee del pomeriggio, con lo stesso segno.
+
+La regola "un profilo ogni dodici ore" non lo vede, perché l'acqua non cambia
+a orario. Lo vede il dato: l'errore è simmetrico sui due bordi, cresce con le
+ore dal profilo e torna a zero quando ne entra uno nuovo. Il fondale non sa a
+che ora è stato misurato il profilo.
+
+Per questo il criterio va scritto sul dato, non solo sull'orologio: la
+differenza fra bordo e centro, linea per linea, guardata mentre la nave è
+ancora sul posto.
+
+https://www.clegar.it/insights/profilo-velocita-del-suono-scaduto/
+
+#offshore #hydrography #multibeam #marinesurvey #offshorewind
+
+### English
+
+The sound velocity profile complies with the specification, and the probe at
+the transducer flags nothing all day. The seabed still comes out curved.
+
+The probe measures sound velocity at a single point: transducer depth. If the
+water changes at the surface, it notices. If what changes is the depth of the
+thermocline, further down, it reads the same value from morning to evening.
+
+In an illustrative example, in 40 m of water, the wind pushes the thermocline
+down by a metre an hour and the profile stays the six o'clock one. After ten
+hours, over a flat seabed, the edge of the swath and the centre are 0.38 m
+apart. Every line of the afternoon has it, with the same sign.
+
+The rule "one profile every twelve hours" does not see it, because the water
+does not change on a timetable. The data do: the error is symmetric on both
+edges, grows with the hours since the profile and drops back to zero when a
+new one comes in. The seabed does not know what time the profile was taken.
+
+That is why the criterion belongs on the data, not only on the clock: the
+edge-minus-centre difference, line by line, looked at while the vessel is
+still on site.
+
+https://www.clegar.it/en/insights/stale-sound-velocity-profile/
+
+#offshore #hydrography #multibeam #marinesurvey #offshorewind

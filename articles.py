@@ -15,6 +15,235 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'profilo-velocita-suono',
+        'topic': 'geoscience',
+        'date': '2026-11-16',
+        'slug': {'it': 'profilo-velocita-del-suono-scaduto',
+                 'en': 'stale-sound-velocity-profile'},
+        'title': {
+            'it': 'Un profilo di velocità del suono scaduto: come si riconosce dai dati, non dall’orologio',
+            'en': 'A stale sound velocity profile: recognising it in the data, not by the clock',
+        },
+        'meta_title': {
+            'it': 'Un profilo di velocità del suono scaduto | Insights',
+            'en': 'A stale sound velocity profile | Insights',
+        },
+        'desc': {
+            'it': ('Perché un profilo di velocità del suono invecchia senza che la sonda al trasduttore '
+                   'se ne accorga, come lo si riconosce dai dati linea per linea, e che cosa chiedere '
+                   'nella specifica perché qualcuno lo guardi mentre la nave è ancora sul posto.'),
+            'en': ('Why a sound velocity profile goes stale without the probe at the transducer noticing, '
+                   'how to recognise it in the data line by line, and what to ask for in the '
+                   'specification so that someone looks while the vessel is still on site.'),
+        },
+        'abstract': {
+            'it': ('Il termoclino scende di dieci metri in una giornata, la sonda al trasduttore non cambia '
+                   'lettura e il profilo resta quello del mattino. Su un fondale piano a 40 m, bordo e '
+                   'centro dello swath finiscono a 0,38 m di distanza. La firma è nel dato: simmetrica, '
+                   'cresce con le ore e torna a zero con il profilo nuovo.'),
+            'en': ('The thermocline sinks ten metres in a day, the probe at the transducer does not change '
+                   'its reading and the profile stays the morning one. Over a flat seabed at 40 m, the edge '
+                   'and the centre of the swath end up 0.38 m apart. The signature is in the data: '
+                   'symmetric, growing with the hours and back to zero with a new profile.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Alle sei del mattino il contractor cala la sonda e misura il profilo di velocità del suono. La specifica chiede un profilo ogni dodici ore, e la sonda montata al trasduttore misura in continuo la velocità del suono a quella profondità: per tutta la giornata segna lo stesso valore del profilo. Alle quattro del pomeriggio un profilo nuovo mostra che l'acqua sotto è cambiata da ore. Nei dati di quelle dieci ore, su un fondale piano, il bordo dello swath e il centro sono a 0,38 m di distanza.</p>
+
+<p>Il profilo era in regola con la specifica, e la sonda non ha dato allarmi. Questo articolo mostra perché un profilo invecchia senza che la sonda al trasduttore se ne accorga, come lo si riconosce dai dati invece che dall'orologio, che cosa si recupera in processing e che cosa chiedere nella specifica.</p>
+
+<h2>A che cosa serve il profilo</h2>
+
+<p>Per ogni fascio un multibeam misura un tempo di andata e ritorno e un angolo di partenza. Per trasformarli in un punto sul fondo, il processing ricostruisce il percorso del suono nella colonna d'acqua, strato per strato: dove la velocità cambia il fascio si piega, e il punto che ne risulta dipende da dove il profilo dice che la velocità cambia. Al nadir il fascio scende in verticale e non si piega: un profilo sbagliato sbaglia solo la velocità media, e quindi la scala della profondità. Un fascio esterno attraversa il termoclino in obliquo, si piega, e un termoclino messo alla quota sbagliata gli fa sbagliare la curva oltre che la velocità.</p>
+
+<p>L'articolo sul witnessing di una calibrazione ha mostrato che questo errore è simmetrico rispetto al nadir, e che due passate reciproche lo separano dal roll. Qui la domanda è un'altra: non come lo si isola in una prova di un'ora, ma come se ne accorge un rilievo che dura settimane, mentre l'acqua cambia.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali.</p>
+
+<p>Fondale piano a 40 m, trasduttori a 4 m di immersione, fasci utili fino a 60 gradi dal nadir: circa 60 m per lato. La colonna d'acqua ha due strati: sopra il termoclino il suono viaggia a 1510 m/s, sotto a 1490 m/s. Il profilo delle 6:00 mette il termoclino a 12 m. Durante la giornata il vento rimescola lo strato superficiale e il termoclino scende di un metro all'ora, fino a 22 m alle 16:00. La velocità sopra il termoclino non cambia: alla profondità dei trasduttori resta 1510 m/s.</p>
+
+<p>Ricostruendo il percorso dei fasci una volta con l'acqua vera e una volta con il profilo delle 6:00:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Ore dal profilo</th><th class="num">Termoclino</th><th class="num">Errore al nadir</th><th class="num">Errore a 60°</th><th class="num">Differenza fra bordo e nadir</th><th class="num">Quota della TVU, Order 1a</th><th class="num">Quota della TVU, Special Order</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">0</td><td class="num">12 m</td><td class="num">0,00</td><td class="num">0,00</td><td class="num">0,00</td><td class="num">0%</td><td class="num">0%</td></tr>
+<tr><td class="num">2</td><td class="num">14 m</td><td class="num">−0,03</td><td class="num">+0,05</td><td class="num">0,08</td><td class="num">7%</td><td class="num">13%</td></tr>
+<tr><td class="num">4</td><td class="num">16 m</td><td class="num">−0,05</td><td class="num">+0,10</td><td class="num">0,15</td><td class="num">14%</td><td class="num">26%</td></tr>
+<tr><td class="num">6</td><td class="num">18 m</td><td class="num">−0,08</td><td class="num">+0,15</td><td class="num">0,23</td><td class="num">21%</td><td class="num">38%</td></tr>
+<tr><td class="num">8</td><td class="num">20 m</td><td class="num">−0,11</td><td class="num">+0,20</td><td class="num">0,31</td><td class="num">28%</td><td class="num">51%</td></tr>
+<tr><td class="num">10</td><td class="num">22 m</td><td class="num">−0,13</td><td class="num">+0,25</td><td class="num">0,38</td><td class="num">35%</td><td class="num">64%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Errori in metri: negativo vuol dire che il dato è meno profondo del vero, positivo che è più profondo. Le quote sono l'errore a 60° diviso per la TVU ammessa a 40 m dalla IHO S-44: 0,72 m per l'Order 1a, 0,39 m per lo Special Order.</p>
+
+<div class="pull"><strong>0,38 m</strong><span>la differenza fra bordo e centro dello swath su un fondale piano, dopo dieci ore, con la sonda al trasduttore che non ha visto cambiare niente</span></div>
+
+<p>Dopo dieci ore il fondale piano esce dal processing incurvato: al centro 13 cm più alto del vero, ai bordi 25 cm più basso. Lo hanno tutte le linee del pomeriggio, con lo stesso segno e la stessa forma.</p>
+
+<h2>Perché la sonda non lo vede</h2>
+
+<p>La sonda al trasduttore misura la velocità del suono in un punto solo: alla profondità a cui è montata. Serve al multibeam per formare i fasci alla partenza, ed è un buon allarme quando cambia l'acqua in superficie – una pioggia, l'acqua di un fiume, il riscaldamento di una giornata calma. Nell'esempio cambia la quota del termoclino, non la velocità sopra di esso: la sonda legge 1510 m/s alle 6:00 e 1510 m/s alle 16:00, d'accordo con il profilo per tutta la giornata. Il confronto fra sonda e profilo controlla l'acqua alla profondità dei trasduttori, non i trentasei metri sotto.</p>
+
+<p>Non lo vede nemmeno la regola delle dodici ore. Una frequenza a orario presuppone che l'acqua cambi con un ritmo noto; un termoclino che scende di un metro all'ora, o un fronte di marea che passa, non lo rispettano. La S-44 non fissa ogni quanto misurare un profilo: fissa l'incertezza verticale ammessa, e lascia a chi scrive la specifica il modo di rispettarla.</p>
+
+<h2>Come si riconosce dai dati</h2>
+
+<p>Un profilo scaduto lascia nel dato una firma con tre caratteristiche. Prese insieme, la distinguono dalle altre cause.</p>
+
+<p><strong>È simmetrica.</strong> Il bordo di dritta e quello di sinistra si spostano nello stesso verso. Un errore di roll li sposta in versi opposti.</p>
+
+<p><strong>Cresce con le ore dal profilo, non con la posizione.</strong> Misurando linea per linea, su tratti di fondale piano, la differenza fra la profondità media dei fasci esterni e quella dei fasci vicini al nadir, nell'esempio la si vede salire di circa 4 cm all'ora.</p>
+
+<p><strong>Torna a zero quando entra un profilo nuovo.</strong> Il fondale non sa a che ora è stato misurato il profilo: se la differenza fra bordo e nadir cala di colpo alla prima linea elaborata con il profilo nuovo, la causa era l'acqua.</p>
+
+<p>Nessuna delle tre richiede strumenti in più: bastano il dato già acquisito e l'ora del profilo applicato a ogni linea. Con una soglia di 0,15 m sulla differenza fra bordo e nadir, nell'esempio il profilo nuovo sarebbe stato chiesto alla quarta ora, con l'errore al bordo a 0,10 m invece che a 0,25.</p>
+
+<h2>Le obiezioni</h2>
+
+<p>La prima: il fondale non è piano. È vero quasi ovunque, ed è il motivo per cui il controllo si fa sui tratti in cui lo è, e si legge nel tempo invece che nel singolo valore. La morfologia cambia con la posizione, non con le ore dal profilo, e non torna a zero quando ne entra uno nuovo. Dove mancano tratti piani, lo stesso confronto si fa nelle sovrapposizioni fra linee adiacenti acquisite a ore diverse dal profilo: lo stesso fondale, visto dai fasci esterni di entrambe, deve dare la stessa profondità.</p>
+
+<p>La seconda: l'errore è dentro la TVU. Nell'Order 1a sì: dopo dieci ore l'errore al bordo vale il 35% della TVU ammessa. Ma la TVU è il bilancio di tutte le fonti – posizionamento, marea, moti della nave, immersione dei trasduttori – e questa, da sola, ne vale un terzo. Non è nemmeno un errore casuale che la media di molti fasci riduce: ha lo stesso segno su ogni linea di un pomeriggio intero, e un modello del fondale lo eredita tutto. In Special Order, lo stesso profilo porta l'errore al bordo al 64% della TVU.</p>
+
+<p>La terza: le crossline lo trovano. Lo trovano se sono state acquisite con un'acqua diversa da quella delle linee che incrociano, e solo nei punti di incrocio; ridotte a una percentuale di incroci entro tolleranza, come si è visto nell'articolo sul crossline check, possono nasconderlo. La firma descritta sopra si legge su ogni linea, il giorno stesso.</p>
+
+<p>La quarta: si corregge in processing. Spesso sì, ed è un motivo in più per accorgersene presto. Rielaborare il dato con un altro profilo non richiede di tornare in mare, purché si siano conservati tempi e angoli dei fasci e purché esista un profilo che descriva l'acqua di quelle ore. Nell'esempio, alla quinta ora, con il profilo delle 6:00 l'errore al bordo è di +0,12 m; con quello delle 16:00 è di −0,12 m: i due profili sono equidistanti nel tempo, e scegliere il più vicino non aiuta. Interpolando fra i due, l'errore scende sotto il centimetro.</p>
+
+<p>L'interpolazione funziona qui perché il termoclino è sceso con regolarità. Se un fronte fosse passato in un'ora, fra due profili a dieci ore di distanza non ci sarebbe stato niente da interpolare. Il dato si recupera con i profili che sono stati misurati, non con quelli che si sarebbero potuti misurare.</p>
+
+<h2>Che cosa chiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Un criterio sul dato, oltre che sull'orologio.</strong><span class="t"> Un profilo nuovo quando la differenza fra bordo e nadir su un tratto piano supera una soglia dichiarata, quando la sonda al trasduttore si scosta dal profilo, e comunque entro un intervallo massimo.</span></span></li>
+  <li><span class="k">02</span><span><strong>Il profilo applicato a ogni linea, registrato con la sua ora.</strong><span class="t"> Senza, nessuno può controllare dopo con quale acqua è stata elaborata una linea.</span></span></li>
+  <li><span class="k">03</span><span><strong>La firma del profilo nel QC giornaliero.</strong><span class="t"> La differenza fra bordo e nadir, linea per linea, in funzione delle ore dal profilo, separata per dritta e sinistra. È un grafico, e si legge in un minuto mentre la nave è ancora sul posto.</span></span></li>
+  <li><span class="k">04</span><span><strong>Un profilo prima e uno dopo ogni blocco di linee.</strong><span class="t"> Il profilo di fine blocco costa pochi minuti e rende possibile l'interpolazione; senza, il dato di quelle ore si corregge soltanto con un'assunzione sull'acqua.</span></span></li>
+  <li><span class="k">05</span><span><strong>Tempi e angoli dei fasci conservati, insieme ai profili grezzi.</strong><span class="t"> La correzione in processing è possibile solo se il dato grezzo esiste ancora quando ci si accorge che serve.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Un profilo di velocità del suono descrive l'acqua di un'ora. La regola a orario dice quando è stato misurato, la sonda al trasduttore dice se è cambiata l'acqua in superficie; nessuna delle due dice se l'acqua sotto è ancora quella. Lo dice il dato, che porta su ogni linea la forma del profilo sbagliato: basta chiedere che qualcuno la guardi mentre la nave è ancora sul posto.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>International Hydrographic Organization, S-44, <em>Standards for Hydrographic Surveys</em>, Edition 6.1.0, 2022: Table 1, coefficienti a e b della TVU per Order 1a e Special Order.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR fornisce verifica indipendente per rilievi geofisici e batimetrici offshore. Se state scrivendo la specifica di un rilievo multibeam, o state rileggendo il QC di uno in corso, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">At six in the morning the contractor lowers the probe and measures the sound velocity profile. The specification asks for a profile every twelve hours, and the probe mounted at the transducer measures sound velocity continuously at that depth: all day long it reads the same value as the profile. At four in the afternoon a new profile shows that the water below changed hours ago. In the data from those ten hours, over a flat seabed, the edge of the swath and the centre are 0.38 m apart.</p>
+
+<p>The profile complied with the specification, and the probe raised no alarm. This article shows why a profile goes stale without the probe at the transducer noticing, how to recognise it in the data rather than by the clock, what can be recovered in processing and what to ask for in the specification.</p>
+
+<h2>What the profile is for</h2>
+
+<p>For each beam a multibeam measures a two-way travel time and a launch angle. To turn them into a point on the seabed, processing reconstructs the path of the sound through the water column, layer by layer: where the velocity changes the beam bends, and the resulting point depends on where the profile says the velocity changes. At nadir the beam goes straight down and does not bend: a wrong profile only gets the mean velocity wrong, and therefore the depth scale. An outer beam crosses the thermocline at a slant and bends, and a thermocline placed at the wrong depth gets its curve wrong as well as its velocity.</p>
+
+<p>The article on witnessing a calibration showed that this error is symmetric about nadir, and that two reciprocal passes separate it from roll. The question here is a different one: not how to isolate it in a one-hour test, but how a survey lasting weeks notices it while the water changes.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures are synthetic – built to illustrate the mechanism, not taken from real projects.</p>
+
+<p>Flat seabed at 40 m, transducers at 4 m draught, usable beams out to 60 degrees from nadir: about 60 m each side. The water column has two layers: above the thermocline sound travels at 1510 m/s, below it at 1490 m/s. The 06:00 profile puts the thermocline at 12 m. During the day the wind mixes the surface layer and the thermocline sinks by one metre an hour, reaching 22 m at 16:00. The velocity above the thermocline does not change: at transducer depth it stays at 1510 m/s.</p>
+
+<p>Reconstructing the beam paths once with the true water and once with the 06:00 profile:</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Hours since profile</th><th class="num">Thermocline</th><th class="num">Error at nadir</th><th class="num">Error at 60°</th><th class="num">Edge minus nadir</th><th class="num">Share of TVU, Order 1a</th><th class="num">Share of TVU, Special Order</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">0</td><td class="num">12 m</td><td class="num">0.00</td><td class="num">0.00</td><td class="num">0.00</td><td class="num">0%</td><td class="num">0%</td></tr>
+<tr><td class="num">2</td><td class="num">14 m</td><td class="num">−0.03</td><td class="num">+0.05</td><td class="num">0.08</td><td class="num">7%</td><td class="num">13%</td></tr>
+<tr><td class="num">4</td><td class="num">16 m</td><td class="num">−0.05</td><td class="num">+0.10</td><td class="num">0.15</td><td class="num">14%</td><td class="num">26%</td></tr>
+<tr><td class="num">6</td><td class="num">18 m</td><td class="num">−0.08</td><td class="num">+0.15</td><td class="num">0.23</td><td class="num">21%</td><td class="num">38%</td></tr>
+<tr><td class="num">8</td><td class="num">20 m</td><td class="num">−0.11</td><td class="num">+0.20</td><td class="num">0.31</td><td class="num">28%</td><td class="num">51%</td></tr>
+<tr><td class="num">10</td><td class="num">22 m</td><td class="num">−0.13</td><td class="num">+0.25</td><td class="num">0.38</td><td class="num">35%</td><td class="num">64%</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Errors in metres: negative means the data are shallower than the truth, positive that they are deeper. The shares are the error at 60° divided by the TVU allowed at 40 m by IHO S-44: 0.72 m for Order 1a, 0.39 m for Special Order.</p>
+
+<div class="pull"><strong>0.38 m</strong><span>the difference between the edge and the centre of the swath over a flat seabed, after ten hours, with the probe at the transducer having seen nothing change</span></div>
+
+<p>After ten hours the flat seabed comes out of processing curved: 13 cm shallower than the truth at the centre, 25 cm deeper at the edges. Every line of the afternoon has it, with the same sign and the same shape.</p>
+
+<h2>Why the probe does not see it</h2>
+
+<p>The probe at the transducer measures sound velocity at a single point: the depth at which it is mounted. The multibeam needs it to form the beams at launch, and it is a good alarm when the water at the surface changes – rain, river water, the warming of a calm day. In the example it is the depth of the thermocline that changes, not the velocity above it: the probe reads 1510 m/s at 06:00 and 1510 m/s at 16:00, in agreement with the profile all day. Comparing probe and profile checks the water at transducer depth, not the thirty-six metres below.</p>
+
+<p>Nor does the twelve-hour rule see it. A fixed interval assumes that the water changes at a known pace; a thermocline sinking a metre an hour, or a tidal front passing through, does not keep to it. S-44 does not set how often a profile must be measured: it sets the allowed vertical uncertainty, and leaves it to whoever writes the specification to decide how it is met.</p>
+
+<h2>How to recognise it in the data</h2>
+
+<p>A stale profile leaves a signature in the data with three features. Taken together, they set it apart from other causes.</p>
+
+<p><strong>It is symmetric.</strong> The starboard and port edges move in the same direction. A roll error moves them in opposite directions.</p>
+
+<p><strong>It grows with the hours since the profile, not with position.</strong> Measuring line by line, over stretches of flat seabed, the difference between the mean depth of the outer beams and that of the beams near nadir, in the example it rises by about 4 cm an hour.</p>
+
+<p><strong>It drops back to zero when a new profile comes in.</strong> The seabed does not know what time the profile was measured: if the edge-minus-nadir difference falls abruptly on the first line processed with the new profile, the cause was the water.</p>
+
+<p>None of the three needs extra equipment: the data already acquired and the time of the profile applied to each line are enough. With a threshold of 0.15 m on the edge-minus-nadir difference, in the example a new profile would have been called for in the fourth hour, with the edge error at 0.10 m rather than 0.25.</p>
+
+<h2>The objections</h2>
+
+<p>The first: the seabed is not flat. That is true almost everywhere, and it is why the check is made on the stretches where it is, and read over time rather than as a single value. Morphology changes with position, not with hours since the profile, and it does not drop back to zero when a new one comes in. Where flat stretches are missing, the same comparison can be made in the overlap between adjacent lines acquired at different hours since the profile: the same seabed, seen by the outer beams of both, must give the same depth.</p>
+
+<p>The second: the error is within TVU. For Order 1a it is: after ten hours the edge error is 35% of the allowed TVU. But TVU is the budget for every source – positioning, tide, vessel motion, transducer draught – and this one, on its own, is worth a third of it. Nor is it a random error that averaging many beams reduces: it has the same sign on every line of a whole afternoon, and a seabed model inherits all of it. For Special Order, the same profile takes the edge error to 64% of the TVU.</p>
+
+<p>The third: the crosslines will find it. They find it if they were acquired in different water from the lines they cross, and only at the crossing points; reduced to a percentage of crossings within tolerance, as the article on the crossline check showed, they can hide it. The signature described above can be read on every line, the same day.</p>
+
+<p>The fourth: it can be corrected in processing. Often it can, which is one more reason to notice early. Reprocessing the data with another profile does not require going back to sea, provided the beam travel times and angles have been kept and provided there is a profile that describes the water at those hours. In the example, in the fifth hour, the edge error is +0.12 m with the 06:00 profile and −0.12 m with the 16:00 one: the two profiles are equally far away in time, and choosing the nearer one does not help. Interpolating between them brings the error below one centimetre.</p>
+
+<p>Interpolation works here because the thermocline sank steadily. Had a front passed through in an hour, there would have been nothing to interpolate between two profiles ten hours apart. Data are recovered with the profiles that were measured, not with the ones that could have been.</p>
+
+<h2>What to ask for in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>A criterion on the data, as well as on the clock.</strong><span class="t"> A new profile when the edge-minus-nadir difference over a flat stretch exceeds a stated threshold, when the probe at the transducer departs from the profile, and in any case within a maximum interval.</span></span></li>
+  <li><span class="k">02</span><span><strong>The profile applied to each line, recorded with its time.</strong><span class="t"> Without it, nobody can check afterwards which water a line was processed with.</span></span></li>
+  <li><span class="k">03</span><span><strong>The profile signature in the daily QC.</strong><span class="t"> The edge-minus-nadir difference, line by line, against hours since the profile, separately for starboard and port. It is a chart, and it takes a minute to read while the vessel is still on site.</span></span></li>
+  <li><span class="k">04</span><span><strong>A profile before and one after each block of lines.</strong><span class="t"> The end-of-block profile costs a few minutes and makes interpolation possible; without it, the data from those hours can only be corrected with an assumption about the water.</span></span></li>
+  <li><span class="k">05</span><span><strong>Beam travel times and angles kept, together with the raw profiles.</strong><span class="t"> Correction in processing is possible only if the raw data still exist when it turns out to be needed.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>A sound velocity profile describes the water of one hour. The fixed interval says when it was measured, the probe at the transducer says whether the water at the surface has changed; neither says whether the water below is still the same. The data say it, carrying the shape of the wrong profile on every line: all it takes is to ask that someone looks at it while the vessel is still on site.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>International Hydrographic Organization, S-44, <em>Standards for Hydrographic Surveys</em>, Edition 6.1.0, 2022: Table 1, TVU coefficients a and b for Order 1a and Special Order.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR provides independent verification for offshore geophysical and bathymetric surveys. If you are writing the specification for a multibeam survey, or reviewing the QC of one under way, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'merge-bias',
         'topic': 'pm',
         'date': '2026-10-28',
