@@ -45,6 +45,7 @@ Già online, da non riprendere:
 | Il parere tecnico in una controversia | Technical Advisory | measured mile, perdita di produttività di un aratro, scelta del tratto di riferimento, differenza di terreno contro evento contestato, controllo incrociato sulle ore di fermo, incertezze con il loro verso, IBA Rules art. 5.2, confine fra fatto tecnico e responsabilità |
 | La spaziatura delle linee | Marine Geoscience | ombra del side scan e distanza dalla linea, striscia sotto la linea con copertura al 100%, spaziatura sopra e sotto la portata, multibeam come copertura della striscia, criterio di riconoscimento in gara, feature detection contro feature search in S-44 |
 | Dove i path paralleli si incontrano | Project Management | merge bias, probabilità della milestone come prodotto delle probabilità dei path, float che non misura la coda della durata, dipendenza fra path per il meteo, predecessori ridotti al blocco che serve, GAO-16-89G |
+| Un profilo di velocità del suono scaduto | Marine Geoscience | termoclino che scende sotto la sonda al trasduttore, regola dei profili a orario, differenza fra bordo e nadir in funzione delle ore dal profilo, ritorno a zero con il profilo nuovo, interpolazione fra profili in processing, S-44 che non fissa la frequenza dei profili |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -87,16 +88,18 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   opinione, che riguarda le assunzioni di un'interpretazione, né la
   classificazione del tempo nave, che riguarda chi paga una giornata.)*
 
-### Marine Geoscience — 3 articoli pubblicati
+### Marine Geoscience — 4 articoli pubblicati
 - [x] Spaziatura delle linee: che cosa non si vede fra una linea e l'altra — 2026-10-26
   *(pubblicato come "la striscia in cui un masso non si vede": l'esempio è
   l'ombra del side scan che si accorcia vicino alla linea. Non riprende il
   crossline check, che riguarda l'accordo verticale agli incroci, né il
   witnessing, che riguarda il roll sui fasci esterni.)*
-- [ ] Un profilo di velocità del suono scaduto, e come si riconosce dai dati
-  *(attenzione: il witnessing spiega già che un errore di velocità del suono
-  incurva i bordi dello swath e si distingue dal roll con passate reciproche.
-  Va impostato su un altro meccanismo o un altro esempio, non rifatto.)*
+- [x] Un profilo di velocità del suono scaduto, e come si riconosce dai dati — 2026-11-16
+  *(il witnessing spiega già che un errore di velocità del suono incurva i
+  bordi dello swath e si distingue dal roll con passate reciproche. Questo
+  articolo non lo rifà: l'esempio è un termoclino che scende durante la
+  giornata senza che la sonda al trasduttore lo veda, e la firma nel tempo –
+  cresce con le ore dal profilo, torna a zero con il profilo nuovo.)*
 
 ### Project Management — 3 articoli pubblicati
 - [x] Le interfacce fra contractor: dove si rompono e chi le tiene — 2026-10-16
