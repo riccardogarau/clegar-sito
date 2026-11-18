@@ -15,6 +15,250 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'coda-processing',
+        'topic': 'excellence',
+        'date': '2026-11-18',
+        'slug': {'it': 'la-coda-fra-acquisizione-e-processing',
+                 'en': 'the-queue-between-acquisition-and-processing'},
+        'title': {
+            'it': 'La coda fra acquisizione e processing: quanti giorni passano prima che qualcuno guardi il dato',
+            'en': 'The queue between acquisition and processing: how many days pass before anyone looks at the data',
+        },
+        'meta_title': {
+            'it': 'La coda fra acquisizione e processing | Insights',
+            'en': 'The queue between acquisition and processing | Insights',
+        },
+        'desc': {
+            'it': ('Perché un processing più lento dell’acquisizione non sposta soltanto la consegna, '
+                   'ma allunga ogni giorno l’attesa prima che un difetto venga visto, e quale '
+                   'indicatore chiedere nel daily report per misurarla.'),
+            'en': ('Why processing slower than acquisition does not just move the delivery date, but '
+                   'lengthens every day the wait before a defect is seen, and which indicator to ask '
+                   'for in the daily report to measure it.'),
+        },
+        'abstract': {
+            'it': ('Acquisizione a 120 km al giorno, processing a 80: entrambi in linea con il '
+                   'programma. Fra le due fasi si forma una coda, e al giorno 8 la linea appena '
+                   'acquisita aspetta cinque giorni prima che qualcuno la apra. Un difetto che solo il '
+                   'processing vede ha intanto 600 km di dati.'),
+            'en': ('Acquisition at 120 km a day, processing at 80: both on schedule. A queue builds '
+                   'up between the two, and on day 8 the line just acquired waits five days before '
+                   'anyone opens it. A defect only processing can see has meanwhile 600 km of data.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Il daily report della nave dice 120 km acquisiti, in linea con il programma. Il report del processing dice 80 km elaborati, in linea con il suo programma. Hanno ragione entrambi. Eppure al giorno 8 la linea appena acquisita aspetterà cinque giorni prima che qualcuno la apra, e un difetto che soltanto il processing può vedere avrà intanto accumulato 600 km di dati.</p>
+
+<p>Nessuna delle due fasi è in ritardo. Il ritardo sta fra le due, in una coda che nessun indicatore misura. Questo articolo mostra come cresce quella coda, che cosa costa – non la data di consegna, che è nel programma, ma il tempo che passa prima che un difetto venga visto – e che cosa chiedere nella specifica.</p>
+
+<h2>Due programmi in regola</h2>
+
+<p>In un rilievo geofisico la produzione si misura a bordo, in chilometri di linea al giorno. Il processing – correzioni, mosaici, interpretazione, verifica del criterio di riconoscimento – lavora sulle stesse linee con un proprio ritmo e un proprio programma. Il contractor lo pianifica sapendo che finirà dopo la smobilitazione, e fissa di conseguenza la consegna dei dati elaborati. Fin qui non c'è niente di scorretto.</p>
+
+<p>Che il ritmo di una catena di lavoro lo fissi la fase più lenta è il punto di partenza della teoria dei vincoli di Goldratt. Qui interessa una conseguenza che si guarda meno: davanti alla fase più lenta si forma una coda. Se il processing è più lento dell'acquisizione, la differenza non sposta soltanto la fine dei lavori; si accumula ogni giorno fra le due fasi. E la linea appena acquisita non viene elaborata quando arriva: aspetta che si smaltisca tutto ciò che ha davanti.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali.</p>
+
+<p>Rilievo del tracciato di un cavo con side scan sonar, multibeam e sub-bottom profiler: 1.800 km di linee, acquisiti a 120 km al giorno in 15 giorni. Il processing lavora sulle linee del giorno prima, in ordine di arrivo, e ne elabora 80 km al giorno. Per semplicità l'esempio non ha giornate di meteo né guasti: le due fasi procedono al ritmo previsto.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Giorno</th><th class="num">Km acquisiti</th><th class="num">Km elaborati</th><th class="num">Km in coda</th><th class="num">Attesa della linea appena acquisita (giorni)</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">1</td><td class="num">120</td><td class="num">0</td><td class="num">120</td><td class="num">1,5</td></tr>
+<tr><td class="num">3</td><td class="num">360</td><td class="num">160</td><td class="num">200</td><td class="num">2,5</td></tr>
+<tr><td class="num">5</td><td class="num">600</td><td class="num">320</td><td class="num">280</td><td class="num">3,5</td></tr>
+<tr><td class="num">8</td><td class="num">960</td><td class="num">560</td><td class="num">400</td><td class="num">5,0</td></tr>
+<tr><td class="num">10</td><td class="num">1.200</td><td class="num">720</td><td class="num">480</td><td class="num">6,0</td></tr>
+<tr><td class="num">12</td><td class="num">1.440</td><td class="num">880</td><td class="num">560</td><td class="num">7,0</td></tr>
+<tr><td class="num">15</td><td class="num">1.800</td><td class="num">1.120</td><td class="num">680</td><td class="num">8,5</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>L'attesa è la coda divisa per il ritmo del processing: la linea appena acquisita viene aperta quando sono stati elaborati tutti i chilometri che la precedono. Cresce di mezza giornata per ogni giorno di acquisizione, perché ogni giorno entrano in coda 40 km che il processing non smaltisce: 120 in entrata, 80 in uscita. L'ultima linea del rilievo aspetta otto giorni e mezzo.</p>
+
+<p>Il processing completo finisce al giorno 23,5: 1.800 km a 80 al giorno, cominciati con un giorno di ritardo. È la data che il contractor ha messo in programma, e la rispetta.</p>
+
+<h2>Che cosa costa la coda</h2>
+
+<p>Al giorno 8 il towfish viene recuperato per una riparazione e rimesso in acqua. Da quel momento il side scan registra un rumore elettrico che a bordo non salta all'occhio: l'immagine c'è su tutta la portata. Ma oltre una certa distanza dalla linea un masso delle dimensioni richieste non si distingue più dal rumore, e le linee non soddisfano il criterio di riconoscimento. Lo stabilisce il processing, quando verifica il criterio sui dati. Le linee vanno rifatte.</p>
+
+<p>Con la coda dell'esempio, la prima linea difettosa viene aperta al giorno 13. Nei cinque giorni intermedi la nave ha acquisito 600 km con lo stesso difetto: cinque giorni di nave da rifare, su un rilievo di quindici. Se il processing avesse tenuto il passo, con un giorno di attesa, il difetto sarebbe emerso al giorno 9, dopo 120 km: un giorno di nave.</p>
+
+<div class="pull"><strong>600 km</strong><span>acquisiti con il difetto prima che qualcuno lo veda, con l'acquisizione e il processing entrambi in linea con il proprio programma</span></div>
+
+<p>Nell'esempio la nave è ancora sul posto, e il rimedio costa giorni di acquisizione. Ma il processing apre la linea acquisita al giorno 9,3 solo al giorno 15, l'ultimo di acquisizione: qualunque difetto cominci dopo emerge a nave smobilitata. Riguarda gli ultimi 680 km, più di un terzo del rilievo.</p>
+
+<p>La relazione è semplice: i chilometri esposti a un difetto sono la produzione giornaliera per l'attesa. La produzione la si vuole alta; l'attesa è l'unico dei due fattori che si può ridurre senza rallentare la nave. Nella teoria delle code la relazione fra coda, flusso e attesa è la legge di Little, che però vale in regime stazionario. Con un processing più lento dell'acquisizione un regime stazionario non c'è: la coda cresce finché la nave non smette di acquisire.</p>
+
+<h2>Tre modi di organizzare lo stesso lavoro</h2>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Organizzazione del processing</th><th class="num">Attesa al giorno 8 (giorni)</th><th class="num">Km esposti al difetto</th><th class="num">Giorni nave da rifare</th><th class="num">Fine del processing completo (giorno)</th></tr>
+</thead>
+<tbody>
+<tr><td>A. 80 km al giorno, in ordine di arrivo</td><td class="num">5</td><td class="num">600</td><td class="num">5</td><td class="num">23,5</td></tr>
+<tr><td>B. Quick-look in ordine di arrivo, processing completo con la capacità restante</td><td class="num">1</td><td class="num">120</td><td class="num">1</td><td class="num">29,1</td></tr>
+<tr><td>C. 120 km al giorno</td><td class="num">1</td><td class="num">120</td><td class="num">1</td><td class="num">16,0</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Il quick-look di B è un passaggio ridotto: soltanto le verifiche che scoprono i difetti più costosi, fra cui il criterio di riconoscimento. Nell'esempio richiede un quarto del tempo del processing completo, e tenere il passo con 120 km al giorno ne assorbe il 37,5% della capacità: 120 / (80 × 4). Il processing completo prosegue con il resto, 50 km al giorno, e dopo l'ultima linea torna a 80. Il lavoro totale cresce di un quarto, e la consegna slitta di 5,6 giorni.</p>
+
+<p>C costa capacità in più: una persona o un turno. B costa giorni a terra: sposta la consegna di 5,6 giorni per non rischiare quattro giorni di nave. Se il difetto non arriva, B ha soltanto allungato la consegna. È un'assicurazione, e si valuta come tale: il suo costo è certo, il danno che evita no.</p>
+
+<h2>Le obiezioni</h2>
+
+<p>La prima: il QC di bordo vede i difetti. Ne vede molti – copertura, quota del towfish, qualità dell'immagine linea per linea. Non vede ciò che emerge soltanto con le verifiche del processing: il criterio di riconoscimento applicato ai dati, il confronto fra linee adiacenti, le correzioni definitive. L'esempio riguarda questa classe di difetti; per le altre la coda costa soltanto tempo a terra.</p>
+
+<p>La seconda: il meteo fa recuperare. Un giorno di standby lascia al processing un giorno per smaltire 80 km di coda, e l'attesa scende di un giorno. Aiuta, ma la coda si riduce quando il mare non permette di lavorare, non quando lo si decide; e nelle settimane di bel tempo continua a crescere di 40 km al giorno.</p>
+
+<p>La terza: la consegna è rispettata. È vero, e il contratto pure. Ma la data di consegna dice quando il processing finisce, non quando comincia a guardare un dato. Le due misure si equivalgono soltanto se le due fasi hanno lo stesso ritmo.</p>
+
+<p>La quarta: il difetto si corregge in processing. Alcuni sì, e allora la coda costa soltanto tempo a terra. Il rumore dell'esempio no: un masso che il sonar non ha distinto dal rumore non si ricostruisce dopo. Per questa classe di difetti il costo si paga in tempo nave, ed è proporzionale all'attesa.</p>
+
+<h2>Che cosa chiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>L'attesa nel daily report, accanto alla produzione.</strong><span class="t"> Ogni giorno, la data di acquisizione della linea più vecchia non ancora passata dal processing, o dal quick-look. È un numero solo, e dice da quanti giorni ci sono dati acquisiti che nessuno ha guardato.</span></span></li>
+  <li><span class="k">02</span><span><strong>Una soglia sull'attesa, non sul metodo.</strong><span class="t"> Per esempio due giorni, che al ritmo dell'esempio valgono 240 km esposti. Come rispettarla – più capacità, un quick-look, un altro ordine di lavoro – lo decide il contractor; un processing a 80 km al giorno la supera già al giorno 2.</span></span></li>
+  <li><span class="k">03</span><span><strong>Il contenuto del quick-look, scritto.</strong><span class="t"> Quali verifiche si fanno subito: almeno quelle i cui difetti non si correggono in processing, a cominciare dal criterio di riconoscimento.</span></span></li>
+  <li><span class="k">04</span><span><strong>La data di consegna dichiarata di conseguenza.</strong><span class="t"> Se il quick-look allunga il processing completo, lo si sa in gara invece di scoprirlo dopo.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Un indicatore di produzione dice quanti chilometri si sono acquisiti; uno di processing dice quanti se ne sono elaborati. Nessuno dei due dice da quanti giorni un dato aspetta di essere guardato, ed è lì che, fra due fasi entrambe in regola, si accumula il rischio. Misurarlo costa una riga del daily report. Non misurarlo, nell'esempio, costa quattro giorni di nave.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>J. D. C. Little, «A Proof for the Queuing Formula: L = λW», <em>Operations Research</em>, 9(3), 1961, pp. 383–387: la relazione fra coda, flusso e attesa, dimostrata per processi stazionari.</li>
+  <li>E. M. Goldratt, J. Cox, <em>The Goal</em>, North River Press, 1984: la fase più lenta come vincolo dell'intera catena di lavoro.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR aiuta a misurare e migliorare le operazioni marine. Se state scrivendo la specifica di un rilievo, o leggendo i report di uno in corso, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">The vessel's daily report says 120 km acquired, on schedule. The processing report says 80 km processed, on its own schedule. Both are right. And yet on day 8 the line just acquired will wait five days before anyone opens it, and a defect that only processing can see will meanwhile have built up 600 km of data.</p>
+
+<p>Neither phase is late. The delay lies between the two, in a queue that no indicator measures. This article shows how that queue grows, what it costs – not the delivery date, which is in the schedule, but the time that passes before a defect is seen – and what to ask for in the specification.</p>
+
+<h2>Two schedules, both met</h2>
+
+<p>In a geophysical survey production is measured on board, in kilometres of line per day. Processing – corrections, mosaics, interpretation, checking the recognition criterion – works on the same lines at its own pace and to its own schedule. The contractor plans it knowing that it will finish after demobilisation, and sets the delivery of the processed data accordingly. So far nothing is wrong.</p>
+
+<p>That the pace of a chain of work is set by its slowest stage is the starting point of Goldratt's theory of constraints. What matters here is a consequence that gets less attention: a queue forms in front of the slowest stage. If processing is slower than acquisition, the difference does not just move the end of the work; it builds up every day between the two phases. And the line just acquired is not processed when it arrives: it waits for everything ahead of it to be cleared.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures are synthetic – built to illustrate the mechanism, not taken from real projects.</p>
+
+<p>Survey of a cable route with side scan sonar, multibeam and sub-bottom profiler: 1,800 km of lines, acquired at 120 km a day over 15 days. Processing works on the previous day's lines, in order of arrival, and processes 80 km a day. For simplicity the example has no weather days and no breakdowns: both phases run at the planned pace.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Day</th><th class="num">Km acquired</th><th class="num">Km processed</th><th class="num">Km in the queue</th><th class="num">Wait for the line just acquired (days)</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">1</td><td class="num">120</td><td class="num">0</td><td class="num">120</td><td class="num">1.5</td></tr>
+<tr><td class="num">3</td><td class="num">360</td><td class="num">160</td><td class="num">200</td><td class="num">2.5</td></tr>
+<tr><td class="num">5</td><td class="num">600</td><td class="num">320</td><td class="num">280</td><td class="num">3.5</td></tr>
+<tr><td class="num">8</td><td class="num">960</td><td class="num">560</td><td class="num">400</td><td class="num">5.0</td></tr>
+<tr><td class="num">10</td><td class="num">1,200</td><td class="num">720</td><td class="num">480</td><td class="num">6.0</td></tr>
+<tr><td class="num">12</td><td class="num">1,440</td><td class="num">880</td><td class="num">560</td><td class="num">7.0</td></tr>
+<tr><td class="num">15</td><td class="num">1,800</td><td class="num">1,120</td><td class="num">680</td><td class="num">8.5</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The wait is the queue divided by the processing pace: the line just acquired is opened once all the kilometres ahead of it have been processed. It grows by half a day for every day of acquisition, because every day 40 km join the queue that processing does not clear: 120 in, 80 out. The last line of the survey waits eight and a half days.</p>
+
+<p>Full processing ends on day 23.5: 1,800 km at 80 a day, started one day late. That is the date the contractor put in the schedule, and it is met.</p>
+
+<h2>What the queue costs</h2>
+
+<p>On day 8 the towfish is recovered for a repair and redeployed. From then on the side scan records electrical noise that does not stand out on board: the image is there across the whole range. But beyond a certain distance from the line a boulder of the required size can no longer be told apart from the noise, and the lines do not meet the recognition criterion. Processing establishes this when it checks the criterion against the data. The lines have to be rerun.</p>
+
+<p>With the queue in the example, the first defective line is opened on day 13. In the five days in between the vessel has acquired 600 km with the same defect: five vessel days to rerun, on a fifteen-day survey. Had processing kept pace, with a one-day wait, the defect would have surfaced on day 9, after 120 km: one vessel day.</p>
+
+<div class="pull"><strong>600 km</strong><span>acquired with the defect before anyone sees it, with acquisition and processing both on their own schedule</span></div>
+
+<p>In the example the vessel is still on site, and the remedy costs days of acquisition. But processing opens the line acquired on day 9.3 only on day 15, the last day of acquisition: any defect that starts later surfaces after demobilisation. That covers the last 680 km, more than a third of the survey.</p>
+
+<p>The relationship is simple: the kilometres exposed to a defect are the daily production times the wait. Production is meant to be high; the wait is the only one of the two factors that can be reduced without slowing the vessel down. In queueing theory the relationship between queue, flow and wait is Little's law, which however holds in a steady state. With processing slower than acquisition there is no steady state: the queue grows until the vessel stops acquiring.</p>
+
+<h2>Three ways of organising the same work</h2>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>How processing is organised</th><th class="num">Wait on day 8 (days)</th><th class="num">Km exposed to the defect</th><th class="num">Vessel days to rerun</th><th class="num">End of full processing (day)</th></tr>
+</thead>
+<tbody>
+<tr><td>A. 80 km a day, in order of arrival</td><td class="num">5</td><td class="num">600</td><td class="num">5</td><td class="num">23.5</td></tr>
+<tr><td>B. Quick-look in order of arrival, full processing with the remaining capacity</td><td class="num">1</td><td class="num">120</td><td class="num">1</td><td class="num">29.1</td></tr>
+<tr><td>C. 120 km a day</td><td class="num">1</td><td class="num">120</td><td class="num">1</td><td class="num">16.0</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The quick-look in B is a reduced pass: only the checks that find the most expensive defects, the recognition criterion among them. In the example it takes a quarter of the time of full processing, and keeping pace with 120 km a day uses 37.5% of the capacity: 120 / (80 × 4). Full processing carries on with the rest, 50 km a day, and after the last line goes back to 80. Total work grows by a quarter, and delivery slips by 5.6 days.</p>
+
+<p>C costs extra capacity: one more person or one more shift. B costs days ashore: it moves delivery by 5.6 days so as not to risk four vessel days. If the defect never comes, B has only lengthened the delivery. It is insurance, and it is judged as such: its cost is certain, the damage it avoids is not.</p>
+
+<h2>The objections</h2>
+
+<p>The first: onboard QC sees defects. It sees many – coverage, towfish altitude, image quality line by line. It does not see what emerges only from the processing checks: the recognition criterion applied to the data, the comparison between adjacent lines, the final corrections. The example concerns this class of defects; for the others the queue only costs time ashore.</p>
+
+<p>The second: weather lets processing catch up. A standby day gives processing a day to clear 80 km of queue, and the wait drops by one day. It helps, but the queue shrinks when the sea stops the work, not when anyone decides; and in the weeks of good weather it keeps growing by 40 km a day.</p>
+
+<p>The third: delivery is on time. True, and so is the contract. But the delivery date says when processing finishes, not when it starts looking at a piece of data. The two measures amount to the same thing only if both phases run at the same pace.</p>
+
+<p>The fourth: the defect can be corrected in processing. Some can, and then the queue only costs time ashore. The noise in the example cannot: a boulder the sonar did not tell apart from the noise cannot be reconstructed afterwards. For this class of defects the cost is paid in vessel time, and it is proportional to the wait.</p>
+
+<h2>What to ask for in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>The wait in the daily report, next to production.</strong><span class="t"> Every day, the acquisition date of the oldest line not yet through processing, or through the quick-look. It is a single number, and it says for how many days there have been acquired data that nobody has looked at.</span></span></li>
+  <li><span class="k">02</span><span><strong>A threshold on the wait, not on the method.</strong><span class="t"> Two days, for instance, which at the pace of the example means 240 km exposed. How to meet it – more capacity, a quick-look, a different order of work – is for the contractor to decide; processing at 80 km a day exceeds it as early as day 2.</span></span></li>
+  <li><span class="k">03</span><span><strong>The content of the quick-look, in writing.</strong><span class="t"> Which checks are made straight away: at least those whose defects cannot be corrected in processing, starting with the recognition criterion.</span></span></li>
+  <li><span class="k">04</span><span><strong>The delivery date stated accordingly.</strong><span class="t"> If the quick-look lengthens full processing, that is known at tender rather than discovered later.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>A production indicator says how many kilometres have been acquired; a processing indicator says how many have been processed. Neither says for how many days a piece of data has been waiting to be looked at, and that is where, between two phases both on schedule, the risk builds up. Measuring it costs one line in the daily report. Not measuring it, in the example, costs four vessel days.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>J. D. C. Little, “A Proof for the Queuing Formula: L = λW”, <em>Operations Research</em>, 9(3), 1961, pp. 383–387: the relationship between queue, flow and wait, proved for stationary processes.</li>
+  <li>E. M. Goldratt, J. Cox, <em>The Goal</em>, North River Press, 1984: the slowest stage as the constraint on the whole chain of work.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR helps measure and improve marine operations. If you are writing the specification for a survey, or reading the reports of one under way, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'profilo-velocita-suono',
         'topic': 'geoscience',
         'date': '2026-11-16',

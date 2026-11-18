@@ -813,3 +813,63 @@ still on site.
 https://www.clegar.it/en/insights/stale-sound-velocity-profile/
 
 #offshore #hydrography #multibeam #marinesurvey #offshorewind
+
+---
+
+## La coda fra acquisizione e processing – 18 novembre 2026
+
+### Italiano
+
+La nave acquisisce in linea con il programma. Il processing elabora in linea
+con il suo. Nessuno dei due report segnala niente.
+
+Il problema sta fra i due.
+
+Se il processing è più lento dell'acquisizione, ogni giorno resta indietro un
+pezzo di rilievo, e la linea appena acquisita aspetta tutto ciò che ha
+davanti. L'attesa cresce per tutta la campagna, e nessun indicatore la riporta.
+
+Conta per i difetti che solo il processing vede e non corregge. In un esempio
+sintetico, a metà campagna un rumore elettrico rende le linee del side scan
+inutilizzabili per il criterio di riconoscimento. A bordo l'immagine c'è.
+Quando il processing apre la prima linea difettosa, la nave ha già acquisito
+600 km da rifare.
+
+La data di consegna è rispettata. Dice quando il processing finisce, non
+quando comincia a guardare un dato.
+
+Il rimedio costa una riga del daily report: da quanti giorni esistono dati
+acquisiti che nessuno ha ancora guardato, con una soglia scritta nella
+specifica.
+
+https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/
+
+#offshore #marinesurvey #projectmanagement #operationalexcellence #offshorewind
+
+### English
+
+The vessel acquires on schedule. Processing works on its own schedule.
+Neither report flags anything.
+
+The problem lies between the two.
+
+If processing is slower than acquisition, every day part of the survey is
+left behind, and the line just acquired waits for everything ahead of it. The
+wait grows throughout the campaign, and no indicator reports it.
+
+It matters for the defects that only processing sees and cannot correct. In
+an illustrative example, halfway through the campaign electrical noise makes
+the side scan lines unusable for the recognition criterion. On board the
+image is there. By the time processing opens the first defective line, the
+vessel has already acquired 600 km that have to be rerun.
+
+The delivery date is met. It says when processing finishes, not when it
+starts looking at the data.
+
+The remedy costs one line in the daily report: for how many days there have
+been acquired data that nobody has looked at yet, with a threshold written
+into the specification.
+
+https://www.clegar.it/en/insights/the-queue-between-acquisition-and-processing/
+
+#offshore #marinesurvey #projectmanagement #operationalexcellence #offshorewind

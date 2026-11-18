@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/the-queue-between-acquisition-and-processing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/"/>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/the-queue-between-acquisition-and-processing/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/the-queue-between-acquisition-and-processing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/"/>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/profilo-velocita-del-suono-scaduto/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/profilo-velocita-del-suono-scaduto/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/stale-sound-velocity-profile/"/>

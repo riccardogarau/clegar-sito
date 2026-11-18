@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La coda fra acquisizione e processing | Insights</title>
+<meta name="description" content="Perché un processing più lento dell’acquisizione non sposta soltanto la consegna, ma allunga ogni giorno l’attesa prima che un difetto venga visto, e quale indicatore chiedere nel daily report per misurarla.">
+<link rel="canonical" href="https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/">
+<link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/">
+<link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/the-queue-between-acquisition-and-processing/">
+<link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CLEGAR">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="La coda fra acquisizione e processing | Insights">
+<meta property="og:description" content="Perché un processing più lento dell’acquisizione non sposta soltanto la consegna, ma allunga ogni giorno l’attesa prima che un difetto venga visto, e quale indicatore chiedere nel daily report per misurarla.">
+<meta property="og:url" content="https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/">
+<meta property="og:image" content="https://www.clegar.it/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La coda fra acquisizione e processing | Insights">
+<meta name="twitter:description" content="Perché un processing più lento dell’acquisizione non sposta soltanto la consegna, ma allunga ogni giorno l’attesa prima che un difetto venga visto, e quale indicatore chiedere nel daily report per misurarla.">
+<meta name="twitter:image" content="https://www.clegar.it/assets/og.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B2545">
+<!-- Google Search Console: sostituire con il proprio codice di verifica -->
+<!-- <meta name="google-site-verification" content="INCOLLA_QUI_IL_CODICE"> -->
+<link rel="icon" href="../../assets/mark.png">
+<link rel="apple-touch-icon" href="../../assets/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"La coda fra acquisizione e processing: quanti giorni passano prima che qualcuno guardi il dato","description":"Perché un processing più lento dell’acquisizione non sposta soltanto la consegna, ma allunga ogni giorno l’attesa prima che un difetto venga visto, e quale indicatore chiedere nel daily report per misurarla.","datePublished":"2026-11-18","dateModified":"2026-11-18","inLanguage":"it","author":{"@type":"Organization","name":"CLEGAR","url":"https://www.clegar.it/"},"publisher":{"@id":"https://www.clegar.it/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/"},"image":"https://www.clegar.it/assets/og.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.clegar.it/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://www.clegar.it/insights/"},{"@type":"ListItem","position":3,"name":"La coda fra acquisizione e processing: quanti giorni passano prima che qualcuno guardi il dato","item":"https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/"}]}</script>
+
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-row">
+    <a class="brand" aria-label="CLEGAR" href="../../">
+      <img src="../../assets/logo.png" alt="CLEGAR — Marine Geoscience &amp; Offshore Advisory">
+    </a>
+    <div class="masthead-meta">
+      <a class="hide-sm" href="mailto:info@clegar.it">info@clegar.it</a>
+      <div class="langsw" role="group" aria-label="Language / Lingua">
+        <a href="../../insights/" aria-current="true">IT</a><a href="../../en/insights/" hreflang="en">EN</a></div>
+      <a class="btn-contact" href="../../contatti/">
+        <span class="it">Parliamone</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<nav class="tabbar" aria-label="Navigazione principale">
+  <div class="tabbar-inner">
+    <a class="tab" href="../../">Home</a>
+    <a class="tab" href="../../geoscienze-marine/">Marine Geoscience</a>
+    <a class="tab" href="../../project-management/">Project Management</a>
+    <a class="tab" href="../../technical-advisory/">Technical Advisory</a>
+    <a class="tab" href="../../owners-engineering/">Owner's Engineering</a>
+    <a class="tab" href="../../operational-excellence/">Operational Excellence</a>
+    <a class="tab" href="../../insights/" aria-current="page">Insights</a>
+    <a class="tab" href="../../contatti/">Contatti</a>
+  </div>
+</nav>
+<main id="main">
+<section class="page">
+  <div class="svc-hero"><div class="wrap">
+<div class="art-meta"><time datetime="2026-11-18">18 novembre 2026</time><a href="../../operational-excellence/">Operational Excellence</a></div><h1>La coda fra acquisizione e processing: quanti giorni passano prima che qualcuno guardi il dato</h1>
+  </div></div>
+  <div class="band band-white band-pad"><div class="wrap">
+    <div class="article">
+<p class="lede">Il daily report della nave dice 120 km acquisiti, in linea con il programma. Il report del processing dice 80 km elaborati, in linea con il suo programma. Hanno ragione entrambi. Eppure al giorno 8 la linea appena acquisita aspetterà cinque giorni prima che qualcuno la apra, e un difetto che soltanto il processing può vedere avrà intanto accumulato 600 km di dati.</p>
+
+<p>Nessuna delle due fasi è in ritardo. Il ritardo sta fra le due, in una coda che nessun indicatore misura. Questo articolo mostra come cresce quella coda, che cosa costa – non la data di consegna, che è nel programma, ma il tempo che passa prima che un difetto venga visto – e che cosa chiedere nella specifica.</p>
+
+<h2>Due programmi in regola</h2>
+
+<p>In un rilievo geofisico la produzione si misura a bordo, in chilometri di linea al giorno. Il processing – correzioni, mosaici, interpretazione, verifica del criterio di riconoscimento – lavora sulle stesse linee con un proprio ritmo e un proprio programma. Il contractor lo pianifica sapendo che finirà dopo la smobilitazione, e fissa di conseguenza la consegna dei dati elaborati. Fin qui non c'è niente di scorretto.</p>
+
+<p>Che il ritmo di una catena di lavoro lo fissi la fase più lenta è il punto di partenza della teoria dei vincoli di Goldratt. Qui interessa una conseguenza che si guarda meno: davanti alla fase più lenta si forma una coda. Se il processing è più lento dell'acquisizione, la differenza non sposta soltanto la fine dei lavori; si accumula ogni giorno fra le due fasi. E la linea appena acquisita non viene elaborata quando arriva: aspetta che si smaltisca tutto ciò che ha davanti.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali.</p>
+
+<p>Rilievo del tracciato di un cavo con side scan sonar, multibeam e sub-bottom profiler: 1.800 km di linee, acquisiti a 120 km al giorno in 15 giorni. Il processing lavora sulle linee del giorno prima, in ordine di arrivo, e ne elabora 80 km al giorno. Per semplicità l'esempio non ha giornate di meteo né guasti: le due fasi procedono al ritmo previsto.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Giorno</th><th class="num">Km acquisiti</th><th class="num">Km elaborati</th><th class="num">Km in coda</th><th class="num">Attesa della linea appena acquisita (giorni)</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">1</td><td class="num">120</td><td class="num">0</td><td class="num">120</td><td class="num">1,5</td></tr>
+<tr><td class="num">3</td><td class="num">360</td><td class="num">160</td><td class="num">200</td><td class="num">2,5</td></tr>
+<tr><td class="num">5</td><td class="num">600</td><td class="num">320</td><td class="num">280</td><td class="num">3,5</td></tr>
+<tr><td class="num">8</td><td class="num">960</td><td class="num">560</td><td class="num">400</td><td class="num">5,0</td></tr>
+<tr><td class="num">10</td><td class="num">1.200</td><td class="num">720</td><td class="num">480</td><td class="num">6,0</td></tr>
+<tr><td class="num">12</td><td class="num">1.440</td><td class="num">880</td><td class="num">560</td><td class="num">7,0</td></tr>
+<tr><td class="num">15</td><td class="num">1.800</td><td class="num">1.120</td><td class="num">680</td><td class="num">8,5</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>L'attesa è la coda divisa per il ritmo del processing: la linea appena acquisita viene aperta quando sono stati elaborati tutti i chilometri che la precedono. Cresce di mezza giornata per ogni giorno di acquisizione, perché ogni giorno entrano in coda 40 km che il processing non smaltisce: 120 in entrata, 80 in uscita. L'ultima linea del rilievo aspetta otto giorni e mezzo.</p>
+
+<p>Il processing completo finisce al giorno 23,5: 1.800 km a 80 al giorno, cominciati con un giorno di ritardo. È la data che il contractor ha messo in programma, e la rispetta.</p>
+
+<h2>Che cosa costa la coda</h2>
+
+<p>Al giorno 8 il towfish viene recuperato per una riparazione e rimesso in acqua. Da quel momento il side scan registra un rumore elettrico che a bordo non salta all'occhio: l'immagine c'è su tutta la portata. Ma oltre una certa distanza dalla linea un masso delle dimensioni richieste non si distingue più dal rumore, e le linee non soddisfano il criterio di riconoscimento. Lo stabilisce il processing, quando verifica il criterio sui dati. Le linee vanno rifatte.</p>
+
+<p>Con la coda dell'esempio, la prima linea difettosa viene aperta al giorno 13. Nei cinque giorni intermedi la nave ha acquisito 600 km con lo stesso difetto: cinque giorni di nave da rifare, su un rilievo di quindici. Se il processing avesse tenuto il passo, con un giorno di attesa, il difetto sarebbe emerso al giorno 9, dopo 120 km: un giorno di nave.</p>
+
+<div class="pull"><strong>600 km</strong><span>acquisiti con il difetto prima che qualcuno lo veda, con l'acquisizione e il processing entrambi in linea con il proprio programma</span></div>
+
+<p>Nell'esempio la nave è ancora sul posto, e il rimedio costa giorni di acquisizione. Ma il processing apre la linea acquisita al giorno 9,3 solo al giorno 15, l'ultimo di acquisizione: qualunque difetto cominci dopo emerge a nave smobilitata. Riguarda gli ultimi 680 km, più di un terzo del rilievo.</p>
+
+<p>La relazione è semplice: i chilometri esposti a un difetto sono la produzione giornaliera per l'attesa. La produzione la si vuole alta; l'attesa è l'unico dei due fattori che si può ridurre senza rallentare la nave. Nella teoria delle code la relazione fra coda, flusso e attesa è la legge di Little, che però vale in regime stazionario. Con un processing più lento dell'acquisizione un regime stazionario non c'è: la coda cresce finché la nave non smette di acquisire.</p>
+
+<h2>Tre modi di organizzare lo stesso lavoro</h2>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th>Organizzazione del processing</th><th class="num">Attesa al giorno 8 (giorni)</th><th class="num">Km esposti al difetto</th><th class="num">Giorni nave da rifare</th><th class="num">Fine del processing completo (giorno)</th></tr>
+</thead>
+<tbody>
+<tr><td>A. 80 km al giorno, in ordine di arrivo</td><td class="num">5</td><td class="num">600</td><td class="num">5</td><td class="num">23,5</td></tr>
+<tr><td>B. Quick-look in ordine di arrivo, processing completo con la capacità restante</td><td class="num">1</td><td class="num">120</td><td class="num">1</td><td class="num">29,1</td></tr>
+<tr><td>C. 120 km al giorno</td><td class="num">1</td><td class="num">120</td><td class="num">1</td><td class="num">16,0</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Il quick-look di B è un passaggio ridotto: soltanto le verifiche che scoprono i difetti più costosi, fra cui il criterio di riconoscimento. Nell'esempio richiede un quarto del tempo del processing completo, e tenere il passo con 120 km al giorno ne assorbe il 37,5% della capacità: 120 / (80 × 4). Il processing completo prosegue con il resto, 50 km al giorno, e dopo l'ultima linea torna a 80. Il lavoro totale cresce di un quarto, e la consegna slitta di 5,6 giorni.</p>
+
+<p>C costa capacità in più: una persona o un turno. B costa giorni a terra: sposta la consegna di 5,6 giorni per non rischiare quattro giorni di nave. Se il difetto non arriva, B ha soltanto allungato la consegna. È un'assicurazione, e si valuta come tale: il suo costo è certo, il danno che evita no.</p>
+
+<h2>Le obiezioni</h2>
+
+<p>La prima: il QC di bordo vede i difetti. Ne vede molti – copertura, quota del towfish, qualità dell'immagine linea per linea. Non vede ciò che emerge soltanto con le verifiche del processing: il criterio di riconoscimento applicato ai dati, il confronto fra linee adiacenti, le correzioni definitive. L'esempio riguarda questa classe di difetti; per le altre la coda costa soltanto tempo a terra.</p>
+
+<p>La seconda: il meteo fa recuperare. Un giorno di standby lascia al processing un giorno per smaltire 80 km di coda, e l'attesa scende di un giorno. Aiuta, ma la coda si riduce quando il mare non permette di lavorare, non quando lo si decide; e nelle settimane di bel tempo continua a crescere di 40 km al giorno.</p>
+
+<p>La terza: la consegna è rispettata. È vero, e il contratto pure. Ma la data di consegna dice quando il processing finisce, non quando comincia a guardare un dato. Le due misure si equivalgono soltanto se le due fasi hanno lo stesso ritmo.</p>
+
+<p>La quarta: il difetto si corregge in processing. Alcuni sì, e allora la coda costa soltanto tempo a terra. Il rumore dell'esempio no: un masso che il sonar non ha distinto dal rumore non si ricostruisce dopo. Per questa classe di difetti il costo si paga in tempo nave, ed è proporzionale all'attesa.</p>
+
+<h2>Che cosa chiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>L'attesa nel daily report, accanto alla produzione.</strong><span class="t"> Ogni giorno, la data di acquisizione della linea più vecchia non ancora passata dal processing, o dal quick-look. È un numero solo, e dice da quanti giorni ci sono dati acquisiti che nessuno ha guardato.</span></span></li>
+  <li><span class="k">02</span><span><strong>Una soglia sull'attesa, non sul metodo.</strong><span class="t"> Per esempio due giorni, che al ritmo dell'esempio valgono 240 km esposti. Come rispettarla – più capacità, un quick-look, un altro ordine di lavoro – lo decide il contractor; un processing a 80 km al giorno la supera già al giorno 2.</span></span></li>
+  <li><span class="k">03</span><span><strong>Il contenuto del quick-look, scritto.</strong><span class="t"> Quali verifiche si fanno subito: almeno quelle i cui difetti non si correggono in processing, a cominciare dal criterio di riconoscimento.</span></span></li>
+  <li><span class="k">04</span><span><strong>La data di consegna dichiarata di conseguenza.</strong><span class="t"> Se il quick-look allunga il processing completo, lo si sa in gara invece di scoprirlo dopo.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Un indicatore di produzione dice quanti chilometri si sono acquisiti; uno di processing dice quanti se ne sono elaborati. Nessuno dei due dice da quanti giorni un dato aspetta di essere guardato, ed è lì che, fra due fasi entrambe in regola, si accumula il rischio. Misurarlo costa una riga del daily report. Non misurarlo, nell'esempio, costa quattro giorni di nave.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>J. D. C. Little, «A Proof for the Queuing Formula: L = λW», <em>Operations Research</em>, 9(3), 1961, pp. 383–387: la relazione fra coda, flusso e attesa, dimostrata per processi stazionari.</li>
+  <li>E. M. Goldratt, J. Cox, <em>The Goal</em>, North River Press, 1984: la fase più lenta come vincolo dell'intera catena di lavoro.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR aiuta a misurare e migliorare le operazioni marine. Se state scrivendo la specifica di un rilievo, o leggendo i report di uno in corso, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+</div>
+    <div class="artnext"><h2>Linea di servizio</h2><ul><li><a href="../../operational-excellence/">Operational Excellence</a></li></ul><h2>Altri articoli su questo tema</h2><ul><li><a href="../../insights/lessons-learned-che-si-usano/">Le lessons learned che nessuno rilegge, e come si scrive una nota che verrà usata</a></li><li><a href="../../insights/readiness-review-prima-che-la-nave-parta/">Readiness review: che cosa si verifica prima che la nave parta</a></li><li><a href="../../insights/la-classificazione-del-tempo-nave/">La classificazione del tempo nave: chi paga la giornata in cui non si è lavorato</a></li></ul></div><div class="share"><span class="share-label">Condividi</span><a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.clegar.it%2Finsights%2Fla-coda-fra-acquisizione-e-processing%2F" target="_blank" rel="noopener">LinkedIn</a><a class="share-btn" href="mailto:?subject=La%20coda%20fra%20acquisizione%20e%20processing%3A%20quanti%20giorni%20passano%20prima%20che%20qualcuno%20guardi%20il%20dato&amp;body=La%20coda%20fra%20acquisizione%20e%20processing%3A%20quanti%20giorni%20passano%20prima%20che%20qualcuno%20guardi%20il%20dato%0Ahttps%3A%2F%2Fwww.clegar.it%2Finsights%2Fla-coda-fra-acquisizione-e-processing%2F">Email</a><button class="share-btn" type="button" data-share-url="https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/" data-share-title="La coda fra acquisizione e processing: quanti giorni passano prima che qualcuno guardi il dato">Copia link</button></div>
+    <a class="art-back" href="../../insights/">&larr; Tutti gli articoli</a>
+  </div></div>
+</section>
+</main>
+<footer class="foot">
+  <img class="foot-mark" src="../../assets/mark.png" alt="">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <img class="foot-word" src="../../assets/logo-white.png" alt="CLEGAR">
+        <p class="it">Consulenza indipendente in geoscienze marine, gestione progetti e assurance tecnica per l'offshore.</p>
+        
+      </div>
+      <div>
+        <h5 class="it">Servizi</h5>
+        <nav class="foot-nav">
+          <a href="../../geoscienze-marine/">Marine Geoscience</a>
+          <a href="../../project-management/">Project Management</a>
+          <a href="../../technical-advisory/">Technical Advisory &amp; Assurance</a>
+          <a href="../../owners-engineering/">Owner's Engineering</a>
+          <a href="../../operational-excellence/">Operational Excellence</a>
+        </nav>
+      </div>
+      <div>
+        <h5 class="it">Contatti</h5>
+        <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+        <p><a href="https://www.linkedin.com/company/clegar" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr">2026</span> CLEGAR S.r.l. – P.IVA/VAT 07422540828</span>
+      <span><a class="it" href="../../privacy/">Privacy e cookie</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
