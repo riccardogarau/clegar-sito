@@ -46,6 +46,7 @@ Già online, da non riprendere:
 | La spaziatura delle linee | Marine Geoscience | ombra del side scan e distanza dalla linea, striscia sotto la linea con copertura al 100%, spaziatura sopra e sotto la portata, multibeam come copertura della striscia, criterio di riconoscimento in gara, feature detection contro feature search in S-44 |
 | Dove i path paralleli si incontrano | Project Management | merge bias, probabilità della milestone come prodotto delle probabilità dei path, float che non misura la coda della durata, dipendenza fra path per il meteo, predecessori ridotti al blocco che serve, GAO-16-89G |
 | Un profilo di velocità del suono scaduto | Marine Geoscience | termoclino che scende sotto la sonda al trasduttore, regola dei profili a orario, differenza fra bordo e nadir in funzione delle ore dal profilo, ritorno a zero con il profilo nuovo, interpolazione fra profili in processing, S-44 che non fissa la frequenza dei profili |
+| La deriva dello zero di un CPT | Owner's Engineering | letture di riferimento prima e dopo la prova, deriva dello zero in kPa contro resistenza netta nell'argilla tenera, classi di applicazione 2012 e categoria di prova 2022, correzione lineare della deriva, taratura di Nkt che non assorbe uno spostamento costante, ripetizione con il pontone sul punto |
 | La coda fra acquisizione e processing | Operational Excellence | processing più lento dell'acquisizione, coda che cresce fra due fasi in regola, attesa come indicatore nel daily report, km esposti a un difetto come produzione per attesa, quick-look in ordine di arrivo contro data di consegna, legge di Little e regime stazionario |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
@@ -72,7 +73,7 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   né il profilo di velocità del suono, che riguarda una firma nel dato, né il
   critical path, che riguarda durate e float.)*
 
-### Owner's Engineering — 3 articoli pubblicati
+### Owner's Engineering — 4 articoli pubblicati
 - [x] Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda — 2026-10-08
   *(tratta il patch test di roll e il residuo della passata di conferma: la
   verifica a tappeto della mobilitazione resta alla voce successiva, che
@@ -85,6 +86,15 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   scelta fra rifarlo e attendere il post-processing. Non riprende la
   classificazione del tempo nave, che riguarda chi paga le ore, né il
   witnessing o l'accettazione della mobilitazione, che si fanno in banchina.)*
+- [x] La deriva dello zero di un CPT: che cosa si legge dopo ogni prova, finché il pontone è sul punto — 2026-11-20
+  *(aggiunto il 2026-11-20: Owner's Engineering, Technical Advisory e Project
+  Management erano a pari merito con tre articoli, vinceva Owner's Engineering
+  per ordine, e non aveva voci in arretrato. L'esempio è una campagna CPTU
+  sottocosta in argilla tenera, con uno spostamento dello zero di 60 kPa che
+  sovrastima su del 50% a 2 m. Non riprende l'accettazione della
+  mobilitazione, che verifica uno strumento contro un riferimento esterno, né
+  la seconda opinione, che usava i CPT come riferimento per tarare una
+  velocità.)*
 
 ### Technical Advisory & Assurance — 3 articoli pubblicati
 - [x] La seconda opinione prima di firmare un'accettazione — 2026-10-09
