@@ -873,3 +873,57 @@ into the specification.
 https://www.clegar.it/en/insights/the-queue-between-acquisition-and-processing/
 
 #offshore #marinesurvey #projectmanagement #operationalexcellence #offshorewind
+
+---
+
+## La deriva dello zero di un CPT – 20 novembre 2026
+
+### Italiano
+
+Un CPT nell'argilla tenera, in classe secondo la norma. Vicino al fondale la
+resistenza al taglio risulta più alta del 50%.
+
+Il cono legge una lettura di riferimento prima della prova e una dopo. La
+differenza è la deriva dello zero, e la si confronta con una soglia in kPa.
+
+In un esempio sintetico la deriva rientra nella seconda classe dell'edizione
+2012 della ISO 22476-1. In una sabbia densa sarebbe trascurabile. Nell'argilla
+tenera vicino al fondale la grandezza che serve – la resistenza netta – è
+piccola, e lo stesso spostamento ci entra per intero. La resistenza al taglio
+risulta più alta di quanto sia: nel verso meno prudente.
+
+La soglia della norma è la stessa in entrambi i terreni. Il suo peso no.
+
+Le due letture si conoscono quando il cono esce dal terreno, con il pontone
+ancora sul punto: è lì che ripetere una prova costa qualche ora. Serve una
+soglia scritta prima, ricavata dall'uso del dato, e il log a fine spinta,
+non nel Factual Report.
+
+https://www.clegar.it/insights/deriva-dello-zero-di-un-cpt/
+
+#geotechnical #CPT #offshorewind #siteinvestigation #ownersengineering
+
+### English
+
+A CPT in soft clay, within class under the standard. Near the seabed the
+shear strength comes out 50% too high.
+
+The cone takes a reference reading before the test and one after. The
+difference is the zero drift, and it is checked against a threshold in kPa.
+
+In an illustrative example the drift falls within the second class of the
+2012 edition of ISO 22476-1. In dense sand it would be negligible. In soft
+clay near the seabed the quantity that matters – the net cone resistance – is
+small, and the same shift goes into it in full. The shear strength comes out
+higher than it is: in the less conservative direction.
+
+The threshold in the standard is the same in both soils. Its weight is not.
+
+The two readings are known when the cone leaves the ground, with the pontoon
+still on location: that is when repeating a test costs a few hours. What it
+takes is a threshold written in advance, derived from the use of the data,
+and the log at the end of the push, not in the Factual Report.
+
+https://www.clegar.it/en/insights/cpt-zero-drift/
+
+#geotechnical #CPT #offshorewind #siteinvestigation #ownersengineering

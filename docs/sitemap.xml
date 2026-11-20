@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/deriva-dello-zero-di-un-cpt/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/deriva-dello-zero-di-un-cpt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/cpt-zero-drift/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/deriva-dello-zero-di-un-cpt/"/>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/cpt-zero-drift/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/deriva-dello-zero-di-un-cpt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/cpt-zero-drift/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/deriva-dello-zero-di-un-cpt/"/>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/la-coda-fra-acquisizione-e-processing/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/the-queue-between-acquisition-and-processing/"/>

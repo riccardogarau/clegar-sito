@@ -15,6 +15,235 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'deriva-zero-cpt',
+        'topic': 'owners',
+        'date': '2026-11-20',
+        'slug': {'it': 'deriva-dello-zero-di-un-cpt',
+                 'en': 'cpt-zero-drift'},
+        'title': {
+            'it': 'La deriva dello zero di un CPT: che cosa si legge dopo ogni prova, finché il pontone è sul punto',
+            'en': 'Zero drift in a CPT: what to read after every test, while the pontoon is still on location',
+        },
+        'meta_title': {
+            'it': 'La deriva dello zero di un CPT | Insights',
+            'en': 'Zero drift in a CPT | Insights',
+        },
+        'desc': {
+            'it': ('Perché uno spostamento dello zero di 60 kPa è trascurabile nella sabbia densa e '
+                   'dimezza l’affidabilità della resistenza al taglio nell’argilla tenera, che cosa può '
+                   'decidere a bordo chi assiste alla campagna e quale soglia scrivere nella specifica.'),
+            'en': ('Why a 60 kPa zero shift is negligible in dense sand but halves the reliability of the '
+                   'shear strength in soft clay, what the person witnessing the campaign can decide on '
+                   'board, and which threshold to write into the specification.'),
+        },
+        'abstract': {
+            'it': ('Le letture di riferimento di un CPT, prima e dopo la prova, differiscono di 60 kPa. '
+                   'Nella sabbia densa è lo 0,6% del dato. Nell’argilla tenera, a 2 m sotto il fondale, '
+                   'vuol dire una resistenza al taglio sovrastimata del 50%, da una prova che l’edizione '
+                   '2012 della ISO 22476-1 metteva in seconda classe.'),
+            'en': ('The reference readings of a CPT, before and after the test, differ by 60 kPa. In '
+                   'dense sand that is 0.6% of the data. In soft clay, 2 m below the seabed, it means a '
+                   'shear strength overestimated by 50%, from a test that the 2012 edition of ISO 22476-1 '
+                   'placed in the second class.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Il log di un CPT spinto fino a 10 m sotto il fondale riporta in testa la lettura di riferimento della resistenza di punta presa prima della prova, e in coda quella presa dopo. Differiscono di 60 kPa. In una sabbia densa sarebbero lo 0,6% del valore misurato. Nell'argilla tenera dei primi metri vogliono dire una resistenza al taglio non drenata sovrastimata della metà – e la prova, per l'edizione 2012 della ISO 22476-1, rientrava comunque nella seconda classe.</p>
+
+<p>Questo articolo mostra perché lo stesso numero pesa così diversamente nei due terreni, che cosa può decidere con quelle due letture chi assiste alla campagna per il committente, finché il pontone è ancora sul punto, e che cosa scrivere nella specifica.</p>
+
+<h2>Due letture per ogni prova</h2>
+
+<p>Il cono di un CPT misura forze con celle di carico, e l'uscita di una cella a carico nullo non è stabile: si sposta con la temperatura, con un sovraccarico, con il terreno che entra nel filtro. Per questo la ISO 22476-1 prevede una lettura di riferimento – l'uscita stabile del sensore subito prima che il cono entri nel terreno e subito dopo che ne è uscito – e chiama deriva dello zero la differenza, in valore assoluto, fra le due. Il profilo si calcola a partire dalla prima lettura; la seconda dice di quanto, durante la prova, quel punto di partenza si è spostato.</p>
+
+<p>Le due letture dicono quanto, non quando. Lo spostamento può essere avvenuto nei primi minuti, mentre il cono si porta alla temperatura dell'acqua, oppure negli ultimi metri, per un sovraccarico. Nel primo caso l'errore pesa su tutto il profilo, nel secondo soltanto sul tratto finale.</p>
+
+<h2>Lo stesso spostamento in due terreni</h2>
+
+<p>In una sabbia densa la resistenza di punta si misura in MPa: su 10 MPa, 60 kPa sono lo 0,6%. Nell'argilla tenera la grandezza che serve è un'altra. Dalla resistenza di punta corretta per la pressione interstiziale si sottrae la tensione verticale totale del terreno sovrastante, e si ottiene la resistenza netta; dividendo per un fattore di cono N<sub>kt</sub>, ricavato empiricamente, si ottiene la resistenza al taglio non drenata s<sub>u</sub>. Secondo Robertson e Cabal N<sub>kt</sub> sta tipicamente fra 10 e 18.</p>
+
+<p>Uno spostamento dello zero della resistenza di punta passa per intero nella resistenza netta, perché le due correzioni non lo toccano. E nei primi metri di un'argilla normalmente consolidata la resistenza netta è di un centinaio di kPa: lo spostamento si misura contro quella, non contro i MPa della sabbia.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali.</p>
+
+<p>Approdo di un cavo: prove CPTU da un pontone in 8 m d'acqua, ciascuna spinta fino a 10 m sotto il fondale. I primi 10 m sono argilla tenera normalmente consolidata, con peso di volume di 16 kN/m³ e una resistenza al taglio non drenata che cresce da 5 kPa al fondale di 1,5 kPa per metro. N<sub>kt</sub> vale 15. Il cono ha un fondo scala di 50 MPa, scelto perché più al largo il tracciato attraversa sabbie dense.</p>
+
+<p>In una delle prove la lettura di riferimento finale della resistenza di punta è più alta di 60 kPa di quella iniziale. Lo spostamento è avvenuto nei primi minuti: la lettura iniziale era stata presa prima che il cono raggiungesse la temperatura dell'acqua. Tutto il profilo risulta quindi più alto di 60 kPa.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Profondità sotto il fondale (m)</th><th class="num">Resistenza netta vera (kPa)</th><th class="num">s<sub>u</sub> vera (kPa)</th><th class="num">s<sub>u</sub> con lo zero spostato di 60 kPa (kPa)</th><th class="num">Sovrastima di s<sub>u</sub> (%)</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">2</td><td class="num">120</td><td class="num">8</td><td class="num">12</td><td class="num">50</td></tr>
+<tr><td class="num">4</td><td class="num">165</td><td class="num">11</td><td class="num">15</td><td class="num">36</td></tr>
+<tr><td class="num">6</td><td class="num">210</td><td class="num">14</td><td class="num">18</td><td class="num">29</td></tr>
+<tr><td class="num">8</td><td class="num">255</td><td class="num">17</td><td class="num">21</td><td class="num">24</td></tr>
+<tr><td class="num">10</td><td class="num">300</td><td class="num">20</td><td class="num">24</td><td class="num">20</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>L'errore su s<sub>u</sub> è lo stesso a ogni profondità: 60 / 15 = 4 kPa. Pesa di più dove s<sub>u</sub> è più piccola, cioè vicino al fondale: a 2 m è la metà del valore vero, a 10 m un quinto. E va nel verso meno prudente, perché l'argilla risulta più resistente di quanto sia.</p>
+
+<div class="pull"><strong>50%</strong><span>di sovrastima della resistenza al taglio a 2 m sotto il fondale, da una prova che l'edizione 2012 della ISO 22476-1 metteva in seconda classe</span></div>
+
+<h2>Che cosa dice la norma</h2>
+
+<p>Nell'edizione 2012 della ISO 22476-1 le prove si assegnavano a quattro classi di applicazione. Per la resistenza di punta la classe 1 ammetteva 35 kPa o il 5% del valore misurato, il maggiore dei due; la classe 2 ammetteva 100 kPa o il 5%. Nella pratica la verifica si faceva sulla deriva dello zero. Con 60 kPa la prova dell'esempio rientrava nella classe 2, che la guida di buona pratica degli operatori neozelandesi indica come obiettivo ragionevole nella maggior parte delle situazioni, riservando la classe 1 ai terreni da tenero a molto tenero.</p>
+
+<p>Il 5% supera 35 kPa soltanto oltre 700 kPa di resistenza di punta, e 100 kPa soltanto oltre 2 MPa. Nell'esempio la resistenza di punta corretta non supera i 460 kPa, che raggiunge a 10 m: conta soltanto la soglia fissa in kPa, uguale a ogni profondità, e il suo peso su s<sub>u</sub> dipende dal terreno. Anche la classe 1 lascia a 2 m un errore possibile di 35 / 15 = 2,3 kPa, il 29% di s<sub>u</sub>.</p>
+
+<p>L'edizione 2022 ha sostituito le classi di applicazione con due grandezze: la classe del penetrometro, che viene dalla calibrazione in laboratorio, e la categoria della prova, che dipende anche dalla deriva dello zero e si conosce soltanto a prova finita. Le soglie dell'edizione vigente stanno nella sua tabella 3. Il meccanismo non cambia: una soglia in kPa pesa in proporzione inversa al valore che si misura. La norma copre le prove a terra e sottocosta, e per quelle offshore rimanda alla ISO 19901-8; l'esempio, in 8 m d'acqua, sta nel campo della prima.</p>
+
+<h2>Che cosa si decide a bordo</h2>
+
+<p>Le due letture si conoscono quando il cono esce dal terreno, con il pontone ancora sul punto. È il momento in cui una prova si ripete al costo di qualche ora: si controlla e si pulisce il cono, lo si lascia arrivare alla temperatura dell'acqua e si spinge di nuovo, a breve distanza dal primo foro. A pontone smobilitato la stessa prova richiede una nuova mobilitazione.</p>
+
+<p>Il rappresentante del committente può prendere questa decisione in giornata a due condizioni: che la soglia sia scritta prima, in kPa, e che il log con le due letture gli arrivi a fine spinta, non nel Factual Report. Senza la prima condizione la decisione diventa una trattativa; senza la seconda arriva quando la ripetizione costa una campagna.</p>
+
+<h2>Le obiezioni</h2>
+
+<p>La prima: la prova è in classe. Lo è, e la classe dice quanto è grande l'errore ammesso, non se è accettabile per l'uso che se ne farà. Una soglia in kPa fissi vale lo stesso nella sabbia e nell'argilla; nell'esempio la classe 2 è compatibile con il 50% di sovrastima di s<sub>u</sub> a 2 m.</p>
+
+<p>La seconda: la deriva si corregge in processing, per esempio distribuendola linearmente lungo la prova. Ma niente dice che lo spostamento sia cresciuto in modo lineare, e le due letture non dicono quando è avvenuto. Nell'esempio è avvenuto all'inizio: la correzione lineare toglierebbe a 2 m soltanto 12 dei 60 kPa, e s<sub>u</sub> resterebbe sovrastimata di 3,2 kPa, il 40%. Corretta così, la prova sembra migliore di quanto sia.</p>
+
+<p>La terza: il cono è accurato allo 0,1% del fondo scala. È un ordine di grandezza corrente per i coni moderni, secondo Robertson e Cabal. Ma lo 0,1% di 50 MPa sono 50 kPa, cioè 3,3 kPa su s<sub>u</sub> a ogni profondità. E un'accuratezza misurata in laboratorio non comprende ciò che succede in campo fra la prima e la seconda lettura.</p>
+
+<p>La quarta: N<sub>kt</sub> si tara sulle prove di laboratorio. La taratura corregge un rapporto, non uno spostamento costante. Con un campione a 6 m, s<sub>u</sub> di 14 kPa e una resistenza netta letta di 270 kPa, la taratura dà N<sub>kt</sub> = 19,3. Con quel valore s<sub>u</sub> torna giusta a 6 m, ma a 2 m resta sovrastimata del 17% e a 10 m diventa sottostimata del 7%. L'errore non sparisce: cambia il gradiente di s<sub>u</sub> con la profondità, che è proprio ciò che il progetto usa.</p>
+
+<h2>Che cosa chiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Le due letture, non soltanto la differenza.</strong><span class="t"> Prima e dopo ogni prova, con il segno, l'ora e il punto in cui sono state prese – al fondale o in superficie. La norma definisce la deriva come valore assoluto, e il valore assoluto non dice in che verso il profilo è sbagliato.</span></span></li>
+  <li><span class="k">02</span><span><strong>Una soglia ricavata dall'uso del dato.</strong><span class="t"> Se a 2 m il progetto tollera un errore del 25% su s<sub>u</sub>, cioè 2 kPa, con N<sub>kt</sub> 15 la deriva ammessa sulla resistenza di punta è 30 kPa. È più severa della classe 1 dell'edizione 2012, e lo è perché l'uso lo richiede.</span></span></li>
+  <li><span class="k">03</span><span><strong>Il tempo di stabilizzazione prima della lettura iniziale.</strong><span class="t"> La lettura si prende dopo che il cono ha raggiunto la temperatura dell'acqua; se il cono misura la temperatura, la si registra insieme alla lettura.</span></span></li>
+  <li><span class="k">04</span><span><strong>Un cono con il fondo scala adatto ai terreni attesi.</strong><span class="t"> Se lo stesso tracciato attraversa argille tenere e sabbie dense, un cono di portata ridotta per le prime invece di un cono da 50 MPa per tutto, e una calibrazione sull'intervallo di valori che si misura davvero.</span></span></li>
+  <li><span class="k">05</span><span><strong>La regola di ripetizione, decisa prima.</strong><span class="t"> Oltre la soglia la prova si ripete finché il pontone è sul punto, e il rappresentante del committente la può chiedere senza aspettare il rapporto.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Una soglia scritta in kPa sembra un requisito di precisione, ma il suo peso dipende dal terreno: nella sabbia densa 60 kPa sono lo 0,6% del dato, nell'argilla tenera la metà della resistenza al taglio vicino al fondale. Le due letture che ogni CPT produce dicono di quanto si è spostato lo zero mentre il pontone è ancora sul punto. Leggerle lì costa qualche minuto per prova. Leggerle nel Factual Report, nell'esempio, lascia nel progetto un'argilla più resistente di quanto sia.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>ISO 22476-1:2022, <em>Geotechnical investigation and testing – Field testing – Part 1: Electrical cone and piezocone penetration test</em>: lettura di riferimento e deriva dello zero, classe del penetrometro e categoria della prova, campo di applicazione a terra e sottocosta.</li>
+  <li>M. Holtrigter, A. Thorp, «CETANZ best practice for CPT testing in NZ», New Zealand Geotechnical Society: le classi di applicazione dell'edizione 2012 e la classe 2 come obiettivo corrente.</li>
+  <li>G. Scholey, «Technical note on calibration for cone penetration testing in soft soils», <em>Proceedings of the 7th International Conference on Geotechnical and Geophysical Site Characterization</em>, Barcellona, 2024: cause della deriva dello zero e limiti della correzione lineare.</li>
+  <li>P. K. Robertson, K. Cabal, <em>Guide to Cone Penetration Testing</em>, 7ª ed., Gregg Drilling, 2022: letture a carico nullo e temperatura, accuratezza dei coni, intervallo di N<sub>kt</sub>.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR assiste i committenti durante le campagne in mare, dalla specifica alla verifica a bordo. Se state preparando una campagna geotecnica sottocosta, o leggendo i log di una in corso, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">The log of a CPT pushed to 10 m below the seabed shows at the top the reference reading of the cone resistance taken before the test, and at the bottom the one taken after it. They differ by 60 kPa. In dense sand that would be 0.6% of the measured value. In the soft clay of the first few metres it means an undrained shear strength overestimated by half – and the test, under the 2012 edition of ISO 22476-1, still fell within the second class.</p>
+
+<p>This article shows why the same number weighs so differently in the two soils, what the person witnessing the campaign for the client can decide with those two readings while the pontoon is still on location, and what to write into the specification.</p>
+
+<h2>Two readings for every test</h2>
+
+<p>The cone of a CPT measures forces with load cells, and the output of a load cell at zero load is not stable: it shifts with temperature, with an overload, with soil getting into the filter. That is why ISO 22476-1 provides for a reference reading – the stable output of the sensor just before the cone enters the ground and just after it leaves it – and calls zero drift the absolute difference between the two. The profile is computed from the first reading; the second says by how much that starting point moved during the test.</p>
+
+<p>The two readings say how much, not when. The shift may have happened in the first minutes, while the cone settles to the water temperature, or in the last few metres, because of an overload. In the first case the error affects the whole profile, in the second only the final stretch.</p>
+
+<h2>The same shift in two soils</h2>
+
+<p>In dense sand cone resistance is measured in MPa: out of 10 MPa, 60 kPa is 0.6%. In soft clay the quantity that matters is a different one. From the cone resistance corrected for pore pressure the total vertical stress of the overlying soil is subtracted, giving the net cone resistance; dividing by an empirically derived cone factor N<sub>kt</sub> gives the undrained shear strength s<sub>u</sub>. According to Robertson and Cabal, N<sub>kt</sub> typically lies between 10 and 18.</p>
+
+<p>A zero shift in the cone resistance passes in full into the net cone resistance, because neither correction touches it. And in the first few metres of a normally consolidated clay the net cone resistance is around a hundred kPa: the shift is measured against that, not against the MPa of the sand.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures are synthetic – built to illustrate the mechanism, not taken from real projects.</p>
+
+<p>A cable landfall: CPTU tests from a pontoon in 8 m of water, each pushed to 10 m below the seabed. The first 10 m are soft normally consolidated clay, with a unit weight of 16 kN/m³ and an undrained shear strength that grows from 5 kPa at the seabed by 1.5 kPa per metre. N<sub>kt</sub> is 15. The cone has a full scale of 50 MPa, chosen because further offshore the route crosses dense sands.</p>
+
+<p>In one of the tests the final reference reading of the cone resistance is 60 kPa higher than the initial one. The shift happened in the first minutes: the initial reading had been taken before the cone reached the water temperature. The whole profile is therefore 60 kPa too high.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Depth below seabed (m)</th><th class="num">True net cone resistance (kPa)</th><th class="num">True s<sub>u</sub> (kPa)</th><th class="num">s<sub>u</sub> with the zero shifted by 60 kPa (kPa)</th><th class="num">Overestimate of s<sub>u</sub> (%)</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">2</td><td class="num">120</td><td class="num">8</td><td class="num">12</td><td class="num">50</td></tr>
+<tr><td class="num">4</td><td class="num">165</td><td class="num">11</td><td class="num">15</td><td class="num">36</td></tr>
+<tr><td class="num">6</td><td class="num">210</td><td class="num">14</td><td class="num">18</td><td class="num">29</td></tr>
+<tr><td class="num">8</td><td class="num">255</td><td class="num">17</td><td class="num">21</td><td class="num">24</td></tr>
+<tr><td class="num">10</td><td class="num">300</td><td class="num">20</td><td class="num">24</td><td class="num">20</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The error in s<sub>u</sub> is the same at every depth: 60 / 15 = 4 kPa. It weighs most where s<sub>u</sub> is smallest, that is near the seabed: at 2 m it is half the true value, at 10 m a fifth. And it goes in the less conservative direction, because the clay comes out stronger than it is.</p>
+
+<div class="pull"><strong>50%</strong><span>overestimate of the shear strength 2 m below the seabed, from a test that the 2012 edition of ISO 22476-1 placed in the second class</span></div>
+
+<h2>What the standard says</h2>
+
+<p>In the 2012 edition of ISO 22476-1 tests were assigned to four application classes. For cone resistance, class 1 allowed 35 kPa or 5% of the measured value, whichever is larger; class 2 allowed 100 kPa or 5%. In practice the check was made on the zero drift. At 60 kPa the test in the example fell within class 2, which the best practice guideline of the New Zealand CPT contractors describes as a reasonable target in most situations, keeping class 1 for soft to very soft soils.</p>
+
+<p>The 5% exceeds 35 kPa only above 700 kPa of cone resistance, and 100 kPa only above 2 MPa. In the example the corrected cone resistance does not exceed 460 kPa, reached at 10 m: only the fixed threshold in kPa counts, the same at every depth, and its weight on s<sub>u</sub> depends on the soil. Even class 1 leaves at 2 m a possible error of 35 / 15 = 2.3 kPa, 29% of s<sub>u</sub>.</p>
+
+<p>The 2022 edition replaced the application classes with two quantities: the cone penetrometer class, which comes from laboratory calibration, and the test category, which also depends on the zero drift and is known only once the test is over. The thresholds of the current edition are in its Table 3. The mechanism does not change: a threshold in kPa weighs in inverse proportion to the value being measured. The standard covers onshore and nearshore tests, and for offshore ones refers to ISO 19901-8; the example, in 8 m of water, falls within the scope of the former.</p>
+
+<h2>What is decided on board</h2>
+
+<p>The two readings are known when the cone leaves the ground, with the pontoon still on location. That is the moment when a test can be repeated at the cost of a few hours: the cone is checked and cleaned, left to reach the water temperature, and pushed again a short distance from the first hole. Once the pontoon has demobilised, the same test requires a new mobilisation.</p>
+
+<p>The client representative can take this decision within the day on two conditions: that the threshold is written in advance, in kPa, and that the log with the two readings reaches them at the end of the push, not in the Factual Report. Without the first condition the decision becomes a negotiation; without the second it comes when a repeat costs a campaign.</p>
+
+<h2>The objections</h2>
+
+<p>The first: the test is within class. It is, and the class says how large the allowed error is, not whether it is acceptable for the use the data will be put to. A threshold in fixed kPa is the same in sand and in clay; in the example class 2 is compatible with a 50% overestimate of s<sub>u</sub> at 2 m.</p>
+
+<p>The second: the drift can be corrected in processing, for instance by spreading it linearly along the test. But nothing says the shift grew linearly, and the two readings do not say when it happened. In the example it happened at the start: a linear correction would remove at 2 m only 12 of the 60 kPa, and s<sub>u</sub> would remain overestimated by 3.2 kPa, 40%. Corrected that way, the test looks better than it is.</p>
+
+<p>The third: the cone is accurate to 0.1% of full scale. That is a common order of magnitude for modern cones, according to Robertson and Cabal. But 0.1% of 50 MPa is 50 kPa, that is 3.3 kPa on s<sub>u</sub> at every depth. And an accuracy measured in the laboratory does not include what happens in the field between the first reading and the second.</p>
+
+<p>The fourth: N<sub>kt</sub> is calibrated against laboratory tests. Calibration corrects a ratio, not a constant shift. With a sample at 6 m, an s<sub>u</sub> of 14 kPa and a net cone resistance read as 270 kPa, calibration gives N<sub>kt</sub> = 19.3. With that value s<sub>u</sub> is right again at 6 m, but at 2 m it remains overestimated by 17% and at 10 m it becomes underestimated by 7%. The error does not disappear: it changes the gradient of s<sub>u</sub> with depth, which is exactly what the design uses.</p>
+
+<h2>What to ask for in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Both readings, not just the difference.</strong><span class="t"> Before and after every test, with their sign, the time and the point where they were taken – at the seabed or at the surface. The standard defines the drift as an absolute value, and an absolute value does not say in which direction the profile is wrong.</span></span></li>
+  <li><span class="k">02</span><span><strong>A threshold derived from the use of the data.</strong><span class="t"> If at 2 m the design tolerates a 25% error on s<sub>u</sub>, that is 2 kPa, with N<sub>kt</sub> of 15 the allowed drift on cone resistance is 30 kPa. It is stricter than class 1 of the 2012 edition, and it is so because the use requires it.</span></span></li>
+  <li><span class="k">03</span><span><strong>The stabilisation time before the initial reading.</strong><span class="t"> The reading is taken once the cone has reached the water temperature; if the cone measures temperature, it is recorded together with the reading.</span></span></li>
+  <li><span class="k">04</span><span><strong>A cone with a full scale suited to the expected soils.</strong><span class="t"> If the same route crosses soft clays and dense sands, a lower-capacity cone for the former instead of a 50 MPa cone for everything, and a calibration over the range of values actually measured.</span></span></li>
+  <li><span class="k">05</span><span><strong>The repeat rule, decided in advance.</strong><span class="t"> Beyond the threshold the test is repeated while the pontoon is on location, and the client representative can call for it without waiting for the report.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>A threshold written in kPa looks like a precision requirement, but its weight depends on the soil: in dense sand 60 kPa is 0.6% of the data, in soft clay half the shear strength near the seabed. The two readings that every CPT produces say how far the zero moved while the pontoon is still on location. Reading them there costs a few minutes per test. Reading them in the Factual Report, in the example, leaves in the design a clay stronger than it is.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>ISO 22476-1:2022, <em>Geotechnical investigation and testing – Field testing – Part 1: Electrical cone and piezocone penetration test</em>: reference reading and zero drift, cone penetrometer class and test category, scope onshore and nearshore.</li>
+  <li>M. Holtrigter, A. Thorp, “CETANZ best practice for CPT testing in NZ”, New Zealand Geotechnical Society: the application classes of the 2012 edition and class 2 as the usual target.</li>
+  <li>G. Scholey, “Technical note on calibration for cone penetration testing in soft soils”, <em>Proceedings of the 7th International Conference on Geotechnical and Geophysical Site Characterization</em>, Barcelona, 2024: causes of zero drift and the limits of linear correction.</li>
+  <li>P. K. Robertson, K. Cabal, <em>Guide to Cone Penetration Testing</em>, 7th ed., Gregg Drilling, 2022: zero load readings and temperature, cone accuracy, range of N<sub>kt</sub>.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR supports clients during campaigns at sea, from the specification to verification on board. If you are preparing a nearshore geotechnical campaign, or reading the logs of one under way, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'coda-processing',
         'topic': 'excellence',
         'date': '2026-11-18',
