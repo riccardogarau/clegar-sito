@@ -48,6 +48,7 @@ Già online, da non riprendere:
 | Un profilo di velocità del suono scaduto | Marine Geoscience | termoclino che scende sotto la sonda al trasduttore, regola dei profili a orario, differenza fra bordo e nadir in funzione delle ore dal profilo, ritorno a zero con il profilo nuovo, interpolazione fra profili in processing, S-44 che non fissa la frequenza dei profili |
 | La deriva dello zero di un CPT | Owner's Engineering | letture di riferimento prima e dopo la prova, deriva dello zero in kPa contro resistenza netta nell'argilla tenera, classi di applicazione 2012 e categoria di prova 2022, correzione lineare della deriva, taratura di Nkt che non assorbe uno spostamento costante, ripetizione con il pontone sul punto |
 | La coda fra acquisizione e processing | Operational Excellence | processing più lento dell'acquisizione, coda che cresce fra due fasi in regola, attesa come indicatore nel daily report, km esposti a un difetto come produzione per attesa, quick-look in ordine di arrivo contro data di consegna, legge di Little e regime stazionario |
+| Il controllo a campione | Technical Advisory | limite superiore di un campione senza errori, regola del tre, campione in percentuale che limita il numero e non la quota, ISO 2859-1 (AQL, serie di lotti) contro ISO 2859-2 (LQ, lotto isolato), estrazione casuale del committente, errori trovati che non si correggono uno per uno, lotto per zona, campione dalla lista contro campione dall'area |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -96,7 +97,7 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   la seconda opinione, che usava i CPT come riferimento per tarare una
   velocità.)*
 
-### Technical Advisory & Assurance — 3 articoli pubblicati
+### Technical Advisory & Assurance — 4 articoli pubblicati
 - [x] La seconda opinione prima di firmare un'accettazione — 2026-10-09
   *(tratta la velocità di conversione di una mappa di spessori, tarata sui CPT.
   La due diligence su un dataset ereditato resta alla voce successiva, che
@@ -107,6 +108,15 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   measured mile e la scelta del tratto di riferimento. Non riprende la seconda
   opinione, che riguarda le assunzioni di un'interpretazione, né la
   classificazione del tempo nave, che riguarda chi paga una giornata.)*
+- [x] Il controllo a campione: che cosa dice un campione senza errori — 2026-11-23
+  *(aggiunto il 2026-11-23: Technical Advisory e Project Management erano a
+  pari merito con tre articoli, vinceva Technical Advisory per ordine, e non
+  aveva voci in arretrato. L'esempio è una lista di 2.400 contatti verificata
+  su 30 senza errori, compatibile con il 9,5% di contatti sbagliati. Non
+  riprende il crossline check né l'accettazione della mobilitazione, che
+  riguardano la precisione di una misura, né la spaziatura delle linee, che
+  riguarda perché un masso non si vede: qui si tratta di che cosa dimostra una
+  verifica a campione.)*
 
 ### Marine Geoscience — 4 articoli pubblicati
 - [x] Spaziatura delle linee: che cosa non si vede fra una linea e l'altra — 2026-10-26
