@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spot-checking a deliverable | Insights</title>
+<meta name="description" content="Why thirty contacts checked without finding an error still allow one in ten to be wrong, why a 5% sample does not guarantee a percentage, and how to write a spot check into the specification so that it proves something.">
+<link rel="canonical" href="https://www.clegar.it/en/insights/spot-checking-a-deliverable/">
+<link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/controllo-a-campione-di-un-deliverable/">
+<link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/spot-checking-a-deliverable/">
+<link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/controllo-a-campione-di-un-deliverable/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CLEGAR">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Spot-checking a deliverable | Insights">
+<meta property="og:description" content="Why thirty contacts checked without finding an error still allow one in ten to be wrong, why a 5% sample does not guarantee a percentage, and how to write a spot check into the specification so that it proves something.">
+<meta property="og:url" content="https://www.clegar.it/en/insights/spot-checking-a-deliverable/">
+<meta property="og:image" content="https://www.clegar.it/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Spot-checking a deliverable | Insights">
+<meta name="twitter:description" content="Why thirty contacts checked without finding an error still allow one in ten to be wrong, why a 5% sample does not guarantee a percentage, and how to write a spot check into the specification so that it proves something.">
+<meta name="twitter:image" content="https://www.clegar.it/assets/og.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B2545">
+<!-- Google Search Console: sostituire con il proprio codice di verifica -->
+<!-- <meta name="google-site-verification" content="INCOLLA_QUI_IL_CODICE"> -->
+<link rel="icon" href="../../../assets/mark.png">
+<link rel="apple-touch-icon" href="../../../assets/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Spot checks: what a sample with no errors actually says","description":"Why thirty contacts checked without finding an error still allow one in ten to be wrong, why a 5% sample does not guarantee a percentage, and how to write a spot check into the specification so that it proves something.","datePublished":"2026-11-23","dateModified":"2026-11-23","inLanguage":"en","author":{"@type":"Organization","name":"CLEGAR","url":"https://www.clegar.it/"},"publisher":{"@id":"https://www.clegar.it/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.clegar.it/en/insights/spot-checking-a-deliverable/"},"image":"https://www.clegar.it/assets/og.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.clegar.it/en/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://www.clegar.it/en/insights/"},{"@type":"ListItem","position":3,"name":"Spot checks: what a sample with no errors actually says","item":"https://www.clegar.it/en/insights/spot-checking-a-deliverable/"}]}</script>
+
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-row">
+    <a class="brand" aria-label="CLEGAR" href="../../../">
+      <img src="../../../assets/logo.png" alt="CLEGAR — Marine Geoscience &amp; Offshore Advisory">
+    </a>
+    <div class="masthead-meta">
+      <a class="hide-sm" href="mailto:info@clegar.it">info@clegar.it</a>
+      <div class="langsw" role="group" aria-label="Language / Lingua">
+        <a href="../../../insights/" hreflang="it">IT</a><a href="../../../en/insights/" aria-current="true">EN</a></div>
+      <a class="btn-contact" href="../../../en/contact/">
+        <span class="en">Talk to us</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<nav class="tabbar" aria-label="Main navigation">
+  <div class="tabbar-inner">
+    <a class="tab" href="../../../en/">Home</a>
+    <a class="tab" href="../../../en/marine-geoscience/">Marine Geoscience</a>
+    <a class="tab" href="../../../en/project-management/">Project Management</a>
+    <a class="tab" href="../../../en/technical-advisory/">Technical Advisory</a>
+    <a class="tab" href="../../../en/owners-engineering/">Owner's Engineering</a>
+    <a class="tab" href="../../../en/operational-excellence/">Operational Excellence</a>
+    <a class="tab" href="../../../en/insights/" aria-current="page">Insights</a>
+    <a class="tab" href="../../../en/contact/">Contact</a>
+  </div>
+</nav>
+<main id="main">
+<section class="page">
+  <div class="svc-hero"><div class="wrap">
+<div class="art-meta"><time datetime="2026-11-23">23 November 2026</time><a href="../../../en/technical-advisory/">Technical Advisory</a></div><h1>Spot checks: what a sample with no errors actually says</h1>
+  </div></div>
+  <div class="band band-white band-pad"><div class="wrap">
+    <div class="article">
+<p class="lede">A list of 2,400 seabed contacts, delivered with the interpretation report of a survey for a wind farm. In the quality control section the contractor writes that 30 were verified, by rechecking their class and height, and no errors were found. The sentence is true, and it says less than it seems: that result is still compatible, at 95% confidence, with a list in which one contact in ten is wrong.</p>
+
+<p>This article shows what a spot check proves and what it does not, why a sample expressed as a percentage of the lot does not guarantee a percentage of errors, which objections come up when this is pointed out, and what to write into the specification so that the client's check says something.</p>
+
+<h2>What a sample with no errors proves</h2>
+
+<p>If a share p of the contacts in a list is wrong, and n of them are checked at random, the probability of finding none wrong is (1 − p)<sup>n</sup>. A sample with no errors rules out, at 95% confidence, only the shares for which that probability falls below 5%. The highest share still compatible is the upper bound: 1 − 0.05<sup>1/n</sup>.</p>
+
+<p>The bound is roughly 3/n. This is the “rule of three”, described by Hanley and Lippman-Hand in 1983 to interpret clinical studies in which the event of concern had never occurred. With 30 contacts the bound is 9.5%: the check found no errors, but it did not rule out that the list holds 228 of them.</p>
+
+<p>The calculation treats the lot as if it were infinite, and for a finite lot it is conservative. If exactly 48 of 2,400 contacts were wrong, a sample of 149 would find none with a probability of 4.5%, not 4.9%: 144 would be enough to show the same threshold. The margin is small as long as the sample is small compared with the lot.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures are synthetic – built to illustrate the mechanism, not taken from real projects.</p>
+
+<p>A geophysical survey of a wind farm site, with side scan sonar and multibeam. The deliverable is a list of 2,400 contacts interpreted as boulders, each with position, height and class. The list is used to choose the foundation positions and to size the boulder clearance campaign. The client decides it can accept up to 2% wrong contacts, that is 48. A contact is wrong if an independent interpreter, working on the same data, assigns it a different class, or measures a height that differs by more than 0.3 m.</p>
+
+<p>The table shows, for samples of different sizes all with no errors, the share of wrong contacts still compatible with the result, and how many contacts that is on the list of 2,400.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Contacts checked, no errors found</th><th class="num">95% upper bound (%)</th><th class="num">Wrong contacts still possible out of 2,400</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">30</td><td class="num">9.5</td><td class="num">228</td></tr>
+<tr><td class="num">60</td><td class="num">4.9</td><td class="num">117</td></tr>
+<tr><td class="num">120</td><td class="num">2.5</td><td class="num">59</td></tr>
+<tr><td class="num">149</td><td class="num">2.0</td><td class="num">48</td></tr>
+<tr><td class="num">300</td><td class="num">1.0</td><td class="num">24</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The first sample that brings the bound below 2% is 149 contacts, five times those in the report. And that is the minimum: finding a single wrong one is enough for the threshold to be no longer shown. Allowing one error in the sample takes 236; allowing two takes 313.</p>
+
+<div class="pull"><strong>9.5%</strong><span>of wrong contacts still compatible, at 95%, with 30 contacts checked without finding an error</span></div>
+
+<h2>5% is not a sampling plan</h2>
+
+<p>In specifications the spot check is often written as a percentage: the client verifies 5% of the items delivered. But the bound depends on how many items are checked, and hardly at all on how many there are in the lot. On a list of 600 contacts 5% is 30, and the bound stays at 9.5%. On 2,400 it is 120, and the bound falls to 2.5%. On 12,000 it is 600, and it falls to 0.5%.</p>
+
+<p>Multiplying each bound by its own lot, the three cases give almost the same number: 57, 59 and 60 wrong contacts still possible. A 5% sample with no errors limits the number of errors in the lot – roughly 3 divided by 0.05 – not their share. If the use of the data calls for a share, the sample size is derived from the share, not from the lot.</p>
+
+<h2>What the standards say</h2>
+
+<p>Sampling by attributes has two ISO standards. ISO 2859-1, whose third edition dates from 2026, indexes its plans by acceptance quality limit (AQL) and is designed for a continuing series of lots from the same supplier: the client is protected by the rules that switch to tighter inspection when quality worsens from one lot to the next. A list of contacts delivered once has no next lot to apply them to.</p>
+
+<p>For isolated lots there is ISO 2859-2, in its 2020 edition, which indexes its plans by limiting quality (LQ): the share of defectives the client wants a low probability of accepting. For its plans that probability, the consumer's risk, is usually below 10%. It is the question of the example asked from the right side: not how many errors the supplier may have on average, but which lot the client does not want to accept. With a 10% risk instead of 5%, the 2% threshold is shown by 114 contacts with no errors instead of 149.</p>
+
+<h2>The objections</h2>
+
+<p>The first: the contractor chose the sample, among the most representative contacts. The calculation holds only for a sample drawn at random; a chosen sample, whoever chooses it, says something about the contacts chosen and nothing about the list. The client makes the draw, after delivery, over the whole list, and records how it was made – the generator and the seed – so that anyone can repeat it.</p>
+
+<p>The second: errors found are corrected. Correcting them fixes those contacts, not the estimate for the rest. If 2 wrong contacts are found among 149, the estimate for the list is 1.3%, that is 32 contacts: with the 2 found corrected, about 30 remain. And the upper bound rises to 4.2%, above the threshold. The list is not shown to be acceptable, and what gets reworked is the process that produced it – the interpreter, the area, the criterion – not the two contacts.</p>
+
+<p>The third: errors are not spread at random, they cluster. Often true, and the bound concerns the whole list, not its parts. If 600 contacts lie in an area of sand waves, where boulders are confused with crests, and 6% of them are wrong there against 0.5% elsewhere, errors over the whole list are 1.9%: below the threshold. A random sample of 149 contacts takes on average 37 from that area, and about one time in ten finds no error there. If there are foundations in that area, the area is a lot of its own, with its own sample.</p>
+
+<p>The fourth: the check verified the list. A sample drawn from the list finds the wrong contacts that are in it, not the boulders that are missing. For omissions the sample is drawn from the area: cells chosen at random, reinterpreted from scratch by an independent interpreter, and compared with the list. The arithmetic is the same; what is counted changes.</p>
+
+<p>The fifth: 149 contacts are too many. If rechecking a contact takes three minutes, 149 contacts are less than eight hours of work, against a boulder clearance campaign sized on that list. And the number does not grow with the lot: a list of 12,000 contacts would need 148.</p>
+
+<h2>What to ask for in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>What counts as an error, written in advance.</strong><span class="t"> A class different from that of an independent interpreter, a height that differs by more than a threshold, a position off by more than a given distance: measurable criteria, not a judgement made once the sample is finished.</span></span></li>
+  <li><span class="k">02</span><span><strong>The share to be shown and the accepted risk.</strong><span class="t"> The 2% at 95% of the example, or the limiting quality and consumer's risk in the terms of ISO 2859-2. The sample size is derived from there: 149 contacts with no errors, not 5% of the list.</span></span></li>
+  <li><span class="k">03</span><span><strong>A random draw made by the client.</strong><span class="t"> After delivery, over the whole lot, with the generator and the seed recorded so that the draw can be repeated.</span></span></li>
+  <li><span class="k">04</span><span><strong>One lot for each use.</strong><span class="t"> Areas where the data decides something different – the foundation positions, a cable route – are sampled separately.</span></span></li>
+  <li><span class="k">05</span><span><strong>Two samples, not one.</strong><span class="t"> One from the list, for wrong contacts; one from the area, for missing boulders.</span></span></li>
+  <li><span class="k">06</span><span><strong>The rejection rule, decided in advance.</strong><span class="t"> If the bound exceeds the threshold the lot is reworked and sampled again from scratch. Correcting the items found in the sample is not enough.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>A spot check with no errors looks like proof of quality, but it says only which error shares it has ruled out. With 30 contacts it has ruled out little: up to 9.5% remains possible. The sample size is derived from what the client wants to show, not from a percentage of the lot, and the draw is made by whoever has to rely on the result. Written that way into the specification, the same check costs a day and says whether the list can be used.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>ISO 2859-1:2026, <em>Sampling procedures for inspection by attributes – Part 1: Sampling schemes indexed by acceptance quality limit (AQL) for lot-by-lot inspection</em>: plans indexed by AQL, continuing series of lots, switching rules.</li>
+  <li>ISO 2859-2:2020, <em>Sampling procedures for inspection by attributes – Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection</em>: isolated lots, limiting quality, consumer's risk.</li>
+  <li>J. A. Hanley, A. Lippman-Hand, “If nothing goes wrong, is everything all right? Interpreting zero numerators”, <em>JAMA</em>, 249(13), 1983, pp. 1743–1745: the rule of three.</li>
+  <li>C. J. Clopper, E. S. Pearson, “The use of confidence or fiducial limits illustrated in the case of the binomial”, <em>Biometrika</em>, 26(4), 1934, pp. 404–413: upper bound when errors are found in the sample.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR verifies contractor deliverables for clients, from the specification of the check to carrying it out. If you are about to receive a list of contacts, or to write how you will verify it, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+</div>
+    <div class="artnext"><h2>Service line</h2><ul><li><a href="../../../en/technical-advisory/">Technical Advisory</a></li></ul><h2>More on this topic</h2><ul><li><a href="../../../en/insights/technical-opinion-in-a-dispute/">A technical opinion in a dispute: what makes it usable</a></li><li><a href="../../../en/insights/due-diligence-on-an-inherited-dataset/">Due diligence on an inherited dataset: a cable’s burial cover has a date</a></li><li><a href="../../../en/insights/second-opinion-before-acceptance/">A second opinion before signing an acceptance: what the contractor’s QC does not check</a></li></ul></div><div class="share"><span class="share-label">Share</span><a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.clegar.it%2Fen%2Finsights%2Fspot-checking-a-deliverable%2F" target="_blank" rel="noopener">LinkedIn</a><a class="share-btn" href="mailto:?subject=Spot%20checks%3A%20what%20a%20sample%20with%20no%20errors%20actually%20says&amp;body=Spot%20checks%3A%20what%20a%20sample%20with%20no%20errors%20actually%20says%0Ahttps%3A%2F%2Fwww.clegar.it%2Fen%2Finsights%2Fspot-checking-a-deliverable%2F">Email</a><button class="share-btn" type="button" data-share-url="https://www.clegar.it/en/insights/spot-checking-a-deliverable/" data-share-title="Spot checks: what a sample with no errors actually says">Copy link</button></div>
+    <a class="art-back" href="../../../en/insights/">&larr; All articles</a>
+  </div></div>
+</section>
+</main>
+<footer class="foot">
+  <img class="foot-mark" src="../../../assets/mark.png" alt="">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <img class="foot-word" src="../../../assets/logo-white.png" alt="CLEGAR">
+        
+        <p class="en">Independent consultancy in marine geoscience, project management and technical assurance for offshore.</p>
+      </div>
+      <div>
+        <h5 class="en">Services</h5>
+        <nav class="foot-nav">
+          <a href="../../../en/marine-geoscience/">Marine Geoscience</a>
+          <a href="../../../en/project-management/">Project Management</a>
+          <a href="../../../en/technical-advisory/">Technical Advisory &amp; Assurance</a>
+          <a href="../../../en/owners-engineering/">Owner's Engineering</a>
+          <a href="../../../en/operational-excellence/">Operational Excellence</a>
+        </nav>
+      </div>
+      <div>
+        <h5 class="en">Contact</h5>
+        <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+        <p><a href="https://www.linkedin.com/company/clegar" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr">2026</span> CLEGAR S.r.l. – P.IVA/VAT 07422540828</span>
+      <span><a class="en" href="../../../en/privacy/">Privacy and cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../../../assets/site.js" defer></script>
+</body>
+</html>

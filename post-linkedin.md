@@ -927,3 +927,58 @@ and the log at the end of the push, not in the Factual Report.
 https://www.clegar.it/en/insights/cpt-zero-drift/
 
 #geotechnical #CPT #offshorewind #siteinvestigation #ownersengineering
+
+---
+
+## Il controllo a campione – 23 novembre 2026
+
+### Italiano
+
+"Verificati 30 contatti, nessun errore." Con quel risultato resta possibile
+che sulla lista sia sbagliato un contatto su dieci.
+
+Un campione senza errori non dimostra che gli errori non ci sono. Esclude
+soltanto le quote di errore per cui sarebbe stato improbabile non trovarne
+nessuno – e con 30 elementi controllati, al 95% di confidenza, resta
+compatibile fino al 9,5%.
+
+In un esempio sintetico, una lista di massi interpretati per un sito
+eolico: per dimostrare la soglia che il committente si era dato serve un
+campione cinque volte più grande, estratto a caso dal committente e non
+scelto dal contractor.
+
+Nemmeno il campione in percentuale che si legge in molte specifiche
+risolve: limita il numero di errori nel lotto, non la loro quota.
+
+Nella specifica servono la definizione di errore, la quota da dimostrare,
+l'estrazione fatta dal committente e la regola di rifiuto, tutte scritte
+prima della consegna.
+
+https://www.clegar.it/insights/controllo-a-campione-di-un-deliverable/
+
+#offshore #marinesurvey #qualityassurance #offshorewind #technicalassurance
+
+### English
+
+"30 contacts verified, no errors found." That result still allows one
+contact in ten on the list to be wrong.
+
+A sample with no errors does not prove there are no errors. It only rules
+out the error shares for which finding none would have been unlikely – and
+with 30 items checked, at 95% confidence, anything up to 9.5% remains
+compatible.
+
+In an illustrative example, a list of boulders interpreted for a wind farm
+site: showing the threshold the client had set takes a sample five times
+larger, drawn at random by the client rather than chosen by the contractor.
+
+Nor does the percentage sample found in many specifications solve it: it
+limits the number of errors in the lot, not their share.
+
+The specification needs the definition of an error, the share to be shown,
+the draw made by the client and the rejection rule, all written before
+delivery.
+
+https://www.clegar.it/en/insights/spot-checking-a-deliverable/
+
+#offshore #marinesurvey #qualityassurance #offshorewind #technicalassurance

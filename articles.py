@@ -15,6 +15,229 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'controllo-a-campione',
+        'topic': 'advisory',
+        'date': '2026-11-23',
+        'slug': {'it': 'controllo-a-campione-di-un-deliverable',
+                 'en': 'spot-checking-a-deliverable'},
+        'title': {
+            'it': 'Il controllo a campione: che cosa dice un campione senza errori',
+            'en': 'Spot checks: what a sample with no errors actually says',
+        },
+        'meta_title': {
+            'it': 'Il controllo a campione di un deliverable | Insights',
+            'en': 'Spot-checking a deliverable | Insights',
+        },
+        'desc': {
+            'it': ('Perché trenta contatti controllati senza trovare errori lasciano possibile che uno su '
+                   'dieci sia sbagliato, perché un campione del 5% non garantisce una percentuale, e come si '
+                   'scrive nella specifica un controllo a campione che dimostra qualcosa.'),
+            'en': ('Why thirty contacts checked without finding an error still allow one in ten to be '
+                   'wrong, why a 5% sample does not guarantee a percentage, and how to write a spot check '
+                   'into the specification so that it proves something.'),
+        },
+        'abstract': {
+            'it': ('Il contractor consegna una lista di 2.400 contatti e dichiara di averne verificati 30 '
+                   'senza trovare errori. Con quel risultato resta compatibile, al 95%, una lista con 228 '
+                   'contatti sbagliati: il 9,5%. Per dimostrare che gli errori restano sotto il 2% servono '
+                   '149 contatti controllati, estratti a caso dal committente.'),
+            'en': ('The contractor delivers a list of 2,400 contacts and states that 30 were checked '
+                   'without finding errors. That result is still compatible, at 95%, with a list holding '
+                   '228 wrong contacts: 9.5%. To show that errors stay below 2% takes 149 checked '
+                   'contacts, drawn at random by the client.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Una lista di 2.400 contatti sul fondale, consegnata con il rapporto di interpretazione di un rilievo per un parco eolico. Nella sezione sul controllo qualità il contractor scrive di averne verificati 30, ricontrollandone classe e altezza, senza trovare errori. La frase è vera, e dice meno di quanto sembri: con quel risultato resta compatibile, al 95% di confidenza, una lista in cui un contatto su dieci è sbagliato.</p>
+
+<p>Questo articolo mostra che cosa dimostra un controllo a campione e che cosa no, perché un campione espresso in percentuale del lotto non garantisce una percentuale di errori, quali obiezioni si sentono quando lo si fa notare, e che cosa scrivere nella specifica perché la verifica del committente dica qualcosa.</p>
+
+<h2>Che cosa dimostra un campione senza errori</h2>
+
+<p>Se in una lista è sbagliata una quota p dei contatti, e se ne controllano n estratti a caso, la probabilità di non trovarne nessuno sbagliato è (1 − p)<sup>n</sup>. Un campione senza errori esclude, al 95% di confidenza, soltanto le quote per cui quella probabilità scende sotto il 5%. La quota più alta che resta compatibile è il limite superiore: 1 − 0,05<sup>1/n</sup>.</p>
+
+<p>Il limite vale circa 3/n. È la «regola del tre», descritta da Hanley e Lippman-Hand nel 1983 per interpretare gli studi clinici in cui l'evento temuto non si era mai verificato. Con 30 contatti il limite è il 9,5%: il controllo non ha trovato errori, ma non ha escluso che sulla lista ce ne siano 228.</p>
+
+<p>Il calcolo tratta il lotto come se fosse infinito, e per un lotto finito è prudente. Se su 2.400 contatti ne fossero sbagliati esattamente 48, un campione di 149 non ne troverebbe nessuno con probabilità del 4,5%, non del 4,9%: per dimostrare la stessa soglia ne basterebbero 144. Il margine è piccolo finché il campione è piccolo rispetto al lotto.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali.</p>
+
+<p>Rilievo geofisico di un sito eolico, con side scan sonar e multibeam. Il deliverable è una lista di 2.400 contatti interpretati come massi, ciascuno con posizione, altezza e classe. La lista serve a scegliere la posizione delle fondazioni e a dimensionare la campagna di rimozione dei massi. Il committente decide di poter accettare fino al 2% di contatti sbagliati, cioè 48. Un contatto è sbagliato se un interprete indipendente, sugli stessi dati, gli assegna una classe diversa, o ne misura un'altezza che differisce di oltre 0,3 m.</p>
+
+<p>La tabella riporta, per campioni di dimensioni diverse e tutti senza errori, la quota di contatti sbagliati che resta compatibile con il risultato, e quanti contatti sono sulla lista di 2.400.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Contatti controllati, nessun errore trovato</th><th class="num">Limite superiore al 95% (%)</th><th class="num">Contatti sbagliati ancora possibili su 2.400</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">30</td><td class="num">9,5</td><td class="num">228</td></tr>
+<tr><td class="num">60</td><td class="num">4,9</td><td class="num">117</td></tr>
+<tr><td class="num">120</td><td class="num">2,5</td><td class="num">59</td></tr>
+<tr><td class="num">149</td><td class="num">2,0</td><td class="num">48</td></tr>
+<tr><td class="num">300</td><td class="num">1,0</td><td class="num">24</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Il primo campione che porta il limite sotto il 2% è di 149 contatti, cinque volte quelli della relazione. Ed è il minimo: basta trovarne uno sbagliato perché la soglia non sia più dimostrata. Se si vuole ammettere un errore nel campione ne servono 236, se se ne ammettono due 313.</p>
+
+<div class="pull"><strong>9,5%</strong><span>di contatti sbagliati ancora compatibili, al 95%, con 30 contatti controllati senza trovare errori</span></div>
+
+<h2>Il 5% non è un piano di campionamento</h2>
+
+<p>Nelle specifiche il controllo a campione si scrive spesso come percentuale: il committente verifica il 5% degli elementi consegnati. Ma il limite dipende da quanti elementi si controllano, e quasi per niente da quanti ce ne sono nel lotto. Su una lista di 600 contatti il 5% sono 30, e il limite resta al 9,5%. Su 2.400 sono 120, e il limite scende al 2,5%. Su 12.000 sono 600, e scende allo 0,5%.</p>
+
+<p>Moltiplicando ciascun limite per il proprio lotto, i tre casi danno quasi lo stesso numero: 57, 59 e 60 contatti sbagliati ancora possibili. Un campione del 5% senza errori limita il numero di errori nel lotto – circa 3 diviso 0,05 – non la loro quota. Se l'uso del dato chiede una quota, la dimensione del campione si ricava dalla quota, non dal lotto.</p>
+
+<h2>Che cosa dice la norma</h2>
+
+<p>Il campionamento per attributi ha due norme ISO. La ISO 2859-1, la cui terza edizione è del 2026, indicizza i piani per livello di qualità accettabile (AQL) ed è pensata per una serie continua di lotti dallo stesso fornitore: il committente è protetto dalle regole che, quando la qualità peggiora da un lotto all'altro, fanno passare a un controllo più severo. Una lista di contatti consegnata una volta sola non ha un lotto successivo a cui applicarle.</p>
+
+<p>Per i lotti isolati c'è la ISO 2859-2, nell'edizione del 2020, che indicizza i piani per qualità limite (LQ): la quota di difettosi che il committente vuole avere poca probabilità di accettare. Per i suoi piani quella probabilità, il rischio del committente, sta di norma sotto il 10%. È la domanda dell'esempio posta dal lato giusto: non quanti errori il fornitore può avere in media, ma quale lotto il committente non vuole accettare. Con un rischio del 10% invece del 5%, la soglia del 2% si dimostra con 114 contatti senza errori invece di 149.</p>
+
+<h2>Le obiezioni</h2>
+
+<p>La prima: il campione l'ha scelto il contractor, fra i contatti più rappresentativi. Il calcolo vale soltanto per un campione estratto a caso; un campione scelto, da chiunque lo scelga, dice qualcosa sui contatti scelti e niente sulla lista. L'estrazione la fa il committente, dopo la consegna, su tutta la lista, e registra come l'ha fatta – il generatore e il seme – perché chiunque possa rifarla.</p>
+
+<p>La seconda: gli errori trovati si correggono. Correggerli sistema quei contatti, non la stima sul resto. Se fra 149 contatti se ne trovano 2 sbagliati, la stima per la lista è l'1,3%, cioè 32 contatti: corretti i 2 trovati, ne restano circa 30. E il limite superiore sale al 4,2%, oltre la soglia. La lista non è dimostrata, e si rilavora il processo che l'ha prodotta – l'interprete, la zona, il criterio – non i due contatti.</p>
+
+<p>La terza: gli errori non sono distribuiti a caso, si concentrano. Spesso è vero, e il limite riguarda la lista intera, non le sue parti. Se 600 contatti stanno in una zona di sand wave, dove i massi si confondono con le creste, e lì è sbagliato il 6% contro lo 0,5% nel resto, sulla lista intera gli errori sono l'1,9%: sotto la soglia. Un campione casuale di 149 contatti ne prende in media 37 da quella zona, e circa una volta su dieci non vi trova nessun errore. Se in quella zona ci sono fondazioni, la zona è un lotto a sé, con il proprio campione.</p>
+
+<p>La quarta: il controllo ha verificato la lista. Un campione estratto dalla lista trova i contatti sbagliati che ci sono, non i massi che mancano. Per le omissioni il campione si estrae dall'area: celle scelte a caso, reinterpretate da capo da un interprete indipendente, e confrontate con la lista. L'aritmetica è la stessa, cambia ciò che si conta.</p>
+
+<p>La quinta: 149 contatti sono troppi. Se il ricontrollo di un contatto richiede tre minuti, 149 contatti sono meno di otto ore di lavoro, contro una campagna di rimozione dei massi dimensionata su quella lista. E il numero non cresce con il lotto: per una lista di 12.000 contatti ne servirebbero 148.</p>
+
+<h2>Che cosa chiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Che cosa è un errore, scritto prima.</strong><span class="t"> Classe diversa da quella di un interprete indipendente, altezza che differisce di oltre una soglia, posizione fuori di oltre una distanza data: criteri misurabili, non un giudizio espresso a campione finito.</span></span></li>
+  <li><span class="k">02</span><span><strong>La quota da dimostrare e il rischio accettato.</strong><span class="t"> Il 2% al 95% dell'esempio, oppure la qualità limite e il rischio del committente nei termini della ISO 2859-2. La dimensione del campione si ricava da lì: 149 contatti senza errori, non il 5% della lista.</span></span></li>
+  <li><span class="k">03</span><span><strong>L'estrazione casuale fatta dal committente.</strong><span class="t"> Dopo la consegna, su tutto il lotto, con il generatore e il seme registrati perché l'estrazione si possa rifare.</span></span></li>
+  <li><span class="k">04</span><span><strong>Un lotto per ogni uso.</strong><span class="t"> Le zone in cui il dato decide qualcosa di diverso – le posizioni delle fondazioni, il tracciato di un cavo – si campionano a parte.</span></span></li>
+  <li><span class="k">05</span><span><strong>Due campioni, non uno.</strong><span class="t"> Uno dalla lista, per i contatti sbagliati; uno dall'area, per i massi che mancano.</span></span></li>
+  <li><span class="k">06</span><span><strong>La regola di rifiuto, decisa prima.</strong><span class="t"> Se il limite supera la soglia si rilavora il lotto e si ricampiona da capo. Correggere gli elementi trovati nel campione non basta.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>Un controllo a campione senza errori sembra una prova di qualità, ma dice soltanto quali quote di errore ha escluso. Con 30 contatti ha escluso poco: resta possibile fino al 9,5%. La dimensione del campione si ricava da quanto il committente vuole dimostrare, non da una percentuale del lotto, e l'estrazione la fa chi deve fidarsi del risultato. Scritto così nella specifica, lo stesso controllo costa una giornata e dice se la lista si può usare.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>ISO 2859-1:2026, <em>Sampling procedures for inspection by attributes – Part 1: Sampling schemes indexed by acceptance quality limit (AQL) for lot-by-lot inspection</em>: piani indicizzati per AQL, serie continue di lotti, regole di passaggio.</li>
+  <li>ISO 2859-2:2020, <em>Sampling procedures for inspection by attributes – Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection</em>: lotti isolati, qualità limite, rischio del committente.</li>
+  <li>J. A. Hanley, A. Lippman-Hand, «If nothing goes wrong, is everything all right? Interpreting zero numerators», <em>JAMA</em>, 249(13), 1983, pp. 1743–1745: la regola del tre.</li>
+  <li>C. J. Clopper, E. S. Pearson, «The use of confidence or fiducial limits illustrated in the case of the binomial», <em>Biometrika</em>, 26(4), 1934, pp. 404–413: limite superiore con errori trovati nel campione.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR verifica per i committenti i deliverable dei contractor, dalla specifica del controllo alla sua esecuzione. Se state per ricevere una lista di contatti, o per scrivere come la verificherete, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">A list of 2,400 seabed contacts, delivered with the interpretation report of a survey for a wind farm. In the quality control section the contractor writes that 30 were verified, by rechecking their class and height, and no errors were found. The sentence is true, and it says less than it seems: that result is still compatible, at 95% confidence, with a list in which one contact in ten is wrong.</p>
+
+<p>This article shows what a spot check proves and what it does not, why a sample expressed as a percentage of the lot does not guarantee a percentage of errors, which objections come up when this is pointed out, and what to write into the specification so that the client's check says something.</p>
+
+<h2>What a sample with no errors proves</h2>
+
+<p>If a share p of the contacts in a list is wrong, and n of them are checked at random, the probability of finding none wrong is (1 − p)<sup>n</sup>. A sample with no errors rules out, at 95% confidence, only the shares for which that probability falls below 5%. The highest share still compatible is the upper bound: 1 − 0.05<sup>1/n</sup>.</p>
+
+<p>The bound is roughly 3/n. This is the “rule of three”, described by Hanley and Lippman-Hand in 1983 to interpret clinical studies in which the event of concern had never occurred. With 30 contacts the bound is 9.5%: the check found no errors, but it did not rule out that the list holds 228 of them.</p>
+
+<p>The calculation treats the lot as if it were infinite, and for a finite lot it is conservative. If exactly 48 of 2,400 contacts were wrong, a sample of 149 would find none with a probability of 4.5%, not 4.9%: 144 would be enough to show the same threshold. The margin is small as long as the sample is small compared with the lot.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures are synthetic – built to illustrate the mechanism, not taken from real projects.</p>
+
+<p>A geophysical survey of a wind farm site, with side scan sonar and multibeam. The deliverable is a list of 2,400 contacts interpreted as boulders, each with position, height and class. The list is used to choose the foundation positions and to size the boulder clearance campaign. The client decides it can accept up to 2% wrong contacts, that is 48. A contact is wrong if an independent interpreter, working on the same data, assigns it a different class, or measures a height that differs by more than 0.3 m.</p>
+
+<p>The table shows, for samples of different sizes all with no errors, the share of wrong contacts still compatible with the result, and how many contacts that is on the list of 2,400.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Contacts checked, no errors found</th><th class="num">95% upper bound (%)</th><th class="num">Wrong contacts still possible out of 2,400</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">30</td><td class="num">9.5</td><td class="num">228</td></tr>
+<tr><td class="num">60</td><td class="num">4.9</td><td class="num">117</td></tr>
+<tr><td class="num">120</td><td class="num">2.5</td><td class="num">59</td></tr>
+<tr><td class="num">149</td><td class="num">2.0</td><td class="num">48</td></tr>
+<tr><td class="num">300</td><td class="num">1.0</td><td class="num">24</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The first sample that brings the bound below 2% is 149 contacts, five times those in the report. And that is the minimum: finding a single wrong one is enough for the threshold to be no longer shown. Allowing one error in the sample takes 236; allowing two takes 313.</p>
+
+<div class="pull"><strong>9.5%</strong><span>of wrong contacts still compatible, at 95%, with 30 contacts checked without finding an error</span></div>
+
+<h2>5% is not a sampling plan</h2>
+
+<p>In specifications the spot check is often written as a percentage: the client verifies 5% of the items delivered. But the bound depends on how many items are checked, and hardly at all on how many there are in the lot. On a list of 600 contacts 5% is 30, and the bound stays at 9.5%. On 2,400 it is 120, and the bound falls to 2.5%. On 12,000 it is 600, and it falls to 0.5%.</p>
+
+<p>Multiplying each bound by its own lot, the three cases give almost the same number: 57, 59 and 60 wrong contacts still possible. A 5% sample with no errors limits the number of errors in the lot – roughly 3 divided by 0.05 – not their share. If the use of the data calls for a share, the sample size is derived from the share, not from the lot.</p>
+
+<h2>What the standards say</h2>
+
+<p>Sampling by attributes has two ISO standards. ISO 2859-1, whose third edition dates from 2026, indexes its plans by acceptance quality limit (AQL) and is designed for a continuing series of lots from the same supplier: the client is protected by the rules that switch to tighter inspection when quality worsens from one lot to the next. A list of contacts delivered once has no next lot to apply them to.</p>
+
+<p>For isolated lots there is ISO 2859-2, in its 2020 edition, which indexes its plans by limiting quality (LQ): the share of defectives the client wants a low probability of accepting. For its plans that probability, the consumer's risk, is usually below 10%. It is the question of the example asked from the right side: not how many errors the supplier may have on average, but which lot the client does not want to accept. With a 10% risk instead of 5%, the 2% threshold is shown by 114 contacts with no errors instead of 149.</p>
+
+<h2>The objections</h2>
+
+<p>The first: the contractor chose the sample, among the most representative contacts. The calculation holds only for a sample drawn at random; a chosen sample, whoever chooses it, says something about the contacts chosen and nothing about the list. The client makes the draw, after delivery, over the whole list, and records how it was made – the generator and the seed – so that anyone can repeat it.</p>
+
+<p>The second: errors found are corrected. Correcting them fixes those contacts, not the estimate for the rest. If 2 wrong contacts are found among 149, the estimate for the list is 1.3%, that is 32 contacts: with the 2 found corrected, about 30 remain. And the upper bound rises to 4.2%, above the threshold. The list is not shown to be acceptable, and what gets reworked is the process that produced it – the interpreter, the area, the criterion – not the two contacts.</p>
+
+<p>The third: errors are not spread at random, they cluster. Often true, and the bound concerns the whole list, not its parts. If 600 contacts lie in an area of sand waves, where boulders are confused with crests, and 6% of them are wrong there against 0.5% elsewhere, errors over the whole list are 1.9%: below the threshold. A random sample of 149 contacts takes on average 37 from that area, and about one time in ten finds no error there. If there are foundations in that area, the area is a lot of its own, with its own sample.</p>
+
+<p>The fourth: the check verified the list. A sample drawn from the list finds the wrong contacts that are in it, not the boulders that are missing. For omissions the sample is drawn from the area: cells chosen at random, reinterpreted from scratch by an independent interpreter, and compared with the list. The arithmetic is the same; what is counted changes.</p>
+
+<p>The fifth: 149 contacts are too many. If rechecking a contact takes three minutes, 149 contacts are less than eight hours of work, against a boulder clearance campaign sized on that list. And the number does not grow with the lot: a list of 12,000 contacts would need 148.</p>
+
+<h2>What to ask for in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>What counts as an error, written in advance.</strong><span class="t"> A class different from that of an independent interpreter, a height that differs by more than a threshold, a position off by more than a given distance: measurable criteria, not a judgement made once the sample is finished.</span></span></li>
+  <li><span class="k">02</span><span><strong>The share to be shown and the accepted risk.</strong><span class="t"> The 2% at 95% of the example, or the limiting quality and consumer's risk in the terms of ISO 2859-2. The sample size is derived from there: 149 contacts with no errors, not 5% of the list.</span></span></li>
+  <li><span class="k">03</span><span><strong>A random draw made by the client.</strong><span class="t"> After delivery, over the whole lot, with the generator and the seed recorded so that the draw can be repeated.</span></span></li>
+  <li><span class="k">04</span><span><strong>One lot for each use.</strong><span class="t"> Areas where the data decides something different – the foundation positions, a cable route – are sampled separately.</span></span></li>
+  <li><span class="k">05</span><span><strong>Two samples, not one.</strong><span class="t"> One from the list, for wrong contacts; one from the area, for missing boulders.</span></span></li>
+  <li><span class="k">06</span><span><strong>The rejection rule, decided in advance.</strong><span class="t"> If the bound exceeds the threshold the lot is reworked and sampled again from scratch. Correcting the items found in the sample is not enough.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>A spot check with no errors looks like proof of quality, but it says only which error shares it has ruled out. With 30 contacts it has ruled out little: up to 9.5% remains possible. The sample size is derived from what the client wants to show, not from a percentage of the lot, and the draw is made by whoever has to rely on the result. Written that way into the specification, the same check costs a day and says whether the list can be used.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>ISO 2859-1:2026, <em>Sampling procedures for inspection by attributes – Part 1: Sampling schemes indexed by acceptance quality limit (AQL) for lot-by-lot inspection</em>: plans indexed by AQL, continuing series of lots, switching rules.</li>
+  <li>ISO 2859-2:2020, <em>Sampling procedures for inspection by attributes – Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection</em>: isolated lots, limiting quality, consumer's risk.</li>
+  <li>J. A. Hanley, A. Lippman-Hand, “If nothing goes wrong, is everything all right? Interpreting zero numerators”, <em>JAMA</em>, 249(13), 1983, pp. 1743–1745: the rule of three.</li>
+  <li>C. J. Clopper, E. S. Pearson, “The use of confidence or fiducial limits illustrated in the case of the binomial”, <em>Biometrika</em>, 26(4), 1934, pp. 404–413: upper bound when errors are found in the sample.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR verifies contractor deliverables for clients, from the specification of the check to carrying it out. If you are about to receive a list of contacts, or to write how you will verify it, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'deriva-zero-cpt',
         'topic': 'owners',
         'date': '2026-11-20',

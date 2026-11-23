@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/controllo-a-campione-di-un-deliverable/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/controllo-a-campione-di-un-deliverable/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/spot-checking-a-deliverable/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/controllo-a-campione-di-un-deliverable/"/>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/spot-checking-a-deliverable/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/controllo-a-campione-di-un-deliverable/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/spot-checking-a-deliverable/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/controllo-a-campione-di-un-deliverable/"/>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/deriva-dello-zero-di-un-cpt/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/deriva-dello-zero-di-un-cpt/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/cpt-zero-drift/"/>
