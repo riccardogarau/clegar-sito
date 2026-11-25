@@ -982,3 +982,64 @@ delivery.
 https://www.clegar.it/en/insights/spot-checking-a-deliverable/
 
 #offshore #marinesurvey #qualityassurance #offshorewind #technicalassurance
+
+---
+
+## Un SPI che torna a 1 – 25 novembre 2026
+
+### Italiano
+
+Dodicesima settimana di una campagna pianificata in dieci. Il rapporto di
+avanzamento riporta un SPI di 0,98, e la campagna finirà con tre settimane
+di ritardo.
+
+Il numero non è sbagliato. È il modo in cui è costruito: l'SPI confronta il
+lavoro fatto con il lavoro previsto a quella data, entrambi misurati in
+denaro. Alla data di fine prevista il denaro pianificato è finito, e da lì
+in poi l'indice misura soltanto quanto lavoro manca. A fine lavori vale 1
+per qualunque progetto, in tempo o in ritardo.
+
+In un esempio sintetico, il contratto chiede un recovery plan quando l'SPI
+scende sotto 0,90. La soglia smette di scattare all'undicesima settimana:
+proprio quando il ritardo è più grande, e la nave è ancora in mare.
+
+L'earned schedule, proposto da Walt Lipke nel 2003, fa lo stesso calcolo in
+tempo, con gli stessi dati che il contractor riporta già: in quale data il
+programma prevedeva di arrivare al lavoro fatto finora. Calcolato così,
+l'indice resta fermo sul ritardo fino all'ultimo giorno.
+
+Nella specifica servono il ritardo in settimane accanto all'SPI, la soglia
+del recovery plan legata all'indice in tempo, e la baseline su cui ogni
+indice è calcolato.
+
+https://www.clegar.it/insights/spi-che-torna-a-uno/
+
+#projectmanagement #earnedvalue #offshore #marinesurvey #offshorewind
+
+### English
+
+Week twelve of a campaign planned for ten. The progress report shows an SPI
+of 0.98, and the campaign will finish three weeks late.
+
+The number is not wrong. It is how it is built: the SPI compares the work
+done with the work planned for that date, both measured in money. At the
+planned finish date the planned money has run out, and from then on the
+index only measures how much work is left. At the end it equals 1 for any
+project, on time or late.
+
+In an illustrative example, the contract calls for a recovery plan when the
+SPI falls below 0.90. The threshold stops triggering in week eleven: just
+when the delay is at its largest, and the vessel is still at sea.
+
+Earned schedule, proposed by Walt Lipke in 2003, does the same calculation
+in time, from the same data the contractor already reports: on which date
+the schedule expected to reach the work done so far. Computed that way, the
+index stays on the delay up to the last day.
+
+The specification needs the delay in weeks next to the SPI, the recovery
+plan threshold tied to the index in time, and the baseline each index is
+computed on.
+
+https://www.clegar.it/en/insights/an-spi-that-returns-to-one/
+
+#projectmanagement #earnedvalue #offshore #marinesurvey #offshorewind

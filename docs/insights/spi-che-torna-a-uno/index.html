@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Un SPI che torna a 1 | Insights</title>
+<meta name="description" content="Perché l’SPI di un progetto in ritardo risale verso 1 dopo la data di fine prevista, perché una soglia scritta sull’SPI smette di scattare quando il ritardo è più grande, e che cosa chiedere nei rapporti di avanzamento per leggere il ritardo in settimane.">
+<link rel="canonical" href="https://www.clegar.it/insights/spi-che-torna-a-uno/">
+<link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/spi-che-torna-a-uno/">
+<link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/an-spi-that-returns-to-one/">
+<link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/spi-che-torna-a-uno/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CLEGAR">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Un SPI che torna a 1 | Insights">
+<meta property="og:description" content="Perché l’SPI di un progetto in ritardo risale verso 1 dopo la data di fine prevista, perché una soglia scritta sull’SPI smette di scattare quando il ritardo è più grande, e che cosa chiedere nei rapporti di avanzamento per leggere il ritardo in settimane.">
+<meta property="og:url" content="https://www.clegar.it/insights/spi-che-torna-a-uno/">
+<meta property="og:image" content="https://www.clegar.it/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Un SPI che torna a 1 | Insights">
+<meta name="twitter:description" content="Perché l’SPI di un progetto in ritardo risale verso 1 dopo la data di fine prevista, perché una soglia scritta sull’SPI smette di scattare quando il ritardo è più grande, e che cosa chiedere nei rapporti di avanzamento per leggere il ritardo in settimane.">
+<meta name="twitter:image" content="https://www.clegar.it/assets/og.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B2545">
+<!-- Google Search Console: sostituire con il proprio codice di verifica -->
+<!-- <meta name="google-site-verification" content="INCOLLA_QUI_IL_CODICE"> -->
+<link rel="icon" href="../../assets/mark.png">
+<link rel="apple-touch-icon" href="../../assets/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Un SPI che torna a 1: il ritardo che l’earned value smette di vedere","description":"Perché l’SPI di un progetto in ritardo risale verso 1 dopo la data di fine prevista, perché una soglia scritta sull’SPI smette di scattare quando il ritardo è più grande, e che cosa chiedere nei rapporti di avanzamento per leggere il ritardo in settimane.","datePublished":"2026-11-25","dateModified":"2026-11-25","inLanguage":"it","author":{"@type":"Organization","name":"CLEGAR","url":"https://www.clegar.it/"},"publisher":{"@id":"https://www.clegar.it/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.clegar.it/insights/spi-che-torna-a-uno/"},"image":"https://www.clegar.it/assets/og.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.clegar.it/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://www.clegar.it/insights/"},{"@type":"ListItem","position":3,"name":"Un SPI che torna a 1: il ritardo che l’earned value smette di vedere","item":"https://www.clegar.it/insights/spi-che-torna-a-uno/"}]}</script>
+
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-row">
+    <a class="brand" aria-label="CLEGAR" href="../../">
+      <img src="../../assets/logo.png" alt="CLEGAR — Marine Geoscience &amp; Offshore Advisory">
+    </a>
+    <div class="masthead-meta">
+      <a class="hide-sm" href="mailto:info@clegar.it">info@clegar.it</a>
+      <div class="langsw" role="group" aria-label="Language / Lingua">
+        <a href="../../insights/" aria-current="true">IT</a><a href="../../en/insights/" hreflang="en">EN</a></div>
+      <a class="btn-contact" href="../../contatti/">
+        <span class="it">Parliamone</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<nav class="tabbar" aria-label="Navigazione principale">
+  <div class="tabbar-inner">
+    <a class="tab" href="../../">Home</a>
+    <a class="tab" href="../../geoscienze-marine/">Marine Geoscience</a>
+    <a class="tab" href="../../project-management/">Project Management</a>
+    <a class="tab" href="../../technical-advisory/">Technical Advisory</a>
+    <a class="tab" href="../../owners-engineering/">Owner's Engineering</a>
+    <a class="tab" href="../../operational-excellence/">Operational Excellence</a>
+    <a class="tab" href="../../insights/" aria-current="page">Insights</a>
+    <a class="tab" href="../../contatti/">Contatti</a>
+  </div>
+</nav>
+<main id="main">
+<section class="page">
+  <div class="svc-hero"><div class="wrap">
+<div class="art-meta"><time datetime="2026-11-25">25 novembre 2026</time><a href="../../project-management/">Project Management</a></div><h1>Un SPI che torna a 1: il ritardo che l’earned value smette di vedere</h1>
+  </div></div>
+  <div class="band band-white band-pad"><div class="wrap">
+    <div class="article">
+<p class="lede">Dodicesima settimana di una campagna pianificata in dieci. Il rapporto di avanzamento del contractor riporta un SPI di 0,98, e il contratto chiede un recovery plan solo quando l'indice scende sotto 0,90. Il numero è calcolato correttamente, e la campagna finirà con tre settimane di ritardo. Da due settimane la soglia non scatta più, ed è proprio il periodo in cui il ritardo è più grande.</p>
+
+<p>Questo articolo mostra perché l'SPI di un progetto in ritardo torna verso 1 da solo, come si calcola lo stesso indice in tempo invece che in denaro, quali obiezioni si sentono quando lo si propone, e che cosa scrivere nella specifica dei rapporti di avanzamento perché il ritardo si legga in settimane.</p>
+
+<h2>Perché l'SPI torna a 1</h2>
+
+<p>Nell'earned value management il programma si traduce in una curva di planned value (PV): quanto lavoro, misurato nel budget, si prevede di aver completato a ogni data. L'earned value (EV) è il lavoro effettivamente completato, misurato con lo stesso budget. L'indice di schedule è il loro rapporto, SPI = EV / PV, e la varianza è la loro differenza, SV = EV − PV.</p>
+
+<p>Il PV, però, smette di crescere alla data di fine prevista, quando raggiunge il budget a completamento (BAC). Da lì in poi l'SPI vale EV / BAC: non confronta più il lavoro fatto con quello previsto a quella data, ma con il lavoro totale. È la percentuale di completamento, e a fine lavori vale 1 per qualunque progetto, in tempo o in ritardo. Allo stesso modo la SV torna a zero. Walt Lipke, che nel 2003 ha proposto l'alternativa descritta qui sotto, lo indica come il difetto noto degli indici di schedule in denaro: a fine progetto SV = 0 e SPI = 1, anche quando il progetto ha finito in ritardo.</p>
+
+<p>Il difetto non è soltanto finale. Già prima della data prevista, quando la curva del PV si appiattisce perché restano le attività di chiusura, il PV cresce più lentamente e l'SPI risale, anche se il lavoro procede allo stesso ritmo di prima.</p>
+
+<h2>Lo stesso indice, in tempo</h2>
+
+<p>L'earned schedule (ES) fa la domanda opposta: non quanto lavoro manca rispetto alla data di oggi, ma in quale data il programma prevedeva di arrivare al lavoro fatto finora. Si cerca sulla curva del PV l'ultimo periodo C in cui il PV non supera l'EV, e si interpola linearmente dentro il periodo successivo: ES = C + (EV − PV<sub>C</sub>) / (PV<sub>C+1</sub> − PV<sub>C</sub>).</p>
+
+<p>Con il tempo trascorso, l'actual time (AT), si ottengono gli indici in tempo: SV(t) = ES − AT, in settimane, e SPI(t) = ES / AT. L'ES non supera mai la durata prevista (PD), mentre l'AT continua a crescere: per un progetto in ritardo l'SPI(t) resta sotto 1 fino all'ultimo giorno. Il rapporto PD / SPI(t) dà inoltre una stima della durata finale, se il ritmo resta quello misurato.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali.</p>
+
+<p>Campagna di rilievo geofisico per un parco eolico, con una durata prevista di 10 settimane e un budget a completamento di 2.000 k€. Il contractor riporta l'avanzamento a settimana, con le regole di misura dell'EV concordate al kick-off. La produzione resta sotto il ritmo previsto fin dalla seconda settimana, e la campagna finisce alla tredicesima.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Settimana</th><th class="num">PV (k€)</th><th class="num">EV (k€)</th><th class="num">SPI</th><th class="num">ES (settimane)</th><th class="num">SPI(t)</th><th class="num">PD / SPI(t) (settimane)</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">1</td><td class="num">100</td><td class="num">100</td><td class="num">1,00</td><td class="num">1,00</td><td class="num">1,00</td><td class="num">10,0</td></tr>
+<tr><td class="num">2</td><td class="num">300</td><td class="num">250</td><td class="num">0,83</td><td class="num">1,75</td><td class="num">0,88</td><td class="num">11,4</td></tr>
+<tr><td class="num">3</td><td class="num">550</td><td class="num">400</td><td class="num">0,73</td><td class="num">2,40</td><td class="num">0,80</td><td class="num">12,5</td></tr>
+<tr><td class="num">4</td><td class="num">800</td><td class="num">600</td><td class="num">0,75</td><td class="num">3,20</td><td class="num">0,80</td><td class="num">12,5</td></tr>
+<tr><td class="num">5</td><td class="num">1.050</td><td class="num">800</td><td class="num">0,76</td><td class="num">4,00</td><td class="num">0,80</td><td class="num">12,5</td></tr>
+<tr><td class="num">6</td><td class="num">1.300</td><td class="num">950</td><td class="num">0,73</td><td class="num">4,60</td><td class="num">0,77</td><td class="num">13,0</td></tr>
+<tr><td class="num">7</td><td class="num">1.550</td><td class="num">1.150</td><td class="num">0,74</td><td class="num">5,40</td><td class="num">0,77</td><td class="num">13,0</td></tr>
+<tr><td class="num">8</td><td class="num">1.750</td><td class="num">1.350</td><td class="num">0,77</td><td class="num">6,20</td><td class="num">0,78</td><td class="num">12,9</td></tr>
+<tr><td class="num">9</td><td class="num">1.900</td><td class="num">1.550</td><td class="num">0,82</td><td class="num">7,00</td><td class="num">0,78</td><td class="num">12,9</td></tr>
+<tr><td class="num">10</td><td class="num">2.000</td><td class="num">1.700</td><td class="num">0,85</td><td class="num">7,75</td><td class="num">0,78</td><td class="num">12,9</td></tr>
+<tr><td class="num">11</td><td class="num">2.000</td><td class="num">1.850</td><td class="num">0,93</td><td class="num">8,67</td><td class="num">0,79</td><td class="num">12,7</td></tr>
+<tr><td class="num">12</td><td class="num">2.000</td><td class="num">1.950</td><td class="num">0,98</td><td class="num">9,50</td><td class="num">0,79</td><td class="num">12,6</td></tr>
+<tr><td class="num">13</td><td class="num">2.000</td><td class="num">2.000</td><td class="num">1,00</td><td class="num">10,00</td><td class="num">0,77</td><td class="num">13,0</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Dalla terza all'ottava settimana i due indici dicono la stessa cosa: l'SPI sta fra 0,73 e 0,77, l'SPI(t) fra 0,77 e 0,80, e la campagna produce a circa tre quarti del ritmo previsto. Poi si separano. Dalla nona settimana la curva del PV si appiattisce e l'SPI risale, mentre l'SPI(t), che misura il ritmo rispetto al programma, resta fra 0,78 e 0,79. Dalla decima il PV è fermo a 2.000 k€, e l'SPI diventa la percentuale di completamento.</p>
+
+<p>Alla dodicesima settimana la SV vale −50 k€, il 2,5% del budget: sembra un residuo. La SV(t) vale −2,5 settimane. E la stima di durata ottenuta con l'SPI, PD / SPI, dà 10,3 settimane: una data già passata da quasi due settimane. Quella ottenuta con l'SPI(t) sta fra 12,5 e 13,0 settimane dalla terza settimana in poi.</p>
+
+<div class="pull"><strong>0,98</strong><span>l'SPI alla dodicesima settimana di una campagna pianificata in dieci, che finirà con tre settimane di ritardo</span></div>
+
+<h2>La soglia che smette di scattare</h2>
+
+<p>Il contratto dell'esempio chiede un recovery plan quando l'SPI scende sotto 0,90. La soglia scatta dalla seconda alla decima settimana e smette alla undicesima, quando l'SPI arriva a 0,93: il ritardo in quel momento è di 2,3 settimane, e alla fine sarà di 3. L'SPI(t) resta sotto 0,90 dalla seconda settimana all'ultima.</p>
+
+<p>Una soglia sull'SPI non è sbagliata in sé. Diventa cieca nell'ultimo tratto del programma, che è anche quello in cui un ritardo costa di più: la nave è ancora in mare, le attività successive sono già pianificate sulla data contrattuale, e il recovery plan ha meno tempo per servire.</p>
+
+<h2>Le obiezioni</h2>
+
+<p>La prima: l'SPI è l'indicatore che chiede il contratto, ed è uno standard. È corretto, e fino all'ottava settimana dell'esempio dice la stessa cosa dell'SPI(t). Il problema non è l'indice, ma l'uso di un rapporto fra due grandezze in denaro come misura di un ritardo in tempo. L'earned schedule si calcola con gli stessi PV ed EV che il contractor riporta già: non chiede dati nuovi, solo un calcolo in più.</p>
+
+<p>La seconda: il ritardo si legge sul programma, non sugli indici. Il programma resta lo strumento principale, e l'earned schedule non lo sostituisce. Serve a controllarlo: la data di fine che il contractor dichiara aggiornando il programma si confronta con PD / SPI(t). Se il programma dice dieci settimane e mezza e l'indice dice tredici, il programma assume un recupero di ritmo che va dimostrato. Ma un ES calcolato su tutto il progetto misura il volume di lavoro, non il critical path: lavoro non critico fatto in anticipo può compensare un ritardo sul path vincolante. Lipke ha descritto nel 2006 come applicare l'earned schedule alle sole attività del critical path; dove il path vincolante è uno solo e riconoscibile, l'indice si calcola anche su quelle.</p>
+
+<p>La terza: la stima PD / SPI(t) è troppo semplice. Assume che il resto del lavoro proceda al ritmo misurato finora, e se la causa del ritardo sparisce – il meteo migliora, uno strumento viene sostituito – sovrastima la durata. Per questo è un controllo incrociato, non una data da firmare. Nell'esempio il ritmo non cambia, e dalla terza settimana la stima resta fra 12,5 e 13,0 settimane, contro una durata effettiva di 13.</p>
+
+<p>La quarta: il ritardo è dovuto al meteo, e il rischio meteo è del committente. Può essere vero, ma è un'altra domanda. L'SPI(t) misura di quanto si è in ritardo, non chi ne risponde: chi paga una giornata di weather standby lo decide la classificazione del tempo nave, non un indice di avanzamento.</p>
+
+<p>La quinta: la baseline è stata aggiornata. Con una nuova baseline il PV si ricalcola, e sia l'SPI sia l'SPI(t) ripartono vicini a 1. Misurano lo scostamento dal piano nuovo, non dalla data contrattuale. Il rapporto deve dire su quale baseline sono calcolati, e riportare anche il ritardo rispetto a quella originale.</p>
+
+<h2>Che cosa chiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Il ritardo in settimane, accanto all'SPI.</strong><span class="t"> ES, SV(t) e SPI(t) in ogni rapporto di avanzamento, calcolati con gli stessi PV ed EV, e la formula dell'interpolazione scritta nella specifica.</span></span></li>
+  <li><span class="k">02</span><span><strong>La soglia sull'indice in tempo.</strong><span class="t"> Il recovery plan si lega all'SPI(t) o a una SV(t) in settimane, non all'SPI, che nell'ultimo tratto del programma risale da solo.</span></span></li>
+  <li><span class="k">03</span><span><strong>Le regole di misura dell'EV, decise al kick-off.</strong><span class="t"> Quando un chilometro di linea o un deliverable si considera completato: senza regole scritte prima, ogni indice è una stima del contractor.</span></span></li>
+  <li><span class="k">04</span><span><strong>La stima di durata come controllo.</strong><span class="t"> PD / SPI(t) accanto alla data di fine del programma aggiornato, con la spiegazione della differenza quando supera una settimana.</span></span></li>
+  <li><span class="k">05</span><span><strong>L'indice sul path vincolante.</strong><span class="t"> Dove una milestone dipende da un path solo, l'earned schedule si calcola anche sulle attività di quel path.</span></span></li>
+  <li><span class="k">06</span><span><strong>La baseline dichiarata.</strong><span class="t"> Ogni indice dice su quale baseline è calcolato, e il ritardo rispetto alla baseline originale resta nel rapporto anche dopo una revisione.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>L'SPI confronta denaro con denaro, e alla data di fine prevista il denaro pianificato è finito: da lì in poi l'indice misura quanto lavoro manca, non quanto tempo si è perso. Calcolato in tempo, con gli stessi dati, lo stesso indice resta fermo sul ritardo fino all'ultimo giorno. Chiederlo nella specifica non costa nulla al contractor, e lega il recovery plan a un numero che non migliora da solo.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>W. Lipke, «Schedule is Different», <em>The Measurable News</em>, estate 2003, pp. 31–34: earned schedule, SV(t) e SPI(t).</li>
+  <li>K. Henderson, «Further Developments in Earned Schedule», <em>The Measurable News</em>, primavera 2004, pp. 15–22: stima della durata finale con PD / SPI(t).</li>
+  <li>W. Lipke, «Applying Earned Schedule to Critical Path Analysis and More», <em>The Measurable News</em>, autunno 2006, pp. 26–30: earned schedule sulle attività del critical path.</li>
+  <li>PMI, <em>Practice Standard for Earned Value Management</em>, 2005: earned schedule come pratica emergente.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR affianca i committenti nel controllo di programmi e rapporti di avanzamento dei contractor, dalla specifica alla lettura settimanale. Se state per scrivere come vi verrà riportato l'avanzamento di una campagna, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+</div>
+    <div class="artnext"><h2>Linea di servizio</h2><ul><li><a href="../../project-management/">Project Management</a></li></ul><h2>Altri articoli su questo tema</h2><ul><li><a href="../../insights/dove-i-path-paralleli-si-incontrano/">Dove i path paralleli si incontrano: tre path almeno all’80%, una milestone al 56%</a></li><li><a href="../../insights/interfacce-fra-contractor/">Le interfacce fra contractor: dove si rompono e chi le tiene</a></li><li><a href="../../insights/quando-il-percorso-critico-si-sposta/">Quando il critical path si sposta</a></li></ul></div><div class="share"><span class="share-label">Condividi</span><a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.clegar.it%2Finsights%2Fspi-che-torna-a-uno%2F" target="_blank" rel="noopener">LinkedIn</a><a class="share-btn" href="mailto:?subject=Un%20SPI%20che%20torna%20a%201%3A%20il%20ritardo%20che%20l%E2%80%99earned%20value%20smette%20di%20vedere&amp;body=Un%20SPI%20che%20torna%20a%201%3A%20il%20ritardo%20che%20l%E2%80%99earned%20value%20smette%20di%20vedere%0Ahttps%3A%2F%2Fwww.clegar.it%2Finsights%2Fspi-che-torna-a-uno%2F">Email</a><button class="share-btn" type="button" data-share-url="https://www.clegar.it/insights/spi-che-torna-a-uno/" data-share-title="Un SPI che torna a 1: il ritardo che l’earned value smette di vedere">Copia link</button></div>
+    <a class="art-back" href="../../insights/">&larr; Tutti gli articoli</a>
+  </div></div>
+</section>
+</main>
+<footer class="foot">
+  <img class="foot-mark" src="../../assets/mark.png" alt="">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <img class="foot-word" src="../../assets/logo-white.png" alt="CLEGAR">
+        <p class="it">Consulenza indipendente in geoscienze marine, gestione progetti e assurance tecnica per l'offshore.</p>
+        
+      </div>
+      <div>
+        <h5 class="it">Servizi</h5>
+        <nav class="foot-nav">
+          <a href="../../geoscienze-marine/">Marine Geoscience</a>
+          <a href="../../project-management/">Project Management</a>
+          <a href="../../technical-advisory/">Technical Advisory &amp; Assurance</a>
+          <a href="../../owners-engineering/">Owner's Engineering</a>
+          <a href="../../operational-excellence/">Operational Excellence</a>
+        </nav>
+      </div>
+      <div>
+        <h5 class="it">Contatti</h5>
+        <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+        <p><a href="https://www.linkedin.com/company/clegar" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr">2026</span> CLEGAR S.r.l. – P.IVA/VAT 07422540828</span>
+      <span><a class="it" href="../../privacy/">Privacy e cookie</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

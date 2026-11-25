@@ -15,6 +15,246 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'earned-schedule',
+        'topic': 'pm',
+        'date': '2026-11-25',
+        'slug': {'it': 'spi-che-torna-a-uno',
+                 'en': 'an-spi-that-returns-to-one'},
+        'title': {
+            'it': 'Un SPI che torna a 1: il ritardo che l’earned value smette di vedere',
+            'en': 'An SPI that returns to 1: the delay earned value stops seeing',
+        },
+        'meta_title': {
+            'it': 'Un SPI che torna a 1 | Insights',
+            'en': 'An SPI that returns to 1 | Insights',
+        },
+        'desc': {
+            'it': ('Perché l’SPI di un progetto in ritardo risale verso 1 dopo la data di fine prevista, '
+                   'perché una soglia scritta sull’SPI smette di scattare quando il ritardo è più grande, '
+                   'e che cosa chiedere nei rapporti di avanzamento per leggere il ritardo in settimane.'),
+            'en': ('Why the SPI of a late project climbs back towards 1 after the planned finish date, '
+                   'why a threshold written on the SPI stops triggering when the delay is at its largest, '
+                   'and what to ask for in progress reports so that the delay is read in weeks.'),
+        },
+        'abstract': {
+            'it': ('Una campagna pianificata in dieci settimane ne dura tredici. Alla dodicesima '
+                   'settimana il rapporto di avanzamento riporta un SPI di 0,98, e la soglia del '
+                   'recovery plan, fissata a 0,90, ha smesso di scattare da due settimane. Calcolato '
+                   'in tempo invece che in denaro, lo stesso indice vale 0,79 e dice due settimane e '
+                   'mezza di ritardo.'),
+            'en': ('A campaign planned for ten weeks takes thirteen. In week twelve the progress report '
+                   'shows an SPI of 0.98, and the recovery plan threshold, set at 0.90, stopped '
+                   'triggering two weeks earlier. Computed in time instead of money, the same index is '
+                   '0.79 and shows a delay of two and a half weeks.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Dodicesima settimana di una campagna pianificata in dieci. Il rapporto di avanzamento del contractor riporta un SPI di 0,98, e il contratto chiede un recovery plan solo quando l'indice scende sotto 0,90. Il numero è calcolato correttamente, e la campagna finirà con tre settimane di ritardo. Da due settimane la soglia non scatta più, ed è proprio il periodo in cui il ritardo è più grande.</p>
+
+<p>Questo articolo mostra perché l'SPI di un progetto in ritardo torna verso 1 da solo, come si calcola lo stesso indice in tempo invece che in denaro, quali obiezioni si sentono quando lo si propone, e che cosa scrivere nella specifica dei rapporti di avanzamento perché il ritardo si legga in settimane.</p>
+
+<h2>Perché l'SPI torna a 1</h2>
+
+<p>Nell'earned value management il programma si traduce in una curva di planned value (PV): quanto lavoro, misurato nel budget, si prevede di aver completato a ogni data. L'earned value (EV) è il lavoro effettivamente completato, misurato con lo stesso budget. L'indice di schedule è il loro rapporto, SPI = EV / PV, e la varianza è la loro differenza, SV = EV − PV.</p>
+
+<p>Il PV, però, smette di crescere alla data di fine prevista, quando raggiunge il budget a completamento (BAC). Da lì in poi l'SPI vale EV / BAC: non confronta più il lavoro fatto con quello previsto a quella data, ma con il lavoro totale. È la percentuale di completamento, e a fine lavori vale 1 per qualunque progetto, in tempo o in ritardo. Allo stesso modo la SV torna a zero. Walt Lipke, che nel 2003 ha proposto l'alternativa descritta qui sotto, lo indica come il difetto noto degli indici di schedule in denaro: a fine progetto SV = 0 e SPI = 1, anche quando il progetto ha finito in ritardo.</p>
+
+<p>Il difetto non è soltanto finale. Già prima della data prevista, quando la curva del PV si appiattisce perché restano le attività di chiusura, il PV cresce più lentamente e l'SPI risale, anche se il lavoro procede allo stesso ritmo di prima.</p>
+
+<h2>Lo stesso indice, in tempo</h2>
+
+<p>L'earned schedule (ES) fa la domanda opposta: non quanto lavoro manca rispetto alla data di oggi, ma in quale data il programma prevedeva di arrivare al lavoro fatto finora. Si cerca sulla curva del PV l'ultimo periodo C in cui il PV non supera l'EV, e si interpola linearmente dentro il periodo successivo: ES = C + (EV − PV<sub>C</sub>) / (PV<sub>C+1</sub> − PV<sub>C</sub>).</p>
+
+<p>Con il tempo trascorso, l'actual time (AT), si ottengono gli indici in tempo: SV(t) = ES − AT, in settimane, e SPI(t) = ES / AT. L'ES non supera mai la durata prevista (PD), mentre l'AT continua a crescere: per un progetto in ritardo l'SPI(t) resta sotto 1 fino all'ultimo giorno. Il rapporto PD / SPI(t) dà inoltre una stima della durata finale, se il ritmo resta quello misurato.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali.</p>
+
+<p>Campagna di rilievo geofisico per un parco eolico, con una durata prevista di 10 settimane e un budget a completamento di 2.000 k€. Il contractor riporta l'avanzamento a settimana, con le regole di misura dell'EV concordate al kick-off. La produzione resta sotto il ritmo previsto fin dalla seconda settimana, e la campagna finisce alla tredicesima.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Settimana</th><th class="num">PV (k€)</th><th class="num">EV (k€)</th><th class="num">SPI</th><th class="num">ES (settimane)</th><th class="num">SPI(t)</th><th class="num">PD / SPI(t) (settimane)</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">1</td><td class="num">100</td><td class="num">100</td><td class="num">1,00</td><td class="num">1,00</td><td class="num">1,00</td><td class="num">10,0</td></tr>
+<tr><td class="num">2</td><td class="num">300</td><td class="num">250</td><td class="num">0,83</td><td class="num">1,75</td><td class="num">0,88</td><td class="num">11,4</td></tr>
+<tr><td class="num">3</td><td class="num">550</td><td class="num">400</td><td class="num">0,73</td><td class="num">2,40</td><td class="num">0,80</td><td class="num">12,5</td></tr>
+<tr><td class="num">4</td><td class="num">800</td><td class="num">600</td><td class="num">0,75</td><td class="num">3,20</td><td class="num">0,80</td><td class="num">12,5</td></tr>
+<tr><td class="num">5</td><td class="num">1.050</td><td class="num">800</td><td class="num">0,76</td><td class="num">4,00</td><td class="num">0,80</td><td class="num">12,5</td></tr>
+<tr><td class="num">6</td><td class="num">1.300</td><td class="num">950</td><td class="num">0,73</td><td class="num">4,60</td><td class="num">0,77</td><td class="num">13,0</td></tr>
+<tr><td class="num">7</td><td class="num">1.550</td><td class="num">1.150</td><td class="num">0,74</td><td class="num">5,40</td><td class="num">0,77</td><td class="num">13,0</td></tr>
+<tr><td class="num">8</td><td class="num">1.750</td><td class="num">1.350</td><td class="num">0,77</td><td class="num">6,20</td><td class="num">0,78</td><td class="num">12,9</td></tr>
+<tr><td class="num">9</td><td class="num">1.900</td><td class="num">1.550</td><td class="num">0,82</td><td class="num">7,00</td><td class="num">0,78</td><td class="num">12,9</td></tr>
+<tr><td class="num">10</td><td class="num">2.000</td><td class="num">1.700</td><td class="num">0,85</td><td class="num">7,75</td><td class="num">0,78</td><td class="num">12,9</td></tr>
+<tr><td class="num">11</td><td class="num">2.000</td><td class="num">1.850</td><td class="num">0,93</td><td class="num">8,67</td><td class="num">0,79</td><td class="num">12,7</td></tr>
+<tr><td class="num">12</td><td class="num">2.000</td><td class="num">1.950</td><td class="num">0,98</td><td class="num">9,50</td><td class="num">0,79</td><td class="num">12,6</td></tr>
+<tr><td class="num">13</td><td class="num">2.000</td><td class="num">2.000</td><td class="num">1,00</td><td class="num">10,00</td><td class="num">0,77</td><td class="num">13,0</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Dalla terza all'ottava settimana i due indici dicono la stessa cosa: l'SPI sta fra 0,73 e 0,77, l'SPI(t) fra 0,77 e 0,80, e la campagna produce a circa tre quarti del ritmo previsto. Poi si separano. Dalla nona settimana la curva del PV si appiattisce e l'SPI risale, mentre l'SPI(t), che misura il ritmo rispetto al programma, resta fra 0,78 e 0,79. Dalla decima il PV è fermo a 2.000 k€, e l'SPI diventa la percentuale di completamento.</p>
+
+<p>Alla dodicesima settimana la SV vale −50 k€, il 2,5% del budget: sembra un residuo. La SV(t) vale −2,5 settimane. E la stima di durata ottenuta con l'SPI, PD / SPI, dà 10,3 settimane: una data già passata da quasi due settimane. Quella ottenuta con l'SPI(t) sta fra 12,5 e 13,0 settimane dalla terza settimana in poi.</p>
+
+<div class="pull"><strong>0,98</strong><span>l'SPI alla dodicesima settimana di una campagna pianificata in dieci, che finirà con tre settimane di ritardo</span></div>
+
+<h2>La soglia che smette di scattare</h2>
+
+<p>Il contratto dell'esempio chiede un recovery plan quando l'SPI scende sotto 0,90. La soglia scatta dalla seconda alla decima settimana e smette alla undicesima, quando l'SPI arriva a 0,93: il ritardo in quel momento è di 2,3 settimane, e alla fine sarà di 3. L'SPI(t) resta sotto 0,90 dalla seconda settimana all'ultima.</p>
+
+<p>Una soglia sull'SPI non è sbagliata in sé. Diventa cieca nell'ultimo tratto del programma, che è anche quello in cui un ritardo costa di più: la nave è ancora in mare, le attività successive sono già pianificate sulla data contrattuale, e il recovery plan ha meno tempo per servire.</p>
+
+<h2>Le obiezioni</h2>
+
+<p>La prima: l'SPI è l'indicatore che chiede il contratto, ed è uno standard. È corretto, e fino all'ottava settimana dell'esempio dice la stessa cosa dell'SPI(t). Il problema non è l'indice, ma l'uso di un rapporto fra due grandezze in denaro come misura di un ritardo in tempo. L'earned schedule si calcola con gli stessi PV ed EV che il contractor riporta già: non chiede dati nuovi, solo un calcolo in più.</p>
+
+<p>La seconda: il ritardo si legge sul programma, non sugli indici. Il programma resta lo strumento principale, e l'earned schedule non lo sostituisce. Serve a controllarlo: la data di fine che il contractor dichiara aggiornando il programma si confronta con PD / SPI(t). Se il programma dice dieci settimane e mezza e l'indice dice tredici, il programma assume un recupero di ritmo che va dimostrato. Ma un ES calcolato su tutto il progetto misura il volume di lavoro, non il critical path: lavoro non critico fatto in anticipo può compensare un ritardo sul path vincolante. Lipke ha descritto nel 2006 come applicare l'earned schedule alle sole attività del critical path; dove il path vincolante è uno solo e riconoscibile, l'indice si calcola anche su quelle.</p>
+
+<p>La terza: la stima PD / SPI(t) è troppo semplice. Assume che il resto del lavoro proceda al ritmo misurato finora, e se la causa del ritardo sparisce – il meteo migliora, uno strumento viene sostituito – sovrastima la durata. Per questo è un controllo incrociato, non una data da firmare. Nell'esempio il ritmo non cambia, e dalla terza settimana la stima resta fra 12,5 e 13,0 settimane, contro una durata effettiva di 13.</p>
+
+<p>La quarta: il ritardo è dovuto al meteo, e il rischio meteo è del committente. Può essere vero, ma è un'altra domanda. L'SPI(t) misura di quanto si è in ritardo, non chi ne risponde: chi paga una giornata di weather standby lo decide la classificazione del tempo nave, non un indice di avanzamento.</p>
+
+<p>La quinta: la baseline è stata aggiornata. Con una nuova baseline il PV si ricalcola, e sia l'SPI sia l'SPI(t) ripartono vicini a 1. Misurano lo scostamento dal piano nuovo, non dalla data contrattuale. Il rapporto deve dire su quale baseline sono calcolati, e riportare anche il ritardo rispetto a quella originale.</p>
+
+<h2>Che cosa chiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>Il ritardo in settimane, accanto all'SPI.</strong><span class="t"> ES, SV(t) e SPI(t) in ogni rapporto di avanzamento, calcolati con gli stessi PV ed EV, e la formula dell'interpolazione scritta nella specifica.</span></span></li>
+  <li><span class="k">02</span><span><strong>La soglia sull'indice in tempo.</strong><span class="t"> Il recovery plan si lega all'SPI(t) o a una SV(t) in settimane, non all'SPI, che nell'ultimo tratto del programma risale da solo.</span></span></li>
+  <li><span class="k">03</span><span><strong>Le regole di misura dell'EV, decise al kick-off.</strong><span class="t"> Quando un chilometro di linea o un deliverable si considera completato: senza regole scritte prima, ogni indice è una stima del contractor.</span></span></li>
+  <li><span class="k">04</span><span><strong>La stima di durata come controllo.</strong><span class="t"> PD / SPI(t) accanto alla data di fine del programma aggiornato, con la spiegazione della differenza quando supera una settimana.</span></span></li>
+  <li><span class="k">05</span><span><strong>L'indice sul path vincolante.</strong><span class="t"> Dove una milestone dipende da un path solo, l'earned schedule si calcola anche sulle attività di quel path.</span></span></li>
+  <li><span class="k">06</span><span><strong>La baseline dichiarata.</strong><span class="t"> Ogni indice dice su quale baseline è calcolato, e il ritardo rispetto alla baseline originale resta nel rapporto anche dopo una revisione.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>L'SPI confronta denaro con denaro, e alla data di fine prevista il denaro pianificato è finito: da lì in poi l'indice misura quanto lavoro manca, non quanto tempo si è perso. Calcolato in tempo, con gli stessi dati, lo stesso indice resta fermo sul ritardo fino all'ultimo giorno. Chiederlo nella specifica non costa nulla al contractor, e lega il recovery plan a un numero che non migliora da solo.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>W. Lipke, «Schedule is Different», <em>The Measurable News</em>, estate 2003, pp. 31–34: earned schedule, SV(t) e SPI(t).</li>
+  <li>K. Henderson, «Further Developments in Earned Schedule», <em>The Measurable News</em>, primavera 2004, pp. 15–22: stima della durata finale con PD / SPI(t).</li>
+  <li>W. Lipke, «Applying Earned Schedule to Critical Path Analysis and More», <em>The Measurable News</em>, autunno 2006, pp. 26–30: earned schedule sulle attività del critical path.</li>
+  <li>PMI, <em>Practice Standard for Earned Value Management</em>, 2005: earned schedule come pratica emergente.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR affianca i committenti nel controllo di programmi e rapporti di avanzamento dei contractor, dalla specifica alla lettura settimanale. Se state per scrivere come vi verrà riportato l'avanzamento di una campagna, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">Week twelve of a campaign planned for ten. The contractor's progress report shows an SPI of 0.98, and the contract calls for a recovery plan only when the index falls below 0.90. The number is correctly computed, and the campaign will finish three weeks late. The threshold stopped triggering two weeks ago, in exactly the period when the delay is at its largest.</p>
+
+<p>This article shows why the SPI of a late project returns towards 1 on its own, how the same index is computed in time instead of money, which objections come up when it is proposed, and what to write into the specification of progress reports so that the delay is read in weeks.</p>
+
+<h2>Why the SPI returns to 1</h2>
+
+<p>In earned value management the schedule is translated into a planned value (PV) curve: how much work, measured in budget, is expected to be complete at each date. Earned value (EV) is the work actually completed, measured against the same budget. The schedule index is their ratio, SPI = EV / PV, and the variance is their difference, SV = EV − PV.</p>
+
+<p>PV, however, stops growing at the planned finish date, when it reaches the budget at completion (BAC). From then on the SPI equals EV / BAC: it no longer compares the work done with the work planned for that date, but with the total work. It is the percentage complete, and at the end it equals 1 for any project, on time or late. In the same way SV returns to zero. Walt Lipke, who in 2003 proposed the alternative described below, points to this as the known flaw of schedule indicators in money: at project end SV = 0 and SPI = 1, even when the project finished late.</p>
+
+<p>The flaw is not confined to the end. Before the planned date, when the PV curve flattens because only closing activities remain, PV grows more slowly and the SPI rises, even if the work proceeds at the same pace as before.</p>
+
+<h2>The same index, in time</h2>
+
+<p>Earned schedule (ES) asks the opposite question: not how much work is missing against today's date, but on which date the schedule expected to reach the work done so far. On the PV curve one finds the last period C in which PV does not exceed EV, and interpolates linearly within the next period: ES = C + (EV − PV<sub>C</sub>) / (PV<sub>C+1</sub> − PV<sub>C</sub>).</p>
+
+<p>With the time elapsed, the actual time (AT), the indicators in time follow: SV(t) = ES − AT, in weeks, and SPI(t) = ES / AT. ES never exceeds the planned duration (PD), while AT keeps growing: for a late project SPI(t) stays below 1 up to the last day. The ratio PD / SPI(t) also gives an estimate of the final duration, if the pace stays as measured.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures are synthetic – built to illustrate the mechanism, not taken from real projects.</p>
+
+<p>A geophysical survey campaign for a wind farm, with a planned duration of 10 weeks and a budget at completion of €2,000k. The contractor reports progress weekly, with the EV measurement rules agreed at kick-off. Production stays below the planned pace from the second week, and the campaign finishes in week thirteen.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Week</th><th class="num">PV (€k)</th><th class="num">EV (€k)</th><th class="num">SPI</th><th class="num">ES (weeks)</th><th class="num">SPI(t)</th><th class="num">PD / SPI(t) (weeks)</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">1</td><td class="num">100</td><td class="num">100</td><td class="num">1.00</td><td class="num">1.00</td><td class="num">1.00</td><td class="num">10.0</td></tr>
+<tr><td class="num">2</td><td class="num">300</td><td class="num">250</td><td class="num">0.83</td><td class="num">1.75</td><td class="num">0.88</td><td class="num">11.4</td></tr>
+<tr><td class="num">3</td><td class="num">550</td><td class="num">400</td><td class="num">0.73</td><td class="num">2.40</td><td class="num">0.80</td><td class="num">12.5</td></tr>
+<tr><td class="num">4</td><td class="num">800</td><td class="num">600</td><td class="num">0.75</td><td class="num">3.20</td><td class="num">0.80</td><td class="num">12.5</td></tr>
+<tr><td class="num">5</td><td class="num">1,050</td><td class="num">800</td><td class="num">0.76</td><td class="num">4.00</td><td class="num">0.80</td><td class="num">12.5</td></tr>
+<tr><td class="num">6</td><td class="num">1,300</td><td class="num">950</td><td class="num">0.73</td><td class="num">4.60</td><td class="num">0.77</td><td class="num">13.0</td></tr>
+<tr><td class="num">7</td><td class="num">1,550</td><td class="num">1,150</td><td class="num">0.74</td><td class="num">5.40</td><td class="num">0.77</td><td class="num">13.0</td></tr>
+<tr><td class="num">8</td><td class="num">1,750</td><td class="num">1,350</td><td class="num">0.77</td><td class="num">6.20</td><td class="num">0.78</td><td class="num">12.9</td></tr>
+<tr><td class="num">9</td><td class="num">1,900</td><td class="num">1,550</td><td class="num">0.82</td><td class="num">7.00</td><td class="num">0.78</td><td class="num">12.9</td></tr>
+<tr><td class="num">10</td><td class="num">2,000</td><td class="num">1,700</td><td class="num">0.85</td><td class="num">7.75</td><td class="num">0.78</td><td class="num">12.9</td></tr>
+<tr><td class="num">11</td><td class="num">2,000</td><td class="num">1,850</td><td class="num">0.93</td><td class="num">8.67</td><td class="num">0.79</td><td class="num">12.7</td></tr>
+<tr><td class="num">12</td><td class="num">2,000</td><td class="num">1,950</td><td class="num">0.98</td><td class="num">9.50</td><td class="num">0.79</td><td class="num">12.6</td></tr>
+<tr><td class="num">13</td><td class="num">2,000</td><td class="num">2,000</td><td class="num">1.00</td><td class="num">10.00</td><td class="num">0.77</td><td class="num">13.0</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>From the third to the eighth week the two indices say the same thing: the SPI lies between 0.73 and 0.77, the SPI(t) between 0.77 and 0.80, and the campaign is producing at about three quarters of the planned pace. Then they part. From the ninth week the PV curve flattens and the SPI rises, while the SPI(t), which measures the pace against the schedule, stays between 0.78 and 0.79. From the tenth, PV is fixed at €2,000k, and the SPI becomes the percentage complete.</p>
+
+<p>In week twelve SV is −€50k, 2.5% of the budget: it looks like a remainder. SV(t) is −2.5 weeks. And the duration estimate obtained with the SPI, PD / SPI, gives 10.3 weeks: a date already almost two weeks in the past. The one obtained with the SPI(t) lies between 12.5 and 13.0 weeks from the third week onwards.</p>
+
+<div class="pull"><strong>0.98</strong><span>the SPI in week twelve of a campaign planned for ten, which will finish three weeks late</span></div>
+
+<h2>The threshold that stops triggering</h2>
+
+<p>The contract in the example calls for a recovery plan when the SPI falls below 0.90. The threshold triggers from the second to the tenth week and stops in the eleventh, when the SPI reaches 0.93: the delay at that point is 2.3 weeks, and at the end it will be 3. The SPI(t) stays below 0.90 from the second week to the last.</p>
+
+<p>A threshold on the SPI is not wrong in itself. It goes blind in the last stretch of the schedule, which is also where a delay costs most: the vessel is still at sea, the following activities are already planned around the contractual date, and the recovery plan has less time to be of use.</p>
+
+<h2>The objections</h2>
+
+<p>The first: the SPI is the indicator the contract asks for, and it is a standard. Correct, and up to the eighth week of the example it says the same thing as the SPI(t). The problem is not the index, but the use of a ratio between two quantities in money as a measure of a delay in time. Earned schedule is computed from the same PV and EV the contractor already reports: it needs no new data, only one more calculation.</p>
+
+<p>The second: delay is read from the schedule, not from indices. The schedule remains the primary tool, and earned schedule does not replace it. It serves to check it: the finish date the contractor declares when updating the schedule is compared with PD / SPI(t). If the schedule says ten and a half weeks and the index says thirteen, the schedule assumes a recovery of pace that has to be demonstrated. But an ES computed over the whole project measures the volume of work, not the critical path: non-critical work done early can offset a delay on the driving path. Lipke described in 2006 how to apply earned schedule to the critical path activities alone; where the driving path is a single, recognisable one, the index is computed on those activities as well.</p>
+
+<p>The third: the PD / SPI(t) estimate is too simple. It assumes the remaining work proceeds at the pace measured so far, and if the cause of the delay goes away – the weather improves, an instrument is replaced – it overestimates the duration. That is why it is a cross-check, not a date to sign. In the example the pace does not change, and from the third week the estimate stays between 12.5 and 13.0 weeks, against an actual duration of 13.</p>
+
+<p>The fourth: the delay is due to weather, and weather risk sits with the client. That may be true, but it is a different question. The SPI(t) measures how late the work is, not who answers for it: who pays for a day of weather standby is decided by the classification of vessel time, not by a progress index.</p>
+
+<p>The fifth: the baseline has been updated. With a new baseline PV is recomputed, and both the SPI and the SPI(t) restart close to 1. They measure the deviation from the new plan, not from the contractual date. The report must state which baseline they are computed on, and also show the delay against the original one.</p>
+
+<h2>What to ask for in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>The delay in weeks, next to the SPI.</strong><span class="t"> ES, SV(t) and SPI(t) in every progress report, computed from the same PV and EV, with the interpolation formula written into the specification.</span></span></li>
+  <li><span class="k">02</span><span><strong>The threshold on the index in time.</strong><span class="t"> The recovery plan is tied to the SPI(t) or to an SV(t) in weeks, not to the SPI, which rises on its own in the last stretch of the schedule.</span></span></li>
+  <li><span class="k">03</span><span><strong>The EV measurement rules, decided at kick-off.</strong><span class="t"> When a kilometre of line or a deliverable counts as complete: without rules written in advance, every index is an estimate by the contractor.</span></span></li>
+  <li><span class="k">04</span><span><strong>The duration estimate as a check.</strong><span class="t"> PD / SPI(t) next to the finish date of the updated schedule, with an explanation of the difference when it exceeds one week.</span></span></li>
+  <li><span class="k">05</span><span><strong>The index on the driving path.</strong><span class="t"> Where a milestone depends on a single path, earned schedule is also computed on the activities of that path.</span></span></li>
+  <li><span class="k">06</span><span><strong>The baseline stated.</strong><span class="t"> Every index states which baseline it is computed on, and the delay against the original baseline stays in the report even after a revision.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>The SPI compares money with money, and at the planned finish date the planned money has run out: from then on the index measures how much work is left, not how much time has been lost. Computed in time, from the same data, the same index stays on the delay up to the last day. Asking for it in the specification costs the contractor nothing, and ties the recovery plan to a number that does not improve on its own.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>W. Lipke, “Schedule is Different”, <em>The Measurable News</em>, Summer 2003, pp. 31–34: earned schedule, SV(t) and SPI(t).</li>
+  <li>K. Henderson, “Further Developments in Earned Schedule”, <em>The Measurable News</em>, Spring 2004, pp. 15–22: estimating the final duration with PD / SPI(t).</li>
+  <li>W. Lipke, “Applying Earned Schedule to Critical Path Analysis and More”, <em>The Measurable News</em>, Fall 2006, pp. 26–30: earned schedule on the critical path activities.</li>
+  <li>PMI, <em>Practice Standard for Earned Value Management</em>, 2005: earned schedule as an emerging practice.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR supports clients in checking contractors' schedules and progress reports, from the specification to the weekly reading. If you are about to write how the progress of a campaign will be reported to you, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'controllo-a-campione',
         'topic': 'advisory',
         'date': '2026-11-23',
