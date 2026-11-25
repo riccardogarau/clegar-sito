@@ -49,6 +49,7 @@ Già online, da non riprendere:
 | La deriva dello zero di un CPT | Owner's Engineering | letture di riferimento prima e dopo la prova, deriva dello zero in kPa contro resistenza netta nell'argilla tenera, classi di applicazione 2012 e categoria di prova 2022, correzione lineare della deriva, taratura di Nkt che non assorbe uno spostamento costante, ripetizione con il pontone sul punto |
 | La coda fra acquisizione e processing | Operational Excellence | processing più lento dell'acquisizione, coda che cresce fra due fasi in regola, attesa come indicatore nel daily report, km esposti a un difetto come produzione per attesa, quick-look in ordine di arrivo contro data di consegna, legge di Little e regime stazionario |
 | Il controllo a campione | Technical Advisory | limite superiore di un campione senza errori, regola del tre, campione in percentuale che limita il numero e non la quota, ISO 2859-1 (AQL, serie di lotti) contro ISO 2859-2 (LQ, lotto isolato), estrazione casuale del committente, errori trovati che non si correggono uno per uno, lotto per zona, campione dalla lista contro campione dall'area |
+| Un SPI che torna a 1 | Project Management | SPI che dopo la data di fine prevista diventa percentuale di completamento, earned schedule con SV(t) e SPI(t), soglia del recovery plan che smette di scattare, PD / SPI(t) come controllo della data del programma, earned schedule sul critical path, baseline aggiornata |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
@@ -131,7 +132,7 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   giornata senza che la sonda al trasduttore lo veda, e la firma nel tempo –
   cresce con le ore dal profilo, torna a zero con il profilo nuovo.)*
 
-### Project Management — 3 articoli pubblicati
+### Project Management — 4 articoli pubblicati
 - [x] Le interfacce fra contractor: dove si rompono e chi le tiene — 2026-10-16
   *(tratta la stessa parola con due significati in due contratti separati. Non
   si sovrappone alla readiness review, che riapre una voce chiusa su una
@@ -142,6 +143,14 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   all'80% che danno una milestone al 56% – e il float che non misura la coda
   della durata. Non riprende il critical path, che è deterministico e
   riguarda quale path vincola quando cambia l'assunzione sul meteo.)*
+- [x] Un SPI che torna a 1: il ritardo che l'earned value smette di vedere — 2026-11-25
+  *(aggiunto il 2026-11-25: Project Management era l'unica linea con tre
+  articoli e non aveva voci in arretrato. L'esempio è una campagna di 10
+  settimane che ne dura 13, con un SPI di 0,98 alla dodicesima settimana e
+  un SPI(t) di 0,79. Non riprende il critical path, che riguarda durate e
+  float, né il merge bias, che riguarda probabilità, né la coda fra
+  acquisizione e processing, che riguarda l'attesa fra due fasi: qui si
+  tratta di come un indice di avanzamento misura il ritardo.)*
 
 ## Che cosa si consegna per ogni articolo
 
