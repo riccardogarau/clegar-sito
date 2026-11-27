@@ -50,12 +50,13 @@ Già online, da non riprendere:
 | La coda fra acquisizione e processing | Operational Excellence | processing più lento dell'acquisizione, coda che cresce fra due fasi in regola, attesa come indicatore nel daily report, km esposti a un difetto come produzione per attesa, quick-look in ordine di arrivo contro data di consegna, legge di Little e regime stazionario |
 | Il controllo a campione | Technical Advisory | limite superiore di un campione senza errori, regola del tre, campione in percentuale che limita il numero e non la quota, ISO 2859-1 (AQL, serie di lotti) contro ISO 2859-2 (LQ, lotto isolato), estrazione casuale del committente, errori trovati che non si correggono uno per uno, lotto per zona, campione dalla lista contro campione dall'area |
 | Un SPI che torna a 1 | Project Management | SPI che dopo la data di fine prevista diventa percentuale di completamento, earned schedule con SV(t) e SPI(t), soglia del recovery plan che smette di scattare, PD / SPI(t) come controllo della data del programma, earned schedule sul critical path, baseline aggiornata |
+| Quanti ricambi a bordo | Operational Excellence | «un ricambio per componente» contro esemplari installati, guasti di Poisson con m = n · T / MTBF, probabilità di fermo per mancanza del pezzo, giorni persi attesi in funzione del tempo di arrivo del pezzo, obiettivo sulla campagna ripartito sui componenti, MTBF del costruttore contro storia di flotta (IEC 61709), off-hire che sposta il costo e non la data, acquisizione degradata scritta in specifica |
 
 Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
 
 ## Arretrato
 
-### Operational Excellence — 4 articoli pubblicati
+### Operational Excellence — 5 articoli pubblicati
 - [x] La classificazione del tempo nave: chi paga la giornata in cui non si è lavorato — 2026-10-05
 - [x] Readiness review: che cosa si verifica prima che la nave parta — 2026-10-05
   *(tratta persone, documenti, permessi, interfacce e contingenze. La verifica
@@ -74,6 +75,16 @@ Pubblicato un articolo, si segna `[x]` e si aggiunge la data.
   rappresentante a bordo, che riguarda il costo del ritorno su un tratto noto,
   né il profilo di velocità del suono, che riguarda una firma nel dato, né il
   critical path, che riguarda durate e float.)*
+
+- [x] Quanti ricambi a bordo: perché «uno di ciascuno» non è una misura — 2026-11-27
+  *(aggiunto il 2026-11-27: tutte e cinque le linee erano a pari merito con
+  quattro articoli, vinceva Operational Excellence per ordine, e non aveva
+  voci in arretrato. L'esempio è un modulo montato in dodici esemplari che,
+  con un ricambio, ha il 34% di probabilità di fermo in 42 giorni, contro lo
+  0,5% di un componente singolo con lo stesso MTBF. Non riprende la
+  classificazione del tempo nave, che riguarda chi paga la giornata, né la
+  readiness review, che verifica ciò che c'è a bordo senza dimensionarlo; il
+  calcolo sulla campagna usa l'aritmetica del merge bias e lo cita.)*
 
 ### Owner's Engineering — 4 articoli pubblicati
 - [x] Il witnessing di una calibrazione: che cosa si firma e che cosa si guarda — 2026-10-08
