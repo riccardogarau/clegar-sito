@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quanti ricambi a bordo | Insights</title>
+<meta name="description" content="Perché la stessa regola sui ricambi protegge in modo molto diverso due componenti con lo stesso MTBF, come si calcola la probabilità di un fermo per mancanza del pezzo, e che cosa chiedere nella specifica prima che la nave parta.">
+<link rel="canonical" href="https://www.clegar.it/insights/quanti-ricambi-a-bordo/">
+<link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/quanti-ricambi-a-bordo/">
+<link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/how-many-spares-on-board/">
+<link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/quanti-ricambi-a-bordo/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CLEGAR">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Quanti ricambi a bordo | Insights">
+<meta property="og:description" content="Perché la stessa regola sui ricambi protegge in modo molto diverso due componenti con lo stesso MTBF, come si calcola la probabilità di un fermo per mancanza del pezzo, e che cosa chiedere nella specifica prima che la nave parta.">
+<meta property="og:url" content="https://www.clegar.it/insights/quanti-ricambi-a-bordo/">
+<meta property="og:image" content="https://www.clegar.it/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quanti ricambi a bordo | Insights">
+<meta name="twitter:description" content="Perché la stessa regola sui ricambi protegge in modo molto diverso due componenti con lo stesso MTBF, come si calcola la probabilità di un fermo per mancanza del pezzo, e che cosa chiedere nella specifica prima che la nave parta.">
+<meta name="twitter:image" content="https://www.clegar.it/assets/og.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B2545">
+<!-- Google Search Console: sostituire con il proprio codice di verifica -->
+<!-- <meta name="google-site-verification" content="INCOLLA_QUI_IL_CODICE"> -->
+<link rel="icon" href="../../assets/mark.png">
+<link rel="apple-touch-icon" href="../../assets/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Quanti ricambi a bordo: perché «uno di ciascuno» non è una misura","description":"Perché la stessa regola sui ricambi protegge in modo molto diverso due componenti con lo stesso MTBF, come si calcola la probabilità di un fermo per mancanza del pezzo, e che cosa chiedere nella specifica prima che la nave parta.","datePublished":"2026-11-27","dateModified":"2026-11-27","inLanguage":"it","author":{"@type":"Organization","name":"CLEGAR","url":"https://www.clegar.it/"},"publisher":{"@id":"https://www.clegar.it/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.clegar.it/insights/quanti-ricambi-a-bordo/"},"image":"https://www.clegar.it/assets/og.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.clegar.it/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://www.clegar.it/insights/"},{"@type":"ListItem","position":3,"name":"Quanti ricambi a bordo: perché «uno di ciascuno» non è una misura","item":"https://www.clegar.it/insights/quanti-ricambi-a-bordo/"}]}</script>
+
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-row">
+    <a class="brand" aria-label="CLEGAR" href="../../">
+      <img src="../../assets/logo.png" alt="CLEGAR — Marine Geoscience &amp; Offshore Advisory">
+    </a>
+    <div class="masthead-meta">
+      <a class="hide-sm" href="mailto:info@clegar.it">info@clegar.it</a>
+      <div class="langsw" role="group" aria-label="Language / Lingua">
+        <a href="../../insights/" aria-current="true">IT</a><a href="../../en/insights/" hreflang="en">EN</a></div>
+      <a class="btn-contact" href="../../contatti/">
+        <span class="it">Parliamone</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<nav class="tabbar" aria-label="Navigazione principale">
+  <div class="tabbar-inner">
+    <a class="tab" href="../../">Home</a>
+    <a class="tab" href="../../geoscienze-marine/">Marine Geoscience</a>
+    <a class="tab" href="../../project-management/">Project Management</a>
+    <a class="tab" href="../../technical-advisory/">Technical Advisory</a>
+    <a class="tab" href="../../owners-engineering/">Owner's Engineering</a>
+    <a class="tab" href="../../operational-excellence/">Operational Excellence</a>
+    <a class="tab" href="../../insights/" aria-current="page">Insights</a>
+    <a class="tab" href="../../contatti/">Contatti</a>
+  </div>
+</nav>
+<main id="main">
+<section class="page">
+  <div class="svc-hero"><div class="wrap">
+<div class="art-meta"><time datetime="2026-11-27">27 novembre 2026</time><a href="../../operational-excellence/">Operational Excellence</a></div><h1>Quanti ricambi a bordo: perché «uno di ciascuno» non è una misura</h1>
+  </div></div>
+  <div class="band band-white band-pad"><div class="wrap">
+    <div class="article">
+<p class="lede">Il piano di mobilitazione dichiara un ricambio a bordo per ogni componente critico, e la specifica chiedeva soltanto «ricambi adeguati per l'intera campagna». La regola sembra prudente e uguale per tutti. Per un componente montato in un solo esemplare, la probabilità di restare senza pezzo in 42 giorni è dello 0,5%. Per un modulo montato in dodici esemplari, con lo stesso MTBF, è del 34%.</p>
+
+<p>Questo articolo mostra da che cosa dipende quella probabilità, come si calcola con dati che il contractor possiede già, quali obiezioni si sentono quando lo si chiede, e che cosa scrivere nella specifica perché «adeguati» diventi un numero.</p>
+
+<h2>Da che cosa dipende un fermo per mancanza del pezzo</h2>
+
+<p>Un componente si ferma quando si guasta e a bordo non c'è più un ricambio. Il numero di guasti attesi durante la campagna dipende da tre grandezze: il tasso di guasto di un esemplare, quanti esemplari sono installati, e per quante ore funzionano. Se il tasso è costante – l'assunzione con cui un MTBF si traduce in un tasso – un esemplare si guasta in media una volta ogni MTBF ore, e n esemplari identici n volte più spesso.</p>
+
+<p>Il numero medio di guasti in T ore di funzionamento è quindi m = n · T / MTBF. Con un tasso costante, il numero di guasti segue la distribuzione di Poisson: la probabilità di k guasti è e<sup>−m</sup> · m<sup>k</sup> / k!. Con s ricambi a bordo, il fermo arriva al guasto numero s + 1, e la probabilità di almeno un fermo è quella di avere più di s guasti: 1 meno la somma delle probabilità da 0 a s guasti.</p>
+
+<p>La regola «uno di ciascuno» fissa s = 1 e ignora n. Ma n entra nel calcolo con lo stesso peso dell'MTBF: dodici esemplari con un MTBF di 10.000 ore si guastano quanto un esemplare solo con un MTBF di 833 ore.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali.</p>
+
+<p>Campagna di rilievo geofisico per un parco eolico, 42 giorni in mare con acquisizione su 24 ore: 1.008 ore di funzionamento. Due componenti dichiarati critici, entrambi con un MTBF di 10.000 ore e un ricambio a bordo. Il primo è il transceiver del sistema di posizionamento acustico, montato in un solo esemplare. Il secondo è un modulo di digitalizzazione dello streamer, montato in dodici esemplari. La specifica dell'esempio non accetta l'acquisizione con un modulo spento: un modulo guasto ferma la linea.</p>
+
+<p>Per il transceiver m = 1 · 1.008 / 10.000 = 0,10 guasti attesi, e la probabilità di più di un guasto è dello 0,5%. Per i moduli m = 12 · 1.008 / 10.000 = 1,21 guasti attesi: con un ricambio, la probabilità di restare senza pezzo almeno una volta è del 34,1%.</p>
+
+<div class="pull"><strong>34%</strong><span>la probabilità di un fermo per mancanza del pezzo con «un ricambio per componente», per un modulo montato in dodici esemplari</span></div>
+
+<p>Quanto costa un fermo dipende da quanto tempo serve perché il pezzo arrivi a bordo. Nella tabella ogni guasto senza ricambio ferma l'acquisizione per un tempo fisso: 2 giorni per un sito sottocosta servito da un porto vicino, 6 giorni per un sito lontano, dove il pezzo va spedito, sdoganato e portato in mare. I giorni persi attesi sono quel tempo moltiplicato per il numero medio di guasti che restano senza ricambio.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Ricambi a bordo</th><th class="num">Probabilità di almeno un fermo</th><th class="num">Giorni persi attesi, pezzo in 2 giorni</th><th class="num">Giorni persi attesi, pezzo in 6 giorni</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">0</td><td class="num">70,2%</td><td class="num">2,42</td><td class="num">7,26</td></tr>
+<tr><td class="num">1</td><td class="num">34,1%</td><td class="num">1,02</td><td class="num">3,05</td></tr>
+<tr><td class="num">2</td><td class="num">12,3%</td><td class="num">0,33</td><td class="num">1,00</td></tr>
+<tr><td class="num">3</td><td class="num">3,5%</td><td class="num">0,09</td><td class="num">0,27</td></tr>
+<tr><td class="num">4</td><td class="num">0,8%</td><td class="num">0,02</td><td class="num">0,06</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Con un ricambio, il sito lontano perde in media tre giorni di nave su 42. Con tre ricambi la probabilità di un fermo scende al 3,5% e i giorni persi attesi a 0,27. La protezione che il transceiver ottiene con un ricambio solo, i moduli la ottengono con tre o quattro.</p>
+
+<h2>Il livello che conta è la campagna</h2>
+
+<p>Fissare un obiettivo per componente non basta. Con dieci componenti critici, ciascuno con il 5% di probabilità di fermo e guasti indipendenti fra loro, la probabilità che la campagna si fermi almeno una volta per un pezzo mancante è 1 − 0,95<sup>10</sup> = 40,1%. Con l'1% per componente scende al 9,6%. È la stessa aritmetica del merge bias, già vista per i path paralleli di un programma: più eventi devono andare tutti bene, e le probabilità si moltiplicano. L'obiettivo va fissato sulla campagna e poi ripartito sui componenti, non il contrario.</p>
+
+<h2>Le obiezioni</h2>
+
+<p>La prima: i ricambi sono un rischio del contractor, perché il guasto è off-hire. Lo sono per il costo della giornata, che la classificazione del tempo nave attribuisce al contractor. Non lo sono per la data. Il giorno perso resta perso anche se non si paga: la finestra meteo si consuma, il contractor successivo aspetta, e la milestone che dipende dal rilievo slitta. Un fermo off-hire sposta il costo, non il programma.</p>
+
+<p>La seconda: l'MTBF è un dato del costruttore, e il contractor non può fare di meglio. L'MTBF dichiarato si riferisce a condizioni di riferimento, che la IEC 61709 descrive proprio per poterle convertire alle condizioni d'uso. Uno streamer trainato, avvolto e svolto sul verricello, non lavora in quelle condizioni, e il tasso di guasto in mare è di solito più alto. Il dato migliore è la storia del contractor: ore di funzionamento e guasti dello stesso componente nelle campagne precedenti. Il calcolo regge male un dato sbagliato: con un MTBF di 5.000 ore invece di 10.000, tre ricambi lasciano il 22,5% di probabilità di fermo, e per scendere sotto il 5% ne servono cinque.</p>
+
+<p>La terza: il tasso di guasto non è costante. Dopo la mobilitazione i guasti sono più frequenti, per montaggi, connettori e movimentazione; verso fine vita lo sono di nuovo, per usura. Entrambi gli effetti alzano il numero di guasti rispetto al modello a tasso costante, che quindi dà una stima ottimistica, non prudente. Le prove in banchina e il periodo di prova in mare servono anche a far emergere i guasti precoci prima che contino.</p>
+
+<p>La quarta: un modulo spento non ferma davvero il rilievo. Dipende da che cosa la specifica accetta come acquisizione degradata. Se accetta un modulo spento, il fermo arriva un guasto più tardi, e con un ricambio la probabilità scende dal 34,1% al 12,3%: la riga dei due ricambi nella tabella. Ma quel modulo spento è un vuoto nel dato, e va deciso prima, nella specifica, non a bordo sotto la pressione della finestra meteo.</p>
+
+<p>La quinta: i ricambi costano. È vero, e il calcolo non lo nega: lo rende confrontabile. Il costo di un ricambio in più si mette accanto ai giorni persi attesi che evita – nell'esempio, da 3,05 a 1,00 giorni passando da uno a due ricambi nel sito lontano – e la decisione resta economica, ma presa con un numero invece che con una regola.</p>
+
+<h2>Che cosa chiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>L'elenco dei componenti critici con gli esemplari installati.</strong><span class="t"> Per ciascuno, quanti ne monta il sistema e quanti ne servono per acquisire secondo la specifica.</span></span></li>
+  <li><span class="k">02</span><span><strong>Il tasso di guasto, con la sua fonte.</strong><span class="t"> La storia di flotta del contractor – ore di funzionamento e guasti – dove esiste, e il dato del costruttore solo dove non esiste, dichiarato come tale.</span></span></li>
+  <li><span class="k">03</span><span><strong>Il tempo di arrivo del pezzo dal sito.</strong><span class="t"> Non dal magazzino al porto, ma dal magazzino a bordo, per il sito della campagna e con i mezzi di trasferimento previsti.</span></span></li>
+  <li><span class="k">04</span><span><strong>Un obiettivo sulla campagna.</strong><span class="t"> La probabilità massima di un fermo per mancanza del pezzo sull'intera campagna, ripartita dal contractor sui componenti.</span></span></li>
+  <li><span class="k">05</span><span><strong>L'acquisizione degradata, scritta prima.</strong><span class="t"> Quanti moduli o canali spenti la specifica accetta, per quanto tempo e con quale effetto sul deliverable.</span></span></li>
+  <li><span class="k">06</span><span><strong>Il calcolo nel piano di mobilitazione.</strong><span class="t"> Numero di ricambi per componente con la probabilità che ne risulta, verificato in readiness review contro quello che c'è davvero a bordo.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>«Un ricambio per componente» conta i componenti, non i guasti. I guasti dipendono da quanti esemplari lavorano, per quante ore e con quale tasso, e il tempo che costano dipende da quanto è lontano il magazzino. Sono tutti dati che il contractor ha già prima di partire. Chiederli nella specifica trasforma «ricambi adeguati» in una probabilità che si può leggere, discutere e verificare in banchina.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>C. C. Sherbrooke, <em>Optimal Inventory Modeling of Systems: Multi-Echelon Techniques</em>, 2ª ed., Kluwer Academic Publishers, 2004: dimensionamento dei ricambi con domanda di Poisson.</li>
+  <li>IEC 61709:2017, <em>Electric components – Reliability – Reference conditions for failure rates and stress models for conversion</em>: tassi di guasto in condizioni di riferimento e conversione alle condizioni d'uso.</li>
+  <li>IEC 60300-3-12:2011, <em>Dependability management – Part 3-12: Application guide – Integrated logistic support</em>: il supporto logistico, ricambi compresi, come parte della gestione dell'affidabilità.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR affianca i committenti nella preparazione delle campagne, dalla specifica alla verifica in banchina di ciò che il piano di mobilitazione dichiara. Se state per scrivere che cosa il contractor deve avere a bordo, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+</div>
+    <div class="artnext"><h2>Linea di servizio</h2><ul><li><a href="../../operational-excellence/">Operational Excellence</a></li></ul><h2>Altri articoli su questo tema</h2><ul><li><a href="../../insights/la-coda-fra-acquisizione-e-processing/">La coda fra acquisizione e processing: quanti giorni passano prima che qualcuno guardi il dato</a></li><li><a href="../../insights/lessons-learned-che-si-usano/">Le lessons learned che nessuno rilegge, e come si scrive una nota che verrà usata</a></li><li><a href="../../insights/readiness-review-prima-che-la-nave-parta/">Readiness review: che cosa si verifica prima che la nave parta</a></li><li><a href="../../insights/la-classificazione-del-tempo-nave/">La classificazione del tempo nave: chi paga la giornata in cui non si è lavorato</a></li></ul></div><div class="share"><span class="share-label">Condividi</span><a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.clegar.it%2Finsights%2Fquanti-ricambi-a-bordo%2F" target="_blank" rel="noopener">LinkedIn</a><a class="share-btn" href="mailto:?subject=Quanti%20ricambi%20a%20bordo%3A%20perch%C3%A9%20%C2%ABuno%20di%20ciascuno%C2%BB%20non%20%C3%A8%20una%20misura&amp;body=Quanti%20ricambi%20a%20bordo%3A%20perch%C3%A9%20%C2%ABuno%20di%20ciascuno%C2%BB%20non%20%C3%A8%20una%20misura%0Ahttps%3A%2F%2Fwww.clegar.it%2Finsights%2Fquanti-ricambi-a-bordo%2F">Email</a><button class="share-btn" type="button" data-share-url="https://www.clegar.it/insights/quanti-ricambi-a-bordo/" data-share-title="Quanti ricambi a bordo: perché «uno di ciascuno» non è una misura">Copia link</button></div>
+    <a class="art-back" href="../../insights/">&larr; Tutti gli articoli</a>
+  </div></div>
+</section>
+</main>
+<footer class="foot">
+  <img class="foot-mark" src="../../assets/mark.png" alt="">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <img class="foot-word" src="../../assets/logo-white.png" alt="CLEGAR">
+        <p class="it">Consulenza indipendente in geoscienze marine, gestione progetti e assurance tecnica per l'offshore.</p>
+        
+      </div>
+      <div>
+        <h5 class="it">Servizi</h5>
+        <nav class="foot-nav">
+          <a href="../../geoscienze-marine/">Marine Geoscience</a>
+          <a href="../../project-management/">Project Management</a>
+          <a href="../../technical-advisory/">Technical Advisory &amp; Assurance</a>
+          <a href="../../owners-engineering/">Owner's Engineering</a>
+          <a href="../../operational-excellence/">Operational Excellence</a>
+        </nav>
+      </div>
+      <div>
+        <h5 class="it">Contatti</h5>
+        <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+        <p><a href="https://www.linkedin.com/company/clegar" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr">2026</span> CLEGAR S.r.l. – P.IVA/VAT 07422540828</span>
+      <span><a class="it" href="../../privacy/">Privacy e cookie</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

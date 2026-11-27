@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How many spares on board | Insights</title>
+<meta name="description" content="Why the same spares rule protects two components with the same MTBF very differently, how to compute the probability of a stop for want of a part, and what to ask for in the specification before the vessel sails.">
+<link rel="canonical" href="https://www.clegar.it/en/insights/how-many-spares-on-board/">
+<link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/quanti-ricambi-a-bordo/">
+<link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/how-many-spares-on-board/">
+<link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/quanti-ricambi-a-bordo/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="CLEGAR">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="How many spares on board | Insights">
+<meta property="og:description" content="Why the same spares rule protects two components with the same MTBF very differently, how to compute the probability of a stop for want of a part, and what to ask for in the specification before the vessel sails.">
+<meta property="og:url" content="https://www.clegar.it/en/insights/how-many-spares-on-board/">
+<meta property="og:image" content="https://www.clegar.it/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How many spares on board | Insights">
+<meta name="twitter:description" content="Why the same spares rule protects two components with the same MTBF very differently, how to compute the probability of a stop for want of a part, and what to ask for in the specification before the vessel sails.">
+<meta name="twitter:image" content="https://www.clegar.it/assets/og.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0B2545">
+<!-- Google Search Console: sostituire con il proprio codice di verifica -->
+<!-- <meta name="google-site-verification" content="INCOLLA_QUI_IL_CODICE"> -->
+<link rel="icon" href="../../../assets/mark.png">
+<link rel="apple-touch-icon" href="../../../assets/mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How many spares on board: why “one of each” is not a measure","description":"Why the same spares rule protects two components with the same MTBF very differently, how to compute the probability of a stop for want of a part, and what to ask for in the specification before the vessel sails.","datePublished":"2026-11-27","dateModified":"2026-11-27","inLanguage":"en","author":{"@type":"Organization","name":"CLEGAR","url":"https://www.clegar.it/"},"publisher":{"@id":"https://www.clegar.it/#organization"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.clegar.it/en/insights/how-many-spares-on-board/"},"image":"https://www.clegar.it/assets/og.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.clegar.it/en/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://www.clegar.it/en/insights/"},{"@type":"ListItem","position":3,"name":"How many spares on board: why “one of each” is not a measure","item":"https://www.clegar.it/en/insights/how-many-spares-on-board/"}]}</script>
+
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-row">
+    <a class="brand" aria-label="CLEGAR" href="../../../">
+      <img src="../../../assets/logo.png" alt="CLEGAR — Marine Geoscience &amp; Offshore Advisory">
+    </a>
+    <div class="masthead-meta">
+      <a class="hide-sm" href="mailto:info@clegar.it">info@clegar.it</a>
+      <div class="langsw" role="group" aria-label="Language / Lingua">
+        <a href="../../../insights/" hreflang="it">IT</a><a href="../../../en/insights/" aria-current="true">EN</a></div>
+      <a class="btn-contact" href="../../../en/contact/">
+        <span class="en">Talk to us</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+
+<nav class="tabbar" aria-label="Main navigation">
+  <div class="tabbar-inner">
+    <a class="tab" href="../../../en/">Home</a>
+    <a class="tab" href="../../../en/marine-geoscience/">Marine Geoscience</a>
+    <a class="tab" href="../../../en/project-management/">Project Management</a>
+    <a class="tab" href="../../../en/technical-advisory/">Technical Advisory</a>
+    <a class="tab" href="../../../en/owners-engineering/">Owner's Engineering</a>
+    <a class="tab" href="../../../en/operational-excellence/">Operational Excellence</a>
+    <a class="tab" href="../../../en/insights/" aria-current="page">Insights</a>
+    <a class="tab" href="../../../en/contact/">Contact</a>
+  </div>
+</nav>
+<main id="main">
+<section class="page">
+  <div class="svc-hero"><div class="wrap">
+<div class="art-meta"><time datetime="2026-11-27">27 November 2026</time><a href="../../../en/operational-excellence/">Operational Excellence</a></div><h1>How many spares on board: why “one of each” is not a measure</h1>
+  </div></div>
+  <div class="band band-white band-pad"><div class="wrap">
+    <div class="article">
+<p class="lede">The mobilisation plan declares one spare on board for each critical component, and the specification only asked for “adequate spares for the whole campaign”. The rule looks prudent and the same for everything. For a component installed once, the probability of running out of parts in 42 days is 0.5%. For a module installed twelve times, with the same MTBF, it is 34%.</p>
+
+<p>This article shows what that probability depends on, how to compute it with data the contractor already holds, which objections come up when it is asked for, and what to write into the specification so that “adequate” becomes a number.</p>
+
+<h2>What a stop for want of a part depends on</h2>
+
+<p>A component stops the work when it fails and there is no spare left on board. The number of failures expected during the campaign depends on three quantities: the failure rate of one unit, how many units are installed, and for how many hours they run. If the rate is constant – the assumption under which an MTBF translates into a rate – one unit fails on average once every MTBF hours, and n identical units n times as often.</p>
+
+<p>The mean number of failures in T operating hours is therefore m = n · T / MTBF. With a constant rate, the number of failures follows the Poisson distribution: the probability of k failures is e<sup>−m</sup> · m<sup>k</sup> / k!. With s spares on board, the stop comes at failure number s + 1, and the probability of at least one stop is that of more than s failures: 1 minus the sum of the probabilities of 0 to s failures.</p>
+
+<p>The “one of each” rule sets s = 1 and ignores n. But n enters the calculation with the same weight as the MTBF: twelve units with an MTBF of 10,000 hours fail as often as a single unit with an MTBF of 833 hours.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures are synthetic – built to illustrate the mechanism, not taken from real projects.</p>
+
+<p>A geophysical survey campaign for a wind farm, 42 days at sea with acquisition around the clock: 1,008 operating hours. Two components declared critical, both with an MTBF of 10,000 hours and one spare on board. The first is the transceiver of the acoustic positioning system, installed once. The second is a digitiser module of the streamer, installed twelve times. The specification in the example does not accept acquisition with a module down: a failed module stops the line.</p>
+
+<p>For the transceiver m = 1 · 1,008 / 10,000 = 0.10 expected failures, and the probability of more than one failure is 0.5%. For the modules m = 12 · 1,008 / 10,000 = 1.21 expected failures: with one spare, the probability of running out of parts at least once is 34.1%.</p>
+
+<div class="pull"><strong>34%</strong><span>the probability of a stop for want of a part with “one spare per component”, for a module installed twelve times</span></div>
+
+<p>What a stop costs depends on how long it takes for the part to reach the vessel. In the table every failure without a spare stops acquisition for a fixed time: 2 days for a nearshore site served by a nearby port, 6 days for a distant site, where the part has to be shipped, cleared through customs and taken out to sea. The expected days lost are that time multiplied by the mean number of failures left without a spare.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Spares on board</th><th class="num">Probability of at least one stop</th><th class="num">Expected days lost, part in 2 days</th><th class="num">Expected days lost, part in 6 days</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">0</td><td class="num">70.2%</td><td class="num">2.42</td><td class="num">7.26</td></tr>
+<tr><td class="num">1</td><td class="num">34.1%</td><td class="num">1.02</td><td class="num">3.05</td></tr>
+<tr><td class="num">2</td><td class="num">12.3%</td><td class="num">0.33</td><td class="num">1.00</td></tr>
+<tr><td class="num">3</td><td class="num">3.5%</td><td class="num">0.09</td><td class="num">0.27</td></tr>
+<tr><td class="num">4</td><td class="num">0.8%</td><td class="num">0.02</td><td class="num">0.06</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>With one spare, the distant site loses on average three vessel days out of 42. With three spares the probability of a stop falls to 3.5% and the expected days lost to 0.27. The protection the transceiver gets from a single spare, the modules get from three or four.</p>
+
+<h2>The level that matters is the campaign</h2>
+
+<p>Setting a target per component is not enough. With ten critical components, each with a 5% probability of a stop and failures independent of one another, the probability that the campaign stops at least once for a missing part is 1 − 0.95<sup>10</sup> = 40.1%. At 1% per component it falls to 9.6%. It is the same arithmetic as merge bias, already seen for the parallel paths of a schedule: several events must all go well, and the probabilities multiply. The target is set on the campaign and then allocated to the components, not the other way round.</p>
+
+<h2>The objections</h2>
+
+<p>The first: spares are the contractor's risk, because a breakdown is off-hire. They are for the cost of the day, which the classification of vessel time assigns to the contractor. They are not for the date. The lost day stays lost even if nobody pays for it: the weather window is used up, the next contractor waits, and the milestone that depends on the survey slips. An off-hire stop moves the cost, not the schedule.</p>
+
+<p>The second: the MTBF is a manufacturer's figure, and the contractor cannot do better. The declared MTBF refers to reference conditions, which IEC 61709 describes precisely so that they can be converted to the conditions of use. A towed streamer, wound on and off the winch, does not work in those conditions, and the failure rate at sea is usually higher. The best figure is the contractor's own history: operating hours and failures of the same component on previous campaigns. The calculation copes badly with a wrong input: with an MTBF of 5,000 hours instead of 10,000, three spares leave a 22.5% probability of a stop, and getting below 5% takes five.</p>
+
+<p>The third: the failure rate is not constant. After mobilisation failures are more frequent, from assembly, connectors and handling; towards the end of life they are again, from wear. Both effects raise the number of failures above the constant-rate model, which therefore gives an optimistic estimate, not a cautious one. Quayside tests and the sea trial period also serve to bring early failures out before they count.</p>
+
+<p>The fourth: a module down does not really stop the survey. That depends on what the specification accepts as degraded acquisition. If it accepts one module down, the stop comes one failure later, and with one spare the probability falls from 34.1% to 12.3%: the two-spares row of the table. But that module down is a gap in the data, and it has to be decided beforehand, in the specification, not on board under the pressure of the weather window.</p>
+
+<p>The fifth: spares cost money. True, and the calculation does not deny it: it makes it comparable. The cost of one more spare is set against the expected days lost it avoids – in the example, from 3.05 to 1.00 days going from one to two spares at the distant site – and the decision remains an economic one, but taken with a number instead of a rule.</p>
+
+<h2>What to ask for in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>The list of critical components with the units installed.</strong><span class="t"> For each, how many the system carries and how many are needed to acquire to specification.</span></span></li>
+  <li><span class="k">02</span><span><strong>The failure rate, with its source.</strong><span class="t"> The contractor's fleet history – operating hours and failures – where it exists, and the manufacturer's figure only where it does not, declared as such.</span></span></li>
+  <li><span class="k">03</span><span><strong>The time for a part to arrive from the site.</strong><span class="t"> Not from the warehouse to the port, but from the warehouse to the vessel, for the campaign site and with the planned transfer means.</span></span></li>
+  <li><span class="k">04</span><span><strong>A target on the campaign.</strong><span class="t"> The maximum probability of a stop for want of a part over the whole campaign, allocated by the contractor to the components.</span></span></li>
+  <li><span class="k">05</span><span><strong>Degraded acquisition, written beforehand.</strong><span class="t"> How many modules or channels down the specification accepts, for how long and with what effect on the deliverable.</span></span></li>
+  <li><span class="k">06</span><span><strong>The calculation in the mobilisation plan.</strong><span class="t"> Number of spares per component with the resulting probability, checked at the readiness review against what is actually on board.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>“One spare per component” counts components, not failures. Failures depend on how many units are working, for how many hours and at what rate, and the time they cost depends on how far away the warehouse is. These are all figures the contractor has before sailing. Asking for them in the specification turns “adequate spares” into a probability that can be read, discussed and checked at the quayside.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>C. C. Sherbrooke, <em>Optimal Inventory Modeling of Systems: Multi-Echelon Techniques</em>, 2nd ed., Kluwer Academic Publishers, 2004: sizing spares with Poisson demand.</li>
+  <li>IEC 61709:2017, <em>Electric components – Reliability – Reference conditions for failure rates and stress models for conversion</em>: failure rates at reference conditions and conversion to the conditions of use.</li>
+  <li>IEC 60300-3-12:2011, <em>Dependability management – Part 3-12: Application guide – Integrated logistic support</em>: logistic support, spares included, as part of dependability management.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR supports clients in preparing campaigns, from the specification to checking at the quayside what the mobilisation plan declares. If you are about to write what the contractor must have on board, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+</div>
+    <div class="artnext"><h2>Service line</h2><ul><li><a href="../../../en/operational-excellence/">Operational Excellence</a></li></ul><h2>More on this topic</h2><ul><li><a href="../../../en/insights/the-queue-between-acquisition-and-processing/">The queue between acquisition and processing: how many days pass before anyone looks at the data</a></li><li><a href="../../../en/insights/lessons-learned-that-get-used/">The lessons learned nobody rereads, and how to write a note that will be used</a></li><li><a href="../../../en/insights/readiness-review-before-the-vessel-sails/">Readiness review: what to check before the vessel sails</a></li><li><a href="../../../en/insights/classifying-vessel-time/">Classifying vessel time: who pays for the day nothing was done</a></li></ul></div><div class="share"><span class="share-label">Share</span><a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.clegar.it%2Fen%2Finsights%2Fhow-many-spares-on-board%2F" target="_blank" rel="noopener">LinkedIn</a><a class="share-btn" href="mailto:?subject=How%20many%20spares%20on%20board%3A%20why%20%E2%80%9Cone%20of%20each%E2%80%9D%20is%20not%20a%20measure&amp;body=How%20many%20spares%20on%20board%3A%20why%20%E2%80%9Cone%20of%20each%E2%80%9D%20is%20not%20a%20measure%0Ahttps%3A%2F%2Fwww.clegar.it%2Fen%2Finsights%2Fhow-many-spares-on-board%2F">Email</a><button class="share-btn" type="button" data-share-url="https://www.clegar.it/en/insights/how-many-spares-on-board/" data-share-title="How many spares on board: why “one of each” is not a measure">Copy link</button></div>
+    <a class="art-back" href="../../../en/insights/">&larr; All articles</a>
+  </div></div>
+</section>
+</main>
+<footer class="foot">
+  <img class="foot-mark" src="../../../assets/mark.png" alt="">
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div>
+        <img class="foot-word" src="../../../assets/logo-white.png" alt="CLEGAR">
+        
+        <p class="en">Independent consultancy in marine geoscience, project management and technical assurance for offshore.</p>
+      </div>
+      <div>
+        <h5 class="en">Services</h5>
+        <nav class="foot-nav">
+          <a href="../../../en/marine-geoscience/">Marine Geoscience</a>
+          <a href="../../../en/project-management/">Project Management</a>
+          <a href="../../../en/technical-advisory/">Technical Advisory &amp; Assurance</a>
+          <a href="../../../en/owners-engineering/">Owner's Engineering</a>
+          <a href="../../../en/operational-excellence/">Operational Excellence</a>
+        </nav>
+      </div>
+      <div>
+        <h5 class="en">Contact</h5>
+        <p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+        <p><a href="https://www.linkedin.com/company/clegar" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="yr">2026</span> CLEGAR S.r.l. – P.IVA/VAT 07422540828</span>
+      <span><a class="en" href="../../../en/privacy/">Privacy and cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="../../../assets/site.js" defer></script>
+</body>
+</html>

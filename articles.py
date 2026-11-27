@@ -15,6 +15,215 @@ FIG_SWAP = '__FIG_SWAP__'
 
 ARTICLES = [
     {
+        'id': 'ricambi-a-bordo',
+        'topic': 'excellence',
+        'date': '2026-11-27',
+        'slug': {'it': 'quanti-ricambi-a-bordo',
+                 'en': 'how-many-spares-on-board'},
+        'title': {
+            'it': 'Quanti ricambi a bordo: perché «uno di ciascuno» non è una misura',
+            'en': 'How many spares on board: why “one of each” is not a measure',
+        },
+        'meta_title': {
+            'it': 'Quanti ricambi a bordo | Insights',
+            'en': 'How many spares on board | Insights',
+        },
+        'desc': {
+            'it': ('Perché la stessa regola sui ricambi protegge in modo molto diverso due componenti '
+                   'con lo stesso MTBF, come si calcola la probabilità di un fermo per mancanza del pezzo, '
+                   'e che cosa chiedere nella specifica prima che la nave parta.'),
+            'en': ('Why the same spares rule protects two components with the same MTBF very differently, '
+                   'how to compute the probability of a stop for want of a part, '
+                   'and what to ask for in the specification before the vessel sails.'),
+        },
+        'abstract': {
+            'it': ('Un ricambio per ogni componente critico, scrive il piano di mobilitazione. Per un '
+                   'componente montato in un solo esemplare la probabilità di restare senza pezzo in una '
+                   'campagna di 42 giorni è dello 0,5%. Per un modulo montato in dodici esemplari, con lo '
+                   'stesso MTBF, è del 34%. La regola è la stessa, la protezione no.'),
+            'en': ('One spare for each critical component, says the mobilisation plan. For a component '
+                   'installed once, the probability of running out of parts in a 42-day campaign is 0.5%. '
+                   'For a module installed twelve times, with the same MTBF, it is 34%. The rule is the '
+                   'same; the protection is not.'),
+        },
+        'body': {
+            'it': """
+<p class="lede">Il piano di mobilitazione dichiara un ricambio a bordo per ogni componente critico, e la specifica chiedeva soltanto «ricambi adeguati per l'intera campagna». La regola sembra prudente e uguale per tutti. Per un componente montato in un solo esemplare, la probabilità di restare senza pezzo in 42 giorni è dello 0,5%. Per un modulo montato in dodici esemplari, con lo stesso MTBF, è del 34%.</p>
+
+<p>Questo articolo mostra da che cosa dipende quella probabilità, come si calcola con dati che il contractor possiede già, quali obiezioni si sentono quando lo si chiede, e che cosa scrivere nella specifica perché «adeguati» diventi un numero.</p>
+
+<h2>Da che cosa dipende un fermo per mancanza del pezzo</h2>
+
+<p>Un componente si ferma quando si guasta e a bordo non c'è più un ricambio. Il numero di guasti attesi durante la campagna dipende da tre grandezze: il tasso di guasto di un esemplare, quanti esemplari sono installati, e per quante ore funzionano. Se il tasso è costante – l'assunzione con cui un MTBF si traduce in un tasso – un esemplare si guasta in media una volta ogni MTBF ore, e n esemplari identici n volte più spesso.</p>
+
+<p>Il numero medio di guasti in T ore di funzionamento è quindi m = n · T / MTBF. Con un tasso costante, il numero di guasti segue la distribuzione di Poisson: la probabilità di k guasti è e<sup>−m</sup> · m<sup>k</sup> / k!. Con s ricambi a bordo, il fermo arriva al guasto numero s + 1, e la probabilità di almeno un fermo è quella di avere più di s guasti: 1 meno la somma delle probabilità da 0 a s guasti.</p>
+
+<p>La regola «uno di ciascuno» fissa s = 1 e ignora n. Ma n entra nel calcolo con lo stesso peso dell'MTBF: dodici esemplari con un MTBF di 10.000 ore si guastano quanto un esemplare solo con un MTBF di 833 ore.</p>
+
+<h2>Un esempio pratico</h2>
+
+<p>I valori sono sintetici – costruiti per illustrare il meccanismo, non tratti da progetti reali.</p>
+
+<p>Campagna di rilievo geofisico per un parco eolico, 42 giorni in mare con acquisizione su 24 ore: 1.008 ore di funzionamento. Due componenti dichiarati critici, entrambi con un MTBF di 10.000 ore e un ricambio a bordo. Il primo è il transceiver del sistema di posizionamento acustico, montato in un solo esemplare. Il secondo è un modulo di digitalizzazione dello streamer, montato in dodici esemplari. La specifica dell'esempio non accetta l'acquisizione con un modulo spento: un modulo guasto ferma la linea.</p>
+
+<p>Per il transceiver m = 1 · 1.008 / 10.000 = 0,10 guasti attesi, e la probabilità di più di un guasto è dello 0,5%. Per i moduli m = 12 · 1.008 / 10.000 = 1,21 guasti attesi: con un ricambio, la probabilità di restare senza pezzo almeno una volta è del 34,1%.</p>
+
+<div class="pull"><strong>34%</strong><span>la probabilità di un fermo per mancanza del pezzo con «un ricambio per componente», per un modulo montato in dodici esemplari</span></div>
+
+<p>Quanto costa un fermo dipende da quanto tempo serve perché il pezzo arrivi a bordo. Nella tabella ogni guasto senza ricambio ferma l'acquisizione per un tempo fisso: 2 giorni per un sito sottocosta servito da un porto vicino, 6 giorni per un sito lontano, dove il pezzo va spedito, sdoganato e portato in mare. I giorni persi attesi sono quel tempo moltiplicato per il numero medio di guasti che restano senza ricambio.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Ricambi a bordo</th><th class="num">Probabilità di almeno un fermo</th><th class="num">Giorni persi attesi, pezzo in 2 giorni</th><th class="num">Giorni persi attesi, pezzo in 6 giorni</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">0</td><td class="num">70,2%</td><td class="num">2,42</td><td class="num">7,26</td></tr>
+<tr><td class="num">1</td><td class="num">34,1%</td><td class="num">1,02</td><td class="num">3,05</td></tr>
+<tr><td class="num">2</td><td class="num">12,3%</td><td class="num">0,33</td><td class="num">1,00</td></tr>
+<tr><td class="num">3</td><td class="num">3,5%</td><td class="num">0,09</td><td class="num">0,27</td></tr>
+<tr><td class="num">4</td><td class="num">0,8%</td><td class="num">0,02</td><td class="num">0,06</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Con un ricambio, il sito lontano perde in media tre giorni di nave su 42. Con tre ricambi la probabilità di un fermo scende al 3,5% e i giorni persi attesi a 0,27. La protezione che il transceiver ottiene con un ricambio solo, i moduli la ottengono con tre o quattro.</p>
+
+<h2>Il livello che conta è la campagna</h2>
+
+<p>Fissare un obiettivo per componente non basta. Con dieci componenti critici, ciascuno con il 5% di probabilità di fermo e guasti indipendenti fra loro, la probabilità che la campagna si fermi almeno una volta per un pezzo mancante è 1 − 0,95<sup>10</sup> = 40,1%. Con l'1% per componente scende al 9,6%. È la stessa aritmetica del merge bias, già vista per i path paralleli di un programma: più eventi devono andare tutti bene, e le probabilità si moltiplicano. L'obiettivo va fissato sulla campagna e poi ripartito sui componenti, non il contrario.</p>
+
+<h2>Le obiezioni</h2>
+
+<p>La prima: i ricambi sono un rischio del contractor, perché il guasto è off-hire. Lo sono per il costo della giornata, che la classificazione del tempo nave attribuisce al contractor. Non lo sono per la data. Il giorno perso resta perso anche se non si paga: la finestra meteo si consuma, il contractor successivo aspetta, e la milestone che dipende dal rilievo slitta. Un fermo off-hire sposta il costo, non il programma.</p>
+
+<p>La seconda: l'MTBF è un dato del costruttore, e il contractor non può fare di meglio. L'MTBF dichiarato si riferisce a condizioni di riferimento, che la IEC 61709 descrive proprio per poterle convertire alle condizioni d'uso. Uno streamer trainato, avvolto e svolto sul verricello, non lavora in quelle condizioni, e il tasso di guasto in mare è di solito più alto. Il dato migliore è la storia del contractor: ore di funzionamento e guasti dello stesso componente nelle campagne precedenti. Il calcolo regge male un dato sbagliato: con un MTBF di 5.000 ore invece di 10.000, tre ricambi lasciano il 22,5% di probabilità di fermo, e per scendere sotto il 5% ne servono cinque.</p>
+
+<p>La terza: il tasso di guasto non è costante. Dopo la mobilitazione i guasti sono più frequenti, per montaggi, connettori e movimentazione; verso fine vita lo sono di nuovo, per usura. Entrambi gli effetti alzano il numero di guasti rispetto al modello a tasso costante, che quindi dà una stima ottimistica, non prudente. Le prove in banchina e il periodo di prova in mare servono anche a far emergere i guasti precoci prima che contino.</p>
+
+<p>La quarta: un modulo spento non ferma davvero il rilievo. Dipende da che cosa la specifica accetta come acquisizione degradata. Se accetta un modulo spento, il fermo arriva un guasto più tardi, e con un ricambio la probabilità scende dal 34,1% al 12,3%: la riga dei due ricambi nella tabella. Ma quel modulo spento è un vuoto nel dato, e va deciso prima, nella specifica, non a bordo sotto la pressione della finestra meteo.</p>
+
+<p>La quinta: i ricambi costano. È vero, e il calcolo non lo nega: lo rende confrontabile. Il costo di un ricambio in più si mette accanto ai giorni persi attesi che evita – nell'esempio, da 3,05 a 1,00 giorni passando da uno a due ricambi nel sito lontano – e la decisione resta economica, ma presa con un numero invece che con una regola.</p>
+
+<h2>Che cosa chiedere nella specifica</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>L'elenco dei componenti critici con gli esemplari installati.</strong><span class="t"> Per ciascuno, quanti ne monta il sistema e quanti ne servono per acquisire secondo la specifica.</span></span></li>
+  <li><span class="k">02</span><span><strong>Il tasso di guasto, con la sua fonte.</strong><span class="t"> La storia di flotta del contractor – ore di funzionamento e guasti – dove esiste, e il dato del costruttore solo dove non esiste, dichiarato come tale.</span></span></li>
+  <li><span class="k">03</span><span><strong>Il tempo di arrivo del pezzo dal sito.</strong><span class="t"> Non dal magazzino al porto, ma dal magazzino a bordo, per il sito della campagna e con i mezzi di trasferimento previsti.</span></span></li>
+  <li><span class="k">04</span><span><strong>Un obiettivo sulla campagna.</strong><span class="t"> La probabilità massima di un fermo per mancanza del pezzo sull'intera campagna, ripartita dal contractor sui componenti.</span></span></li>
+  <li><span class="k">05</span><span><strong>L'acquisizione degradata, scritta prima.</strong><span class="t"> Quanti moduli o canali spenti la specifica accetta, per quanto tempo e con quale effetto sul deliverable.</span></span></li>
+  <li><span class="k">06</span><span><strong>Il calcolo nel piano di mobilitazione.</strong><span class="t"> Numero di ricambi per componente con la probabilità che ne risulta, verificato in readiness review contro quello che c'è davvero a bordo.</span></span></li>
+</ul>
+
+<h2>Il punto di fondo</h2>
+
+<p>«Un ricambio per componente» conta i componenti, non i guasti. I guasti dipendono da quanti esemplari lavorano, per quante ore e con quale tasso, e il tempo che costano dipende da quanto è lontano il magazzino. Sono tutti dati che il contractor ha già prima di partire. Chiederli nella specifica trasforma «ricambi adeguati» in una probabilità che si può leggere, discutere e verificare in banchina.</p>
+
+<h3>Riferimenti</h3>
+
+<ul>
+  <li>C. C. Sherbrooke, <em>Optimal Inventory Modeling of Systems: Multi-Echelon Techniques</em>, 2ª ed., Kluwer Academic Publishers, 2004: dimensionamento dei ricambi con domanda di Poisson.</li>
+  <li>IEC 61709:2017, <em>Electric components – Reliability – Reference conditions for failure rates and stress models for conversion</em>: tassi di guasto in condizioni di riferimento e conversione alle condizioni d'uso.</li>
+  <li>IEC 60300-3-12:2011, <em>Dependability management – Part 3-12: Application guide – Integrated logistic support</em>: il supporto logistico, ricambi compresi, come parte della gestione dell'affidabilità.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR affianca i committenti nella preparazione delle campagne, dalla specifica alla verifica in banchina di ciò che il piano di mobilitazione dichiara. Se state per scrivere che cosa il contractor deve avere a bordo, ne parliamo volentieri.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+            'en': """
+<p class="lede">The mobilisation plan declares one spare on board for each critical component, and the specification only asked for “adequate spares for the whole campaign”. The rule looks prudent and the same for everything. For a component installed once, the probability of running out of parts in 42 days is 0.5%. For a module installed twelve times, with the same MTBF, it is 34%.</p>
+
+<p>This article shows what that probability depends on, how to compute it with data the contractor already holds, which objections come up when it is asked for, and what to write into the specification so that “adequate” becomes a number.</p>
+
+<h2>What a stop for want of a part depends on</h2>
+
+<p>A component stops the work when it fails and there is no spare left on board. The number of failures expected during the campaign depends on three quantities: the failure rate of one unit, how many units are installed, and for how many hours they run. If the rate is constant – the assumption under which an MTBF translates into a rate – one unit fails on average once every MTBF hours, and n identical units n times as often.</p>
+
+<p>The mean number of failures in T operating hours is therefore m = n · T / MTBF. With a constant rate, the number of failures follows the Poisson distribution: the probability of k failures is e<sup>−m</sup> · m<sup>k</sup> / k!. With s spares on board, the stop comes at failure number s + 1, and the probability of at least one stop is that of more than s failures: 1 minus the sum of the probabilities of 0 to s failures.</p>
+
+<p>The “one of each” rule sets s = 1 and ignores n. But n enters the calculation with the same weight as the MTBF: twelve units with an MTBF of 10,000 hours fail as often as a single unit with an MTBF of 833 hours.</p>
+
+<h2>A worked example</h2>
+
+<p>The figures are synthetic – built to illustrate the mechanism, not taken from real projects.</p>
+
+<p>A geophysical survey campaign for a wind farm, 42 days at sea with acquisition around the clock: 1,008 operating hours. Two components declared critical, both with an MTBF of 10,000 hours and one spare on board. The first is the transceiver of the acoustic positioning system, installed once. The second is a digitiser module of the streamer, installed twelve times. The specification in the example does not accept acquisition with a module down: a failed module stops the line.</p>
+
+<p>For the transceiver m = 1 · 1,008 / 10,000 = 0.10 expected failures, and the probability of more than one failure is 0.5%. For the modules m = 12 · 1,008 / 10,000 = 1.21 expected failures: with one spare, the probability of running out of parts at least once is 34.1%.</p>
+
+<div class="pull"><strong>34%</strong><span>the probability of a stop for want of a part with “one spare per component”, for a module installed twelve times</span></div>
+
+<p>What a stop costs depends on how long it takes for the part to reach the vessel. In the table every failure without a spare stops acquisition for a fixed time: 2 days for a nearshore site served by a nearby port, 6 days for a distant site, where the part has to be shipped, cleared through customs and taken out to sea. The expected days lost are that time multiplied by the mean number of failures left without a spare.</p>
+
+<div class="tablewrap">
+<table>
+<thead>
+<tr><th class="num">Spares on board</th><th class="num">Probability of at least one stop</th><th class="num">Expected days lost, part in 2 days</th><th class="num">Expected days lost, part in 6 days</th></tr>
+</thead>
+<tbody>
+<tr><td class="num">0</td><td class="num">70.2%</td><td class="num">2.42</td><td class="num">7.26</td></tr>
+<tr><td class="num">1</td><td class="num">34.1%</td><td class="num">1.02</td><td class="num">3.05</td></tr>
+<tr><td class="num">2</td><td class="num">12.3%</td><td class="num">0.33</td><td class="num">1.00</td></tr>
+<tr><td class="num">3</td><td class="num">3.5%</td><td class="num">0.09</td><td class="num">0.27</td></tr>
+<tr><td class="num">4</td><td class="num">0.8%</td><td class="num">0.02</td><td class="num">0.06</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>With one spare, the distant site loses on average three vessel days out of 42. With three spares the probability of a stop falls to 3.5% and the expected days lost to 0.27. The protection the transceiver gets from a single spare, the modules get from three or four.</p>
+
+<h2>The level that matters is the campaign</h2>
+
+<p>Setting a target per component is not enough. With ten critical components, each with a 5% probability of a stop and failures independent of one another, the probability that the campaign stops at least once for a missing part is 1 − 0.95<sup>10</sup> = 40.1%. At 1% per component it falls to 9.6%. It is the same arithmetic as merge bias, already seen for the parallel paths of a schedule: several events must all go well, and the probabilities multiply. The target is set on the campaign and then allocated to the components, not the other way round.</p>
+
+<h2>The objections</h2>
+
+<p>The first: spares are the contractor's risk, because a breakdown is off-hire. They are for the cost of the day, which the classification of vessel time assigns to the contractor. They are not for the date. The lost day stays lost even if nobody pays for it: the weather window is used up, the next contractor waits, and the milestone that depends on the survey slips. An off-hire stop moves the cost, not the schedule.</p>
+
+<p>The second: the MTBF is a manufacturer's figure, and the contractor cannot do better. The declared MTBF refers to reference conditions, which IEC 61709 describes precisely so that they can be converted to the conditions of use. A towed streamer, wound on and off the winch, does not work in those conditions, and the failure rate at sea is usually higher. The best figure is the contractor's own history: operating hours and failures of the same component on previous campaigns. The calculation copes badly with a wrong input: with an MTBF of 5,000 hours instead of 10,000, three spares leave a 22.5% probability of a stop, and getting below 5% takes five.</p>
+
+<p>The third: the failure rate is not constant. After mobilisation failures are more frequent, from assembly, connectors and handling; towards the end of life they are again, from wear. Both effects raise the number of failures above the constant-rate model, which therefore gives an optimistic estimate, not a cautious one. Quayside tests and the sea trial period also serve to bring early failures out before they count.</p>
+
+<p>The fourth: a module down does not really stop the survey. That depends on what the specification accepts as degraded acquisition. If it accepts one module down, the stop comes one failure later, and with one spare the probability falls from 34.1% to 12.3%: the two-spares row of the table. But that module down is a gap in the data, and it has to be decided beforehand, in the specification, not on board under the pressure of the weather window.</p>
+
+<p>The fifth: spares cost money. True, and the calculation does not deny it: it makes it comparable. The cost of one more spare is set against the expected days lost it avoids – in the example, from 3.05 to 1.00 days going from one to two spares at the distant site – and the decision remains an economic one, but taken with a number instead of a rule.</p>
+
+<h2>What to ask for in the specification</h2>
+
+<ul class="flist">
+  <li><span class="k">01</span><span><strong>The list of critical components with the units installed.</strong><span class="t"> For each, how many the system carries and how many are needed to acquire to specification.</span></span></li>
+  <li><span class="k">02</span><span><strong>The failure rate, with its source.</strong><span class="t"> The contractor's fleet history – operating hours and failures – where it exists, and the manufacturer's figure only where it does not, declared as such.</span></span></li>
+  <li><span class="k">03</span><span><strong>The time for a part to arrive from the site.</strong><span class="t"> Not from the warehouse to the port, but from the warehouse to the vessel, for the campaign site and with the planned transfer means.</span></span></li>
+  <li><span class="k">04</span><span><strong>A target on the campaign.</strong><span class="t"> The maximum probability of a stop for want of a part over the whole campaign, allocated by the contractor to the components.</span></span></li>
+  <li><span class="k">05</span><span><strong>Degraded acquisition, written beforehand.</strong><span class="t"> How many modules or channels down the specification accepts, for how long and with what effect on the deliverable.</span></span></li>
+  <li><span class="k">06</span><span><strong>The calculation in the mobilisation plan.</strong><span class="t"> Number of spares per component with the resulting probability, checked at the readiness review against what is actually on board.</span></span></li>
+</ul>
+
+<h2>The underlying point</h2>
+
+<p>“One spare per component” counts components, not failures. Failures depend on how many units are working, for how many hours and at what rate, and the time they cost depends on how far away the warehouse is. These are all figures the contractor has before sailing. Asking for them in the specification turns “adequate spares” into a probability that can be read, discussed and checked at the quayside.</p>
+
+<h3>References</h3>
+
+<ul>
+  <li>C. C. Sherbrooke, <em>Optimal Inventory Modeling of Systems: Multi-Echelon Techniques</em>, 2nd ed., Kluwer Academic Publishers, 2004: sizing spares with Poisson demand.</li>
+  <li>IEC 61709:2017, <em>Electric components – Reliability – Reference conditions for failure rates and stress models for conversion</em>: failure rates at reference conditions and conversion to the conditions of use.</li>
+  <li>IEC 60300-3-12:2011, <em>Dependability management – Part 3-12: Application guide – Integrated logistic support</em>: logistic support, spares included, as part of dependability management.</li>
+</ul>
+
+<div class="callout">
+  <p>CLEGAR supports clients in preparing campaigns, from the specification to checking at the quayside what the mobilisation plan declares. If you are about to write what the contractor must have on board, we are glad to talk it through.</p>
+</div>
+
+<p><a href="mailto:info@clegar.it">info@clegar.it</a></p>
+""",
+        },
+    },
+    {
         'id': 'earned-schedule',
         'topic': 'pm',
         'date': '2026-11-25',

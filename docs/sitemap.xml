@@ -164,6 +164,24 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.clegar.it/insights/quanti-ricambi-a-bordo/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/quanti-ricambi-a-bordo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/how-many-spares-on-board/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/quanti-ricambi-a-bordo/"/>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.clegar.it/en/insights/how-many-spares-on-board/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/quanti-ricambi-a-bordo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/how-many-spares-on-board/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clegar.it/insights/quanti-ricambi-a-bordo/"/>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.clegar.it/insights/spi-che-torna-a-uno/</loc>
     <xhtml:link rel="alternate" hreflang="it" href="https://www.clegar.it/insights/spi-che-torna-a-uno/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clegar.it/en/insights/an-spi-that-returns-to-one/"/>

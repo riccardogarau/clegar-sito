@@ -1043,3 +1043,60 @@ computed on.
 https://www.clegar.it/en/insights/an-spi-that-returns-to-one/
 
 #projectmanagement #earnedvalue #offshore #marinesurvey #offshorewind
+
+---
+
+## Quanti ricambi a bordo – 27 novembre 2026
+
+### Italiano
+
+Un ricambio per ogni componente critico: è la regola di molti piani di
+mobilitazione, e sembra uguale per tutti i componenti.
+
+Non lo è. La probabilità di restare senza pezzo dipende da quanti guasti ci
+si aspetta, e i guasti dipendono da quanti esemplari lavorano, per quante ore
+e con quale tasso. «Uno di ciascuno» conta i componenti, non i guasti.
+
+In un esempio sintetico, una campagna di 42 giorni in mare: per un modulo
+montato in dodici esemplari, con un ricambio a bordo, la probabilità di un
+fermo per mancanza del pezzo è del 34%. Per un componente con lo stesso MTBF
+montato una volta sola, lo stesso ricambio basta quasi sempre. La regola è la
+stessa, la protezione no.
+
+E un guasto off-hire sposta il costo della giornata, non la data: la
+finestra meteo si consuma comunque.
+
+Nella specifica servono gli esemplari installati, il tasso di guasto con la
+sua fonte, il tempo di arrivo del pezzo dal sito e un obiettivo di
+probabilità sull'intera campagna, non per componente.
+
+https://www.clegar.it/insights/quanti-ricambi-a-bordo/
+
+#offshore #marinesurvey #operationalexcellence #offshorewind #reliability
+
+### English
+
+One spare for each critical component: that is the rule in many mobilisation
+plans, and it looks the same for every component.
+
+It is not. The probability of running out of parts depends on how many
+failures are expected, and failures depend on how many units are working,
+for how many hours and at what rate. “One of each” counts components, not
+failures.
+
+In an illustrative example, a 42-day campaign at sea: for a module installed
+twelve times, with one spare on board, the probability of a stop for want of
+a part is 34%. For a component with the same MTBF installed once, the same
+single spare is almost always enough. The rule is the same; the protection is
+not.
+
+And an off-hire breakdown moves the cost of the day, not the date: the
+weather window is used up all the same.
+
+The specification needs the units installed, the failure rate with its
+source, the time for a part to arrive from the site, and a probability
+target on the whole campaign, not per component.
+
+https://www.clegar.it/en/insights/how-many-spares-on-board/
+
+#offshore #marinesurvey #operationalexcellence #offshorewind #reliability
